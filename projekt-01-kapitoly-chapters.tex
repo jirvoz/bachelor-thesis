@@ -14,26 +14,54 @@ To achieve this there are many benchmarks targetting different types of load, us
 
 Good performance tests usually create great amount of data, which is required to be processed, aggregaed and visualised.
 
-\chapter{Notes}
-benchmarky jsou zamerene na paralelni beh
+\chapter{Linux process scheduling}
 
+\chapter{Performance measurement}
+
+\chapter{Displaying the results}
+
+\chapter{Notes}
 \begin{verbatim}
 Linux scheduler
+    CFS
     numa planning
+        not easy for scheduler
+        manual pinning option
         group imbalance bug
+    tune profiles
+        focus on throughput or latency
 Performance
     performance isn't simple pass/fail
     comparison of baseline and target kernel
+    provisioning of machines with Beaker
+    collecting system load data
+        mpstat
+            usage of every cpu
+        numatop
+            usage of memory
+        ps with psr column
+            cpu time
+        time
+            total, user and system time spent
+        turbostat
+        lstopo for hardware schema image
     benchmarks
         specjbb2005
-        nas parallel
         specjvm2008
-        linpack and stream
+        nas parallel
+        linpack
+        stream (memory throughput)
+        (specjbb2015 - not stable)
     result storing
         preprocessing to xml
         storing to database
     plotting
+        lstopo for plotting hardware topology
         bargraphs to show inaccuaracy
+            operations per second (runtime of benchmark)
+            time out of cpu
+        detailed comparsion of two results
+        timeline with many results over longer period of time
         heatmaps for core usage over time
             http://www.brendangregg.com/HeatMaps/utilization.html
 \end{verbatim}
