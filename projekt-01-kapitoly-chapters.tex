@@ -16,7 +16,37 @@ Good performance tests usually create great amount of data, which is required to
 
 \chapter{Linux process scheduling}
 
+\section{Completely Fair Scheduler}
+
+\texttt{https://en.wikipedia.org/wiki/Completely\_Fair\_Scheduler}
+
 \chapter{Performance measurement}
+
+A basic way to measure performance of system is benchmark. They return some numbers representing throughput of system, but can't tell more about the system behavior.
+To get a better insight on the system, there are many performance analysis tools to observe cpu and memory utilization, location of processes on cores or their time out of cpu.
+\texttt{http://www.brendangregg.com/activebenchmarking.html}
+
+\section{Benchmarks}
+
+\subsection{NAS Parallel Benchmarks}
+NAS Parallel Benchmarks is a set of small programs to help evaluate performance of parallel supercomputers.
+\texttt{https://www.nas.nasa.gov/publications/npb.html}
+
+\subsection{SPECjbb2005}
+Java Business Benchmark behaves as a server-side Java application. It is primarily focused on measuring performance of Java implementation, but also reflects performance of operating system and cpu itself.
+
+\subsection{LINPACK Benchmark}
+LINPACK Benchmark comes from LINPACK package, wich was used to solve systems of linear equations in single or double precision.
+
+\section{Performance analysis tools}
+
+\subsection{mpstat}
+
+\subsection{ps}
+
+\subsection{perf}
+
+\subsection{time}
 
 \chapter{Displaying the results}
 
@@ -27,34 +57,47 @@ Linux scheduler
     numa planning
         not easy for scheduler
         manual pinning option
+            numactl
         group imbalance bug
     tune profiles
         focus on throughput or latency
 Performance
     performance isn't simple pass/fail
     comparison of baseline and target kernel
+    running just benchmark is waste of testing potential, it's good to collect more data
+        http://www.brendangregg.com/activebenchmarking.html
     provisioning of machines with Beaker
     collecting system load data
         mpstat
             usage of every cpu
+        numastat
         numatop
-            usage of memory
-        ps with psr column
+            usage of cpu and memory on each node
+        ps
+            psr and numa column
             cpu time
         time
             total, user and system time spent
         turbostat
+        perf stat
         lstopo for hardware schema image
+        free
     benchmarks
         specjbb2005
         specjvm2008
         nas parallel
-        linpack
+        linpack benchmark
         stream (memory throughput)
-        (specjbb2015 - not stable)
+        specjbb2015 - not stable
+        hackbench - not tried yet
+    scenarios
+        variable number of benchmark instances
+        with and without pinning processes to specific numa nodes
     result storing
         preprocessing to xml
         storing to database
+        aggregating results
+        computing statistical data
     plotting
         lstopo for plotting hardware topology
         bargraphs to show inaccuaracy
@@ -64,6 +107,7 @@ Performance
         timeline with many results over longer period of time
         heatmaps for core usage over time
             http://www.brendangregg.com/HeatMaps/utilization.html
+        graph of process migration between numa nodes
 \end{verbatim}
 
 \chapter{Specification}
