@@ -17,11 +17,17 @@ Good performance tests usually create great amount of data, which is required to
 \chapter{Linux process scheduling}
 
 \section{Completely Fair Scheduler}
-
+Completely Fair Scheduler is process scheduler which replaced the O(1) scheduler
+in version 2.6.23 of Linux kernel. It orders processes using red-black tree where it
+chooses process with the lowest spent execution time.
 \texttt{https://en.wikipedia.org/wiki/Completely\_Fair\_Scheduler}
 
-\chapter{Performance measurement}
+Single processor is simple, problems come with NUMA nodes. Switching between
+nodes or reading from another is expensive.
+Another problem is when scheduler leaves cores idle, even where there are
+runnable threads waiting.
 
+\chapter{Performance measurement}
 A basic way to measure performance of system is benchmark. They return some numbers representing throughput of system, but can't tell more about the system behavior.
 To get a better insight on the system, there are many performance analysis tools to observe cpu and memory utilization, location of processes on cores or their time out of cpu.
 \texttt{http://www.brendangregg.com/activebenchmarking.html}
@@ -29,24 +35,54 @@ To get a better insight on the system, there are many performance analysis tools
 \section{Benchmarks}
 
 \subsection{NAS Parallel Benchmarks}
-NAS Parallel Benchmarks is a set of small programs to help evaluate performance of parallel supercomputers.
+NAS Parallel Benchmarks is a set of small programs to help evaluate performance of parallel supercomputers.
 \texttt{https://www.nas.nasa.gov/publications/npb.html}
+
+NAS Parallel consists of small programs performing highly parallel computations.
+Can be run on variable number of threads. Has different sizes of workload to fit
+machines with wide range of performance.
+It's written in languages C and Fortran.
 
 \subsection{SPECjbb2005}
 Java Business Benchmark behaves as a server-side Java application. It is primarily focused on measuring performance of Java implementation, but also reflects performance of operating system and cpu itself.
+It models system of wholesale company as a multitier application. The benchmark
+itself creates the load, measures the throughput and also generates simple
+report in HTML and raw text formats.
+
+The main output value is \emph{throughput} in units called \emph{SPECjbb2005
+  bops} \footnote{Business operations per second}.
+In case of using more JVM instances, there is a second unit called SPECjbb2005
+bops/JVM representing average throughput of single JVM\footnote{Java virtual machine} instance.
+Another collected metric is memory comsumption, which isn't that useful in
+scheduler performance monitoring.
 
 \subsection{LINPACK Benchmark}
 LINPACK Benchmark comes from LINPACK package, wich was used to solve systems of linear equations in single or double precision.
 
 \section{Performance analysis tools}
 
-\subsection{mpstat}
+\subsection{time}
+Simple command, that can measure resource usage. Usually it's used to measure
+running time of process.
+
+It isn't bash builtin, but programm, that must be usually called from /usr/bin/time.
 
 \subsection{ps}
+This command lists current processes with information about them. In
+\texttt{PSR} and \texttt{NUMA} column are useful informations of CPU and NUMA
+node number, where is the process running.
+
+\subsection{mpstat}
+
+\subsection{turbostat}
+This tool provides measuring of CPU usage and mainly its frequency.
 
 \subsection{perf}
 
-\subsection{time}
+\chapter{Storing the results}
+Get the important parts.
+XML files
+Database
 
 \chapter{Displaying the results}
 
