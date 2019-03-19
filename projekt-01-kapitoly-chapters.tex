@@ -106,6 +106,31 @@ it allows user to quicky see the numbers without any processing of the data.
 
 \chapter{Displaying the results}
 
+\section{Heatmaps}
+
+\section{Boxplots}
+Boxplot is method for displaying statistical properties of data groups. The
+usually displayed values are minimum, 1\textsuperscript{st} quartile, median, 3\textsuperscript{rd} quartile and maximum.
+This feature is useful to visualize accuaracy and reliability of measurement.
+Then it's easier to distinguish performance regression from noise.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{obrazky-figures/boxplot}
+  \caption{Example of boxplot showing Mops of NAS benchmark with different
+    number of threads}
+\end{figure}
+
+
+\chapter{Timelines}
+
+
+\chapter{Automatic evaluation}
+
+
+\chapter{Future work}
+
+
 \chapter{Notes}
 \begin{verbatim}
 Linux scheduler
@@ -164,6 +189,20 @@ Performance
         heatmaps for core usage over time
             http://www.brendangregg.com/HeatMaps/utilization.html
         graph of process migration between numa nodes
+Timelines
+    analysis
+    used technologies
+    desing
+    implementation
+    output
+Automatic regression detection
+    motivation
+    marking data
+    preprocessing for classificator
+    methods
+        linear logistic regression
+        decision trees
+    evaluation
 \end{verbatim}
 
 \chapter{Specification}
