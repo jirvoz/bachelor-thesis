@@ -123,6 +123,20 @@ Then it's easier to distinguish performance regression from noise.
 
 
 \chapter{Timelines}
+An common way to get performance report is to compare two results. Usually, they
+are called baseline and target results. The comparison of two results allows to
+write many details about the measurement and changes between versions. Those
+details usually contain clues to the cause of possible performance change.
+
+However, sometimes is not enough to compare just two versions and larger amount
+of results over longer period of time can bring a new perspective. There is much
+more visible difference between the deviation from measurement error and the
+performance change. It is also easier to find the versions, where a
+performance degradation occured and where was fixed.
+
+With larger amount of data, there can also emerge performance drops, which
+appeared continuously over longer period of time and couldn't be spotted,
+because they were in tolerance due to deviation.
 
 
 \chapter{Automatic evaluation}
