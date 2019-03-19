@@ -27,6 +27,7 @@ nodes or reading from another is expensive.
 Another problem is when scheduler leaves cores idle, even where there are
 runnable threads waiting.
 
+
 \chapter{Performance measurement}
 A basic way to measure performance of system is benchmark. They return some numbers representing throughput of system, but can't tell more about the system behavior.
 To get a better insight on the system, there are many performance analysis tools to observe cpu and memory utilization, location of processes on cores or their time out of cpu.
@@ -56,8 +57,10 @@ bops/JVM representing average throughput of single JVM\footnote{Java virtual mac
 Another collected metric is memory comsumption, which isn't that useful in
 scheduler performance monitoring.
 
-\subsection{LINPACK Benchmark}
+\subsection{LINPACK benchmark}
 LINPACK Benchmark comes from LINPACK package, wich was used to solve systems of linear equations in single or double precision.
+
+\subsection{Stream benchmark}
 
 \section{Performance analysis tools}
 
@@ -79,10 +82,27 @@ This tool provides measuring of CPU usage and mainly its frequency.
 
 \subsection{perf}
 
+
 \chapter{Storing the results}
-Get the important parts.
-XML files
-Database
+Benchmarks usually generate long human-readable output in text or even HTML
+format. This is useful when analyzing single report. In the output are details
+of the test run itself, simple resource usage or success of result validation.
+However, the amount of result starts to rise with repeated runs, different
+amount of instances and new versions kernels.
+
+For the comparison of performance results, it is usually enough the number
+representing throughput or time of each benchmark run. Those numbers can be
+preprocessed from the benchmark output files to a format more suitable for quick
+accesing required data.
+
+\section{XML files}
+XML is markup language, that can store heterogeneous data in tree structure.
+However, the main feature of this format is human-readability. Even with the
+inefficient storage of numerical data and repetition of tag and attribute names,
+it allows user to quicky see the numbers without any processing of the data.
+
+\section{Database}
+
 
 \chapter{Displaying the results}
 
