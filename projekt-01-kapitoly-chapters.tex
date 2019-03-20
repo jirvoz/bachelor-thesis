@@ -36,13 +36,30 @@ To get a better insight on the system, there are many performance analysis tools
 \section{Benchmarks}
 
 \subsection{NAS Parallel Benchmarks}
-NAS Parallel Benchmarks is a set of small programs to help evaluate performance of parallel supercomputers.
-\texttt{https://www.nas.nasa.gov/publications/npb.html}
+NAS Parallel Benchmarks is set of benchmarks focused on performance of highly
+parallel computations on supercomputers. In addition to floating point
+computations it targets communication and data movement between computation
+nodes. Performed algorithms are based on large scale computational fluid
+dynamics at the Numerical Aerodynamic Simulation (NAS) Program which is based at
+NASA Ames Research Center.
 
-NAS Parallel consists of small programs performing highly parallel computations.
-Can be run on variable number of threads. Has different sizes of workload to fit
-machines with wide range of performance.
-It's written in languages C and Fortran.
+Benchmarks are written in Fortran-90 or C language, beacause they were the most
+commonly used programming languages in scientific parallel computing community
+by the time they were created. They can be compiled with different classes of
+problem sizes to suit machines with different amount of memory and computational
+power.
+
+Many parameters can be passed to benchmark also before execution to tweak
+properties of behavior. One of them is number of computation thread, which in
+lower amount slowers the run time, but allows to measure behavior of system
+without full usage.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{obrazky-figures/nas}
+  \caption{Example of Scalar Penta-diagonal solver results from NAS Parallel with
+  different number of computational threads.}
+\end{figure}
 
 \subsection{SPECjbb2005}
 Java Business Benchmark behaves as a server-side Java application. It is primarily focused on measuring performance of Java implementation, but also reflects performance of operating system and cpu itself.
@@ -110,7 +127,8 @@ it allows user to quicky see the numbers without any processing of the data.
 
 \section{Boxplots}
 Boxplot is method for displaying statistical properties of data groups. The
-usually displayed values are minimum, 1\textsuperscript{st} quartile, median, 3\textsuperscript{rd} quartile and maximum.
+usually displayed values are minimum, 1\textsuperscript{st} quartile, median,
+3\textsuperscript{rd} quartile and maximum.
 This feature is useful to visualize accuaracy and reliability of measurement.
 Then it's easier to distinguish performance regression from noise.
 
@@ -137,6 +155,18 @@ performance degradation occured and where was fixed.
 With larger amount of data, there can also emerge performance drops, which
 appeared continuously over longer period of time and couldn't be spotted,
 because they were in tolerance due to deviation.
+
+\section{Result storage}
+Benchmark results are stored on filesystem in directories. Each result consists
+of two XML files with information and preprocessed main data from the test run,
+more files with larger complementary data from analysis tools and compressed
+original outputs from benchmark. First XML file contains metadata from the test
+run including time, machine hostname, kernel and OS version, benchmark name,
+configuration of environment, which could affect the result and few other data.
+The second XML file contains the important preprocessed data itself.
+
+The program has to go throgh all these results to choose the right ones for the
+following creation of graphs.
 
 
 \chapter{Automatic evaluation}
