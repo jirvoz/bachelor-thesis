@@ -191,6 +191,28 @@ Each of theese nodes then contain in them nodes with the rules.
 
 
 \chapter{Automatic evaluation}
+With every expansion of regular kernel testing rises the amount of produced
+results. With more machines with different configurations, benchmarks with
+different focus or baselines from different supported versions, number of results
+can rise with every new kernel version even by hundrets. This tends to automate
+the repetitive classification of results between pass and fail to leave results
+without significant change and focus on the ones with performance regressions.
+
+\section{Marking of results}
+To teach automatic classificator is essential large amount of data. To reduce
+time spent on marking of the passed and failed results I created a form in
+report to quicken this process.
+
+On machine for storing results is running simple server application for
+commiting requests from the form. The server is written in Python built on top
+of Flask framework. On request it finds given result and modifies its file with
+marking for learning.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{obrazky-figures/teaching_table}
+  \caption{Form from HTML comparison report page to mark data for machine learning}
+\end{figure}
 
 
 \chapter{Future work}
