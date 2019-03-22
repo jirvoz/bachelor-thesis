@@ -168,6 +168,27 @@ The second XML file contains the important preprocessed data itself.
 The program has to go throgh all these results to choose the right ones for the
 following creation of graphs.
 
+\section{Comparison rules}
+For automatic report generation are essential rules, which will specify results,
+that can be used and in which role. I chose \emph{regular expressions} to match
+properties of results. Regular expressions offer broad possibilities to describe
+shape of kernel version or just value of any evironment configuration. To filter
+all builds of kernel 4.18 works simple pattern \texttt{kernel-4.18\textbackslash
+..*}.
+
+To store the rules are stored in XML file with same node naming as in XML file
+with result properties. The first level of XML document contains three nodes
+representing purpose of rules.
+\begin{itemize}
+  \item \textbf{Baseline rules} specify the first result in plotted set. Acts as
+    main result others are compared to.
+  \item \textbf{Target rules} define the results to be plotted.
+  \item \textbf{Starting rules} are for case, when base result is not from
+    target set of results and specifying first target result with regex would be
+    hard.
+\end{itemize}
+Each of theese nodes then contain in them nodes with the rules.
+
 
 \chapter{Automatic evaluation}
 
