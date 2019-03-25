@@ -15,12 +15,29 @@ To achieve this there are many benchmarks targetting different types of load, us
 Good performance tests usually create great amount of data, which is required to be processed, aggregaed and visualised.
 
 \chapter{Linux process scheduling}
+Scheduler is part of operating system which assigns processor time to tasks.
+It's main goal is to maximize effectivity of CPU usage and fairness of assigned
+CPU time to each task.
+
+There are two opposing targets for scheduler - maximazing throughput, or
+latency. While user's workstation aims for low response time, computational
+servers require high throughput. Scheduler can be then tuned to fit the intended
+purpose.
 
 \section{Completely Fair Scheduler}
-Completely Fair Scheduler is process scheduler which replaced the O(1) scheduler
-in version 2.6.23 of Linux kernel. It orders processes using red-black tree where it
-chooses process with the lowest spent execution time.
-\texttt{https://en.wikipedia.org/wiki/Completely\_Fair\_Scheduler}
+Completely Fair Scheduler is current Linux process scheduler, merged into version
+2.6.23 of Linux kernel in 2007. Its author is Ingo Molnár, author of previous
+O(1) scheduler as well.
+
+It features queuing tasks in red-black tree structure ordered by the time spent
+running on CPU so far. When the scheduler needs to choose next task to run, it
+takes the leftmost node with lowest execution time. On multi-core systems it
+keeps own queue for each core, which must be balanced for efficient utilization
+of the system.
+
+Time complexity of CFS scheduling is O(log N). Taking the leftmost node with
+next task can be done in constant time, but queuing the task again requires
+O(log N) operations to insert it back to the red-black tree.
 
 Single processor is simple, problems come with NUMA nodes. Switching between
 nodes or reading from another is expensive.
