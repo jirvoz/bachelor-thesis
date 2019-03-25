@@ -39,10 +39,13 @@ Time complexity of CFS scheduling is O(log N). Taking the leftmost node with
 next task can be done in constant time, but queuing the task again requires
 O(log N) operations to insert it back to the red-black tree.
 
-Single processor is simple, problems come with NUMA nodes. Switching between
-nodes or reading from another is expensive.
-Another problem is when scheduler leaves cores idle, even where there are
-runnable threads waiting.
+\section{NUMA}
+With increasing amount of cores and arrival of multi-socket machines began
+coming up problems with bus bandwidth between CPUs and their common memory. This
+problem was solved with NUMA\footnote{Non-Uniform Memory Access} technology.
+Each processor or group of cores has its own memory and bus. However, accesing
+memory from other nodes is more expensive. The data must be transfered through
+interconnect bus or even controller.
 
 
 \chapter{Performance measurement}
