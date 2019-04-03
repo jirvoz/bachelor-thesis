@@ -77,31 +77,50 @@ To get a better insight on the system, there are many performance analysis tools
 \texttt{http://www.brendangregg.com/activebenchmarking.html}
 
 \section{Benchmarks}
+In this chapter we will list the benchmarks that are currently used to evaluate
+performance of latest kernel versions. The benchmarks are usually based on real
+applications used both in scientific and business environments.
+
+The benchmarks run in many threads or processes and feature communication
+between the instances. With bad distribution of processes and threads by the
+scheduler rises their time of waiting in the queue and the performance of the
+system goes down. On NUMA systems performance depends moreover on placement of
+data to the memory.
 
 \subsection{NAS Parallel Benchmarks}
-NAS Parallel Benchmarks is set of benchmarks focused on performance of highly
+NAS Parallel Benchmarks is a set of benchmarks focused on performance of highly
 parallel computations on supercomputers. In addition to floating point
-computations it targets communication and data movement between computation
-nodes. Performed algorithms are based on large scale computational fluid
+computations, it targets communication and data movement among computation
+nodes. The performed algorithms are based on large scale computational fluid
 dynamics at the Numerical Aerodynamic Simulation (NAS) Program which is based at
 NASA Ames Research Center.
 
-Benchmarks are written in Fortran-90 or C language, beacause they were the most
+Benchmarks are written in Fortran-90 or in C language, beacause these were the most
 commonly used programming languages in scientific parallel computing community
-by the time they were created. They can be compiled with different classes of
-problem sizes to suit machines with different amount of memory and computational
+at the time when the benchmarks were created. They can be compiled with different classes of
+problem sizes to suit machines with different amount of memory and of computational
 power.
 
-Many parameters can be passed to benchmark also before execution to tweak
-properties of behavior. One of them is number of computation thread, which in
-lower amount slowers the run time, but allows to measure behavior of system
-without full usage.
+Main output value of the benchmark is throughput measured in units called Mop/s
+(millions of operations per second) representing amount of floating-point
+operations per unit of time.
+
+The benchmark also offers a few parameters that can passed to the benchmark
+before the execution to tweak properties of behavior. One of them is a number of
+computation threads, which in a lower amount slowers the run time, but allows to
+measure behavior of the system without full usage. Figure \ref{fig:nas} shows
+throughput with different number of threads on machine with 24 phisical cores
+and Hyper-threading.
+
+Downside of this benchmark is it can only run with fixed dataset, but not for a
+fixed time period. This constraint makes the runtime of the benchmark with less threads longer
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{obrazky-figures/nas}
+  \includegraphics[width=12cm]{obrazky-figures/nas}
   \caption{Example of Scalar Penta-diagonal solver results from NAS Parallel with
-  different number of computational threads.}
+    different number of computational threads.}
+  \label{fig:nas}
 \end{figure}
 
 \subsection{SPECjbb2005}
