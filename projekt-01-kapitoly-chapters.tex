@@ -15,37 +15,60 @@ To achieve this there are many benchmarks targetting different types of load, us
 Good performance tests usually create great amount of data, which is required to be processed, aggregaed and visualised.
 
 \chapter{Linux process scheduling}
-Scheduler is part of operating system which assigns processor time to tasks.
-It's main goal is to maximize effectivity of CPU usage and fairness of assigned
+Scheduler is a part of an operating system which assigns the processor time to tasks.
+Its main goal is to maximize effectivity of the CPU usage and fairness of assigned
 CPU time to each task.
 
-There are two opposing targets for scheduler - maximazing throughput, or
-latency. While user's workstation aims for low response time, computational
-servers require high throughput. Scheduler can be then tuned to fit the intended
+There are two opposing targets for a scheduler - either maximazing throughput or
+minimizing latency. Lower amount of context switches leaves more CPU time for
+applications, but raises the response time on system events.
+While user's workstation aims for a low response time, computational servers
+require high throughput. Scheduler can be usually tuned to fit the intended
 purpose.
 
 \section{Completely Fair Scheduler}
-Completely Fair Scheduler is current Linux process scheduler, merged into version
-2.6.23 of Linux kernel in 2007. Its author is Ingo Molnár, author of previous
+Completely Fair Scheduler is the current Linux process scheduler, which was
+merged into the version
+2.6.23 of the Linux kernel in 2007. Its author is Ingo Molnár, who is author of previous
 O(1) scheduler as well.
 
-It features queuing tasks in red-black tree structure ordered by the time spent
-running on CPU so far. When the scheduler needs to choose next task to run, it
-takes the leftmost node with lowest execution time. On multi-core systems it
-keeps own queue for each core, which must be balanced for efficient utilization
-of the system.
+It features queuing tasks in a red-black tree structure ordered by the time spent
+running on the CPU so far. Red-black tree is a binary search
+tree with self-balancing mechanism based on marking nodes with either red or
+black color.
+When the scheduler needs to choose the next task to run, it
+takes the leftmost node with the lowest execution time. 
 
-Time complexity of CFS scheduling is O(log N). Taking the leftmost node with
-next task can be done in constant time, but queuing the task again requires
-O(log N) operations to insert it back to the red-black tree.
+The time complexity of the CFS scheduling is O(log N). Taking the leftmost node with
+the next task can be done in a constant time, but queuing the task again requires
+O(log N) operations to insert it back into the red-black tree. Even with the
+higher scheduling complexity, the CFS scheduler has better fairness and
+responsiveness than with O(1) scheduler, which used simple queue to choose the
+next task.
+
+On multi-core systems scheduler uses separate queue for each core. To effectivly
+use the processing power, scheduler must regularly balance those queues by
+moving processes from the most busy cores to idle ones.
+
+When moving processes between cores scheduler takes in account topology of the
+system. Loosing data from caches after migration can have a bigger impact on
+performance, than leaving the process on the busy core.
 
 \section{NUMA}
-With increasing amount of cores and arrival of multi-socket machines began
-coming up problems with bus bandwidth between CPUs and their common memory. This
-problem was solved with NUMA\footnote{Non-Uniform Memory Access} technology.
-Each processor or group of cores has its own memory and bus. However, accesing
-memory from other nodes is more expensive. The data must be transfered through
-interconnect bus or even controller.
+With an increasing amount of cores and arrival of the multi-socket machines
+appeared problems with bus bandwidth between CPUs and their common memory. This
+problem was solved with \emph{Non-Uniform Memory Access} (NUMA) technology.
+Each processor or group of cores has its own memory and bus. This allows higher
+access speed to the local memory of the processor, than on UMA systems with
+common bus. However, accesing memory from other nodes is more expensive. The
+data must be transfered through interconnect bus or even controller, which slows
+the system significantly.
+
+% TODO cite http://highscalability.com/blog/2013/5/30/google-finds-numa-up-to-20-slower-for-gmail-and-websearch.html
+Access to memory on another node or even moving the data is expensive and with
+wrong approach can cause worse performance, than Unified memory access systems.
+Balancing processes between NUMA nodes is still in active development, which
+brings many changes both to better or sometimes worse performance.
 
 
 \chapter{Performance measurement}
