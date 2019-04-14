@@ -19,7 +19,7 @@ Scheduler is a part of an operating system which assigns the processor time to t
 Its main goal is to maximize effectivity of the CPU usage and fairness of assigned
 CPU time to each task.
 
-There are two opposing targets for a scheduler - either maximazing throughput or
+There are two opposing targets for a scheduler: either maximazing throughput or
 minimizing latency. Lower amount of context switches leaves more CPU time for
 applications, but raises the response time on system events.
 While user's workstation aims for a low response time, computational servers
@@ -30,7 +30,7 @@ purpose.
 Completely Fair Scheduler is the current Linux process scheduler, which was
 merged into the version
 2.6.23 of the Linux kernel in 2007. Its author is Ingo Molnár, who is author of previous
-O(1) scheduler as well.
+\emph{O(1) scheduler} as well.
 
 It features queuing tasks in a red-black tree structure ordered by the time spent
 running on the CPU so far. Red-black tree is a binary search
@@ -45,6 +45,8 @@ O(log N) operations to insert it back into the red-black tree. Even with the
 higher scheduling complexity, the CFS scheduler has better fairness and
 responsiveness than with O(1) scheduler, which used simple queue to choose the
 next task.
+% CFS can also handle priority better: it requires only one queue instead of two
+% for each of 140 priorities in Linux for O(1)
 
 On multi-core systems scheduler uses separate queue for each core. To effectivly
 use the processing power, scheduler must regularly balance those queues by
@@ -54,10 +56,49 @@ When moving processes between cores scheduler takes in account topology of the
 system. Loosing data from caches after migration can have a bigger impact on
 performance, than leaving the process on the busy core.
 
-\section{NUMA}
-With an increasing amount of cores and arrival of the multi-socket machines
-appeared problems with bus bandwidth between CPUs and their common memory. This
-problem was solved with \emph{Non-Uniform Memory Access} (NUMA) technology.
+% Linux kernel book
+CFS solves this using scheduling domains. Scheduling domain is a set of CPUs
+that should be balanced between themselves.
+CPUs in scheduling domain are divided to groups. Scheduler checks load of the
+whole groups to decide if there is need to migrate processes between them.
+
+There are multiple levels of scheduling domains with different parameters like
+how often is the load difference checked or how big the load difference between
+groups must be to migrate tasks to balance the queues.
+The lowest level is between hyper-threaded logical cores where are almost no
+losses of cached data and rebalancing can be done very often.
+Higher level is between physical processor cores where have cache losses bigger
+impact on the decision. Above cores are NUMA nodes on machines with multiple
+physical processors with different access speed to their memory sections.
+
+Scheduling domains are regularly rebalanced by going up from bottom of the
+scheduling domain hiearchy checking balance of the groups on each level.
+
+\section{Scheduling on SMP systems}
+Symetric mutiprocessing (SMP) is an architecture of computer with multiple
+physical processors, that have single shared memory, access to all IO devices
+and run on the same instance of operating system. This allows the machine to
+offer more processing power with a little overhead with memory sharing. Each
+processor has still its own high speed cache, but with memory sharing there must
+be maintained \emph{cache coherence} -- the uniformity of data shared between
+processors in their caches.
+
+For the main shared memory there are two ways of accesing it from multiple
+processors: uniform (UMA) and non-uniform (NUMA) memory access.
+
+\subsection{Uniform memory access}
+In UMA architecture all processors share one memory controller they use to
+access shared memory. Each processor has the same speed of memory access and
+latency. They share one common access route to memory which brings more
+simplicity at the cost of lower bandwidth and speed.
+
+This architecture is easier for the scheduler to balance processes between
+the physical processors. The time to access the shared memory is same on all of
+the cores and there is no need to move the process memory to any other place for
+faster access.
+
+\subsection{Non-uniform memory access}
+The problem with low bandwidth tries to solve Non-Uniform Memory Access.
 Each processor or group of cores has its own memory and bus. This allows higher
 access speed to the local memory of the processor, than on UMA systems with
 common bus. However, accesing memory from other nodes is more expensive. The
