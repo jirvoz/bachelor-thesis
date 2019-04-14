@@ -72,9 +72,29 @@ brings many changes both to better or sometimes worse performance.
 
 
 \chapter{Performance measurement}
-A basic way to measure performance of system is benchmark. They return some numbers representing throughput of system, but can't tell more about the system behavior.
-To get a better insight on the system, there are many performance analysis tools to observe cpu and memory utilization, location of processes on cores or their time out of cpu.
-\texttt{http://www.brendangregg.com/activebenchmarking.html}
+Effectivity of task scheduling and their migration between processors affects
+the amount of the tasks the system can handle and the time a task spends before
+finishing.
+
+Benchmarks generate artificial load imitating the load in real envirnonment.
+While streesing the system they also measure the performance. Then the
+benchmarks return a value representing performance of the system. The value is
+usually in the form of time the task needed to finish or amount of operations
+the system could perform per unit of time.
+
+Although the benchmarks generate values that are suitable for comparison, they
+don't provide any more detailed information about how the system achieved the
+measured performance and where could be possible bottlenecks.
+
+To get better insight into the behavior of the system there are many tools to
+collect information about the system behavior. Useful informations of scheduler
+provide assignment of tasks to processor cores, the time the tasks spent out of
+CPU in queues, load of each processor core and the location om memory of the
+processes on NUMA systems. 
+% TODO cite http://www.brendangregg.com/activebenchmarking.html
+
+\section{Performance metrics}
+throughput
 
 \section{Benchmarks}
 In this chapter we will list the benchmarks that are currently used to evaluate
