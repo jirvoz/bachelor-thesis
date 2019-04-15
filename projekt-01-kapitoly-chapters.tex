@@ -205,10 +205,19 @@ LINPACK Benchmark comes from LINPACK package, wich was used to solve systems of 
 \section{Performance analysis tools}
 
 \subsection{time}
-Simple command, that can measure resource usage. Usually it's used to measure
-running time of process.
+Time is a simple command for measuring the time application spent running. The
+most common numbers it gives out are the total of real time application needed
+to finish, the time it spent in user mode and time spent in kernel mode.
 
-It isn't bash builtin, but programm, that must be usually called from /usr/bin/time.
+Many benchmarks provide the execution time themselves which can make this
+utility look useless. However the intersting information is difference between
+userspace and kernel time and the total execution time which is time that
+application spent out of the CPU waiting in queue.
+
+It can be confused with bash builtin command time, which provides simmilar
+information, but the real command can provide more verbose information with
+possibility of custom formating of output. It can be usually called from
+/usr/bin/time.
 
 \subsection{ps}
 This command lists current processes with information about them. In
