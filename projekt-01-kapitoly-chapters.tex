@@ -98,16 +98,56 @@ the cores and there is no need to move the process memory to any other place for
 faster access.
 
 \subsection{Non-uniform memory access}
-The problem with low bandwidth tries to solve Non-Uniform Memory Access.
-Each processor or group of cores has its own memory and bus. This allows higher
-access speed to the local memory of the processor, than on UMA systems with
-common bus. However, accesing memory from other nodes is more expensive. The
-data must be transfered through interconnect bus or even controller, which slows
-the system significantly.
+The problem with low bandwidth tries to solve the NUMA architecture.
+It groups physical processors or group of cores with their own separate memory
+and bus for faster access. This significantly improves overall memory throughput
+of the system with correct utilization.
 
-% TODO cite http://highscalability.com/blog/2013/5/30/google-finds-numa-up-to-20-slower-for-gmail-and-websearch.html
-Access to memory on another node or even moving the data is expensive and with
-wrong approach can cause worse performance, than Unified memory access systems.
+Nodes are also have to be connected to each other to access memory of other
+nodes. That is achieved with interconnecting buses or even controllers. Each
+manufacturer has its own technology implementing the interconnection
+technologies: Intel uses Ultra Path Interconnect which replaced its QuickPath
+Interconnect from older machines, AMD uses Infinity Fabric supersetting older
+HyperTransport.
+
+On bigger machines with larger amount of processors not every two processors are
+connected, but access the data through a path of connected ones. This can be
+seen on Figure \ref{fig:proliant} showing 8 NUMA node machine with advanced
+structure of interconnect buses and controllers.
+
+%Best Practices When Deploying Linux on DL980 4AA3-6556ENW.pdf
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{obrazky-figures/proliant}
+  \caption{Architecture of NUMA communication on HP ProLiant DL980}
+  \label{fig:proliant}
+\end{figure}
+
+Consequence of this is different latency between nodes which must be taken into
+account when balancing tasks between nodes. Difference of access latency between
+NUMA nodes for machine from Figure \ref{fig:proliant} shows part of output from
+command \texttt{numactl --hardware}:
+
+\begin{minipage}{\linewidth}
+\begin{verbatim}
+node distances:
+node 0 1 2 3 4 5 6 7
+0: 10 12 17 17 19 19 19 19
+1: 12 10 17 17 19 19 19 19
+2: 17 17 10 12 19 19 19 19
+3: 17 17 12 10 19 19 19 19
+4: 19 19 19 19 10 12 17 17
+5: 19 19 19 19 12 10 17 17
+6: 19 19 19 19 17 17 10 12
+7: 19 19 19 19 17 17 12 10
+\end{verbatim}
+\end{minipage}\\
+
+Balancing tasks between NUMA nodes is difficult for scheduler taking into
+account expensive memory movement or access to different nodes. With wrong
+approach the performance of NUMA system can even drop below the performance of
+similar UMA system\footnote{http://highscalability.com/blog/2013/5/30/google-finds-numa-up-to-20-slower-for-gmail-and-websearch.html}.
+
 Balancing processes between NUMA nodes is still in active development, which
 brings many changes both to better or sometimes worse performance.
 
