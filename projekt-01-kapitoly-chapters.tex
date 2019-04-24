@@ -269,24 +269,38 @@ LINPACK Benchmark comes from LINPACK package, wich was used to solve systems of 
 \section{Performance analysis tools}
 
 \subsection{time}
-Time is a simple command for measuring the time application spent running. The
-most common numbers it gives out are the total of real time application needed
-to finish, the time it spent in user mode and time spent in kernel mode.
+Time is a simple command for measuring the time that an application spent running. The
+most common numbers it gives out are the total of real time that the application needed
+to finish, the time that it spent in the user mode, and the time spent in the kernel mode.
 
 Many benchmarks provide the execution time themselves which can make this
-utility look useless. However the intersting information is difference between
-userspace and kernel time and the total execution time which is time that
-application spent out of the CPU waiting in queue.
+utility look useless. However the intersting information is the difference between
+the userspace and the kernel time and the total execution time, which is time that
+the application spent out of the CPU waiting in a queue.
 
-It can be confused with bash builtin command time, which provides simmilar
+It can be confused with bash builtin command \texttt{time}, which provides similar
 information, but the real command can provide more verbose information with
-possibility of custom formating of output. It can be usually called from
-/usr/bin/time.
+a possibility of custom formating of output. It can be usually called from
+\texttt{/usr/bin/time}.
 
 \subsection{ps}
-This command lists current processes with information about them. In
-\texttt{PSR} and \texttt{NUMA} column are useful informations of CPU and NUMA
-node number, where is the process running.
+Ps is Linux command, which is used to display about active processes. Its name
+stands for processes status. It can provide various information obtainable from
+the virtual files in \texttt{/proc} directory. The most common information
+include their PID, time spent on processor, state of the process, used memory,
+associated terminal, the command that started the process and more.
+
+Especially useful are optional columns \texttt{PSR} and \texttt{NUMA}. They
+show the number of processor and the number of NUMA node where the process is
+running. Continuous monitoring of those values can provide view on migration of
+the process during its run time. 
+
+Output of the command can be filtered in many ways. By default it shows only
+processes from the current user and the current terminal, but it can list all
+the processes on the system. The listing can be filtered using parameters by
+most of the columns of information it provides. The listing can be limited for
+instance by specific terminal, effective user, children of a specified process
+or PID to single intended process.
 
 \subsection{mpstat}
 
