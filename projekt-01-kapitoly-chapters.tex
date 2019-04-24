@@ -16,63 +16,75 @@ Good performance tests usually create great amount of data, which is required to
 
 \chapter{Linux process scheduling}
 Scheduler is a part of an operating system which assigns the processor time to tasks.
-Its main goal is to maximize effectivity of the CPU usage and fairness of assigned
-CPU time to each task.
+Its main goal is to maximize effectivity of the CPU usage and fairness of the
+CPU time assigned to each task.
 
-There are two opposing targets for a scheduler: either maximazing throughput or
+There are two opposing targets for a scheduler: either maximizing throughput or
 minimizing latency. Lower amount of context switches leaves more CPU time for
-applications, but raises the response time on system events.
+tasks, but raises the response time on system events.
 While user's workstation aims for a low response time, computational servers
 require high throughput. Scheduler can be usually tuned to fit the intended
 purpose.
 
+In this chapter we describe basic behavior of Linux process scheduler. Then we
+compare uniform and non-uniform memory access on multiprocessor architectures
+and how scheduler handles them.
+
 \section{Completely Fair Scheduler}
 Completely Fair Scheduler is the current Linux process scheduler, which was
-merged into the version
-2.6.23 of the Linux kernel in 2007. Its author is Ingo Molnár, who is author of previous
-\emph{O(1) scheduler} as well.
+merged into the version 2.6.23 of the Linux kernel in 2007. Its author is Ingo
+Molnár, who is the author of the previous \emph{O(1) scheduler} as well.
 
-It features queuing tasks in a red-black tree structure ordered by the time spent
+It features queuing tasks in a red-black tree structure ordered by time spent
 running on the CPU so far. Red-black tree is a binary search
 tree with self-balancing mechanism based on marking nodes with either red or
 black color.
 When the scheduler needs to choose the next task to run, it
 takes the leftmost node with the lowest execution time. 
 
-The time complexity of the CFS scheduling is O(log N). Taking the leftmost node with
-the next task can be done in a constant time, but queuing the task again requires
-O(log N) operations to insert it back into the red-black tree. Even with the
-higher scheduling complexity, the CFS scheduler has better fairness and
-responsiveness than with O(1) scheduler, which used simple queue to choose the
-next task.
+The time complexity of the CFS scheduling is O(log N). Taking the leftmost node
+with the next task can be done in a constant time, but queuing the task again
+requires O(log N) operations to insert it back into the red-black tree. Even
+with a higher scheduling complexity, the CFS scheduler has a better fairness and
+responsiveness than the previous O(1) scheduler, which used a simple queue to
+choose the next task.
 % CFS can also handle priority better: it requires only one queue instead of two
 % for each of 140 priorities in Linux for O(1)
 
-On multi-core systems scheduler uses separate queue for each core. To effectivly
-use the processing power, scheduler must regularly balance those queues by
-moving processes from the most busy cores to idle ones.
+On multi-core systems, the scheduler uses a separate queue for each core. In
+order to effectively use the processing power, the scheduler must regularly
+balance those queues by moving processes from the most busy cores to idle ones.
 
-When moving processes between cores scheduler takes in account topology of the
-system. Loosing data from caches after migration can have a bigger impact on
-performance, than leaving the process on the busy core.
+When moving processes between cores, scheduler takes in the account a topology
+of the system. Loosing data from caches after a migration can have a bigger
+impact on performance than leaving the process on the busy core.
 
 % Linux kernel book
-CFS solves this using scheduling domains. Scheduling domain is a set of CPUs
-that should be balanced between themselves.
-CPUs in scheduling domain are divided to groups. Scheduler checks load of the
-whole groups to decide if there is need to migrate processes between them.
+CFS solves this problem by using scheduling domains. Scheduling domain is a set
+of CPUs that should be balanced between themselves. CPUs in a scheduling domain
+are divided into groups. Scheduler checks load of the whole groups to decide if
+there is a need to migrate processes between them.
 
-There are multiple levels of scheduling domains with different parameters like
+There are multiple levels of scheduling domains with different parameters such as
 how often is the load difference checked or how big the load difference between
 groups must be to migrate tasks to balance the queues.
 The lowest level is between hyper-threaded logical cores where are almost no
 losses of cached data and rebalancing can be done very often.
-Higher level is between physical processor cores where have cache losses bigger
-impact on the decision. Above cores are NUMA nodes on machines with multiple
-physical processors with different access speed to their memory sections.
+A higher level is between physical processor cores where  cache losses can have
+bigger impact on the decision.
+Above cores can be processor sockets on machines with multiple physical
+processors with different access speed to different memory sections.
 
 Scheduling domains are regularly rebalanced by going up from bottom of the
-scheduling domain hiearchy checking balance of the groups on each level.
+scheduling domain hierarchy and by checking balance of the groups on each level.
+
+% https://lwn.net/Articles/764482/
+\begin{figure}
+  \centering
+  \includegraphics[width=4cm]{obrazky-figures/sched-domains}
+  \caption{Hiearchy of scheduling domains}
+  \label{fig:sched-dom}
+\end{figure}
 
 \section{Scheduling on SMP systems}
 Symetric mutiprocessing (SMP) is an architecture of computer with multiple
