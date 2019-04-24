@@ -165,25 +165,37 @@ brings many changes both to better or sometimes worse performance.
 
 
 \chapter{Performance measurement}
-Effectivity of task scheduling and their migration between processors affects
-the amount of the tasks the system can handle and the time a task spends before
-finishing.
+Performance testing is examination of the system behavior under workload and its
+effectivity of resource usage. Many systems depend on the time they are able to
+respond and this property affects the usability of th system.
 
-Benchmarks generate artificial load imitating the load in real envirnonment.
-While streesing the system they also measure the performance. Then the
-benchmarks return a value representing performance of the system. The value is
-usually in the form of time the task needed to finish or amount of operations
-the system could perform per unit of time.
+Compared to functional testing, performance testing does not produce exact true
+or false result. It produces set of numerical values which must be compared to
+pressumed values or values from other version to make a conclusion.
+
+Next step is inspection of behavior of the system to understand the measured
+values and determine the causes of the difference from the expected values.
+
+For evaluation of system performance are usually used benchmarks.
+Benchmarks generate artificial load imitating the load in real environment.
+While stressing the system they also measure the performance. The benchmarks
+typically return a value representing the performance of the system. The value
+is usually in the form of the time that the task needed to finish or amount of
+the operations that the system could perform per a unit of time.
+
+Effectivity of task scheduling and of their migration between processors affects
+the amount of the tasks that the system can handle and the time that a task
+spends before finishing.
 
 Although the benchmarks generate values that are suitable for comparison, they
-don't provide any more detailed information about how the system achieved the
-measured performance and where could be possible bottlenecks.
+do not provide any more detailed information about how the system achieved the
+measured performance and where could be some possible bottlenecks.
 
-To get better insight into the behavior of the system there are many tools to
-collect information about the system behavior. Useful informations of scheduler
-provide assignment of tasks to processor cores, the time the tasks spent out of
-CPU in queues, load of each processor core and the location om memory of the
-processes on NUMA systems. 
+To get a better insight into the behavior of the system, there are many tools to
+collect information about the system behavior. Useful informations about the
+scheduler include assignment of tasks to the processor cores, the time that the
+tasks spent out of the CPU in queues, load of each processor core, and the
+location of memory of the processes on NUMA systems.
 % TODO cite http://www.brendangregg.com/activebenchmarking.html
 
 \section{Performance metrics}
