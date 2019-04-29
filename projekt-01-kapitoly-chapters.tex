@@ -332,8 +332,45 @@ it allows user to quicky see the numbers without any processing of the data.
 
 
 \chapter{Displaying the results}
+\section{Heat maps}
+Heat maps are three dimensional graphs which are using color as the third
+dimension for values. This allows to plot two dependencies of the values
+compared to line graphs, which must use multiple lines to plot the same data.
+Heatmapy škálují pro velké data. 
+Data jsou kvantizovány do bucketů.
 
-\section{Heatmaps}
+In the Figure \ref{fig:heatmap} is heat map showing utilization of all CPU cores over
+time under workload. The data were collected by mpstat utility and processed to
+show sum of user and kernel space utilization of each core. Plotting those data
+using line graph with a line for every core would be confusing even for this
+relatively small amount of CPUs.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{obrazky-figures/heatmap}
+  \caption{Example of heat map showing CPU utilization over time. The machine
+    with 24 logical CPUs is under workload from NAS Parallel benchmark running
+    in 16 threads.}
+  \label{fig:heatmap}
+\end{figure}
+
+Another use of heat map is shown in Figure \ref{fig:numa_heatmap}. It does not
+show utilization of threads, but their location on which NUMA node they are.
+This heat map shows the migration of threads between NUMA nodes and the expected
+result is not the highest value, but minimum of color changes in each line. The
+shown data comes from NAS Parallel benchmark, which was run with 16 and 24
+threads in 5 loops. The heat map shows better scheduler behavior on the 16
+threads run than on the 24 threads run.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{obrazky-figures/numa_heatmap}
+  \caption{Example of heat map showing thread migration between NUMA nodes. The
+    expected result is not the highest value, but minimum of color changes in
+    each line. The shown result comes from machine with 24 logical CPUs running
+    NAS Parallel benchmark on 16 and 24 threads in 5 loops.}
+  \label{fig:numa_heatmap}
+\end{figure}
 
 \section{Boxplots}
 Boxplot is method for displaying statistical properties of data groups. The
