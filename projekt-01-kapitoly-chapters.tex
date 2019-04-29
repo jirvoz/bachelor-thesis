@@ -495,6 +495,51 @@ marking for learning.
   \caption{Form from HTML comparison report page to mark data for machine learning}
 \end{figure}
 
+\section{Used technologies}
+For classification we will use library scikit-learn for python3. Scikit-learn is
+simple library for data analysis and machine learning with BSD open source
+license. It is easy to use with fast learning curve and well documented. It is
+good choice for small and medium sized projects that do not need massive
+scalability. It provides various algorithms for classification, regression and
+clustering built on NumPy and SciPy python libraries.
+
+Unlike other machine learning libraries like PyTorch and TensorFlow the
+scikit-learn library does not focus on deep neural networks for larger and
+advanced problems. It provides more simple classificators for easier problems
+with smaller datasets where advanced methods would not have enough training
+data.
+
+\section{Reading the results}
+Learning data come as an XML file containing preprocessed data from
+base and target run of the benchmark which are marked as passed or failed.
+
+Record of each benchmark operation is marked as pass or fail and contains
+records of runs with different amount of threads or processes. Those records
+contain median, minimum, maximum and quartiles form the repeated runs of the
+configuration. The root element contains UUIDs of the comparison and its base
+and target results for easier tracing in case of suspicious values.
+
+Here is an example of data for the teaching of classificators:
+\begin{verbatim}
+<comparison_results base_uuid="..." report_uuid="..." target_uuid="...">
+  <comparison_result benchmark_name="NASParallel"
+      operation_name="bt_C_x" result_status="pass">
+    <Result median_diff="1" threads_no="4">
+      <base_result first_q="7409.2" max="7507.0" mean="7451.7"
+        median="7456.5" min="7406.4" stdev="39.2" third_q="7479.3" />
+      <target_result first_q="7503.0" max="7597.5" mean="7513.1"
+        median="7522.2" min="7404.8" stdev="62.7" third_q="7537.8" />
+    </Result>
+    <Result median_diff="0" threads_no="8">
+      <base_result first_q="14330.8" max="14740.1" mean="14476.6"
+        median="14469.1" min="14325.9" stdev="151.7" third_q="14517.2" />
+      <target_result first_q="14494.5" max="14619.3" mean="14481.1"
+        median="14521.6" min="14233.7" stdev="130.5" third_q="14536.5" />
+    </Result>
+...
+\end{verbatim}
+
+\section{Preprocessing for learning}
 
 %\chapter{Future work}
 
