@@ -324,9 +324,43 @@ accesing required data.
 
 \section{XML files}
 XML is markup language, that can store heterogeneous data in tree structure.
-However, the main feature of this format is human-readability. Even with the
-inefficient storage of numerical data and repetition of tag and attribute names,
-it allows user to quicky see the numbers without any processing of the data.
+The tree structure can effectively represent the test scenario running each
+benchmark operation with different parameters and multiple repetitions.
+
+Another feature of XML format is human-readability offering quick insight to stored
+data just with any text editor.
+This comes with a disadvantage of redundant data in form of repeated names of
+tags and attributes which often take more space than the data itself. Parsing of
+the data also take considerable amount of CPU time prolonging the duration of
+analysis.
+
+Example of results stored in XML format:
+\begin{verbatim}
+<?xml version="1.0"?>
+<BeakerRunResult>
+ <TestResult>
+  <NASResult benchmarkName="lu_C_x">
+   <threads number="002">
+    <result timeReal="293.764" timeOutOfCPU="10.789" mops="7016.79"/>
+    <result timeReal="291.454" timeOutOfCPU="7.086" mops="7075.39"/>
+    <result timeReal="290.403" timeOutOfCPU="7.844" mops="7096.21"/>
+    <result timeReal="288.959" timeOutOfCPU="4.079" mops="7131.56"/>
+    <result timeReal="289.642" timeOutOfCPU="4.644" mops="7118.24"/>
+   </threads>
+   <threads number="004">
+    <result timeReal="153.149" timeOutOfCPU="12.688" mops="13462.15"/>
+    <result timeReal="154.477" timeOutOfCPU="18.743" mops="13344.54"/>
+...
+\end{verbatim}
+This example shows beginning of XML file with important values from one NAS
+Parallel benchmark run scenario. The XML file starts with root element
+\texttt{<BeakerRunResult>} and \texttt{<TestResult>} node which are wrapping
+\texttt{<NASResult>} nodes representing results from each benchmark operation
+from NAS Parallel benchmark suite. Each benchmark operation is run with
+different amount of threads in few loops to lower the measurement inaccuracy.
+Nodes of results with the same number of threads are wrapped in
+\texttt{<threads>} node. All the values are stored as attributes of the
+corresponding node.
 
 \section{Database}
 
