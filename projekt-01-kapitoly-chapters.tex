@@ -305,7 +305,19 @@ or PID to single intended process.
 \subsection{mpstat}
 
 \subsection{turbostat}
-This tool provides measuring of CPU usage and mainly its frequency.
+This tool provides measuring hardware properties of the CPUs with x86
+architecture. It reports for each core its usage, frequency, temperature,
+percentage of time in idle states. For each socket it reports power consumption.
+
+There are two ways to run turbostat. It can be supplied with a command to run
+and it will return the average values from the run time of the command. Without
+the command it will collect the statistics at regular time intervals.
+
+Data from this tool can be used to analyze performance drop caused by CPU
+itself. It can be due to frequency drop because of overheating or missing
+workload. The power consumption data can be used to roughly compare the power
+efficiency of both scheduler and physical CPUs, but provide only consumption of
+the CPUs and their RAM and not the whole machine.
 
 \subsection{perf}
 
