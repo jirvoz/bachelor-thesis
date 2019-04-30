@@ -303,6 +303,17 @@ instance by specific terminal, effective user, children of a specified process
 or PID to single intended process.
 
 \subsection{mpstat}
+This Linux command provides continuous information about utilization of CPUs. It
+can show utilization of processor cores, NUMA nodes or the whole system
+dependent on passed argument. Some of the provided values are utilization in
+user space, utilization in kernel space, percentage of waiting for IO
+operations, percentage of handling interrupt requests and the idle percentage,
+when system is idle and does not wait for any IO operation.
+
+Mpstat can collect those data once when executed or at regular time intervals.
+The regular collecting of utilization of the CPU cores or NUMA nodes through the
+run time of benchmark. With little processing of the data is easy to watch the
+equal or unequal distribution of load between the cores and NUMA nodes.
 
 \subsection{turbostat}
 This tool provides measuring hardware properties of the CPUs with x86
