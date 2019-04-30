@@ -199,18 +199,20 @@ location of memory of the processes on NUMA systems.
 % TODO cite http://www.brendangregg.com/activebenchmarking.html
 
 \section{Performance metrics}
+run time
+
 throughput
 
 \section{Benchmarks}
-In this chapter we will list the benchmarks that are currently used to evaluate
-performance of latest kernel versions. The benchmarks are usually based on real
-applications used both in scientific and business environments.
+In this chapter we will describe the benchmarks that are currently used to evaluate
+performance of the latest kernel versions. The benchmarks are usually based on real
+applications used both in scientific and in business environments.
 
 The benchmarks run in many threads or processes and feature communication
-between the instances. With bad distribution of processes and threads by the
-scheduler rises their time of waiting in the queue and the performance of the
-system goes down. On NUMA systems performance depends moreover on placement of
-data to the memory.
+between the INSTANCES. A bad distribution of processes and threads by the
+scheduler causes their time of waiting in the queue to rise and the performance of the
+system to go down. Moreover, on NUMA systems, the performance depends on placement of
+data in the memory.
 
 \subsection{NAS Parallel Benchmarks}
 NAS Parallel Benchmarks is a set of benchmarks focused on performance of highly
@@ -220,25 +222,26 @@ nodes. The performed algorithms are based on large scale computational fluid
 dynamics at the Numerical Aerodynamic Simulation (NAS) Program which is based at
 NASA Ames Research Center.
 
-Benchmarks are written in Fortran-90 or in C language, beacause these were the most
+Benchmarks are written in Fortran-90 or in C language, because these were the most
 commonly used programming languages in scientific parallel computing community
 at the time when the benchmarks were created. They can be compiled with different classes of
 problem sizes to suit machines with different amount of memory and of computational
 power.
 
-Main output value of the benchmark is throughput measured in units called Mop/s
-(millions of operations per second) representing amount of floating-point
+The main output value of the benchmark is throughput measured in units called Mop/s
+(millions of operations per second) representing the amount of floating-point
 operations per unit of time.
 
-The benchmark also offers a few parameters that can passed to the benchmark
-before the execution to tweak properties of behavior. One of them is a number of
+The benchmark also offers a few parameters that can be passed to the benchmark
+before the execution to tweak properties of its behavior. One of them is a number of
 computation threads, which in a lower amount slowers the run time, but allows to
 measure behavior of the system without full usage. Figure \ref{fig:nas} shows
-throughput with different number of threads on machine with 24 phisical cores
+an example of a throughput with different number of threads on a machine with 24 physical cores
 and Hyper-threading.
 
-Downside of this benchmark is it can only run with fixed dataset, but not for a
-fixed time period. This constraint makes the runtime of the benchmark with less threads longer
+A downside of this benchmark is it can only run with a fixed dataset, but not for a
+fixed time period. This constraint makes the run time of the benchmark with less
+threads longer.
 
 \begin{figure}
   \centering
@@ -249,20 +252,26 @@ fixed time period. This constraint makes the runtime of the benchmark with less 
 \end{figure}
 
 \subsection{SPECjbb2005}
-Java Business Benchmark behaves as a server-side Java application. It is primarily focused on measuring performance of Java implementation, but also reflects performance of operating system and cpu itself.
-It models system of wholesale company as a multitier application. The benchmark
-itself creates the load, measures the throughput and also generates simple
+Java Business Benchmark behaves as a server-side Java application. It is
+primarily focused on measuring performance of Java implementation, but it also
+reflects performance of operating system and of the CPU itself.
+It models a system of a wholesale company as a multitier application. The benchmark
+itself creates the load, measures the throughput, and also generates a simple
 report in HTML and raw text formats.
 
-The main output value is \emph{throughput} in units called \emph{SPECjbb2005
-  bops} \footnote{Business operations per second}.
-In case of using more JVM instances, there is a second unit called SPECjbb2005
-bops/JVM representing average throughput of single JVM\footnote{Java virtual machine} instance.
-Another collected metric is memory comsumption, which isn't that useful in
-scheduler performance monitoring.
+The main output value is \emph{throughput} measured in units called
+\emph{SPECjbb2005 bops} \footnote{Business operations per second}. In case of
+using more JVM\footnote{Java virtual machine} instances, there is a second unit
+called SPECjbb2005 bops/JVM representing an average throughput of a single JVM
+instance. Another collected metric is memory a consumption, which isn't that
+useful in scheduler performance monitoring.
+
+\subsection{SPECjvm2008}
+SPECjvm2008 is benchmark primarily focused on performance of Java Virtual
+Machine, but its results can reflect performance of the scheduler.
 
 \subsection{LINPACK benchmark}
-LINPACK Benchmark comes from LINPACK package, wich was used to solve systems of linear equations in single or double precision.
+LINPACK Benchmark comes from LINPACK package, which was used to solve systems of linear equations in single or double precision.
 
 \subsection{Stream benchmark}
 
