@@ -87,61 +87,74 @@ scheduling domain hierarchy and by checking balance of the groups on each level.
 \end{figure}
 
 \section{Scheduling on SMP systems}
-Symetric mutiprocessing (SMP) is an architecture of computer with multiple
-physical processors, that have single shared memory, access to all IO devices
-and run on the same instance of operating system. This allows the machine to
-offer more processing power with a little overhead with memory sharing. Each
-processor has still its own high speed cache, but with memory sharing there must
-be maintained \emph{cache coherence} -- the uniformity of data shared between
-processors in their caches.
+Symmetric multiprocessing (SMP) is an architecture of computers with multiple
+physical processors that have a single shared memory, a shared access to all IO
+devices, and that run on the same instance of operating system. This allows the
+machine to offer more processing power with a little overhead caused by memory
+sharing.
 
-For the main shared memory there are two ways of accesing it from multiple
-processors: uniform (UMA) and non-uniform (NUMA) memory access.
+Each processor has still its own high speed cache, but due to memory sharing,
+\emph{cache coherence} must be maintained -- the data shared between processors
+in their caches must be uniform.
+
+There are two ways of accessing the shared memory from multiple processors:
+uniform (UMA) and non-uniform (NUMA) memory access.
 
 \subsection{Uniform memory access}
-In UMA architecture all processors share one memory controller they use to
-access shared memory. Each processor has the same speed of memory access and
-latency. They share one common access route to memory which brings more
-simplicity at the cost of lower bandwidth and speed.
+In the UMA architecture, all processors share a single memory controller that
+they use to access the shared memory. Therefore, each processor has the same
+speed of memory access and the same latency. They share a common access route to
+the memory, which brings more simplicity at the cost of a lower bandwidth and
+speed.
 
-This architecture is easier for the scheduler to balance processes between
-the physical processors. The time to access the shared memory is same on all of
-the cores and there is no need to move the process memory to any other place for
-faster access.
+In this architecture, it is easier for the scheduler to balance processes
+between the physical processors. The time to access the shared memory is same on
+all of the cores and therefore there is no need to move the memory associated
+with a process to any other place for faster access.
 
 \subsection{Non-uniform memory access}
-The problem with low bandwidth tries to solve the NUMA architecture.
-It groups physical processors or group of cores with their own separate memory
-and bus for faster access. This significantly improves overall memory throughput
-of the system with correct utilization.
+The NUMA architecture tries to solve the problem with low bandwidth.
+It arranges physical processors or cores into nodes, where each node has its
+own separate memory and a bus for faster access. This significantly improves
+overall memory throughput of the system when used correctly.
 
 Nodes are also have to be connected to each other to access memory of other
-nodes. That is achieved with interconnecting buses or even controllers. Each
-manufacturer has its own technology implementing the interconnection
-technologies: Intel uses Ultra Path Interconnect which replaced its QuickPath
-Interconnect from older machines, AMD uses Infinity Fabric supersetting older
-HyperTransport.
+nodes. That is achieved using either interconnecting buses or controllers. Each
+manufacturer has its own technology implementing the interconnection: Intel uses
+Ultra Path Interconnect which replaced its QuickPath Interconnect from older
+machines, AMD uses Infinity Fabric supersetting the older HyperTransport.
 
-On bigger machines with larger amount of processors not every two processors are
-connected, but access the data through a path of connected ones. This can be
-seen on Figure \ref{fig:proliant} showing 8 NUMA node machine with advanced
-structure of interconnect buses and controllers.
+On bigger machines with the large amount of processors, not every two processors
+are necessarily connected. Instead, they may but access the data through a path
+of connected ones. This can be seen on Figure \ref{fig:proliant} showing an 8
+NUMA node machine with an advanced structure of interconnect buses and
+controllers.
 
 %Best Practices When Deploying Linux on DL980 4AA3-6556ENW.pdf
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{obrazky-figures/proliant}
-  \caption{Architecture of NUMA communication on HP ProLiant DL980}
+  \caption{Architecture of NUMA communication on HP ProLiant DL980. Each
+    processor connected with its own local memory makes up a NUMA node. Each
+    pair of nodes have dedicated interconnect bus for faster data transfer
+    between them. Communication with other nodes is realized through node
+    controllers. The topology of the interconnect buses shows there will be 4
+    different access speeds depending on the distance between nodes. The local
+    access will is the fastest, then the access to the neighbor node, access
+    through one controller and the slowest access through both controllers. The
+    interconnect buses are doubled to avoid overloading one of them.}
   \label{fig:proliant}
 \end{figure}
 
-Consequence of this is different latency between nodes which must be taken into
-account when balancing tasks between nodes. Difference of access latency between
-NUMA nodes for machine from Figure \ref{fig:proliant} shows part of output from
-command \texttt{numactl --hardware}:
+Consequence of interconnection between NUMA nodes is different latency between
+nodes which must be taken into account when balancing tasks between nodes.
+Difference in the access latency between pair of NUMA nodes for the machine from
+Figure \ref{fig:proliant} can be seen in a part of output from a command
+\verb|numactl --hardware|:
 
 \begin{minipage}{\linewidth}
 \begin{verbatim}
+
 node distances:
 node 0 1 2 3 4 5 6 7
 0: 10 12 17 17 19 19 19 19
