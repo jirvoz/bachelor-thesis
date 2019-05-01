@@ -155,13 +155,24 @@ node 0 1 2 3 4 5 6 7
 \end{verbatim}
 \end{minipage}\\
 
-Balancing tasks between NUMA nodes is difficult for scheduler taking into
-account expensive memory movement or access to different nodes. With wrong
-approach the performance of NUMA system can even drop below the performance of
-similar UMA system\footnote{http://highscalability.com/blog/2013/5/30/google-finds-numa-up-to-20-slower-for-gmail-and-websearch.html}.
+Balancing tasks between NUMA nodes is difficult for the scheduler since it needs
+to take into account an expensive memory movement or access to different nodes.
+With a wrong approach the performance of a NUMA system can drop even below the
+performance of a similar UMA
+system\footnote{http://highscalability.com/blog/2013/5/30/google-finds-numa-up-to-20-slower-for-gmail-and-websearch.html}.
 
 Balancing processes between NUMA nodes is still in active development, which
-brings many changes both to better or sometimes worse performance.
+brings many changes. These usually improve performance, however, there are cases
+when a change can cause a performance regression. Therefore, it is essential to
+carry out a thorough performance testing of the scheduling.
+
+% TODO task can be pinned
+
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=15cm]{obrazky-figures/lstopo}
+%   \caption{Topology of 4 NUMA node machine generated using lstopo utility}
+% \end{figure}
 
 
 \chapter{Performance measurement}
