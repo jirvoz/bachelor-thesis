@@ -462,18 +462,26 @@ threads run than on the 24 threads run.
   \label{fig:numa_heatmap}
 \end{figure}
 
-\section{Boxplots}
-Boxplot is method for displaying statistical properties of data groups. The
-usually displayed values are minimum, 1\textsuperscript{st} quartile, median,
-3\textsuperscript{rd} quartile and maximum.
-This feature is useful to visualize accuaracy and reliability of measurement.
-Then it's easier to distinguish performance regression from noise.
+\section{Box plots}
+Box plot is method for displaying statistical properties of data from multiple
+measurements. It extends the simple visualization of discrete values by adding
+to the median values also the minimum and maximum measured values and first and
+third quartiles from the measurement. In special cases are also added marks for
+99\textsuperscript{th} or similar percentile relevant for the given case.
+
+All the displayed values shows the accuracy and reliability of measurement. This
+insight helps to distinguish real performance regression from noise caused by
+unpredictable behavior of the scheduler and measurement error.
+
+In the Figure \ref{fig:boxplot} is an example of box plot showing throughput
+measured by NAS benchmark with different number of threads.  
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{obrazky-figures/boxplot}
-  \caption{Example of boxplot showing Mops of NAS benchmark with different
-    number of threads}
+  \caption{Example of boxplot showing throughput measured by NAS benchmark from
+    multiple measurements with different number of threads.}
+  \label{fig:boxplot}
 \end{figure}
 
 
