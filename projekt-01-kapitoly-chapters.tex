@@ -532,24 +532,24 @@ representing purpose of rules.
     target set of results and specifying first target result with regex would be
     hard.
 \end{itemize}
-Each of theese nodes then contain in them nodes with the rules.
+Each of these nodes then contain in them nodes with the rules.
 
 
 \chapter{Automatic evaluation}
 With every expansion of regular kernel testing rises the amount of produced
 results. With more machines with different configurations, benchmarks with
 different focus or baselines from different supported versions, number of results
-can rise with every new kernel version even by hundrets. This tends to automate
+can rise with every new kernel version even by hundreds. This tends to automate
 the repetitive classification of results between pass and fail to leave results
 without significant change and focus on the ones with performance regressions.
 
 \section{Marking of results}
-To teach automatic classificator is essential large amount of data. To reduce
+To teach automatic classifier is essential large amount of data. To reduce
 time spent on marking of the passed and failed results I created a form in
 report to quicken this process.
 
 On machine for storing results is running simple server application for
-commiting requests from the form. The server is written in Python built on top
+committing requests from the form. The server is written in Python built on top
 of Flask framework. On request it finds given result and modifies its file with
 marking for learning.
 
@@ -558,6 +558,29 @@ marking for learning.
   \includegraphics[width=12cm]{obrazky-figures/teaching_table}
   \caption{Form from HTML comparison report page to mark data for machine learning}
 \end{figure}
+
+\section{Human classification of results}
+There are quite many results to check with every new tested kernel. The test
+suite with the Linpack, Stream, NAS Parellel and SPEC benchmarks are run on more
+than eight machines with different amount of NUMA nodes and processor models.
+Man has to go through the reports and check the results of all the benchmarks
+with different configurations.
+
+When looking at results of benchmark operation, the most important values are
+medians from runs with different amount of threads. Unfortunately, due to noise in measurement
+and limited amount of repeated runs the medians can be significantly affected by
+the noise. This complication brings the need of more detailed inspection of
+results than just watching difference in medians of results.
+
+Another useful data are minimum, maximum and quartile values from each
+measurement. They reveal the stability of the benchmark and the measurement
+noise. With those values it is much easier and more accurate telling the
+measurement noise from performance regression. With similar minimum, maximum and
+quartile values the performance can be the same even with difference in median values.
+
+The threshold between noise and performance regression is considered as 5\%
+difference between base and target measurement but varies by the stability of
+each benchmark and complexity of the machine it was run on.
 
 \section{Used technologies}
 For classification we will use library scikit-learn for python3. Scikit-learn is
@@ -569,7 +592,7 @@ clustering built on NumPy and SciPy python libraries.
 
 Unlike other machine learning libraries like PyTorch and TensorFlow the
 scikit-learn library does not focus on deep neural networks for larger and
-advanced problems. It provides more simple classificators for easier problems
+advanced problems. It provides more simple classifiers for easier problems
 with smaller datasets where advanced methods would not have enough training
 data.
 
@@ -583,7 +606,7 @@ contain median, minimum, maximum and quartiles form the repeated runs of the
 configuration. The root element contains UUIDs of the comparison and its base
 and target results for easier tracing in case of suspicious values.
 
-Here is an example of data for the teaching of classificators:
+Here is an example of data for the teaching of classifiers:
 \begin{verbatim}
 <comparison_results base_uuid="..." report_uuid="..." target_uuid="...">
   <comparison_result benchmark_name="NASParallel"
