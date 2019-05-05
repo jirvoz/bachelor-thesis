@@ -81,7 +81,7 @@ scheduling domain hierarchy and by checking balance of the groups on each level.
 % https://lwn.net/Articles/764482/
 \begin{figure}
   \centering
-  \includegraphics[width=4cm]{obrazky-figures/sched-domains}
+  \includegraphics[width=4cm]{sched-domains}
   \caption{Hiearchy of scheduling domains}
   \label{fig:sched-dom}
 \end{figure}
@@ -133,7 +133,7 @@ controllers.
 %Best Practices When Deploying Linux on DL980 4AA3-6556ENW.pdf
 \begin{figure}
   \centering
-  \includegraphics[width=14cm]{obrazky-figures/proliant}
+  \includegraphics[width=14cm]{proliant}
   \caption{Architecture of NUMA communication on HP ProLiant DL980. Each
     processor connected with its own local memory makes up a NUMA node. Each
     pair of nodes have dedicated interconnect bus for faster data transfer
@@ -183,7 +183,7 @@ carry out a thorough performance testing of the scheduling.
 
 % \begin{figure}
 %   \centering
-%   \includegraphics[width=15cm]{obrazky-figures/lstopo}
+%   \includegraphics[width=15cm]{lstopo}
 %   \caption{Topology of 4 NUMA node machine generated using lstopo utility}
 % \end{figure}
 
@@ -269,7 +269,7 @@ threads longer.
 
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{obrazky-figures/nas}
+  \includegraphics[width=12cm]{nas}
   \caption{Example of Scalar Penta-diagonal solver results from NAS Parallel with
     different number of computational threads.}
   \label{fig:nas}
@@ -437,7 +437,7 @@ relatively small amount of CPUs.
 
 \begin{figure}
   \centering
-  \includegraphics[width=14cm]{obrazky-figures/heatmap}
+  \includegraphics[width=14cm]{heatmap}
   \caption{Example of heat map showing CPU utilization over time. The machine
     with 24 logical CPUs is under workload from NAS Parallel benchmark running
     in 16 threads.}
@@ -454,7 +454,7 @@ threads run than on the 24 threads run.
 
 \begin{figure}
   \centering
-  \includegraphics[width=14cm]{obrazky-figures/numa_heatmap}
+  \includegraphics[width=14cm]{numa_heatmap}
   \caption{Example of heat map showing thread migration between NUMA nodes. The
     expected result is not the highest value, but minimum of color changes in
     each line. The shown result comes from machine with 24 logical CPUs running
@@ -478,7 +478,7 @@ measured by NAS benchmark with different number of threads.
 
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{obrazky-figures/boxplot}
+  \includegraphics[width=12cm]{boxplot}
   \caption{Example of boxplot showing throughput measured by NAS benchmark from
     multiple measurements with different number of threads.}
   \label{fig:boxplot}
@@ -555,7 +555,7 @@ marking for learning.
 
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{obrazky-figures/teaching_table}
+  \includegraphics[width=12cm]{teaching_table}
   \caption{Form from HTML comparison report page to mark data for machine learning}
 \end{figure}
 
@@ -706,50 +706,91 @@ For the following training and evaluation of the models we have roughly 250
 marked vectors. This should be enough to train different simple classifiers with
 sufficient accuracy on other unmarked vectors.
 
+\subsection{k-nearest neighbors}
+This classifier does not construct any generalized model, but works with the
+whole training data. The decision is made by voting of the $k$ nearest
+neighbors.
 
-%\chapter{Future work}
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{knn}
+  \caption{Accuracy of k-nearest neighbors classifier on available training
+    data with different parameters. On x axis is number of k-nearest neighbors
+    that vote for the class of queried vector. The two plotted lines differ in
+    weighting of the votes. The first takes all votes with uniform weight and
+    the second weights the votes by distance of the neighbors from the queried
+    vector.}
+  \label{fig:knn}
+\end{figure}
 
+\subsection{Linear models}
+Linear models try to separate classes with line/plane/hyperplane/...
+
+\subsection{Decision tree}
+Decision of this classifier is based on decision tree built on training data.
+They are easy to interpret and visualize. Disadvantage is high chance of
+overfitting.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{tree_part}
+  \caption{Part of decision tree created by Decision tree classifier and
+    rendered by Graphviz library for Python. It shows the first three layers of the
+    decision tree. First line of non-leaf node shows the condition for choosing
+    the next decision branch. \emph{gini} property of node shows its impurity --
+    proportion of training data not fitting the class of the node. Leaf nodes
+    have 0 impurity because they contain vectors of single class. Parameters
+    \emph{samples} and \emph{value} show the amount of training vectors for the
+    subtree and their division to pass and fail classes.}
+  \label{fig:knn}
+\end{figure}
+
+\subsection{Randomized forests}
+Random forests create set of randomized decision trees.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{randomized_forests}
+  \caption{Accuracy of randomized forests classifiers on available training data
+    with different parameters. On x axis is number of trees that vote for the
+    class of queried vector. The first plotted line represents the Random forest
+    method and the second the Extra trees method of building the trees.}
+  \label{fig:knn}
+\end{figure}
+
+\section{Evaluation of classifiers}
+What is cross validation
+Best classifiers seems to be random forest.
+The precision slightly rises with amount of trees together with time needed for
+learning and classification.
+
+
+\chapter{Future work}
+more precise classification with more learning data
+classification of results can be included to timelines
 
 \chapter{Notes}
 \begin{verbatim}
+zkontrolovat prekladatelem
+zminit Red Hat
+minipage na xml ukazky
+zmenšit font kodu
+
 Linux scheduler
-    CFS
-    numa planning
-        not easy for scheduler
-        manual pinning option
-            numactl
-        group imbalance bug
-    tune profiles
+    manual pinning option
+        numactl
+    group imbalance bug
+    tuned profiles
         focus on throughput or latency
 Performance
-    performance isn't simple pass/fail
-    comparison of baseline and target kernel
-    running just benchmark is waste of testing potential, it's good to collect more data
-        http://www.brendangregg.com/activebenchmarking.html
     provisioning of machines with Beaker
     collecting system load data
-        mpstat
-            usage of every cpu
         numastat
         numatop
             usage of cpu and memory on each node
-        ps
-            psr and numa column
-            cpu time
-        time
-            total, user and system time spent
-        turbostat
         perf stat
         lstopo for hardware schema image
         free
-    benchmarks
-        specjbb2005
-        specjvm2008
-        nas parallel
-        linpack benchmark
-        stream (memory throughput)
-        specjbb2015 - not stable
-        hackbench - not tried yet
     scenarios
         variable number of benchmark instances
         with and without pinning processes to specific numa nodes
@@ -760,28 +801,11 @@ Performance
         computing statistical data
     plotting
         lstopo for plotting hardware topology
-        bargraphs to show inaccuaracy
-            operations per second (runtime of benchmark)
+        bargraphs to show inaccuracy
+            operations per second (run time of benchmark)
             time out of cpu
-        detailed comparsion of two results
+        detailed comparison of two results
         timeline with many results over longer period of time
-        heatmaps for core usage over time
-            http://www.brendangregg.com/HeatMaps/utilization.html
-        graph of process migration between numa nodes
-Timelines
-    analysis
-    used technologies
-    desing
-    implementation
-    output
-Automatic regression detection
-    motivation
-    marking data
-    preprocessing for classificator
-    methods
-        linear logistic regression
-        decision trees
-    evaluation
 \end{verbatim}
 
 \chapter{Specification}
