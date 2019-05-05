@@ -711,6 +711,22 @@ This classifier does not construct any generalized model, but works with the
 whole training data. The decision is made by voting of the $k$ nearest
 neighbors.
 
+The learning process consists only of building data structure for more efficient
+search through the learning dataset. More computations come with the prediction
+when the algorithm must go through the learning dataset and find $k$ nearest
+vectors.
+
+Accuracy of the model highly depends on the parameter $k$. Higher values
+suppress noise in dataset, but can smoother the boundaries of classes too much.
+This behavior can be seen in Figure \ref{fig:knn}.
+
+Scikit-learn implements k-NN classifier in \texttt{KNeighborsClassifier} class.
+Next to setting the $k$ number it provides parameter for weighting votes. First
+option is uniform voting where each of the $k$ neighbors have the same weight of
+the vote. The second option weights votes based on the distance from queried
+vector. The weighted option provides better results for our dataset as can be
+seen in Figure \ref{fig:knn}.
+
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{knn}
