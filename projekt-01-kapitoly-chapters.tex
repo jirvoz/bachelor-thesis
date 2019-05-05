@@ -611,22 +611,85 @@ Here is an example of data for the teaching of classifiers:
 <comparison_results base_uuid="..." report_uuid="..." target_uuid="...">
   <comparison_result benchmark_name="NASParallel"
       operation_name="bt_C_x" result_status="pass">
-    <Result median_diff="1" threads_no="4">
+    <result median_diff="1" threads_no="4">
       <base_result first_q="7409.2" max="7507.0" mean="7451.7"
         median="7456.5" min="7406.4" stdev="39.2" third_q="7479.3" />
       <target_result first_q="7503.0" max="7597.5" mean="7513.1"
         median="7522.2" min="7404.8" stdev="62.7" third_q="7537.8" />
-    </Result>
-    <Result median_diff="0" threads_no="8">
+    </result>
+    <result median_diff="0" threads_no="8">
       <base_result first_q="14330.8" max="14740.1" mean="14476.6"
         median="14469.1" min="14325.9" stdev="151.7" third_q="14517.2" />
       <target_result first_q="14494.5" max="14619.3" mean="14481.1"
         median="14521.6" min="14233.7" stdev="130.5" third_q="14536.5" />
-    </Result>
+    </result>
 ...
 \end{verbatim}
 
 \section{Preprocessing for learning}
+The intended task is to classify result of each benchmark operation with
+different thread configurations which is represented by
+\texttt{<comparison\_result>} node in example from previous section. The number
+of threads configurations represented by \texttt{threads\_no} attribute in each
+\texttt{<result>} is not always the same and varies on the number of CPU cores
+on the testing machine.
+
+The important values we focus on are the statistical data from runs with
+different amount of threads, that a man uses to mark the data manually. From
+each of the runs we take minimum, median, maximum and first and third quartile
+from the repeated measurements of the same run configuration.
+
+To avoid absolute values from measurements that are different on each machine,
+we will use relative proportions. Difference of target and base medians will be
+divided by base median and the rest of target statistical values will be divided
+by the target median.
+
+Last task is to reduce provided data with variable number of threaded results
+to fixed size vector. We will take minimum, median and maximum from values of
+each statistical property: of minimums, medians, maximums and first and third
+quartiles. This reduction will keep important values form the benchmark
+operation results in reasonably small vector.
+
+For later use, we will name the vector component like \texttt{"median min"} is
+minimum value of all medians in results with different number of threads.
+
+The whole preprocessing of a single result of benchmark operation shows this
+Python code snippet:
+\begin{lstlisting}[language=Python]
+mins = []
+medians = []
+maxes = []
+q1s = []
+q3s = []
+
+# Iterate over the thread results of single benchmark operation
+for res in cpresult:
+    for basetarget in res:
+        if basetarget.tag == "base_result":
+            b_attr = basetarget.attrib
+        if basetarget.tag == "target_result":
+            t_attr = basetarget.attrib
+    try:
+        medians.append((float(t_attr["median"]) - float(b_attr["median"]))
+                        / float(b_attr["median"]))
+        mins.append((float(t_attr["median"]) - float(t_attr["min"]))
+                        / float(t_attr["median"]))
+        maxes.append((float(t_attr["median"]) - float(t_attr["max"]))
+                        / float(t_attr["median"]))
+        q1s.append((float(t_attr["median"]) - float(t_attr["first_q"]))
+                        / float(t_attr["median"]))
+        q3s.append((float(t_attr["median"]) - float(t_attr["third_q"]))
+                        / float(t_attr["median"]))
+    except:
+        print("ERROR in values in " + path)
+
+vector = []
+for a in [medians, mins, maxes, q1s, q3s]:
+    vector.append(min(a))
+    vector.append(median(a))
+    vector.append(max(a))
+\end{lstlisting}
+
 \section{Comparison of classifiers}
 Classification is procedure of assigning category to new observation based on
 training set of observations with specified category. Because of the
