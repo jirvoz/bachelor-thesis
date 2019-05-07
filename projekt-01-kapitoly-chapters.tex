@@ -412,34 +412,84 @@ tags and attributes which often take more space than the data itself. Parsing of
 the data also take considerable amount of CPU time prolonging the duration of
 analysis.
 
-Example of results stored in XML format:
-\begin{verbatim}
+% TODO in our team we use this method for cases described in following figures
+
+Example of results from one run of the NAS Parallel benchmark scenario stored in
+XML format is in Figure \ref{fig:xml_result}. Another example with aggregated
+data is in Figure \ref{fig:xml_sums}.
+
+\begin{figure}
+  \small
+  \begin{verbatim}
 <?xml version="1.0"?>
-<BeakerRunResult>
- <TestResult>
-  <NASResult benchmarkName="lu_C_x">
-   <threads number="002">
-    <result timeReal="293.764" timeOutOfCPU="10.789" mops="7016.79"/>
-    <result timeReal="291.454" timeOutOfCPU="7.086" mops="7075.39"/>
-    <result timeReal="290.403" timeOutOfCPU="7.844" mops="7096.21"/>
-    <result timeReal="288.959" timeOutOfCPU="4.079" mops="7131.56"/>
-    <result timeReal="289.642" timeOutOfCPU="4.644" mops="7118.24"/>
-   </threads>
-   <threads number="004">
-    <result timeReal="153.149" timeOutOfCPU="12.688" mops="13462.15"/>
-    <result timeReal="154.477" timeOutOfCPU="18.743" mops="13344.54"/>
+<beaker_run_result>
+  <test_result>
+    <nas_result benchmark_name="mg_C_x">
+      <threads number="2">
+        <result mops="5560.4" real_time="31.0" out_of_cpu_time="0.9"/>
+        <result mops="5411.4" real_time="32.2" out_of_cpu_time="1.6"/>
+        <result mops="5499.3" real_time="31.4" out_of_cpu_time="0.6"/>
+        <result mops="5407.4" real_time="31.9" out_of_cpu_time="1.3"/>
+        <result mops="5376.1" real_time="32.0" out_of_cpu_time="0.7"/>
+      </threads>
+      <threads number="4">
+        <result mops="10254.9" real_time="16.8" out_of_cpu_time="1.2"/>
+        <result mops="10075.4" real_time="17.1" out_of_cpu_time="1.7"/>
+        <result mops="10226.6" real_time="16.8" out_of_cpu_time="1.4"/>
+        <result mops="10250.2" real_time="16.8" out_of_cpu_time="1.3"/>
+        <result mops="10227.7" real_time="17.0" out_of_cpu_time="2.5"/>
+      </threads>
 ...
 \end{verbatim}
-This example shows beginning of XML file with important values from one NAS
-Parallel benchmark run scenario. The XML file starts with root element
-\texttt{<BeakerRunResult>} and \texttt{<TestResult>} node which are wrapping
-\texttt{<NASResult>} nodes representing results from each benchmark operation
-from NAS Parallel benchmark suite. Each benchmark operation is run with
-different amount of threads in few loops to lower the measurement inaccuracy.
-Nodes of results with the same number of threads are wrapped in
-\texttt{<threads>} node. All the values are stored as attributes of the
-corresponding node.
+  \normalsize
+  \caption{This example shows beginning of XML file with important values from one NAS
+    Parallel benchmark run scenario. The XML file starts with root element
+    \texttt{<beaker\_run\_result>} and \texttt{<test\_run>} node which are wrapping
+    \texttt{<nas\_result>} nodes representing results from each benchmark operation
+    from NAS Parallel benchmark suite. Each benchmark operation is run with
+    different amount of threads in few loops to lower the measurement inaccuracy.
+    Nodes of results with the same number of threads are wrapped in
+    \texttt{<threads>} node. All the values are stored as attributes of the
+    corresponding node.}
+  \label{fig:xml_result}
+\end{figure}
 
+\begin{figure}
+  \small
+  \begin{verbatim}
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result>
+    <nas_result benchmark_name="mg_C_x">
+      <threads number="2">
+        <mops mean="5450.9" stdev="68.4" first_q="5407.4" median="5411.4"
+          third_q="5499.3" max="5560.4" min="5376.1"/>
+        <total_time mean="31.7" stdev="0.4" first_q="31.4" median="31.9"
+          third_q="32.0" max="32.2" min="31.0"/>
+        <out_of_cpu_time mean="1.0" stdev="0.4" first_q="0.7" median="0.9"
+          third_q="1.3" max="1.6" min="0.6"/>
+      </threads>
+      <threads number="4">
+        <mops mean="10207.0" stdev="66.8" first_q="10226.6" median="10227.7"
+          third_q="10250.2" max="10254.9" min="10075.4"/>
+        <total_time mean="16.9" stdev="0.1" first_q="16.8" median="16.8"
+          third_q="17.0" max="17.1" min="16.8"/>
+        <out_of_cpu_time mean="1.6" stdev="0.5" first_q="1.3" median="1.4"
+          third_q="1.7" max="2.5" min="1.2"/>
+      </threads>
+...
+\end{verbatim}
+  \normalsize
+  \caption{Another form of stored data shows this beginning of XML file. Instead
+    of all values obtained from the benchmark run scenario, here are only
+    aggregated statistical values form the sets of collected values from each
+    configuration. The aggregated values include minimum, maximum, mean, median,
+    quartiles and standard deviation of metrics like throughput, run time, or
+    time in queue for CPU. Those values are directly usable for plotting of
+    comparison graph without any manipulation with them lowering the time for
+    generation of reports.}
+  \label{fig:xml_sums}
+\end{figure}
 
 \section{Relational database}
 Relational database is a type of database using relational model. The relational
