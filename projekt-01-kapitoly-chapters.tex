@@ -440,8 +440,40 @@ Nodes of results with the same number of threads are wrapped in
 \texttt{<threads>} node. All the values are stored as attributes of the
 corresponding node.
 
-\section{Database}
 
+\section{Relational database}
+Relational database is a type of database using relational model. The relational
+model stores data in tables using rows for records and columns for their
+attributes. Each row represents an unique record with its attributes in columns.
+Columns store values of attributes with same data type. Record in different
+tables can be connected in relationships.
+
+There are many database management systems implementing the relational database
+model available under various licenses. From the open-source we can name
+PostgreSQL, SQLite, MySQL, or its fork MariaDB. To the category with proprietary
+code belong implementations from companies including Oracle, Microsoft, or IBM.
+
+Data in database are managed using SQL (Structured Query Language). It provides
+commands for storing, manipulating and retrieving data. With advanced joining of
+tables and filtering it provides wide possibilities of data processing just at
+the point of reading of the stored data.
+
+Database offers much faster access to data without complicated parsing of text
+files. Searching through the data can be much faster with indexing of the
+records by selected columns. Moreover, databases store data more
+space-efficiently directly in binary format to avoid unnecessary conversions.
+
+The efficiency of database comes with its disadvantages. 
+Storing the data in binary form eliminates the possibility of quick insight to
+data like with XML files. To access any data is required to write SQL query to
+request specific from the storage.
+More complications come with design of the database tables. Different benchmarks
+produce different type of result and the requirements for stored data can change
+over time. This requires building universal complex structures or occasional
+changes in the database model.
+
+In our team we consider the option of storing results of the benchmark in
+database, considering the work needed for migration from storing in XML files.
 
 \chapter{Displaying the results}
 \section{Heat maps}
