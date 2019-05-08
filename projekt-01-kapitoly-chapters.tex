@@ -1,29 +1,71 @@
 \chapter{Introduction}
-Performance of operating system is crucial, because it can significantly affect all the applications running above it.
-When a regression in new version occurs, business applications can be even financially affected.
+Performance of operating system is crucial as any degradation can significantly
+affect the performance of all applications running above it. Moreover, when a
+new version is released and it contains performance regression, it can even
+break the stability of business applications leading to great financial losses.
+Important part of systems is the implementation and strategy of process
+scheduler, which manages processes and their processor time.
 
-Scheduler was simple. Multi-core CPUs made the scheduler little more complex, but those complications were tuned through time.
-Next milestone was introduction of multi-CPU machines with separated memory for each physical unit.
+Scheduler used to be simple, but with introduction of multi-core CPUs came
+requirement of multiple runqueues for each core and their balancing. This brought
+some complexity to the code and took some time to eliminate bugs and tune the
+behavior. Another change came with symmetric multiprocessing technology bringing
+to market machines with multiple CPU sockets and non-uniform memory organization
+and access. Scheduling on those systems is still under active development and
+prone to performance degradation bugs.
 
-Compared to functional testing, performance isn't evaluated as true/false result, but relative change to previous measurement.
-Due to this complexity is hard to use common tools for inspecting performance.
-The biggest regression in scheduler doesn't hide in uneffective code, but in wrong placement of processes to cores and it's queues.
+Compared to functional testing, performance cannot be evaluated as just true and
+false results. It is more challenging as we have to compare it relatively with
+previous versions or measurements, and choose suitable threshold, when reporting
+the performance regression. Due to complexity of the scheduler the common tools
+for inspecting performance may not frequently yield satisfying results.
+Moreover, the biggest performance regressions of the scheduler does not dwell in
+inefficient code, but instead in inefficient placement of processes to the cores
+and their queues.
 
-The usual testing method is simulating load simmilar to real usage.
-To achieve this there are many benchmarks targetting different types of load, usually many parallel process, sometimes communicating between each other.
+The usual performance testing method of the scheduler is to simulate load
+similar to real usage. Currently there are many benchmarks targeting different
+types of load, usually spawning many parallel process, sometimes even
+communicating between each other. The results of measurements of the performance
+must be also stored systematically and effectively for later use in generation
+of comparisons. For the right and effective interpretation of the collected
+results and their comparisons is essential right type of their visualization.
 
-Good performance tests usually create great amount of data, which is required to be processed, aggregaed and visualised.
+In this thesis, we propose an utilization of machine learning methods that will
+automatically check for possible degradations in Linux kernel scheduler. We will
+describe creation of dataset for the classification, compare different
+classifiers, and evaluate their accuracy on the dataset.
+Moreover, we will interpret long-term results of the benchmarks using box plots
+in order to enhance the process of data analysis. This visualization should help
+with inspecting the measurement stability of benchmarks, finding versions where
+performance degradations appeared or were fixed.
 
-\chapter{Linux process scheduling}
+This thesis is structured as follows. In Chapter \ref{ch:scheduler} we describe
+Completely Fair Scheduler -- the current process scheduler of Linux kernel,
+architecture or symmetric multiprocessing systems, and how the scheduler handles
+them. In Chapter \ref{ch:measurement} we describe the performance measurement of
+the Linux process scheduler. First we describe benchmarks used in Red Hat for
+load testing of scheduler performance, then complementary tools for analysis of
+behavior of the scheduler and the system. Ways of storage of the collected data
+we describe in Chapter \ref{ch:storage} and visualization of the results and
+their comparisons in Chapter \ref{ch:visualization}. A new way of visualization
+of long-term results comparison called \emph{Timelines} we propose in Chapter
+\ref{ch:timelines}. In Chapter \ref{ch:ai} we propose utilization of machine
+learning methods for automatic classification of comparison of two results to
+recognize a performance regression.
+
+
+
+\chapter{Linux process scheduling} \label{ch:scheduler}
 Scheduler is a part of an operating system which assigns the processor time to tasks.
-Its main goal is to maximize effectivity of the CPU usage and fairness of the
+Its main goal is to maximize effectivity of the CPU usage and to ensure fairness of the
 CPU time assigned to each task.
 
-There are two opposing targets for a scheduler: either maximizing throughput or
-minimizing latency. Lower amount of context switches leaves more CPU time for
+There are two opposing targets for a scheduler: either maximizing the throughput or
+minimizing the latency. Lower amount of context switches leaves more CPU time for
 tasks, but raises the response time on system events.
-While user's workstation aims for a low response time, computational servers
-require high throughput. Scheduler can be usually tuned to fit the intended
+While users' workstations aims for a low response time, computational servers
+require high throughput. Scheduler can then be usually tuned to fit the intended
 purpose.
 
 In this chapter we describe basic behavior of Linux process scheduler. Then we
@@ -192,7 +234,8 @@ carry out a thorough performance testing of the scheduling.
 % \end{figure}
 
 
-\chapter{Performance measurement}
+
+\chapter{Performance measurement} \label{ch:measurement}
 Performance testing is examination of the system behavior under a workload and of its
 effectivity of resource usage. For many systems, the time they are able to
 respond in is crucial and this property affects the usability of the system.
@@ -388,7 +431,9 @@ numactl
 numatop
 numastat
 
-\chapter{Storing the results}
+
+
+\chapter{Storing the results} \label{ch:storage}
 Benchmarks sometimes generate long human-readable output in text or even HTML
 format. This is useful when analyzing single report. In the output there are details
 of the test run itself, simple resource usage or success of result validation.
@@ -525,11 +570,21 @@ changes in the database model.
 In our team we consider the option of storing results of the benchmark in
 database, considering the work needed for migration from storing in XML files.
 
-\chapter{Displaying the results}
+
+
+\chapter{Displaying the results} \label{ch:visualization}
+Effective analysis of results from performance measurement requires delivering
+the comparison in a form in which can human quickly see the differences of
+measured values and their severity. Visualization ...
+
+It must deliver easily understandable data even to people that do not work with
+performance analysis on their daily basis.
+
 \section{Heat maps}
 Heat maps are three dimensional graphs which are using color as the third
 dimension for values. This allows to plot two dependencies of the values
 compared to line graphs, which must use multiple lines to plot the same data.
+
 Heatmapy škálují pro velké data. 
 Data jsou kvantizovány do bucketů.
 
@@ -590,7 +645,8 @@ measured by NAS benchmark with different number of threads.
 \end{figure}
 
 
-\chapter{Timelines}
+
+\chapter{Timelines} \label{ch:timelines}
 Začlenit do předchozí kapitoly: první 2-3 způsoby popisují dosavadní metody
 zobrazení a poslední je produktem této práce. Ukládání výsledků včlenit ještě
 před zobrazování.
@@ -669,7 +725,8 @@ representing the purpose of the rules.
 asdf
 
 
-\chapter{Automatic evaluation}
+
+\chapter{Automatic evaluation} \label{ch:ai}
 With every new release of regular kernel and its testing the amount of produced
 results rises. With more machines with different configurations, benchmarks with
 different focus or baselines from different supported versions, number of results
@@ -976,7 +1033,8 @@ comparison in the node is not the best for splitting, but randomly chosen.
 The second is extremely randomized trees method implemented in
 \texttt{ExtraTreesClassifier} class. This implementation extends the randomness
 by choosing more thresholds for decision randomly and selecting the best instead
-of computing the most discriminative one.
+of computing the most discriminative one. This method helps to reduce variance
+of the model at the cost of higher bias.
 
 Comparison of these two implementations is in Figure
 \ref{fig:randomized_forests}. The RandomForestClassifier has slightly better
@@ -1000,9 +1058,11 @@ Best classifiers seems to be random forest.
 This classifier will be added to analyzer for automatic labeling of comparisons.
 
 
+
 \chapter{Future work}
 more precise classification with more learning data
 classification of results can be included to timelines
+
 
 
 \chapter{Conclusion}
@@ -1021,21 +1081,19 @@ pracovištích).
 \begin{verbatim}
 zkontrolovat prekladatelem
 zminit Red Hat
-figure na xml ukazky
-zmenšit font kodu
 citovat cely scikit, nebo konkretni stranky
 vlozit nedelitelne mezery
 stress more what is my work, team and general knowledge
   in our team we use ..., my part of work is ...
-carka pred and pokud delam vycet
-poradi casti v kapitole o ai
 klicova slova v lstlisting
 jednostranny tisk
-vlozit zadani
-upravit tt font
+rozsirit podekovani
 
 text semestralni prace
 licence zdrojaku
+lstlisting na jednu stranu
+timeliny jako section vizualizace?
+(1) a (2) v introductionu
 
 Linux scheduler
     manual pinning option
