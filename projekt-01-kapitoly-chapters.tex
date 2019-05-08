@@ -661,6 +661,10 @@ representing the purpose of the rules.
     hard.
 \end{itemize}
 
+\subsection{Highcharts}
+
+\subsection{Parallelization}
+
 \section{Output}
 asdf
 
@@ -680,26 +684,6 @@ with performance regressions.
 In this chapter we will describe the way of obtaining data from results and
 their processing for the evaluation. We will describe different classification
 models suitable for given dataset and compare their success rate.
-
-\section{Labeling of results}
-To teach the automatic classifier we need large amount of data for training. To
-reduce the time spent on labeling of the passed and failed results we included a
-HTML form to report page with comparison of two results to speed up this process.
-
-% TODO talk more about the application
-It is a simple server application for committing requests from the form that
-runs on a machine used to store the results. The server is written in Python
-built on top of the Flask framework. On request it finds given result and modifies
-its file with labeling for learning.
-% TODO ref to section with XML example
-
-% TODO diagram of labeling process
-
-\begin{figure}
-  \centering
-  \includegraphics[width=12cm]{teaching_table}
-  \caption{Form from HTML comparison report page to label data for machine learning}
-\end{figure}
 
 \section{Human classification of results}
 There are quite many results to check with every new tested kernel. The test
@@ -751,7 +735,8 @@ and target results for easier tracing in case of suspicious values.
 Here is an example of data for the teaching of classifiers:
 
 \begin{figure}
-\begin{verbatim}
+  \small
+  \begin{verbatim}
 <comparison_results base_uuid="..." report_uuid="..." target_uuid="...">
   <comparison_result benchmark_name="NASParallel"
       operation_name="bt_C_x" result_status="pass">
@@ -768,11 +753,32 @@ Here is an example of data for the teaching of classifiers:
         median="14521.6" min="14233.7" stdev="130.5" third_q="14536.5" />
     </result>
 ...
-\end{verbatim}
-  \caption{adsf}
+  \end{verbatim}
+  \normalsize
+  \caption{Part of XML file with labeled data for classification.}
 \end{figure}
 
-\section{Preprocessing for learning}
+\section{Labeling of results}
+To teach the automatic classifier we need large amount of data for training. To
+reduce the time spent on labeling of the passed and failed results we included a
+HTML form to report page with comparison of two results to speed up this process.
+
+% TODO talk more about the application
+It is a simple server application for committing requests from the form that
+runs on a machine used to store the results. The server is written in Python
+built on top of the Flask framework. On request it finds given result and modifies
+its file with labeling for learning.
+% TODO ref to section with XML example
+
+% TODO diagram of labeling process
+
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{teaching_table}
+  \caption{Form from HTML comparison report page to label data for machine learning}
+\end{figure}
+
+\section{Preprocessing for learning} \label{sec:learn_preprocess}
 The intended task is to classify result of each benchmark operation with
 different thread configurations which is represented by
 \texttt{<comparison\_result>} node in example from previous section. The number
@@ -790,20 +796,40 @@ we will use relative proportions. Difference of target and base medians will be
 divided by base median and the rest of target statistical values will be divided
 by the target median.
 
-Last task is to reduce provided data with variable number of threaded results
+Next task is to reduce provided data with variable number of threaded results
 to fixed size vector. We will take minimum, median and maximum from values of
 each statistical property: of minimums, medians, maximums and first and third
 quartiles. This reduction will keep important values form the benchmark
 operation results in reasonably small vector.
 
-For later use, we will name the vector component like \texttt{median min} is
+Last operation with vector values is applying square root on them. This
+operation reduces distances of vectors with exceptionally high values, which
+helps the k-NN and linear classifier to get better results. Scatter of the
+vectors plotted in 3 best dimensions is shown in Figure \ref{fig:vectors_plot}.
+
+For later use, we will name the vector component like \texttt{medians min} is
 minimum value of all medians in results with different number of threads.
 
-The whole preprocessing of a single result of benchmark operation shows this
-Python code snippet:
+The whole preprocessing of a single result of benchmark operation shows the
+Figure \ref{fig:learn_preprocess} with Python code snippet.
 
-\scriptsize
-\begin{lstlisting}[language=Python]
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{vectors_plot}
+  \caption{In this figure are plotted vectors from the training dataset reduced
+    to 3 dimensions, which are the best for classification. The reduction was done by
+    \texttt{SelectKBest} class from scikit-learn library by choosing the
+    dimensions with the biggest variability between classes. The plot on the
+    left shows scatter of vectors from dataset with unmodified values. The plot
+    on the right shows the vectors from dataset modified by applying square root
+    on their values. This modification and naming of the axis is explained in
+    Section \ref{sec:learn_preprocess}}
+  \label{fig:vectors_plot}
+\end{figure}
+
+\begin{figure}
+  \small
+  \begin{lstlisting}[language=Python]
 mins = []
 medians = []
 maxes = []
@@ -836,9 +862,16 @@ for a in [medians, mins, maxes, q1s, q3s]:
     vector.append(min(a))
     vector.append(median(a))
     vector.append(max(a))
-\end{lstlisting}
 
-\normalsize
+vector = list(map(lambda x: math.sqrt(float(x))
+                  if float(x) > 0
+                  else -math.sqrt(abs(float(x))), vector)))
+  \end{lstlisting}
+  \normalsize
+  \caption{asdf}
+  \label{fig:learn_preprocess}
+\end{figure}
+
 \section{Comparison of classifiers}
 Classification is procedure of assigning category to new observation based on
 training set of observations with specified category. Because of the
@@ -855,7 +888,11 @@ For the following training and evaluation of the models we have roughly 250
 labeled vectors. This should be enough to train different simple classifiers with
 sufficient accuracy on other unlabeled vectors.
 
-\subsection{k-nearest neighbors}
+\subsection{Validation and metrics}
+cross validation
+accuracy
+
+\subsection{k-nearest neighbors classifier}
 This classifier does not construct any generalized model, but works with the
 whole training data. The decision is made by voting of the $k$ nearest
 neighbors.
@@ -889,16 +926,26 @@ seen in Figure \ref{fig:knn}.
 \end{figure}
 
 \subsection{Linear classifier}
-Linear models try to separate classes with line, plane, hyperplane, etc.
+Linear models try to separate vectors of two different classes to two spaces
+using a line, plane, hyperplane, etc. depending on the dimensionality of the
+vectors.
+\ref{fig:vectors_plot}
 
-\subsection{Decision tree}
+\subsection{Decision tree classifier}
 Decision of this classifier is based on decision tree built on training data.
-They are easy to interpret and visualize. Disadvantage is high chance of
-overfitting.
+In each node the tree looks on one component of the queried vector and by
+comparison with learned threshold the tree decides to which branch it will
+continue. Each leaf of the tree contains label that is returned for the queried
+vector which led to the leaf.
+
+Learning of the model involves the creation of the decision tree.
+
+They are easy to interpret and visualize. Example in Figure \ref{fig:decision_tree}.
+Disadvantage is high chance of overfitting.
 
 \begin{figure}
   \centering
-  \includegraphics[width=14cm]{tree_part}
+  \includegraphics[width=14cm]{decision_tree}
   \caption{Part of decision tree created by Decision tree classifier and
     rendered by Graphviz library for Python. It shows the first three layers of the
     decision tree. First line of non-leaf node shows the condition for choosing
@@ -907,32 +954,68 @@ overfitting.
     have 0 impurity because they contain vectors of single class. Parameters
     \emph{samples} and \emph{value} show the amount of training vectors for the
     subtree and their division to pass and fail classes.}
-  \label{fig:knn}
+  \label{fig:decision_tree}
 \end{figure}
 
-\subsection{Randomized forests}
-Random forests create set of randomized decision trees.
+\subsection{Forest of randomized trees classifiers}
+The forest of randomized trees classifier extends the decision tree
+classification by creating a set of decision tree classifiers with small portion
+of randomness introduced in the creation of the decision trees. Output of the
+classifier is decided by voting of the decision tree classifiers. This
+modification compensates the overfitting of single decision tree classifiers.
+Although the amount of trees slightly increases the accuracy of the prediction,
+the duration of learning of the model and prediction rises linearly with the
+amount of trees.
+
+The scikit-learn library provides two implementation of classifiers based on
+randomized trees. The first is \texttt{RandomForestClassifier} class. The
+dataset for each tree is resampled with replacement creating slightly reduced
+and different dataset. When building a decision tree, the component used for
+comparison in the node is not the best for splitting, but randomly chosen.
+
+The second is extremely randomized trees method implemented in
+\texttt{ExtraTreesClassifier} class. This implementation extends the randomness
+by choosing more thresholds for decision randomly and selecting the best instead
+of computing the most discriminative one.
+
+Comparison of these two implementations is in Figure
+\ref{fig:randomized_forests}. The RandomForestClassifier has slightly better
+accuracy than ExtraTreesClassifier. Accuracy also rises much slower compared to
+number of the trees in the model.
 
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{randomized_forests}
-  \caption{Accuracy of randomized forests classifiers on available training data
-    with different parameters. On x axis is number of trees that vote for the
-    class of queried vector. The first plotted line represents the Random forest
-    method and the second the Extra trees method of building the trees.}
-  \label{fig:knn}
+  \caption{Accuracy of randomized forests classifiers on available training
+    dataset with different parameters. On x axis is number of trees that vote
+    for the class of queried vector. The first plotted line represents the
+    Random forest method and the second the Extra trees method of building the
+    trees.}
+  \label{fig:randomized_forests}
 \end{figure}
 
 \section{Evaluation of classifiers}
 What is cross validation
 Best classifiers seems to be random forest.
-The precision slightly rises with amount of trees together with time needed for
-learning and classification.
+This classifier will be added to analyzer for automatic labeling of comparisons.
 
 
 \chapter{Future work}
 more precise classification with more learning data
 classification of results can be included to timelines
+
+
+\chapter{Conclusion}
+In this work we described ...
+... was evaluated ...
+
+Závěrečná kapitola obsahuje zhodnocení dosažených výsledků se zvlášť vyznačeným
+vlastním přínosem studenta. Povinně se zde objeví i zhodnocení z pohledu dalšího
+vývoje projektu, student uvede náměty vycházející ze zkušeností s řešeným
+projektem a uvede rovněž návaznosti na právě dokončené projekty (řešené v rámci
+ostatních bakalářských prací v daném roce nebo na projekty řešené na externích
+pracovištích).
+
 
 \chapter{Notes}
 \begin{verbatim}
@@ -950,6 +1033,9 @@ klicova slova v lstlisting
 jednostranny tisk
 vlozit zadani
 upravit tt font
+
+text semestralni prace
+licence zdrojaku
 
 Linux scheduler
     manual pinning option
