@@ -273,9 +273,8 @@ location of memory of the processes on NUMA systems.
 % TODO cite http://www.brendangregg.com/activebenchmarking.html
 
 \section{Performance metrics}
-run time
-
-throughput
+\paragraph{Throughput} operation per time unit
+\paragraph{Run time} time spent running
 
 \section{Benchmarks}
 In the following section we will describe the benchmarks that are currently used
@@ -364,10 +363,11 @@ application needed to finish, the time that it spent in the user mode, and the
 time spent in the kernel mode.
 
 Many benchmarks provide the execution time themselves which can make this
-utility unnecessary. However, the interesting metric is the difference between
-the userspace and the kernel time and the total execution time, which is the time that
-the application spent out of the CPU waiting in a queue.
-% TODO clarify this calculation
+utility unnecessary. However, the interesting metric is the time that the
+application spent out of the CPU waiting in queue. This value is not provided
+directly, but can be calculated from user, kernel and real time and number of
+threads, that the application used:
+$$T_{out\_of\_cpu} = (T_{real} \times used\_threads) - (T_{user} + T_{kernel})$$
 
 It can be confused with the Bash builtin command \texttt{time}, which provides similar
 output, but the real binary can provide more verbose information with
@@ -580,6 +580,8 @@ measured values and their severity. Visualization ...
 It must deliver easily understandable data even to people that do not work with
 performance analysis on their daily basis.
 
+\section{Line graphs}
+
 \section{Heat maps}
 Heat maps are three dimensional graphs which are using color as the third
 dimension for values. This allows to plot two dependencies of the values
@@ -680,11 +682,16 @@ Best type of graph for results with repeated runs are boxplots. Boxplots show
 important statistical values from the runs: median, minimum, maximum and first
 and third quartiles. 
 
+different numbers of threads
+the highest ain't always the most important
+
+table of numerical results
+links to cqe database
+
 \section{Implementation}
-highcharts for graphs
 
 \section{Result storage}
-Data jsou k dispozici v tomoto formátu.
+Data jsou k dispozici ve formátu jako ve figure \ref{fig:xml_sums}.
 
 Benchmark results are in our case stored on filesystem in directories. Each result consists
 of two XML files with information and preprocessed main data from the test run,
@@ -718,11 +725,12 @@ representing the purpose of the rules.
 \end{itemize}
 
 \subsection{Highcharts}
+median +-5\% lines
 
 \subsection{Parallelization}
 
 \section{Output}
-asdf
+Example of timelines graphs
 
 
 
