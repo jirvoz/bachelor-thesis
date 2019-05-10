@@ -439,7 +439,7 @@ time of each benchmark run is usually enough. Those numbers can be preprocessed
 from the benchmark output files to a format more suitable for quick accessing
 required data.
 
-\section{XML files}
+\section{XML files} \label{sec:xml_files}
 XML is a markup language, that can store heterogeneous data in tree structure.
 The tree structure can effectively represent the test scenario running each
 benchmark operation with different parameters and multiple repetitions.
@@ -769,12 +769,13 @@ difference between base and target measurement but varies by the stability of
 each benchmark and complexity of the machine it was run on.
 
 \section{Used technologies}
-For classification we use library \emph{scikit-learn} for Python3. Scikit-learn is
-a simple library for data analysis and machine learning with BSD open source
-license. It is easy to use with fast learning curve and well documented. It is
-a good choice for small and medium sized projects that do not need massive
-scalability. It provides various algorithms for classification, regression and
-clustering built on \emph{NumPy} and \emph{SciPy} Python libraries.
+For classification we use library \emph{scikit-learn}\;\cite{scikit-learn} with
+Python3. Scikit-learn is a simple library for data analysis and machine learning
+with BSD open source license. It is easy to use with fast learning curve and
+well documented. It is a good choice for small and medium sized projects that do
+not need massive scalability. It provides various algorithms for classification,
+regression and clustering built on \emph{NumPy} and \emph{SciPy} Python
+libraries.
 
 Unlike other machine learning libraries like PyTorch and TensorFlow, the
 scikit-learn library does not focus on deep neural networks for larger and
@@ -782,7 +783,7 @@ advanced problems. It provides more simple classifiers for easier problems
 with smaller datasets where advanced methods would not have enough training
 data.
 
-\section{Reading the results}
+\section{Reading the labeled results} \label{sec:learn_xml}
 Learning data come as an XML file containing preprocessed data from
 the base and the target run of the benchmark which are labeled as passed or failed.
 
@@ -792,7 +793,8 @@ contain median, minimum, maximum and quartiles form the repeated runs of the
 configuration. The root element contains UUIDs of the comparison and its base
 and target results for easier tracing in case of suspicious values.
 
-Here is an example of data for the teaching of classifiers:
+Example of XML file with data for the teaching of classifiers is shown in Figure
+\ref{fig:learn_xml}.
 
 \begin{figure}
   \small
@@ -816,26 +818,37 @@ Here is an example of data for the teaching of classifiers:
   \end{verbatim}
   \normalsize
   \caption{Part of XML file with labeled data for classification.}
+  \label{fig:learn_xml}
 \end{figure}
 
 \section{Labeling of results}
 To teach the automatic classifier we need large amount of data for training. To
 reduce the time spent on labeling of the passed and failed results we included a
-HTML form to report page with comparison of two results to speed up this process.
-
-% TODO talk more about the application
-It is a simple server application for committing requests from the form that
-runs on a machine used to store the results. The server is written in Python
-built on top of the Flask framework. On request it finds given result and modifies
-its file with labeling for learning.
-% TODO ref to section with XML example
-
-% TODO diagram of labeling process
+HTML form to report page with comparison of two results to speed up this
+process. The design of the form is shown in Figure \ref{fig:label_form}.
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{teaching_table}
   \caption{Form from HTML comparison report page to label data for machine learning}
+  \label{fig:label_form}
+\end{figure}
+
+For processing of requests from the HTML form we built a simple HTTP simple
+server application using Flask framework for Python3. It is wrapped in Docker
+container which runs on machine which stores the performance results and
+comparison reports. It receives a HTTP request with POST data containing type of
+benchmark, path to directory with the report page and labels for results of each
+benchmark operation. Using this data the application modifies the XML file with
+labels described in Section \ref{sec:learn_xml} and returns HTTP redirect header
+back to the comparison report. This process is shown in diagram in Figure
+\ref{fig:marker_diagram}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{marker_diagram}
+  \caption{Form from HTML comparison report page to label data for machine learning}
+  \label{fig:marker_diagram}
 \end{figure}
 
 \section{Preprocessing for learning} \label{sec:learn_preprocess}
@@ -928,11 +941,12 @@ vector = list(map(lambda x: math.sqrt(float(x))
                   else -math.sqrt(abs(float(x))), vector)))
   \end{lstlisting}
   \normalsize
-  \caption{asdf}
+  \caption{}
   \label{fig:learn_preprocess}
 \end{figure}
+% TODO describe the code
 
-\section{Comparison of classifiers}
+\section{Comparison of classifiers} \label{sec:classifier_comparison}
 Classification is procedure of assigning category to new observation based on
 training set of observations with specified category. Because of the
 availability of already classified data it belongs to \emph{supervised learning}
@@ -1081,8 +1095,17 @@ number of the trees in the model.
 
 \section{Evaluation of classifiers}
 What is cross validation
-Best classifiers seems to be random forest.
+Best classifiers seems to be knn and random forest.
 This classifier will be added to analyzer for automatic labeling of comparisons.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{classifiers}
+  \caption{Comparison of accuracy of different classifiers mentioned in Section
+    \ref{sec:classifier_comparison}. The results come from cross-validation by
+    split the dataset to train and test sets using ratio 3:1.}
+  \label{fig:classifiers}
+\end{figure}
 
 
 
