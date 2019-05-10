@@ -124,7 +124,7 @@ scheduling domain hierarchy and by checking balance of the groups on each level.
 \begin{figure}
   \centering
   \includegraphics[width=4cm]{sched-domains}
-  \caption{Hiearchy of scheduling domains}
+  \caption{Hiearchy of scheduling domains\cite{sched-groups-lwn}}
   \label{fig:sched-dom}
 \end{figure}
 
@@ -179,16 +179,16 @@ controllers.
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{proliant}
-  \caption{Architecture of NUMA communication on HP ProLiant DL980. Each
-    processor connected with its own local memory makes up a NUMA node. Each
-    pair of nodes have dedicated interconnect bus for faster data transfer
-    between them. Communication with other nodes is realized through node
-    controllers. The topology of the interconnect buses shows there will be 4
-    different access speeds depending on the distance between nodes. The local
-    access is the fastest, then follows the access to the neighbor node, the
-    access through one controller and the slowest is the access through both
-    controllers. The interconnect buses are doubled to avoid overloading one of
-    them.}
+  \caption{Architecture of NUMA communication on HP ProLiant
+    DL980\;\cite{proliant}. Each processor connected with its own local memory
+    makes up a NUMA node. Each pair of nodes have dedicated interconnect bus for
+    faster data transfer between them. Communication with other nodes is
+    realized through node controllers. The topology of the interconnect buses
+    shows there will be 4 different access speeds depending on the distance
+    between nodes. The local access is the fastest, then follows the access to
+    the neighbor node, the access through one controller and the slowest is the
+    access through both controllers. The interconnect buses are doubled to avoid
+    overloading one of them.}
   \label{fig:proliant}
 \end{figure}
 
@@ -226,12 +226,6 @@ when a change can cause a performance regression. Therefore, it is essential to
 carry out a thorough performance testing of the scheduling.
 
 % TODO task can be pinned
-
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=15cm]{lstopo}
-%   \caption{Topology of 4 NUMA node machine generated using lstopo utility}
-% \end{figure}
 
 
 
@@ -290,33 +284,33 @@ on NUMA systems, the performance depends also on placement of data in the
 memory.
 
 \subsection{NAS Parallel Benchmarks}
-NAS Parallel Benchmarks is a set of programs focused on performance of highly
-parallel computations on supercomputers. In addition to floating point
-computations, it targets communication and data movement among computation
-nodes. The performed algorithms are based on large scale computational fluid
-dynamics at the Numerical Aerodynamic Simulation (NAS) Program which is based at
-NASA Ames Research Center.
+NAS Parallel Benchmarks\;\cite{nas-parallel} is a set of programs focused on
+performance of highly parallel computations on supercomputers. In addition to
+floating point computations, it targets communication and data movement among
+computation nodes. The performed algorithms are based on large scale
+computational fluid dynamics at the Numerical Aerodynamic Simulation (NAS)
+Program which is based at NASA Ames Research Center.
 
 Benchmarks are written in Fortran-90 or in C language, as these were the most
 commonly used programming languages in scientific parallel computing community
-at the time when the benchmarks were created. They can be compiled with different classes of
-problem sizes to suit machines with different amount of memory and of computational
-power.
+at the time when the benchmarks were created. They can be compiled with
+different classes of problem sizes to suit machines with different amount of
+memory and of computational power.
 
-The main output value of the benchmark is the throughput measured in units called Mop/s
-(millions of operations per second) representing the amount of floating-point
-operations per unit of time.
+The main output value of the benchmark is the throughput measured in units
+called Mop/s (millions of operations per second) representing the amount of
+floating-point operations per unit of time.
 
 The benchmark also offers a few parameters that can be passed to the benchmark
 before the execution. One of them is the number of computation threads, which in
 a lower amount slows down the run time, but allows one to measure behavior of
-the system without full usage. Figure \ref{fig:nas} shows
-an example of a throughput with different number of threads on a machine with 24 physical cores
+the system without full usage. Figure \ref{fig:nas} shows an example of a
+throughput with different number of threads on a machine with 24 physical cores
 and hyper-threading.
 
-The downside of this benchmark is it can only run with a fixed dataset, but not for a
-fixed time period. This constraint makes the run time of the benchmark with less
-threads longer.
+The downside of this benchmark is it can only run with a fixed dataset, but not
+for a fixed time period. This constraint makes the run time of the benchmark
+with less threads longer.
 
 \begin{figure}
   \centering
@@ -348,11 +342,11 @@ SPECjvm2008 is benchmark primarily focused on performance of Java Virtual
 Machine, but its results can reflect performance of the scheduler.
 
 \subsection{LINPACK benchmark}
-LINPACK Benchmark comes from LINPACK package, which was used to solve systems of linear equations in single or double precision.
+LINPACK Benchmark\cite{linpack} comes from LINPACK package, which was used to solve systems of linear equations in single or double precision.
 
 \subsection{STREAM benchmark}
-STREAM is the de facto industry standard benchmark
-for measuring sustained memory bandwidth.
+The STREAM benchmark is a simple, synthetic benchmark designed to measure the sustainable memory bandwidth (in MB/s) and a corresponding computation rate for four simple vector kernels.
+STREAM runs on each core of a mode using the OpenMP programming paradigm. Four synthetic computational kernels are run, and the best rates observed are reported for each choice of thread count.
 
 \section{Performance analysis tools}
 
@@ -726,6 +720,7 @@ representing the purpose of the rules.
 
 \subsection{Highcharts}
 median +-5\% lines
+Highcharts\cite{highcharts} is a battle-tested SVG-based, multi-platform charting library that has been actively developed since 2009. It makes it easy to add interactive, mobile-optimized charts to your web and mobile projects. It features robust documentation, advanced responsiveness and industry-leading accessibility support.
 
 \subsection{Parallelization}
 
@@ -1134,20 +1129,3 @@ Performance
         detailed comparison of two results
         timeline with many results over longer period of time
 \end{verbatim}
-
-\chapter{Specification}
-\begin{enumerate}
-\item Get acquainted with the existing methods for measuring performance of the Linux kernel scheduler and with means of storing of benchmarks results for further processing.
-\item Study possible ways of processing these results with a focus on graphic interpretation and on methods for detection of performance degradation.
-\item Design and implement a method for efficient graphic interpretation of long-term measurements.
-\item Design and implement a method for automatic detection of performance regression.
-\item Demonstrate the functionality of your implementation on at least two versions of the Linux kernel.
-\item Evaluate the obtained results and discuss possibilities of further development of the project, especially of the automatic detection of performance regression.
-\end{enumerate}
-
-Literature:
-\begin{itemize}
-\item Lozi, Jean-Pierre, et al. "The Linux scheduler: a decade of wasted cores." Proceedings of the Eleventh European Conference on Computer Systems. ACM, 2016.
-\item Daniel, P., and Cesati Marco. "Understanding the Linux kernel." (2007).
-\item Bailey, David H., et al. "The NAS parallel benchmarks." The International Journal of Supercomputing Applications 5.3 (1991): 63-73.
-\end{itemize}
