@@ -949,8 +949,32 @@ labeled vectors. This should be enough to train different simple classifiers wit
 sufficient accuracy on other unlabeled vectors.
 
 \subsection{Validation and metrics}
-cross validation
-accuracy
+To compare success rate of different classification models we need a method to evaluate
+accuracy of predicting new data. Testing the model on data it got also for
+learning brings risk of overlooking \emph{overfitting}. Overfitting means that the model
+precisely predicts data it has already seen, but fails to predict any new data
+it has not seen yet.
+
+To avoid overfitting we will use \emph{cross-validation} method to test model.
+It removes part of data from training set and uses them as testing set for
+evaluating the prediction.
+
+For splitting the training data we will use \emph{k-fold} method. This method
+splits the original dataset to $k$ groups. One of groups is used as testing set and
+the rest $k - 1$ groups are left for training. This way we get $k$ different
+dataset for evaluation of our classifiers.
+
+As implementation of k-fold cross-validation we will use
+\texttt{RepeatedStratifiedKFold} class from scikit-learn library with parameter
+$k$ set to 4. It will split the original dataset to 4 groups with same ratio of
+pass and fail labels repeating this process with differently shuffled data.
+Setting number of folds to 4 will give us enough data for training, but also for
+the evaluation.
+
+As metric for rating of predicted values we will use \emph{accuracy} scoring.
+Predicted results will be evaluated as 1 or 0 if the predicted class is the same as the reference
+class from manual labeling or not. Averaging those scores from the whole testing
+set will give us ratio of correctly predicted vectors.
 
 \subsection{k-nearest neighbors classifier}
 This classifier does not construct any generalized model, but works with the
