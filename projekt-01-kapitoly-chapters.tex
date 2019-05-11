@@ -704,10 +704,6 @@ measured by NAS benchmark with different number of threads.
 
 
 \chapter{Timelines} \label{ch:timelines}
-Začlenit do předchozí kapitoly: první 2-3 způsoby popisují dosavadní metody
-zobrazení a poslední je produktem této práce. Ukládání výsledků včlenit ještě
-před zobrazování.
-
 A common way to analyze performance reports is to compare two results measured
 for different versions or settings. Usually, these
 are called baseline and target results or profiles. The comparison of two
@@ -726,6 +722,12 @@ performance degradation occurred and where was fixed.
 With larger amount of data, we can also detect creeping performance drops, which
 appeared continuously over longer period of time and could not be detected,
 because they were within the tolerance due to the measurement deviation.
+
+This chapter proposes creation of reports with comparison of multiple results of
+performance measurement from benchmarks used in out team in Red Hat. The
+visualization of course of performance results will help to see the performance
+of Linux kernel scheduler in wider range of time and help to determine stability
+and precision of different benchmarks.
 
 \section{Design}
 Main purpose is to watch performance through kernel versions on specific machine
