@@ -47,12 +47,14 @@ them. In Chapter \ref{ch:measurement} we describe the performance measurement of
 the Linux process scheduler. First we describe benchmarks used in Red Hat for
 load testing of scheduler performance, then complementary tools for analysis of
 behavior of the scheduler and the system. Ways of storage of the collected data
-we describe in Chapter \ref{ch:storage} and visualization of the results and
-their comparisons in Chapter \ref{ch:visualization}. A new way of visualization
-of long-term results comparison called \emph{Timelines} we propose in Chapter
-\ref{ch:timelines}. In Chapter \ref{ch:ai} we propose utilization of machine
-learning methods for automatic classification of comparison of two results to
-recognize a performance regression.
+and their visualization for comparison is described in Chapter
+\ref{ch:processing}.
+
+A new way of visualization of long-term results comparison called
+\emph{Timelines} we propose in Chapter \ref{ch:timelines}. In Chapter
+\ref{ch:ai} we propose utilization of machine learning methods for automatic
+classification of comparison of two results to recognize a performance
+regression.
 
 
 
@@ -274,8 +276,8 @@ executed per second. Higher values mean better performance.
 
 \paragraph{Run time} is simply the real time the benchmark needed to finish the
 execution. It is mostly presented in seconds, but longer runs can be presented
-using \texttt{hours:minutes:seconds.milliseconds} format. The lower the run time
-is, the better performance it represents.
+more human-friendly converting the time to hours, minutes, and seconds. The
+lower the run time is, the better performance it represents.
 
 \paragraph{Time out of CPU} represents the time the benchmark spent in process
 queue waiting for execution. This metric can be calculated from user, kernel and
@@ -440,7 +442,10 @@ numastat
 
 
 
-\chapter{Storing the results} \label{ch:storage}
+\chapter{Processing of results} \label{ch:processing}
+Results must be stored and visualized.
+
+\section{Storage of the results}
 Benchmarks sometimes generate long human-readable output in text or even HTML
 format. This is useful when analyzing single report. In the output there are details
 of the test run itself, simple resource usage or success of result validation.
@@ -452,7 +457,7 @@ time of each benchmark run is usually enough. Those numbers can be preprocessed
 from the benchmark output files to a format more suitable for quick accessing
 required data.
 
-\section{XML files} \label{sec:xml_files}
+\subsection{XML files}
 XML is a markup language, that can store heterogeneous data in tree structure.
 The tree structure can effectively represent the test scenario running each
 benchmark operation with different parameters and multiple repetitions.
@@ -543,7 +548,7 @@ data is in Figure \ref{fig:xml_sums}.
   \label{fig:xml_sums}
 \end{figure}
 
-\section{Relational database}
+\subsection{Relational database}
 Relational database is a type of database using relational model. The relational
 model stores data in tables using rows for records and columns for their
 attributes. Each row represents an unique record with its attributes in columns.
@@ -577,17 +582,21 @@ changes in the database model.
 In our team we consider the option of storing results of the benchmark in
 database, considering the work needed for migration from storing in XML files.
 
-
-
-\chapter{Displaying the results} \label{ch:visualization}
+\section{Visualization the results} \label{ch:visualization}
 Effective analysis of results from performance measurement requires delivering
 the comparison in a form in which can human quickly see the differences of
-measured values and their severity. Visualization ...
+measured values and their severity. Visualization offers this advantage against
+raw text data collected from benchmarks and performance analysis tools.
+
+velké množství dat  na malém prostoru  ve srozumitelné formě
+effectivity against text representation
+reveals relations between values
+utilization of human image memory
 
 It must deliver easily understandable data even to people that do not work with
 performance analysis on their daily basis.
 
-\section{Line graphs}
+\subsection{Line graphs}
 Line graphs are the simplest method of displaying a course of values of variable
 dependent on a parameter in two dimensional space. It allows to easily spot
 nature of the plotted values -- either rising, descending or constant. The
@@ -618,7 +627,7 @@ utilization of every CPU core.
   \label{fig:linegraph}
 \end{figure}
 
-\section{Heat maps}
+\subsection{Heat maps}
 Heat maps are three dimensional graphs which are using color as the third
 dimension for values. This allows to plot two dependencies of the values
 compared to line graphs, which must use multiple lines to plot the same data.
@@ -659,7 +668,7 @@ the 16 threads run than on the 24 threads run.
   \label{fig:numa_heatmap}
 \end{figure}
 
-\section{Box plots}
+\subsection{Box plots}
 Box plot is a method for displaying statistical properties of data from multiple
 measurements. It extends the simple visualization of discrete values by adding
 to the median values also the minimum and maximum measured values and first and
