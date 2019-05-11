@@ -150,9 +150,11 @@ Each processor has still its own high speed cache, but due to memory sharing,
 in their caches must be uniform.
 
 There are two ways of accessing the shared memory from multiple processors:
-uniform (UMA) and non-uniform (NUMA) memory access. The NUMA technology is more
-widespread thanks to higher performance capability with similar configuration.
-% TODO motivate the NUMA more - usage in RH
+uniform (UMA) and non-uniform (NUMA) memory access. When correctly used, the
+NUMA technology has higher performance capability with similar configuration
+compared to UMA systems. In our experience most paying customers of Red Hat use
+the NUMA technology and we will primarily focus on scheduler behavior on this
+SMP architecture.
 
 \subsection{Uniform memory access}
 In the UMA architecture, all processors share a single memory controller that
