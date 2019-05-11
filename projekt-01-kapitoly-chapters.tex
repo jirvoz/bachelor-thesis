@@ -1036,18 +1036,33 @@ comparison with learned threshold the tree decides to which branch it will
 continue. Each leaf of the tree contains label that is returned for the queried
 vector which led to the leaf.
 
-Learning of the model involves the creation of the decision tree.
+Learning of the model involves the construction of the decision tree. The
+construction looks for the best component of vector for splitting the dataset by
+classes. It creates a decision node and splits the training dataset based on the
+selected component to the decision branches. This process is recursively
+repeated with each part of the split dataset until the split contains vectors of
+single class (purity of the node is 1) or any additional restrictive condition
+is met.
 
-They are easy to interpret and visualize. Example in Figure \ref{fig:decision_tree}.
-Disadvantage is high chance of overfitting.
+Main advantage of the decision tree is its transparency and easy visualization
+of the model. In Figure \ref{fig:decision_tree} there is visualization of
+decision tree constrained by depth and samples count in leaf nodes built with
+our dataset of performance comparisons.
+
+Disadvantage of the decision tree is sensitivity to noisy data and is high
+chance of overfitting, because the tree tries to fit the whole dataset and has
+100\% prediction accuracy on already seen data. This issue can be suppressed by
+reducing maximum depth of the tree, setting minimal amount of samples required
+to split impure node into another decision.
 
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{decision_tree}
-  \caption{Part of decision tree created by Decision tree classifier and
-    rendered by Graphviz library for Python. It shows the first three layers of the
-    decision tree. First line of non-leaf node shows the condition for choosing
-    the next decision branch. \emph{gini} property of node shows its impurity --
+  \caption{Decision tree created by Decision tree classifier and rendered by
+    Graphviz library for Python. It shows decision tree generated on our
+    performance comparison data constrained by depth and samples count in leaf
+    node. First line of non-leaf node shows the condition for choosing the next
+    decision branch. \emph{gini} property of node shows its impurity --
     proportion of training data not fitting the class of the node. Leaf nodes
     have 0 impurity because they contain vectors of single class. Parameters
     \emph{samples} and \emph{value} show the amount of training vectors for the
