@@ -588,14 +588,43 @@ It must deliver easily understandable data even to people that do not work with
 performance analysis on their daily basis.
 
 \section{Line graphs}
+Line graphs are the simplest method of displaying a course of values of variable
+dependent on a parameter in two dimensional space. It allows to easily spot
+nature of the plotted values -- either rising, descending or constant. The
+data can be plotted as discrete values using points or as a continuous function
+using a line. Comparison of more variables from different datasets is done by
+plotting multiple lines to the same graph, one for each variable. In Figure
+\ref{fig:linegraph} is example of line graphs showing CPU utilization of system
+NUMA nodes and ratio of access to memory of remote nodes.
+
+Although line graphs are quick and simple to create and use, they fail to scale
+for larger amount of lines in single graph. Larger amount lines become too
+confusing and impossible to read. Graphs of CPU usage of each NUMA node in
+Figure \ref{fig:linegraph} is still readable, but impossible to use for
+utilization of every CPU core.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{numa_behavior}
+  \caption{Example of line graphs showing statistics collected using numatop
+    utility. The graphs in top row show CPU utilization of each NUMA node
+    through time and in the bottom row show ratio of access to local memory of
+    the node and memory of remote nodes. The graphs on the left show expected
+    behavior of scheduler causing uniform utilization of each node and minimal
+    amount of access to memory of remote nodes. The utilization graphs use
+    linear y axis and memory access graphs use logarithmic y axis. The plotted
+    values were collected on 4 NUMA node machine under workload from NAS
+    Parallel benchmark running in 4 threads.}
+  \label{fig:linegraph}
+\end{figure}
 
 \section{Heat maps}
 Heat maps are three dimensional graphs which are using color as the third
 dimension for values. This allows to plot two dependencies of the values
 compared to line graphs, which must use multiple lines to plot the same data.
-
-Heatmapy škálují pro velké data. 
-Data jsou kvantizovány do bucketů.
+Heat maps provide better scalability for larger data, where line graphs would be
+confusing with too many lines. It is also much easier to spot correlation
+with the additional dimensions compared to line graphs.
 
 In the Figure \ref{fig:heatmap} is heat map showing utilization of all CPU cores over
 time under workload. The data were collected by mpstat utility and processed to
