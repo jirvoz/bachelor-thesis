@@ -266,9 +266,23 @@ tasks spent out of the CPU in queues, load of each processor core or the
 location of memory of the processes on NUMA systems.
 % TODO cite http://www.brendangregg.com/activebenchmarking.html
 
-\section{Performance metrics}
-\paragraph{Throughput} operation per time unit
-\paragraph{Run time} time spent running
+\section{Performance metrics} \label{sec:metrics}
+\paragraph{Throughput} metrics represents the amount of operations per time
+unit. It can use different units: floating point operations, operation as
+a specific tasks defined by benchmark (e.g. SPEC Java benchmarks) usually
+executed per second. Higher values mean better performance.
+
+\paragraph{Run time} is simply the real time the benchmark needed to finish the
+execution. It is mostly presented in seconds, but longer runs can be presented
+using \texttt{hours:minutes:seconds.milliseconds} format. The lower the run time
+is, the better performance it represents.
+
+\paragraph{Time out of CPU} represents the time the benchmark spent in process
+queue waiting for execution. This metric can be calculated from user, kernel and
+real time provided by \emph{time} utility and number of threads, that the
+application used:
+$$T_{out\_of\_cpu} = (T_{real} \times used\_threads) - (T_{user} + T_{kernel})$$
+The lower this value is, the better behavior of scheduler it represents.
 
 \section{Benchmarks}
 In the following section we will describe the benchmarks that are currently used
@@ -359,9 +373,8 @@ time spent in the kernel mode.
 Many benchmarks provide the execution time themselves which can make this
 utility unnecessary. However, the interesting metric is the time that the
 application spent out of the CPU waiting in queue. This value is not provided
-directly, but can be calculated from user, kernel and real time and number of
-threads, that the application used:
-$$T_{out\_of\_cpu} = (T_{real} \times used\_threads) - (T_{user} + T_{kernel})$$
+directly, but provides user, kernel and real time from whose the metric can be
+calculated as described in Section \ref{sec:metrics}.
 
 It can be confused with the Bash builtin command \texttt{time}, which provides similar
 output, but the real binary can provide more verbose information with
