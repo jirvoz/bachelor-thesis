@@ -27,7 +27,7 @@ inefficient code, but instead in an inefficient placement of processes to the
 CPU cores and their queues.
 
 This thesis deals with performance testing of the Red Hat Enterprise Linux
-kernel scheduler done in Red Hat, Inc. company.
+(RHEL) kernel scheduler done in Red Hat, Inc. company.
 The usual performance testing method of the scheduler is to simulate load
 similar to the real usage. Currently, there are many benchmarks targeting different
 types of load, usually spawning many parallel process, sometimes even
@@ -482,8 +482,9 @@ analysis.
 % TODO in our team we use this method for cases described in following figures
 
 Example of results from one run of the NAS Parallel benchmark scenario stored in
-XML format is in Figure \ref{fig:xml_result}. Another example with aggregated
-data is in Figure \ref{fig:xml_sums}.
+XML format is in Figure \ref{fig:xml_result}. Example with aggregated
+data is in Figure \ref{fig:xml_sums}. In XML format are stored also properties
+of the benchmark run result shown in Figure \ref{fig:xml_config}.
 
 \begin{figure}
   \small
@@ -556,6 +557,24 @@ data is in Figure \ref{fig:xml_sums}.
     comparison graph without any manipulation with them lowering the time for
     generation of reports.}
   \label{fig:xml_sums}
+\end{figure}
+
+\begin{figure}
+  \small
+  \begin{verbatim}<?xml version="1.0"?>
+<beaker_run_result>
+  <settings>
+    <BenchmarkName value="NASParallel"/>
+    <Distribution value="RHEL-7.5"/>
+    <Kernel value="kernel-3.10.0-862.el7.x86_64"/>
+    <Architecture value="x86_64"/>
+    <TunedProfile value="throughput-performance"/>
+    <SELinux value="Enforcing"/>
+...
+\end{verbatim}
+  \normalsize
+  \caption{Example of XML file storing properties of benchmark run results.}
+  \label{fig:xml_config}
 \end{figure}
 
 \subsection{Relational database}
@@ -703,7 +722,7 @@ measured by NAS benchmark with different number of threads.
 
 
 
-\chapter{Timelines} \label{ch:timelines}
+\chapter{Visualization using timelines} \label{ch:timelines}
 A common way to analyze performance reports is to compare two results measured
 for different versions or settings. Usually, these
 are called baseline and target results or profiles. The comparison of two
@@ -730,36 +749,50 @@ of Linux kernel scheduler in wider range of time and help to determine stability
 and precision of different benchmarks.
 
 \section{Design}
-Main purpose is to watch performance through kernel versions on specific machine
-with specific configuration like amount of memory or enablement of
-hyper-threading. Each report will be generated for one testing machine
-containing graphs of results from available benchmarks.
+Main purpose is to watch performance through kernel versions on a specific testing
+machine. Output of the timelines generator will be HTML reports showing
+benchmark results of desired kernel versions on single machine. Mockup of
+produced HTML page is described in Figure \ref{fig:mockup}. Displayed results
+will be specified using rules for base kernel as the first reference result
+and target kernels forming the actual timeline.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{mockup}
+  \caption{Mockup of timelines report page. The report will contain results from
+    single testing machine fulfilling specified rules. Below table with the rules
+    in the top of the report will be graphs of the available benchmarks. Each
+    benchmark section will have separate graph for each of its operation and table
+    below the graphs containing featured values from each operation for each
+    benchmark with links to the results in our result database.}
+  \label{fig:mockup}
+\end{figure}
 
 Best type of graph for results with repeated runs are boxplots. Boxplots show
 important statistical values from the runs: median, minimum, maximum and first
-and third quartiles. 
+and third quartiles. Those values will quickly reveal stability of plotted
+benchmark and noise in the measurement helping with distinguishing of true
+performance degradations.
 
-different numbers of threads
-the highest ain't always the most important
+Each graph of benchmark operation will contain results from all thread
+configuration, but only one desired configuration will be visible by default.
+The desired number of threads is the point where performance regressions create
+biggest difference, which is in most cases the highest number of threads.
 
-table of numerical results
-links to cqe database
+The graphs will also contain horizontal lines in background following median of
+base result and its value increased and decreased by 5\%. Those lines will allow
+more effective recognition of significant performance changes without looking at
+the absolute values of the measurements.
+
+Under the graphs of all operations of benchmark will be table containing medians
+of featured thread runs for each benchmark operation of every displayed kernel
+for browsing of the absolute result values. Each record will also work as link
+to result record in our team database of benchmark results.
 
 \section{Implementation}
-
-\section{Result storage}
-Data jsou k dispozici ve formátu jako ve figure \ref{fig:xml_sums}.
-
-Benchmark results are in our case stored on filesystem in directories. Each result consists
-of two XML files with information and preprocessed main data from the test run,
-more files with larger complementary data from analysis tools and compressed
-original outputs from benchmark. First XML file contains metadata from the test
-run including the time, machine hostname, kernel and OS version, benchmark name,
-configuration of environment, which could affect the result.
-The second XML file contains the important preprocessed data itself.
-
-The analyzer has to go through all these results to choose the right ones for the
-following creation of graphs.
+This section describes aspects of implementation of the timelines report generator.
+The programming for the generator was chosen Python2 due to earlier origins of
+its implementation.
 
 \subsection{Comparison rules}
 For automatic report generation are essential rules, which will specify results,
@@ -774,21 +807,72 @@ with the result properties. The first level of XML document contains three nodes
 representing the purpose of the rules.
 \begin{itemize}
   \item \textbf{Baseline rules} specify the first result in the plotted set.
-    Acts as the main result that the others are compared to.
+    Acts as the main result that the others are compared to. In case of multiple
+    results fitting the rule, the newest one will be used.
   \item \textbf{Target rules} define the results to be plotted.
   \item \textbf{Starting rules} are for the case, when base result is not from
     target set of results and specifying first target result with regex would be
     hard.
-\end{itemize}
+  \end{itemize}
 
-\subsection{Highcharts}
-median +-5\% lines
-Highcharts\cite{highcharts} is a battle-tested SVG-based, multi-platform charting library that has been actively developed since 2009. It makes it easy to add interactive, mobile-optimized charts to your web and mobile projects. It features robust documentation, advanced responsiveness and industry-leading accessibility support.
+\subsection{Reading of results}
+Benchmark results are in our case stored on filesystem in directories. The
+generator has to go recursively through directory with results of benchmark runs
+with files containing desired data. From each result, it starts with file
+containing properties of given result. This file provides metadata from the
+benchmark run including the time, machine hostname, kernel and OS version,
+benchmark name, configuration of environment for selecting desired results using
+the comparison rules. Example of XML file with properties is in Figure
+\ref{fig:xml_config}.
 
-\subsection{Parallelization}
+After applying the rules the generator reads files from
+selected results with preprocessed data that are ready to use for drawing box
+plot graphs. Example of the file with preprocessed values is in Figure
+\ref{fig:xml_sums}. Parsed data from this XML file is all the generator needs to
+start drawing the timeline graphs.
 
-\section{Output}
+\subsection{Plotting of timelines}
+For displaying the data in graphs using box plots we will use Highcharts
+javascript library\;\cite{highcharts} for generating interactive SVG-based
+graphs for HTML pages. It is offers free license for non-commercial use with
+available source code, but also paid licenses for commercial use. It provides
+fast and easy creation of various types of graphs including box plots with wide
+possibilities of customization.
+
+how are charts generated
+
+\subsection{Generator parallelization}
+usage of multiple processes
+there is no need for locks - the common data are only read by the processes
+
+\section{Generated output}
 Example of timelines graphs
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{timeline_jvm_table}
+  \caption{Generated box plot timeline graph of \emph{mpegaudio} operation from
+    SPECjvm2008 benchmark with part of table showing numeric results of the
+    SPECjvm2008 operations. The table shows medians from benchmark runs with
+    featured number of threads and the kernel names are links to our team
+    database of results. It displays performance results of upstream kernels for
+    Red Hat Enterprise Linux 8. The performance degradation is consequence of
+    changes in memory placement and migration behavior.}
+  \label{fig:timeline_jvm_table}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{timeline_nas}
+  \caption{Timeline box plot from the same report as Figure
+    \ref{fig:timeline_jvm_table} showing results of \emph{Embarrassingly
+    Parallel} operation from NAS Parallel benchmark. This benchmark got
+    performance gain in the same version as the SPECjvm2008 benchmark registered
+    performance degradation. Fortunately, this performance gain in NAS Parallel
+    benchmark operation did not disappeared after fixing the degradation at
+    SPECjvm2008 benchmark.}
+  \label{fig:timeline_nas}
+\end{figure}
 
 
 
