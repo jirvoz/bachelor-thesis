@@ -1270,18 +1270,56 @@ number of the trees in the model.
 \end{figure}
 
 \section{Evaluation of classifiers}
-What is cross validation
-Best classifiers seems to be knn and random forest.
-This classifier will be added to analyzer for automatic labeling of comparisons.
+For the evaluation and comparison of proposed classifiers we will use these
+configurations:
+\begin{itemize}
+\item \textbf{k-nearest neighbors} with $k=3$ and uniform vote weight.
+\item \textbf{k-nearest neighbors} with $k=6$ and vote weight based on distance.
+\item \textbf{Linear regression} with balanced weight of the classes.
+\item \textbf{Decision tree} with minimum of 16 samples in each leaf node.
+\item \textbf{Random forest} with 100 trees.
+\item \textbf{Extra trees} with 100 trees.
+\end{itemize}
+
+Precision of the classifiers will be evaluated using k-fold cross-validation
+described in Subsection \ref{subsec:validation}.
+
+Results of the classifiers evaluation are visualized in Figure
+\ref{fig:classifiers}. Exact median values of classification precision on
+testing datasets with deviation of measurement are listed below:
+
+\begin{minipage}{\linewidth}
+\begin{verbatim}
+k-NN (uniform):
+  accuracy: 93.63% (+/- 4.96%)
+k-NN (distance):
+  accuracy: 94.29% (+/- 4.66%)
+Logistic regression:
+  accuracy: 92.05% (+/- 5.72%)
+Decision tree:
+  accuracy: 92.97% (+/- 5.82%)
+Random forest:
+  accuracy: 93.13% (+/- 5.66%)
+Extra trees:
+  accuracy: 91.85% (+/- 5.59%)
+\end{verbatim}
+\end{minipage}\\
 
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{classifiers}
   \caption{Comparison of accuracy of different classifiers mentioned in Section
-    \ref{sec:classifier_comparison}. The results come from cross-validation by
-    split the dataset to train and test sets using ratio 3:1.}
+    \ref{sec:classifier_comparison}. The results come from repeated k-fold
+    cross-validation by splitting the dataset to train and test sets using ratio
+    3:1.}
   \label{fig:classifiers}
 \end{figure}
+
+As the best classifiers seems to be \emph{k-nearest neighbors} classifiers and
+\emph{random forest} classifiers. Now any of these classifiers is fine to use
+for the automatic detection of performance regression, but with more manually
+labeled data will be the evaluation repeated and the selection of classifier
+reconsidered.
 
 
 
