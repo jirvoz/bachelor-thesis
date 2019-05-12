@@ -130,7 +130,6 @@ processors with different access speed to different memory sections.
 Scheduling domains are regularly rebalanced by going up from bottom of the
 scheduling domain hierarchy and by checking balance of the groups on each level.
 
-% https://lwn.net/Articles/764482/
 \begin{figure}
   \centering
   \includegraphics[width=4cm]{sched-domains}
@@ -226,6 +225,11 @@ node 0 1 2 3 4 5 6 7
 \end{verbatim}
 \end{minipage}\\
 
+The \texttt{numactl} utility also provides possibility of pinning processes to a
+specific NUMA node to ensure the process and its memory will stay on the
+intended node. This allows user to arrange processes manually in way considered
+as the best for maximum performance.
+
 Balancing tasks between NUMA nodes is difficult for the scheduler since it needs
 to take into account an expensive memory movement or access to different nodes.
 With a wrong approach the performance of a NUMA system can drop even below the
@@ -236,8 +240,6 @@ Balancing processes between NUMA nodes is still in active development, which
 brings many changes. These usually improve performance, however, there are cases
 when a change can cause a performance regression. Therefore, it is essential to
 carry out a thorough performance testing of the scheduling.
-
-% TODO task can be pinned
 
 
 
