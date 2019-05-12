@@ -481,12 +481,17 @@ tags and attributes which often take more space than the data itself. Parsing of
 the data also take considerable amount of CPU time prolonging the duration of
 analysis.
 
-% TODO in our team we use this method for cases described in following figures
+In our team we use the XML format for storing results values from benchmark runs
+and their aggregated statistics for easier generation of performance comparison
+reports. Next to the results is also stored configuration of the benchmark run
+containing properties of the system the benchmark ran on. The properties include
+hostname of testing machine, version of kernel and operating system, or
+configuration of environment.
 
 Example of results from one run of the NAS Parallel benchmark scenario stored in
 XML format is in Figure \ref{fig:xml_result}. Example with aggregated
-data is in Figure \ref{fig:xml_sums}. In XML format are stored also properties
-of the benchmark run result shown in Figure \ref{fig:xml_config}.
+data is in Figure \ref{fig:xml_sums}. Example of XML file with properties
+of benchmark run result is shown in Figure \ref{fig:xml_config}.
 
 \begin{figure}
   \small
@@ -532,20 +537,20 @@ of the benchmark run result shown in Figure \ref{fig:xml_config}.
   <test_result>
     <nas_result benchmark_name="mg_C_x">
       <threads number="2">
-        <mops mean="5450.9" stdev="68.4" first_q="5407.4" median="5411.4"
-          third_q="5499.3" max="5560.4" min="5376.1"/>
-        <total_time mean="31.7" stdev="0.4" first_q="31.4" median="31.9"
-          third_q="32.0" max="32.2" min="31.0"/>
-        <out_of_cpu_time mean="1.0" stdev="0.4" first_q="0.7" median="0.9"
-          third_q="1.3" max="1.6" min="0.6"/>
+        <mops mean="5450.9" stdev="68.4" first_q="5407.4"
+          median="5411.4" third_q="5499.3" max="5560.4" min="5376.1"/>
+        <total_time mean="31.7" stdev="0.4" first_q="31.4"
+          median="31.9" third_q="32.0" max="32.2" min="31.0"/>
+        <out_of_cpu_time mean="1.0" stdev="0.4" first_q="0.7"
+          median="0.9" third_q="1.3" max="1.6" min="0.6"/>
       </threads>
       <threads number="4">
-        <mops mean="10207.0" stdev="66.8" first_q="10226.6" median="10227.7"
-          third_q="10250.2" max="10254.9" min="10075.4"/>
-        <total_time mean="16.9" stdev="0.1" first_q="16.8" median="16.8"
-          third_q="17.0" max="17.1" min="16.8"/>
-        <out_of_cpu_time mean="1.6" stdev="0.5" first_q="1.3" median="1.4"
-          third_q="1.7" max="2.5" min="1.2"/>
+        <mops mean="10207.0" stdev="66.8" first_q="10226.6"
+          median="10227.7" third_q="10250.2" max="10254.9" min="10075.4"/>
+        <total_time mean="16.9" stdev="0.1" first_q="16.8"
+          median="16.8" third_q="17.0" max="17.1" min="16.8"/>
+        <out_of_cpu_time mean="1.6" stdev="0.5" first_q="1.3"
+          median="1.4" third_q="1.7" max="2.5" min="1.2"/>
       </threads>
 ...
 \end{verbatim}
@@ -563,7 +568,8 @@ of the benchmark run result shown in Figure \ref{fig:xml_config}.
 
 \begin{figure}
   \small
-  \begin{verbatim}<?xml version="1.0"?>
+\begin{verbatim}
+<?xml version="1.0"?>
 <beaker_run_result>
   <settings>
     <BenchmarkName value="NASParallel"/>
@@ -575,7 +581,13 @@ of the benchmark run result shown in Figure \ref{fig:xml_config}.
 ...
 \end{verbatim}
   \normalsize
-  \caption{Example of XML file storing properties of benchmark run results.}
+  \caption{Example of XML file with properties of a benchmark run. In a flat
+    structure in node \texttt{<settings>} are key-value pairs stored as node
+    name and attribute \texttt{value} with the actual value of the property.
+    There are information including benchmark name, version of kernel and
+    operating system, hostname and architecture of testing machine and various
+    system and environment parameters that could affect the performance
+    measurement results.}
   \label{fig:xml_config}
 \end{figure}
 
