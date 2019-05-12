@@ -1123,7 +1123,7 @@ For the following training and evaluation of the models we have roughly 250
 labeled vectors. This should be enough to train different simple classifiers with
 sufficient accuracy on other unlabeled vectors.
 
-\subsection{Validation and metrics}
+\subsection{Validation and metrics} \label{subsec:validation}
 To compare success rate of different classification models we need a method to evaluate
 accuracy of predicting new data. Testing the model on data it got also for
 learning brings risk of overlooking \emph{overfitting}. Overfitting means that the model
@@ -1323,50 +1323,64 @@ reconsidered.
 
 
 
-\chapter{Future work}
-more precise classification with more learning data
-classification of results can be included to timelines
-
-
-
 \chapter{Conclusion}
-In this work we described ...
-... was evaluated ...
+In this work we described performance testing of Linux kernel scheduler in Red
+Hat, Inc. company. The process of checking for performance regressions in new
+versions of kernels for Red Hat Enterprise Linux consist of measuring
+performance of the kernel using benchmarks, storing of the results and
+visualization of performance comparisons between the targeted kernel version and
+reference base version.
 
-Závěrečná kapitola obsahuje zhodnocení dosažených výsledků se zvlášť vyznačeným
-vlastním přínosem studenta. Povinně se zde objeví i zhodnocení z pohledu dalšího
-vývoje projektu, student uvede náměty vycházející ze zkušeností s řešeným
-projektem a uvede rovněž návaznosti na právě dokončené projekty (řešené v rámci
-ostatních bakalářských prací v daném roce nebo na projekty řešené na externích
-pracovištích).
+This work proposed a new way of visualization of performance results called
+\emph{timelines} focused on long-term performance development of multiple Linux
+kernels.
+
+The timelines were already used to compare stability of operations from used
+benchmarks to create reduced test scenario with the more stable operations for
+less important tests with shorter run time. Compared to original scenario with
+estimated run time of 24 hours the shorter variant took only one third of the
+time. Besides the generated timelines reports are continuously used to examine
+kernel performance through longer period of time.
+
+Furthermore, this thesis proposed an utilization of machine learning for
+automatic classification of performance measurement comparisons to reduce time
+one has to spend to look for performance regressions.
+
+The trained model is going to be integrated in generator of performance
+comparison reports to mark the comparison as passed or failed (containing
+performance regression). This will reduce time of examining tens of reports from
+each new tested kernel and create more time to work on new features of the
+generator. With more manually labeled data for learning will be the classifiers
+evaluated and compared again. Then will be the current one replaced with the
+better trained one.
+
+Although the proposed timeline graphs reports and automatic detection of
+performance degradation pushes the effectivity of working with performance
+results forward, their potential is not depleted yet. Future addition of
+Jinja2\footnote{\url{http://jinja.pocoo.org}} template system to timeline report
+generator will make the code much cleaner and the reports look a bit rough
+without a proper CSS styling. The performance degradation classifiers will be
+reevaluated after obtaining larger manually labeled dataset and the automatic
+classification will be included to timeline reports to highlight performance
+regressions and watch precision of classification on new real data.
+
 
 
 \chapter{Notes}
 \begin{verbatim}
-zkontrolovat prekladatelem
-zminit Red Hat
-citovat cely scikit, nebo konkretni stranky
 vlozit nedelitelne mezery
-stress more what is my work, team and general knowledge
-  in our team we use ..., my part of work is ...
-klicova slova v lstlisting
 jednostranny tisk
 rozsirit podekovani
+motivace v uvodech kapitol
+licence zdrojaku soubor LICENSE
 
-text semestralni prace
-licence zdrojaku
-lstlisting na jednu stranu
-timeliny jako section vizualizace?
-(1) a (2) v introductionu
+grafy ke vsem benchmarkum?
 
 Linux scheduler
-    manual pinning option
-        numactl
     group imbalance bug
     tuned profiles
         focus on throughput or latency
 Performance
-    provisioning of machines with Beaker
     collecting system load data
         numastat
         numatop
@@ -1377,16 +1391,7 @@ Performance
     scenarios
         variable number of benchmark instances
         with and without pinning processes to specific numa nodes
-    result storing
-        preprocessing to xml
-        storing to database
-        aggregating results
-        computing statistical data
     plotting
         lstopo for plotting hardware topology
-        bargraphs to show inaccuracy
-            operations per second (run time of benchmark)
-            time out of cpu
         detailed comparison of two results
-        timeline with many results over longer period of time
 \end{verbatim}
