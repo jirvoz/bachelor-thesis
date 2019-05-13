@@ -817,8 +817,8 @@ to result record in our team database of benchmark results.
 
 \section{Implementation}
 This section describes aspects of implementation of the timelines report generator.
-The programming for the generator was chosen Python2 due to earlier origins of
-its implementation.
+The programming language chosen for the generator is Python2 due to earlier
+origins of its implementation.
 
 \subsection{Comparison rules}
 For automatic report generation are essential rules, which will specify results,
@@ -865,14 +865,52 @@ available source code, but also paid licenses for commercial use. It provides
 fast and easy creation of various types of graphs including box plots with wide
 possibilities of customization.
 
-how are charts generated
+On the HTML page are the charts rendered by JavaScript function from the
+Highcharts library to specified \texttt{div} element by its id attribute as an
+SVG image. The rendering function takes parameters for the graph in JSON format
+including type of chart, axis parameters, horizontal lines for reference median,
+interactive tooltips, and the data series.
 
 \subsection{Generator parallelization}
-usage of multiple processes
-there is no need for locks - the common data are only read by the processes
+With multiple entered sets of rules for timeline reports the generator can
+create multiple reports, e.g. separate reports for Red Hat Enterprise Linux 7
+and 8. The procedure of parsing results and generating graphs is more on CPU
+than IO operations.
+
+To reduce time needed to generate all reports multiprocessing is used. There is
+no need of exclusive access to any shared resource, because all of them are
+used only for reading, not writing. For implementation Python2 provides
+\texttt{multiprocessing} library with \texttt{Process} class that creates child
+process by forking allowing true parallel generation of reports. Using only
+threads in Python does not lead to parallel computation because of Python's
+\emph{global interpreter lock} is preventing multiple threads from executing
+code simultaneously.
 
 \section{Generated output}
-Example of timelines graphs
+Output of the timeline generator is HTML report containing graphs of different
+benchmark operations with summary tables as described in mockup in Figure
+\ref{fig:mockup}.
+
+The graphs use box plot method which shows the measurement accuracy. This
+feature helped to eliminate unstable benchmark operations from run scenarios.
+One of the unstable operation is shown in Figure \ref{fig:timeline_unstable}.
+
+Thanks to wide range of displayed results it is easy to find version where a
+performance regression occurred, or was fixed. This case is captured in Figure
+\ref{fig:timeline_jvm_table}, where is also shown part of the summary table. The
+cause of the degradation is change in memory migration rules between NUMA nodes.
+However, this change was not pure regression, because other benchmark shown
+significant gain displayed in Figure \ref{fig:timeline_nas}. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{timeline_unstable}
+  \caption{Example of very unstable benchmark which was removed from the run
+    scenario because of irrelevant results. The yellow and orange lines show
+    median of base result and 5\% differences which are usually threshold for
+    suspected performance regression.}
+  \label{fig:timeline_unstable}
+\end{figure}
 
 \begin{figure}
   \centering
