@@ -723,13 +723,17 @@ the 16 threads run than on the 24 threads run.
 Box plot is a method for displaying statistical properties of data from multiple
 measurements. It extends the simple visualization of discrete values by adding
 to the median values also the minimum and maximum measured values and first and
-third quartiles from the measurement. In special cases are also added marks for
-99\textsuperscript{th} or similar percentile relevant for the given case.
-% TODO why it displays those values
+third quartiles from the measurement.
 
-All the displayed values shows the accuracy and reliability of measurement. This
-insight helps to distinguish real performance regression from noise caused by
-unpredictable behavior of the scheduler and measurement error.
+In some cases the whiskers for minimum and maximum value represent standard
+deviation or 2\textsuperscript{nd} and 99\textsuperscript{th} percentile. Data
+out of the range displayed as standalone points above or below the whiskers.
+
+Box plots are great to illustrate dispersion and variation of data that do not
+follow exact normal distribution. All the displayed marks show accuracy and
+reliability of measurement. This insight helps to distinguish real performance
+regression from noise caused by unpredictable behavior of the scheduler and
+measurement error.
 
 In the Figure \ref{fig:boxplot} is an example of box plot showing throughput
 measured by NAS benchmark with different number of threads.  
