@@ -455,9 +455,18 @@ numastat
 
 
 \chapter{Processing of results} \label{ch:processing}
-Results must be stored and visualized.
+Getting the output of benchmarks and tools for performance analysis is just a
+part of performance regression testing. To make comparison of two results it is
+essential to store the results in an efficient way for quick creation of
+comparison report. The quality of the comparison report also affect the right
+choice and use of visualization of the results and their comparison.
 
-\section{Storage of the results}
+This chapter is structured as follows: Section \ref{sec:storage} describing
+ways of storing the results from benchmarks and Section \ref{sec:visualization}
+describing different visualization methods suitable for analysis of performance
+changes.
+
+\section{Storage of the results} \label{sec:storage}
 Benchmarks sometimes generate long human-readable output in text or even HTML
 format. This is useful when analyzing single report. In the output there are details
 of the test run itself, simple resource usage or success of result validation.
@@ -625,19 +634,18 @@ changes in the database model.
 In our team we consider the option of storing results of the benchmark in
 database, considering the work needed for migration from storing in XML files.
 
-\section{Visualization the results} \label{ch:visualization}
+\section{Visualization the results} \label{sec:visualization}
 Effective analysis of results from performance measurement requires delivering
-the comparison in a form in which can human quickly see the differences of
-measured values and their severity. Visualization offers this advantage against
-raw text data collected from benchmarks and performance analysis tools.
+the comparison in a form in which can human quickly see the differences in
+measured values and their severity.
 
-velké množství dat  na malém prostoru  ve srozumitelné formě
-effectivity against text representation
-reveals relations between values
-utilization of human image memory
+Visualization offers this advantage against raw text data collected from
+benchmarks and performance analysis tools. It allows us to see much faster
+important relations between collected data utilizing often smaller display area
+than the raw data.
 
-It must deliver easily understandable data even to people that do not work with
-performance analysis on their daily basis.
+Right visualization also allows us deliver more easily understandable data even
+for people that do not work with performance analysis on their daily basis.
 
 \subsection{Line graphs}
 Line graphs are the simplest method of displaying a course of values of variable
