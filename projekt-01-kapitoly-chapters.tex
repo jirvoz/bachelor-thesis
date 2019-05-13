@@ -393,10 +393,23 @@ run time, page faults, context switches, or location on which core or NUMA node
 it ran.
 
 \subsection{STREAM benchmark}
-The STREAM benchmark is a simple, synthetic benchmark designed to measure the sustainable memory bandwidth (in MB/s) and a corresponding computation rate for four simple vector kernels.
-STREAM runs on each core of a mode using the OpenMP programming paradigm. Four synthetic computational kernels are run, and the best rates observed are reported for each choice of thread count.
+The STREAM benchmark\;\cite{stream} is a simple benchmark aimed for measuring memory
+bandwidth and also computation speed of simple vector kernels. Its motivation is
+slow grow of memory performance compared to CPU, which makes speed of this
+component also crucial for the performance of the whole system.
+
+Output metric of the benchmark is memory bandwidth in \emph{MB/s}, but it
+provides the same statistics as Linpack benchmark: run time, page faults,
+context switches, or location on which core or NUMA node it ran.
 
 \section{Performance analysis tools}
+Although benchmarks create workload on tested system and collect some metric of
+its performance, tools for performance analysis are needed to get better insight
+to behavior of the system. To the interesting information belong utilization of
+processor cores, migration of benchmark process and its memory between NUMA
+nodes, or the time the process spent in queue out of CPU.
+This section describes utilities used to collect data to get the insight to
+system behavior.
 
 \subsection{time}
 Time is a simple command for measuring the time that an application spends
