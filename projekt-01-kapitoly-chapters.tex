@@ -6,16 +6,17 @@ break the stability of business applications leading to great financial losses.
 An important part of operating systems is implementation and strategy of a process
 scheduler, which manages processes and their processor time.
 
-In the Linux kernel, scheduler used to be simple, but with an introduction of multi-core CPUs came
-a requirement for multiple runqueues for each core and their balancing. This brought
-some complexity to the code and it took some time to eliminate bugs and tune the
-scheduler behavior. Another change came with symmetric multiprocessing technology bringing
-to market machines with multiple CPU sockets and non-uniform memory organization
-and access. Scheduling on those systems is still under an active development and
-therefore it is prone to performance degradation bugs. In order to discover these bugs and to
-keep performance of the operating system, performance testing is essential. Due
-to this fact, it is essential to evaluate performance of the scheduler before
-each release.
+In the Linux kernel, scheduler used to be simple, but with an introduction of
+multi-core CPUs came a requirement for multiple runqueues for each core and
+their balancing. This brought some complexity to the code and it took some time
+to eliminate bugs and tune the scheduler behavior. Another change came with
+symmetric multiprocessing technology bringing to market machines with multiple
+CPU sockets and non-uniform memory organization and access\;\cite{wasted-cores}.
+Scheduling on those systems is still under an active development and therefore
+it is prone to performance degradation bugs. In order to discover these bugs and
+to keep performance of the operating system, performance testing is essential.
+Due to this fact, it is essential to evaluate performance of the scheduler
+before each release.
 
 Compared to functional testing, performance cannot be evaluated as just true and
 false results. It is more challenging as we have to (1) compare it relatively with
@@ -67,9 +68,9 @@ regression.
 
 
 \chapter{Linux process scheduling} \label{ch:scheduler}
-Scheduler is a part of an operating system which assigns the processor time to tasks.
-Its main goal is to maximize effectivity of the CPU usage and to ensure fairness of the
-CPU time assigned to each task.
+Process scheduler is a part of an operating system which assigns the processor
+time to tasks. Its main goal is to maximize effectivity of the CPU usage and to
+ensure fairness of the CPU time assigned to each task.
 
 There are two opposing targets for a scheduler: either maximizing the throughput or
 minimizing the latency. Lower amount of context switches leaves more CPU time for
@@ -111,8 +112,8 @@ When moving processes between cores, scheduler takes in the account a topology
 of the system. Losing data from caches after the migration can have a bigger
 impact on performance than leaving the process on the busy core.
 
-% Linux kernel book
-CFS solves this problem by using scheduling domains. Scheduling domain is a set
+CFS solves this problem by using scheduling
+domains\;\cite{understanging-linux-kernel}. Scheduling domain is a set
 of CPUs that should be balanced between themselves. CPUs in a scheduling domain
 are divided into groups. Scheduler then checks the load of the whole groups to
 decide if there is a need to migrate processes between them.
@@ -271,14 +272,14 @@ spends before finishing.
 
 Although the available benchmarks generate values that are suitable for comparison, they
 do not provide any more detailed information about how the system achieved the
-measured performance or where the possible bottlenecks could be.
+measured performance or where the possible bottlenecks could
+be\;\cite{active-benchmarking}.
 
 To get a better insight into the behavior of the system, there are many tools to
 collect performance records about the system behavior. Useful information about the
 scheduler include assignment of tasks to the processor cores, the time that the
 tasks spent out of the CPU in queues, load of each processor core or the
 location of memory of the processes on NUMA systems.
-% TODO cite http://www.brendangregg.com/activebenchmarking.html
 
 \section{Performance metrics} \label{sec:metrics}
 \paragraph{Throughput} metrics represents the amount of operations per time
