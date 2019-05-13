@@ -454,13 +454,15 @@ power efficiency of both the scheduler and the physical CPUs, but the command
 only provides consumption of the CPUs and their RAM and not of the whole
 machine.
 
-\subsection{perf}
-Linux tool for monitoring hardware and software events, profiling and tracing.
+% TODO
+%\subsection{numatop and numastat}
 
-\subsection{numa* tools}
-numactl
-numatop
-numastat
+\subsection{perf}
+% TODO
+Linux tool for monitoring hardware and software events, profiling and tracing.
+perf stat
+perf record \& report
+perf top
 
 
 
@@ -1200,7 +1202,7 @@ the rest $k - 1$ groups are left for training. This way we get $k$ different
 dataset for evaluation of our classifiers.
 
 As implementation of k-fold cross-validation we will use
-\texttt{RepeatedStratifiedKFold} class from scikit-learn library with parameter
+\texttt{Repeated\-Stratified\-K\-Fold} class from scikit-learn library with parameter
 $k$ set to 4. It will split the original dataset to 4 groups with same ratio of
 pass and fail labels repeating this process with differently shuffled data.
 Setting number of folds to 4 will give us enough data for training, but also for
@@ -1225,7 +1227,7 @@ Accuracy of the model highly depends on the parameter $k$. Higher values
 suppress noise in dataset, but can smoother the boundaries of classes too much.
 This behavior can be seen in Figure \ref{fig:knn}.
 
-Scikit-learn implements k-NN classifier in \texttt{KNeighborsClassifier} class.
+Scikit-learn implements k-NN classifier in \texttt{K\-Neighbors\-Classifier} class.
 Next to setting the $k$ number it provides parameter for weighting votes. First
 option is uniform voting where each of the $k$ neighbors have the same weight of
 the vote. The second option weights votes based on the distance from queried
@@ -1244,11 +1246,20 @@ seen in Figure \ref{fig:knn}.
   \label{fig:knn}
 \end{figure}
 
-\subsection{Linear classifier}
-Linear models try to separate vectors of two different classes to two spaces
+\subsection{Linear logistic regression classifier}
+Linear model tries to separate vectors of two different classes to two spaces
 using a line, plane, hyperplane, etc. depending on the dimensionality of the
-vectors.
-\ref{fig:vectors_plot}
+vectors. It works by multiplying queried feature vector by learned set of
+weights. Thanks to this simplicity it scales very well for large amount of
+vectors and features.
+
+The linear logistic regression classifier is implemented by scikit-learn in
+\texttt{Logistic\-Regression} class. We will use it with \texttt{class\_weight}
+parameter set to \emph{balanced}, because the linear classifier keeps the
+probabilities of classes favoring the by count of vectors it got for learning.
+
+In Figure \ref{fig:vectors_plot} we can see that our data are linearly separable
+and the linear logistic regression should be able to fit our dataset with good results.
 
 \subsection{Decision tree classifier}
 Decision of this classifier is based on decision tree built on training data.
@@ -1302,13 +1313,13 @@ the duration of learning of the model and prediction rises linearly with the
 amount of trees.
 
 The scikit-learn library provides two implementation of classifiers based on
-randomized trees. The first is \texttt{RandomForestClassifier} class. The
+randomized trees. The first is \texttt{Random\-Forest\-Classifier} class. The
 dataset for each tree is resampled with replacement creating slightly reduced
 and different dataset. When building a decision tree, the component used for
 comparison in the node is not the best for splitting, but randomly chosen.
 
 The second is extremely randomized trees method implemented in
-\texttt{ExtraTreesClassifier} class. This implementation extends the randomness
+\texttt{Extra\-Trees\-Classifier} class. This implementation extends the randomness
 by choosing more thresholds for decision randomly and selecting the best instead
 of computing the most discriminative one. This method helps to reduce variance
 of the model at the cost of higher bias.
@@ -1437,7 +1448,6 @@ licence zdrojaku soubor LICENSE
 grafy ke vsem benchmarkum?
 
 Linux scheduler
-    group imbalance bug
     tuned profiles
         focus on throughput or latency
 Performance
@@ -1445,13 +1455,8 @@ Performance
         numastat
         numatop
             usage of cpu and memory on each node
-        perf stat
         lstopo for hardware schema image
-        free
     scenarios
         variable number of benchmark instances
         with and without pinning processes to specific numa nodes
-    plotting
-        lstopo for plotting hardware topology
-        detailed comparison of two results
 \end{verbatim}
