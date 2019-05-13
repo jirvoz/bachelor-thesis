@@ -132,25 +132,25 @@
   abstract.cs={Výkon plánovače procesů v jádře operačního systému značně
     ovlivňuje rychlost a odezvu všech aplikací, které na něm běží. Jakýkoli
     propad výkonu pak může mít kritické důsledky na běhu aplikací. S příchodem
-    nových technologií (např. symetrický multiprocesing) se kód plánovače vyvíjí
+    každé nové technologie (např. symetrický multiprocesing) se kód plánovače vyvíjí
     a rozšiřuje. Proto jsou potřeba regresní testy nejen na jeho fukčnost, ale i
     výkon. Tato práce mapuje metody testování plánovače operačního systému Linux
     ve firmě Red Hat. Popisuje způsoby měření výkonu plánovače, sbírání
     informací o jeho chování, ukládání sesbíraných dat a jejich vizualiaci.
-    Hlavím cílem práce je pak návrh a implementace nového způsobu vizualizace
+    Hlavním cílem práce je pak návrh a implementace nového způsobu vizualizace
     dlouhodobých měření a využití strojového učení pro automatciké rozpoznání
     degradace výkonu mezi dvěma výsledky.}, % abstrakt v českém či slovenském jazyce / abstract in czech or slovak language
   abstract.en={Performance of process scheduler in a kernel of an operating
     system significantly influences throughput and latency of all applications
     running above it. Any performance drop can have critical consequences on the
-    applications. With the arrival of new technologies (e.g. symmetric
-    multiprocesing), the code of the scheduler evolves and grows. This requires
+    applications. With the arrival of every new technology (e.g. symetric
+    multiprocesing) the code of the scheduler evolves and grows. This requires
     not only functional, but also performance regression testing. This work
     presents methods of performance testing used in the Red Hat, Inc. company.
-    It describes ways of measurement of the process scheduler of the Linux
-    kernel, ways of collecting information about its behavior, of storing the
-    collected data, and of the data visualization. The goal of this work is
-    desing and implementation of a new way of visualization of long-term
+    It describes how one can measure performance of the Linux process scheduler
+    in the Linux kernel, collect statistics about its behavior, store the
+    collected data, and visualize them. The goal of this work is to
+    design and implement a new technique of visualization of long-term
     measurements and utilization of machine learning for automatic
     classification of performance degradation between different results.}, % abstrakt v anglickém jazyce / abstract in english
   %abstract.en={An abstract of the work in English will be written in this paragraph.},
@@ -182,8 +182,49 @@
 % Rozšířený abstrakt (cca 3 normostrany) - lze definovat zde nebo výše / Extended abstract (approximately 3 standard pages) - can be defined here or above
 \extendedabstract{Do tohoto odstavce bude zapsán rozšířený abstrakt práce v českém
   (slovenském) jazyce: úvod, popis vlastního řešení a shrnutí a zhodnocení
-  dosažených výsledků.}
+  dosažených výsledků.
 
+  Plánovač procesů v operačním systému se stará o přidělování procesorového času
+  běžícím procesům a jejich rovnoměrné rozložení mezi procesorové jádra. Výkon
+  plánovače procesů pak silně ovlivňuje i výkon samotných aplikací běžících na
+  daném operačním systému. Jakýkoli propad výkonu pak může mít v komerční sféře
+  za následky vysoké finanční ztráty.
+
+  Plánovač procesů funguje velmi jednoduše pro systémy s jedním jádrem, ovšem s
+  příchodem vícejádrových procesorů se plánování zkomplikovalo vyvažováním front
+  procesů mezi jádry a trvalo, než se všechny problémy vyladily. Nové komplikace
+  plánování pak přinesly víceprocesorové systémy s neuniformní dobou přístupu do
+  paměti. Plánování na této architektuře je stále ve vývoji a tím i náchylné k
+  chybám způsobujícím propad výkonu. Proto je potřeba regresní testování výkonu
+  nových verzí jádra pro včasné odhalení těchto chyb.
+
+  Na rozdíl od funkčního testování není výkonové testování není jednoznačný
+  výsledek, jestli test doběhl. Pro zjištění změny výkonu je potřeba relativní
+  porovnání naměřených hodnot s referenčním výsledkem z předchozí verze nebo
+  jiné konfigurace a určení prahu mezi odchylkou měření a skutečným propadem
+  výkonu. Propady výkonu plánovače navíc nejsou způsobeny pomalým kódem, ale
+  chybným přemisťováním procesů a jejich dat mezi jádry a fyzickými procesory.
+
+  Tato práce popisuje výkonové testování plánovače procesů Red Hat Enterprise
+  Linuxu ve společnosti Red Hat, Inc. Běžný způsob zjišťování výkonu plánovače
+  je měření benchmarkem, který simuluje reálnou zátěž. Benchmarků je více s
+  různými způsoby zátěže, především však pomocí většího množství procesů nebo
+  vláken s vnitřní komunikací. Výsledky jsou pak systematicky ukládány pro
+  snažší tvorbu porovnání výkonu. Pro efektivní analýzu výkonu je pak nutná
+  volba správné vizualiace pro rychlé odhalení zdroje problému.
+
+  Práce navrhuje a implementuje novou metodu zobrazování dlouhodobých výsledků
+  měření výkonu nazvanou \emph{timelines}. Výstupem je pak HTML stránka
+  obsahující krabicové (box plot) grafy a shrnující tabulky znázorňující změnu
+  výkonu a přesnost měření v průběhu verzí jádra operačního systému. Tento
+  výstup již pomohl s redukcí nestabilních částí benchmarků a průběžně slouží
+  pro sledování změn výkonu a dohledávání verzí, kde výkon změnil.
+
+  Dále práce navrhuje použití strojového učení pro automatcikou klasifikaci
+  porovnání dvou výsledků, zda se mezi nimi i přes nepřesnost měření a šum
+  projevuje propad výkonu. Práce navrhuje předzpracování výsledků měření pro
+  učení klasifikátorů a porovnává různé klasifikátory pro budoucí začlenění do
+  generátoru zpráv s porovnáním nových výsledků pro urychlení jejich analýzy.}
 % nastavení délky bloku s titulkem pro úpravu zalomení řádku - lze definovat zde nebo výše / setting the length of a block with a thesis title for adjusting a line break - can be defined here or above
 %\titlelength{14.5cm}
 
