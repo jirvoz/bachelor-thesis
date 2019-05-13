@@ -351,7 +351,8 @@ with less threads longer.
 \end{figure}
 
 \subsection{SPECjbb2005}
-Java Business Benchmark behaves as a server-side Java application. It is
+Java Business Benchmark\;\cite{jbb2005} created by Standard Performance
+Evaluation Corporation (SPEC) behaves as a server-side Java application. It is
 primarily focused on measuring performance of Java core implementation, but it
 also reflects a performance of operating system and of the CPU itself. It models
 a system of a wholesale company as a multitier application. The benchmark itself
@@ -380,7 +381,16 @@ Output of the benchmark uses \emph{ops/m} unit describing number of executed
 operations per minute.
 
 \subsection{LINPACK benchmark}
-LINPACK Benchmark\cite{linpack} comes from LINPACK package, which was used to solve systems of linear equations in single or double precision.
+LINPACK Benchmark\cite{linpack} comes from LINPACK package, which was used to
+solve systems of linear equations. It is primarily
+used to measure floating point computation power of large machines at both
+single and double precision. It is used also by TOP500 project for building list
+of 500 most powerful computers.
+
+Main measured value from the benchmark is number of floating point operations per
+second (\emph{flops}), but the benchmark output provide more information like
+run time, page faults, context switches, or location on which core or NUMA node
+it ran.
 
 \subsection{STREAM benchmark}
 The STREAM benchmark is a simple, synthetic benchmark designed to measure the sustainable memory bandwidth (in MB/s) and a corresponding computation rate for four simple vector kernels.
