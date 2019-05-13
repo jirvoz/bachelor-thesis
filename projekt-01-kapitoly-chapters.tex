@@ -482,11 +482,24 @@ machine.
 %\subsection{numatop and numastat}
 
 \subsection{perf}
-% TODO
-Linux tool for monitoring hardware and software events, profiling and tracing.
-perf stat
-perf record \& report
-perf top
+Linux command \texttt{perf}, also known as \texttt{perf\_events}, is tool for
+profiling with performance counters Linux subsystem. It provides counting of
+\emph{hardware events} (e.g. cpu cycles, branch and cache misses),
+\emph{software events} (e.g. context switches, page faults), or custom
+\emph{tracepoints} (e.g. specific system calls, filesystem or network
+operations).
+
+It offers wide range of commands, from which are most used:
+\paragraph{\texttt{perf stat}} counts selected events during an execution of
+process or specified time period. It can observe events belonging to the process
+or system-wide. The counted statistics are written at the end of time interval
+or process execution.
+\paragraph{\texttt{perf record}} record the events to perf.data file for later
+analysis.
+\paragraph{\texttt{perf report}} read the perf.data file created by perf record
+and displays the collected statistics.
+\paragraph{\texttt{perf top}} provides live analysis of system by showing all
+observed function calls ordered by number of cycles spent in them.
 
 
 
