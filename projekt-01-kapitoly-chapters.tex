@@ -366,8 +366,18 @@ instance. The collected metric is memory consumption, which is not that
 important for scheduler performance monitoring.
 
 \subsection{SPECjvm2008}
-SPECjvm2008 is benchmark primarily focused on performance of Java Virtual
-Machine, but its results can reflect performance of the scheduler.
+Java Virtual Machine Benchmark\;\cite{jvm2008} is another benchmark from SPEC
+focused on Java Virtual Machine and Java Runtime Environment, but reflecting
+also behavior of process scheduler and memory management.
+
+It consists of separate operations using real life applications (e.g. Sunflow
+rendering, Java compiler) or stressing specific part of Java implementation
+(e.g. cryptography algorithms, working with XML documents, Scimark floating
+point benchmark). The operations run in multiple threads sharing data both on
+application level and in common JVM instance.
+
+Output of the benchmark uses \emph{ops/m} unit describing number of executed
+operations per minute.
 
 \subsection{LINPACK benchmark}
 LINPACK Benchmark\cite{linpack} comes from LINPACK package, which was used to solve systems of linear equations in single or double precision.
