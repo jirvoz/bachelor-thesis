@@ -1,52 +1,54 @@
 \chapter{Introduction}
-Performance of an operating system is crucial as any degradation can significantly
-affect the performance of all applications running above it. Moreover, when a
-new version is released and it contains a performance regression, it can even
-break the stability of business applications leading to great financial losses.
-An important part of operating systems is implementation and strategy of a process
+Performance of an operating system is crucial as any triggered degradation can
+significantly affect the performance of all applications running above it.
+Moreover, when a new version is released and it introduces a performance
+regression, it can break the stability of e.g. business applications leading to
+great financial losses. An important part of operating system and the main
+influence on its performance is the implementation and strategy of a process
 scheduler, which manages processes and their processor time.
 
 In the Linux kernel, scheduler used to be simple, but with an introduction of
-multi-core CPUs came a requirement for multiple runqueues for each core and
-their balancing. This brought some complexity to the code and it took some time
-to eliminate bugs and tune the scheduler behavior. Another change came with
+multi-core CPUs achieving stable performance required adapting
+multiple runqueues for each core and
+their balancing. This lead to complex code and it took some time
+to eliminate the bugs and tune the scheduler's behavior. Another change came with
 symmetric multiprocessing technology bringing to market machines with multiple
 CPU sockets and non-uniform memory organization and access\;\cite{wasted-cores}.
-Scheduling on those systems is still under an active development and therefore
-it is prone to performance degradation bugs. In order to discover these bugs and
-to keep performance of the operating system, performance testing is essential.
-Due to this fact, it is essential to evaluate performance of the scheduler
+Scheduling on such systems is still under an active development and therefore
+it is even more prone to performance degradation bugs. In order to discover these bugs and
+to keep the performance of the operating system stable, using performance testing was essential.
+Due to this fact, the performance of the scheduler has to be evaluated
 before each release.
 
 Compared to functional testing, performance cannot be evaluated as just true and
 false results. It is more challenging as we have to (1) compare it relatively with
-previous versions or measurements, and (2) choose a suitable threshold for reporting
+previous versions or measurements, and (2) choose a suitable threshold when reporting
 the performance regression. Due to complexity of the scheduler, the common tools
 for inspecting performance may often yield unsatisfying results.
 Moreover, the biggest performance regressions of the scheduler do not dwell in an
-inefficient code, but instead in an inefficient placement of processes to the
+inefficient code, but instead in an inefficient assignment of processes to the
 CPU cores and their queues.
 
-This thesis deals with performance testing of the Red Hat Enterprise Linux
-(RHEL) kernel scheduler done in Red Hat, Inc. company.
+This thesis focuses on performance testing of the Red Hat Enterprise Linux
+(RHEL) kernel scheduler managed by the Red Hat, Inc. company.
 The usual performance testing method of the scheduler is to simulate load
 similar to the real usage. Currently, there are many benchmarks targeting different
 types of load, usually spawning many parallel process, sometimes even
 communicating between each other. The results of measurements of the performance
 must be stored systematically and effectively for later
-comparisons. In order to effectively interpret the collected
-results and their comparisons, their visualization of various kinds is essential.
+comparisons. So in order to effectively interpret the collected
+results and their comparisons, their effective visualization is essential.
 
-In this thesis, we propose new way of interpreting long-term results of the
+In this thesis, we propose a new interpretation of long-term results of the
 benchmarks using box plot graphs in order to enhance the process of data
 analysis. This visualization should help with inspecting the measurement
 stability of benchmarks and with finding versions where performance degradations
 appeared or were fixed.
 
-Moreover, to help to reduce time one has to spend analyzing comparisons,
+Moreover, to reduce time one has to spend analyzing these comparisons,
 we propose an utilization of machine learning methods that will
 automatically check for possible degradations in the Linux kernel scheduler. We will
-describe creation of a dataset for classification, compare different
+describe how to create the dataset for classification, compare different
 classifiers, and evaluate their accuracy on the dataset.
 
 This thesis is structured as follows. In Chapter \ref{ch:scheduler} we describe
@@ -101,8 +103,6 @@ requires O(log N) operations to insert it back into the red-black tree. Even
 with a higher scheduling complexity, the CFS scheduler has a better fairness and
 responsiveness than the previous O(1) scheduler, which used a simple queue to
 choose the next task.
-% CFS can also handle priority better: it requires only one queue instead of two
-% for each of 140 priorities in Linux for O(1)
 
 On multi-core systems, the scheduler uses a separate queue for each core. In
 order to effectively use the processing power, the scheduler must regularly
@@ -113,7 +113,7 @@ of the system. Losing data from caches after the migration can have a bigger
 impact on performance than leaving the process on the busy core.
 
 CFS solves this problem by using scheduling
-domains\;\cite{understanging-linux-kernel}. Scheduling domain is a set
+domains\;\cite{understanding-linux-kernel}. Scheduling domain is a set
 of CPUs that should be balanced between themselves. CPUs in a scheduling domain
 are divided into groups. Scheduler then checks the load of the whole groups to
 decide if there is a need to migrate processes between them.
@@ -129,13 +129,14 @@ Above those cores can be processor sockets on machines with multiple physical
 processors with different access speed to different memory sections.
 
 Scheduling domains are regularly rebalanced by going up from bottom of the
-scheduling domain hierarchy and by checking balance of the groups on each level.
+scheduling domain hierarchy (illustrated by Figure \ref{fig:sched-domains}) and
+by checking balance of the groups on each level.
 
 \begin{figure}
   \centering
   \includegraphics[width=4cm]{sched-domains}
-  \caption{Hiearchy of scheduling domains\cite{sched-groups-lwn}}
-  \label{fig:sched-dom}
+  \caption{Hierarchy of scheduling domains\cite{sched-groups-lwn}}
+  \label{fig:sched-domains}
 \end{figure}
 
 \section{Scheduling on SMP systems}
@@ -178,7 +179,7 @@ Nodes also have to be connected to each other to access memory of other
 nodes. That is achieved using either interconnecting buses or controllers. Each
 manufacturer has its own technology implementing the interconnection: Intel uses
 Ultra Path Interconnect which replaced its QuickPath Interconnect from older
-machines. On the contrary AMD uses Infinity Fabric supersetting the older
+machines. On the contrary, AMD uses Infinity Fabric supersetting the older
 HyperTransport.
 
 On bigger machines with a large amount of processors, not every two processors
@@ -197,8 +198,8 @@ controllers.
     faster data transfer between them. Communication with other nodes is
     realized through node controllers. The topology of the interconnect buses
     shows there will be 4 different access speeds depending on the distance
-    between nodes. The local access is the fastest, then follows the access to
-    the neighbor node, the access through one controller and the slowest is the
+    between nodes. The local access is the fastest, then follow the access to
+    the neighbor node and the access through one controller, and the slowest is the
     access through both controllers. The interconnect buses are doubled to avoid
     overloading one of them.}
   \label{fig:proliant}
@@ -228,7 +229,7 @@ node 0 1 2 3 4 5 6 7
 
 The \texttt{numactl} utility also provides possibility of pinning processes to a
 specific NUMA node to ensure the process and its memory will stay on the
-intended node. This allows user to arrange processes manually in way considered
+intended node. This allows user to arrange processes manually in a way considered
 as the best for maximum performance.
 
 Balancing tasks between NUMA nodes is difficult for the scheduler since it needs
@@ -251,22 +252,22 @@ respond in is crucial and this property affects the usability of the system.
 
 Compared to functional testing, performance testing does not produce an exact true
 or false result. It produces a set of numerical values which must be compared to
-pressumed values or values from an other version to make a conclusion.
+presumed values or values from an other version to make a conclusion.
 
 After the performance measurement, the next step is inspection of behavior of
 the system to understand the measured values and to determine the causes of the
 difference from the expected values.
 
-In order to measure the performance of scheduler, we use benchmarks.
+In order to measure the performance of a scheduler, we use benchmarks.
 Benchmarks generate artificial load imitating the load in real environment.
-While stress testing the system they also measure its performance. The benchmarks
+While stress testing the system, they also measure its performance. The benchmarks
 typically return a value representing the performance of the system. The value
 is usually in the form of the time that the task needed to finish or of the amount of
 the operations that the system could perform per a unit of time.
 
-In previous chapter, we have introduced the current state of task scheduling in
-Linux kernel.
-Effectivity of the scheduling and of their migration between processors affects
+In the previous chapter, we have introduced the current state of task scheduling in
+the Linux kernel.
+Effectivity of the scheduling and of task migration between processors affects
 the amount of the tasks that the system can handle and the time that a task
 spends before finishing.
 
@@ -278,26 +279,28 @@ be\;\cite{active-benchmarking}.
 To get a better insight into the behavior of the system, there are many tools to
 collect performance records about the system behavior. Useful information about the
 scheduler include assignment of tasks to the processor cores, the time that the
-tasks spent out of the CPU in queues, load of each processor core or the
+tasks spent out of the CPU in queues, load of each processor core, or the
 location of memory of the processes on NUMA systems.
 
 \section{Performance metrics} \label{sec:metrics}
-\paragraph{Throughput} metrics represents the amount of operations per time
-unit. It can use different units: floating point operations, operation as
-a specific tasks defined by benchmark (e.g. SPEC Java benchmarks) usually
-executed per second. Higher values mean better performance.
+We now present typical metrics used in performance measurement.
 
-\paragraph{Run time} is simply the real time the benchmark needed to finish the
+\paragraph{Throughput} These metrics represents the amount of operations per time
+unit. The operations can be, e.g., floating point operations, or operation as
+specific tasks defined by a benchmark (e.g. SPEC Java benchmarks). Time units are usually
+seconds. Higher values mean better performance.
+
+\paragraph{Run time} This metric is simply the real time that the benchmark needed to finish the
 execution. It is mostly presented in seconds, but longer runs can be presented
-more human-friendly converting the time to hours, minutes, and seconds. The
+in a more human-friendly format, converting the time to hours, minutes, and seconds. The
 lower the run time is, the better performance it represents.
 
-\paragraph{Time out of CPU} represents the time the benchmark spent in process
-queue waiting for execution. This metric can be calculated from user, kernel and
-real time provided by \emph{time} utility and number of threads, that the
+\paragraph{Time out of CPU} This metric represents the time that the benchmark spent in process
+queue waiting for execution. This metric can be calculated from user, kernel, and
+real time provided by the \emph{time} utility and from the number of threads, that the
 application used:
 $$T_{out\_of\_cpu} = (T_{real} \times used\_threads) - (T_{user} + T_{kernel})$$
-The lower this value is, the better behavior of scheduler it represents.
+The lower this value is, the better behavior of the scheduler it represents.
 
 \section{Benchmarks}
 In the following section we will describe the benchmarks that are currently used
@@ -344,9 +347,9 @@ with less threads longer.
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{nas}
-  \caption{Example of Scalar Penta-diagonal solver results from NAS Parallel
+  \caption{Example of Scalar Penta-diagonal solver results from the NAS Parallel
     benchmark with different number of computational threads. The size of the
-    boxes represent the inaccuracy of measurement caused by noise and
+    boxes represent the inaccuracy of measurement caused by noise and by
     non-deterministic behavior of scheduler.}
   \label{fig:nas}
 \end{figure}
@@ -382,25 +385,25 @@ Output of the benchmark uses \emph{ops/m} unit describing number of executed
 operations per minute.
 
 \subsection{LINPACK benchmark}
-LINPACK Benchmark\cite{linpack} comes from LINPACK package, which was used to
+LINPACK Benchmark\cite{linpack} comes from the LINPACK package, which was used to
 solve systems of linear equations. It is primarily
 used to measure floating point computation power of large machines at both
-single and double precision. It is used also by TOP500 project for building list
+single and double precision. It is used also by the TOP500 project for building list
 of 500 most powerful computers.
 
-Main measured value from the benchmark is number of floating point operations per
-second (\emph{flops}), but the benchmark output provide more information like
+Main measured value from the benchmark is the number of floating point operations per
+second (\emph{flops}), but the benchmark output provides more information such as
 run time, page faults, context switches, or location on which core or NUMA node
 it ran.
 
 \subsection{STREAM benchmark}
 The STREAM benchmark\;\cite{stream} is a simple benchmark aimed for measuring memory
-bandwidth and also computation speed of simple vector kernels. Its motivation is
+bandwidth and also computation speed of simple vector kernels. Its motivation is a
 slow grow of memory performance compared to CPU, which makes speed of this
 component also crucial for the performance of the whole system.
 
 Output metric of the benchmark is memory bandwidth in \emph{MB/s}, but it
-provides the same statistics as Linpack benchmark: run time, page faults,
+provides the same statistics as the Linpack benchmark: run time, page faults,
 context switches, or location on which core or NUMA node it ran.
 
 \section{Performance analysis tools}
@@ -421,7 +424,7 @@ time spent in the kernel mode.
 Many benchmarks provide the execution time themselves which can make this
 utility unnecessary. However, the interesting metric is the time that the
 application spent out of the CPU waiting in queue. This value is not provided
-directly, but provides user, kernel and real time from whose the metric can be
+directly, but time provides user, kernel and real time from which the metric can be
 calculated as described in Section \ref{sec:metrics}.
 
 It can be confused with the Bash builtin command \texttt{time}, which provides similar
@@ -432,9 +435,9 @@ the possibility of custom formatting of output. It can be usually called from
 \subsection{ps}
 Ps is a Linux command, which is used to display information about active processes. Its name
 stands for ``processes status''. It can provide various information obtainable from
-the virtual files in \texttt{/proc} directory. The most common information
+the virtual files in the \texttt{/proc} directory. The most common information
 include the process PID, time spent on processor, state of the process, used memory,
-associated terminal, the command that started the process and more.
+associated terminal, the command that started the process, and more.
 
 Especially useful are the optional columns \texttt{PSR} and \texttt{NUMA}. They
 show the number of the processor and the number of the NUMA node where the process is
@@ -446,7 +449,7 @@ processes for the current user and for the current terminal, but it can list all
 the processes on the system. The listing can be filtered using parameters by
 most of the columns of information it provides. The listing can be limited for
 instance by a specific terminal, by an effective user, by children of a specified process,
-or by a PID a to single intended process.
+or by a PID to a single intended process.
 
 \subsection{mpstat}
 This Linux command provides continuous information about utilization of CPUs. It
@@ -458,14 +461,15 @@ when system is idle and does not wait for any IO operation.
 
 Mpstat can collect those data once when executed or at regular time intervals.
 The regular collecting of utilization of the CPU cores or of the NUMA nodes is
-done through the run time of benchmark. With little processing of the data, it
-is easy to watch the distribution of load between the cores and the NUMA nodes
-is equal or not.
+done through the run time of a benchmark. With little processing of the data, it
+is easy to watch whether the distribution of load between the cores and the NUMA
+nodes is equal or not.
 
 \subsection{turbostat}
-This tool provides measuring of hardware properties of the CPUs with x86
-architecture. It reports for each core its usage, frequency, temperature and
-percentage of time in idle states. For each socket it reports its power consumption.
+This tool provides measuring of hardware properties of the CPUs with the x86
+architecture. It reports for each core its usage, frequency, temperature, and
+percentage of time in different idle states. For each socket it reports its
+power consumption.
 
 There are two ways to run turbostat. It can be supplied with a command to run
 and it will return the average values from the run time of the command. Without
@@ -478,77 +482,74 @@ power efficiency of both the scheduler and the physical CPUs, but the command
 only provides consumption of the CPUs and their RAM and not of the whole
 machine.
 
-% TODO
-%\subsection{numatop and numastat}
-
 \subsection{perf}
-Linux command \texttt{perf}, also known as \texttt{perf\_events}, is tool for
+Linux command \texttt{perf}, also known as \texttt{perf\_events}, is a tool for
 profiling with performance counters Linux subsystem. It provides counting of
 \emph{hardware events} (e.g. cpu cycles, branch and cache misses),
 \emph{software events} (e.g. context switches, page faults), or custom
 \emph{tracepoints} (e.g. specific system calls, filesystem or network
 operations).
 
-It offers wide range of commands, from which are most used:
-\paragraph{\texttt{perf stat}} counts selected events during an execution of
-process or specified time period. It can observe events belonging to the process
-or system-wide. The counted statistics are written at the end of time interval
-or process execution.
-\paragraph{\texttt{perf record}} record the events to perf.data file for later
+It offers wide range of commands, from which the most used are:
+\paragraph{\texttt{perf stat}} The command counts selected events during an
+execution of a process or during a specified time period. It can observe events belonging
+to the process or system-wide. The counted statistics are written at the end of the
+time interval or of the process execution.
+\paragraph{\texttt{perf record}} The command record the events to perf.data file for later
 analysis.
-\paragraph{\texttt{perf report}} read the perf.data file created by perf record
+\paragraph{\texttt{perf report}} The command reads the perf.data file created by perf record
 and displays the collected statistics.
-\paragraph{\texttt{perf top}} provides live analysis of system by showing all
-observed function calls ordered by number of cycles spent in them.
+\paragraph{\texttt{perf top}} The command provides live analysis of system by showing all
+observed function calls ordered by the number of cycles spent in them.
 
 
 
 \chapter{Processing of results} \label{ch:processing}
 Getting the output of benchmarks and tools for performance analysis is just a
-part of performance regression testing. To make comparison of two results it is
-essential to store the results in an efficient way for quick creation of
-comparison report. The quality of the comparison report also affect the right
-choice and use of visualization of the results and their comparison.
+part of performance regression testing. To perform comparison of two results, it is
+essential to store the results in an efficient way for quick creation of a
+comparison report. The quality of the comparison report also affects the right
+choice and a use of visualization of the results and their comparison.
 
-This chapter is structured as follows: Section \ref{sec:storage} describing
+This chapter is structured as follows. Section \ref{sec:storage} describes
 ways of storing the results from benchmarks and Section \ref{sec:visualization}
-describing different visualization methods suitable for analysis of performance
+describes different visualization methods suitable for analysis of performance
 changes.
 
 \section{Storage of the results} \label{sec:storage}
 Benchmarks sometimes generate long human-readable output in text or even HTML
-format. This is useful when analyzing single report. In the output there are details
-of the test run itself, simple resource usage or success of result validation.
-However, the amount of result starts to rise with repeated runs, different
-amount of instances and new versions kernels.
+format. This is useful when analyzing a single report. In the output there are details
+of the test run itself, a simple resource usage, or success of result validation.
+However, the amount of result starts to rise with repeated runs, with different
+amount of instances, and with new versions kernels.
 
 For the comparison of performance results, the number representing throughput or
 time of each benchmark run is usually enough. Those numbers can be preprocessed
 from the benchmark output files to a format more suitable for quick accessing
-required data.
+of the required data.
 
 \subsection{XML files}
-XML is a markup language, that can store heterogeneous data in tree structure.
+XML is a markup language, that can store heterogeneous data in a tree structure.
 The tree structure can effectively represent the test scenario running each
 benchmark operation with different parameters and multiple repetitions.
 
 Another feature of XML format is human-readability offering quick insight to stored
 data just with any text editor.
-This comes with a disadvantage of redundant data in form of repeated names of
+This comes with a disadvantage of redundant data in the form of repeated names of
 tags and attributes which often take more space than the data itself. Parsing of
-the data also take considerable amount of CPU time prolonging the duration of
+the data also takes considerable amount of the CPU time prolonging the duration of
 analysis.
 
-In our team we use the XML format for storing results values from benchmark runs
+In our team, we use the XML format for storing result values from benchmark runs
 and their aggregated statistics for easier generation of performance comparison
 reports. Next to the results is also stored configuration of the benchmark run
-containing properties of the system the benchmark ran on. The properties include
-hostname of testing machine, version of kernel and operating system, or
-configuration of environment.
+containing properties of the system that the benchmark ran on. The properties include
+hostname of the testing machine, version of kernel and of operating system, or
+configuration of the environment.
 
 Example of results from one run of the NAS Parallel benchmark scenario stored in
-XML format is in Figure \ref{fig:xml_result}. Example with aggregated
-data is in Figure \ref{fig:xml_sums}. Example of XML file with properties
+the XML format is in Figure \ref{fig:xml_result}. Example with aggregated
+data is in Figure \ref{fig:xml_sums}. Example of an XML file with properties
 of benchmark run result is shown in Figure \ref{fig:xml_config}.
 
 \begin{figure}
@@ -652,8 +653,8 @@ of benchmark run result is shown in Figure \ref{fig:xml_config}.
 \subsection{Relational database}
 Relational database is a type of database using relational model. The relational
 model stores data in tables using rows for records and columns for their
-attributes. Each row represents an unique record with its attributes in columns.
-Columns store values of attributes with same data type. Record in different
+attributes. Each row represents a unique record with its attributes in columns.
+Columns store values of attributes with the same data type. Records in different
 tables can be connected in relationships.
 
 There are many database management systems implementing the relational database
@@ -662,7 +663,7 @@ PostgreSQL, SQLite, MySQL, or its fork MariaDB. To the category with proprietary
 code belong implementations from companies including Oracle, Microsoft, or IBM.
 
 Data in database are managed using SQL (Structured Query Language). It provides
-commands for storing, manipulating and retrieving data. With advanced joining of
+commands for storing, manipulating, and retrieving data. With advanced joining of
 tables and filtering it provides wide possibilities of data processing just at
 the point of reading of the stored data.
 
@@ -673,41 +674,42 @@ space-efficiently directly in binary format to avoid unnecessary conversions.
 
 The efficiency of database comes with its disadvantages. 
 Storing the data in binary form eliminates the possibility of quick insight to
-data like with XML files. To access any data is required to write SQL query to
-request specific from the storage.
+data like with XML files. To access any data, it is required to write an SQL query to
+request specific information from the storage.
 More complications come with design of the database tables. Different benchmarks
-produce different type of result and the requirements for stored data can change
+produce different type of result and the requirements for the stored data can change
 over time. This requires building universal complex structures or occasional
 changes in the database model.
 
-In our team we consider the option of storing results of the benchmark in
-database, considering the work needed for migration from storing in XML files.
+In our team we currently consider the option of storing results of benchmarks in
+a database, which would require a lot of work needed for migration from the
+current storing in XML files.
 
 \section{Visualization the results} \label{sec:visualization}
-Effective analysis of results from performance measurement requires delivering
-the comparison in a form in which can human quickly see the differences in
+Effective analysis of results from a performance measurement requires delivering
+the comparison in a form in which a human can quickly see the differences in
 measured values and their severity.
 
 Visualization offers this advantage against raw text data collected from
-benchmarks and performance analysis tools. It allows us to see much faster
-important relations between collected data utilizing often smaller display area
+benchmarks and performance analysis tools. It allows us to much faster see
+important relations between the collected data utilizing often smaller display area
 than the raw data.
 
-Right visualization also allows us deliver more easily understandable data even
+Right visualization also allows us to deliver more easily understandable data even
 for people that do not work with performance analysis on their daily basis.
 
 \subsection{Line graphs}
-Line graphs are the simplest method of displaying a course of values of variable
+Line graphs are the simplest method of displaying a course of values of a variable
 dependent on a parameter in two dimensional space. It allows to easily spot
-nature of the plotted values -- either rising, descending or constant. The
+nature of the plotted values -- either increasing, decreasing, or constant. The
 data can be plotted as discrete values using points or as a continuous function
 using a line. Comparison of more variables from different datasets is done by
 plotting multiple lines to the same graph, one for each variable. In Figure
-\ref{fig:linegraph} is example of line graphs showing CPU utilization of system
-NUMA nodes and ratio of access to memory of remote nodes.
+\ref{fig:linegraph} is an example of line graphs showing CPU utilization of system
+NUMA nodes and the ratio of access to memory of remote nodes.
 
 Although line graphs are quick and simple to create and use, they fail to scale
-for larger amount of lines in single graph. Larger amount lines become too
+for larger amount of lines in a single graph. Larger amount of lines becomes too
 confusing and impossible to read. Graphs of CPU usage of each NUMA node in
 Figure \ref{fig:linegraph} is still readable, but impossible to use for
 utilization of every CPU core.
@@ -715,14 +717,14 @@ utilization of every CPU core.
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{numa_behavior}
-  \caption{Example of line graphs showing statistics collected using numatop
-    utility. The graphs in top row show CPU utilization of each NUMA node
-    through time and in the bottom row show ratio of access to local memory of
-    the node and memory of remote nodes. The graphs on the left show expected
-    behavior of scheduler causing uniform utilization of each node and minimal
+  \caption{An example of line graphs showing statistics collected using the numatop
+    utility. The graphs in the top row show CPU utilization of each NUMA node
+    through time and in the graphs bottom row show ratio of access to local memory of
+    the node and to memory of remote nodes. The graphs on the left show an expected
+    behavior of a scheduler causing uniform utilization of each node and a minimal
     amount of access to memory of remote nodes. The utilization graphs use
     linear y axis and memory access graphs use logarithmic y axis. The plotted
-    values were collected on 4 NUMA node machine under workload from NAS
+    values were collected on 4 NUMA node machine under workload from the NAS
     Parallel benchmark running in 4 threads.}
   \label{fig:linegraph}
 \end{figure}
@@ -735,17 +737,17 @@ Heat maps provide better scalability for larger data, where line graphs would be
 confusing with too many lines. It is also much easier to spot correlation
 with the additional dimensions compared to line graphs.
 
-In the Figure \ref{fig:heatmap} is heat map showing utilization of all CPU cores over
-time under workload. The data were collected by mpstat utility and processed to
-show sum of user and kernel space utilization of each core. Plotting those data
+In Figure \ref{fig:heatmap} is a heat map showing utilization of all CPU cores over
+time under workload. The data was collected by the mpstat utility and processed to
+show the sum of user and kernel space utilization of each core. Plotting those data
 using line graph with a line for every core would be confusing even for this
 relatively small amount of CPUs.
 
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{heatmap}
-  \caption{Example of heat map showing CPU utilization over time. The machine
-    with 24 logical CPUs is under workload from NAS Parallel benchmark running
+  \caption{Example of a heat map showing CPU utilization over time. The machine
+    with 24 logical CPUs is under a workload from NAS Parallel benchmark running
     in 16 threads.}
   \label{fig:heatmap}
 \end{figure}
@@ -761,37 +763,37 @@ the 16 threads run than on the 24 threads run.
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{numa_heatmap}
-  \caption{Example of heat map showing thread migration between NUMA nodes. The
-    expected result is not the highest value, but minimum of color changes in
-    each line. The shown result comes from machine with 24 logical CPUs running
-    NAS Parallel benchmark on 16 and 24 threads in 5 loops.}
+  \caption{Example of a heat map showing thread migration between NUMA nodes. The
+    expected result is not the highest value, but the minimum of color changes in
+    each line. The shown result comes from a machine with 24 logical CPUs running
+    the NAS Parallel benchmark on 16 and 24 threads in 5 loops.}
   \label{fig:numa_heatmap}
 \end{figure}
 
 \subsection{Box plots}
 Box plot is a method for displaying statistical properties of data from multiple
 measurements. It extends the simple visualization of discrete values by adding
-to the median values also the minimum and maximum measured values and first and
-third quartiles from the measurement.
+to the median values also the minimum and the maximum measured values and the
+first and the third quartiles from the measurement.
 
 In some cases the whiskers for minimum and maximum value represent standard
-deviation or 2\textsuperscript{nd} and 99\textsuperscript{th} percentile. Data
-out of the range displayed as standalone points above or below the whiskers.
+deviation or the 2\textsuperscript{nd} and the 99\textsuperscript{th} percentile. Data
+out of the range is displayed as standalone points above or below the whiskers.
 
-Box plots are great to illustrate dispersion and variation of data that do not
-follow exact normal distribution. All the displayed marks show accuracy and
+Box plots are great to illustrate dispersion and variation of the data that do not
+follow exact normal distribution. All of the displayed marks show accuracy and
 reliability of measurement. This insight helps to distinguish real performance
-regression from noise caused by unpredictable behavior of the scheduler and
+regression from a noise caused by unpredictable behavior of the scheduler and
 measurement error.
 
-In the Figure \ref{fig:boxplot} is an example of box plot showing throughput
-measured by NAS benchmark with different number of threads.  
+In Figure \ref{fig:boxplot} is an example of a box plot showing throughput
+measured by the NAS benchmark with different number of threads.  
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{boxplot}
-  \caption{Example of boxplot showing throughput measured by NAS benchmark from
-    multiple measurements with different number of threads.}
+  \caption{Example of a box plot showing throughput measured by the NAS
+    benchmark from multiple measurements with different number of threads.}
   \label{fig:boxplot}
 \end{figure}
 
@@ -799,91 +801,93 @@ measured by NAS benchmark with different number of threads.
 
 \chapter{Visualization using timelines} \label{ch:timelines}
 A common way to analyze performance reports is to compare two results measured
-for different versions or settings. Usually, these
-are called baseline and target results or profiles. The comparison of two
-results allows one to
-interpret many details about the measurement and changes between versions. Those
-details usually contain clues to the cause of possible performance changes.
+for different versions or settings. Usually, these are called the baseline and
+the target results or profiles. The comparison of two results allows one to
+interpret the measurement and changes between versions, usually containing clues
+to the cause of possible performance changes, e.g. change in some value of
+parameter or new code functionality.
 
 However, sometimes it is not enough to compare just two strictly following
-versions. If instead we analyze larger amount
-of results over longer period of time we can see a new perspective. In that case
-there is much
-more visible difference between the deviation from measurement error and the
-performance change. It is also easier to find the versions, where exactly a
-performance degradation occurred and where was fixed.
+versions. If, instead, we analyze a larger amount of results over a longer period
+of time, we can begin to see a whole new perspective. In that case there can be
+a much more visible difference between a deviation from a measurement error and
+a performance change. It is also easier to find versions where a
+performance degradation occurred and where it was fixed.
 
 With larger amount of data, we can also detect creeping performance drops, which
-appeared continuously over longer period of time and could not be detected,
+appeared continuously over a longer period of time and could not be detected,
 because they were within the tolerance due to the measurement deviation.
 
-This chapter proposes creation of reports with comparison of multiple results of
-performance measurement from benchmarks used in out team in Red Hat. The
-visualization of course of performance results will help to see the performance
-of Linux kernel scheduler in wider range of time and help to determine stability
-and precision of different benchmarks.
+This chapter proposes new kind of reports with comparison of multiple results of
+performance measurement from benchmarks used by Red Hat Kernel Performance
+Quality Engineering team. The visualization of performance results helps to see
+the performance of Linux kernel scheduler in wider range of time as well as to
+determine stability and precision of different benchmarks.
 
 \section{Design}
-Main purpose is to watch performance through kernel versions on a specific testing
-machine. Output of the timelines generator will be HTML reports showing
-benchmark results of desired kernel versions on single machine. Mockup of
-produced HTML page is described in Figure \ref{fig:mockup}. Displayed results
-will be specified using rules for base kernel as the first reference result
-and target kernels forming the actual timeline.
+We mainly focus on performance of kernel versions on a specific testing machine.
+The timelines generator will output HTML reports showing benchmark results of
+the desired kernel versions on a single machine. We describe the mockup of
+produced HTML page in Figure \ref{fig:mockup}. Displayed results are specified
+using rules for a base kernel as the first reference result and target kernels
+forming the actual timeline.
 
 \begin{figure}
   \centering
   \includegraphics[width=8cm]{mockup}
-  \caption{Mockup of timelines report page. The report will contain results from
-    single testing machine fulfilling specified rules. Below table with the rules
-    in the top of the report will be graphs of the available benchmarks. Each
-    benchmark section will have separate graph for each of its operation and table
-    below the graphs containing featured values from each operation for each
-    benchmark with links to the results in our result database.}
+  \caption{Mockup of timelines report page. The report contains results from a
+    single testing machine fulfilling the specified rules. Below the table we
+    display with the rules we display graphs of the available benchmarks. Each
+    benchmark section will have a separate graph for each of its operations and
+    a table below the graphs containing featured values from each operation for
+    each benchmark with links to the results in our result database.}
   \label{fig:mockup}
 \end{figure}
 
-Best type of graph for results with repeated runs are boxplots. Boxplots show
-important statistical values from the runs: median, minimum, maximum and first
-and third quartiles. Those values will quickly reveal stability of plotted
-benchmark and noise in the measurement helping with distinguishing of true
-performance degradations.
+We propose that the most suitable type of graph for displaying results with
+repeated runs are boxplots. Boxplots show important statistical values from the
+runs: the median, the minimum, the maximum, and the first and the third
+quartiles. Those values can quickly reveal stability of the plotted benchmark and
+noise in the measurement that can help to distinguish true performance
+degradations.
 
-Each graph of benchmark operation will contain results from all thread
-configuration, but only one desired configuration will be visible by default.
+Each graph of benchmark operation contains results from all thread
+configurations, but only one desired configuration is visible by default.
 The desired number of threads is the point where performance regressions create
-biggest difference, which is in most cases the highest number of threads.
+the biggest difference, which is in most cases the highest number of threads.
 
-The graphs will also contain horizontal lines in background following median of
+The graphs will also contain horizontal lines in background following median of the
 base result and its value increased and decreased by 5\%. Those lines will allow
 more effective recognition of significant performance changes without looking at
 the absolute values of the measurements.
 
-Under the graphs of all operations of benchmark will be table containing medians
+Under the graphs of all operations of benchmark will be a table containing medians
 of featured thread runs for each benchmark operation of every displayed kernel
-for browsing of the absolute result values. Each record will also work as link
-to result record in our team database of benchmark results.
+for browsing of the absolute result values. Each record will also work as a link
+to result record in the database of benchmark results of Red Hat Kernel
+Performance QE team.
 
 \section{Implementation}
-This section describes aspects of implementation of the timelines report generator.
-The programming language chosen for the generator is Python2 due to earlier
-origins of its implementation.
+This section describes selected aspects of implementation of the timelines
+report generator. The generator is implemented in Python2 due to earlier origins
+of its implementation.
 
 \subsection{Comparison rules}
-For automatic report generation are essential rules, which will specify results,
-that can be used and in which role. We propose to use \emph{regular expressions} to match
-properties of results. Regular expressions offer broad possibilities to describe
-shape of kernel version or just value of any environment configuration. E.g. to filter
-all builds of kernel 4.18 we can use simple pattern \texttt{kernel-4.18\textbackslash
-..*}.
+For automatic report generation it is essential to allow defining rules, which
+will specify results, that can be used and in which role (i.e. whether they
+correspond baseline or target). We propose to use \emph{regular expressions} to
+match properties of results. Regular expressions offer broad possibilities to
+describe shape of kernel version or the value of any environment configuration.
+E.g. to filter all builds of kernel 4.18 we can use simple pattern
+\texttt{kernel-4.18\textbackslash ..*}.
 
 We store the rules in an XML file with the same node naming as in the XML file
 with the result properties. The first level of XML document contains three nodes
 representing the purpose of the rules.
 \begin{itemize}
   \item \textbf{Baseline rules} specify the first result in the plotted set.
-    Acts as the main result that the others are compared to. In case of multiple
-    results fitting the rule, the newest one will be used.
+    These act as the main result that the others are compared to. In case of
+    multiple results fitting the rule, the newest one will be used.
   \item \textbf{Target rules} define the results to be plotted.
   \item \textbf{Starting rules} are for the case, when base result is not from
     target set of results and specifying first target result with regex would be
@@ -891,13 +895,13 @@ representing the purpose of the rules.
   \end{itemize}
 
 \subsection{Reading of results}
-Benchmark results are in our case stored on filesystem in directories. The
+Benchmark results are in our case stored in the filesystem in directories. The
 generator has to go recursively through directory with results of benchmark runs
 with files containing desired data. From each result, it starts with file
 containing properties of given result. This file provides metadata from the
 benchmark run including the time, machine hostname, kernel and OS version,
 benchmark name, configuration of environment for selecting desired results using
-the comparison rules. Example of XML file with properties is in Figure
+the comparison rules. Example of the XML file with properties is in Figure
 \ref{fig:xml_config}.
 
 After applying the rules the generator reads files from
@@ -907,9 +911,9 @@ plot graphs. Example of the file with preprocessed values is in Figure
 start drawing the timeline graphs.
 
 \subsection{Plotting of timelines}
-For displaying the data in graphs using box plots we will use Highcharts
-javascript library\;\cite{highcharts} for generating interactive SVG-based
-graphs for HTML pages. It is offers free license for non-commercial use with
+For displaying the data in graphs using box plots we use Highcharts
+JavaScript library\;\cite{highcharts} for generating interactive SVG-based
+graphs for HTML pages. It offers free license for non-commercial use with
 available source code, but also paid licenses for commercial use. It provides
 fast and easy creation of various types of graphs including box plots with wide
 possibilities of customization.
@@ -1432,68 +1436,39 @@ reconsidered.
 
 
 \chapter{Conclusion}
-In this work we described performance testing of Linux kernel scheduler in Red
+In this work we described the performance testing of Linux kernel scheduler in Red
 Hat, Inc. company. The process of checking for performance regressions in new
-versions of kernels for Red Hat Enterprise Linux consist of measuring
-performance of the kernel using benchmarks, storing of the results and
+versions of kernels for Red Hat Enterprise Linux consist of measuring the
+performance of the kernel using benchmarks, storage of the results and
 visualization of performance comparisons between the targeted kernel version and
-reference base version.
+reference the base version.
 
-This work proposed a new way of visualization of performance results called
-\emph{timelines} focused on long-term performance development of multiple Linux
+This work proposes a new way of visualization of performance results called
+\emph{Timelines} focused on long-term performance development of multiple Linux
 kernels.
-
-The timelines were already used to compare stability of operations from used
+The timelines were already used to compare the stability of operations from used
 benchmarks to create reduced test scenario with the more stable operations for
 less important tests with shorter run time. Compared to original scenario with
 estimated run time of 24 hours the shorter variant took only one third of the
-time. Besides the generated timelines reports are continuously used to examine
+time. Besides the generated timelines, reports are continuously used to examine
 kernel performance through longer period of time.
 
 Furthermore, this thesis proposed an utilization of machine learning for
 automatic classification of performance measurement comparisons to reduce time
 one has to spend to look for performance regressions.
-
-The trained model is going to be integrated in generator of performance
-comparison reports to mark the comparison as passed or failed (containing
-performance regression). This will reduce time of examining tens of reports from
-each new tested kernel and create more time to work on new features of the
-generator. With more manually labeled data for learning will be the classifiers
-evaluated and compared again. Then will be the current one replaced with the
-better trained one.
+The trained model is going to be integrated in the generator of performance
+comparison reports to mark the comparison as passed or failed (i.e. containing
+performance regression). This will reduce time of examining dozens of reports from
+each new tested kernel and allow more time to work on new features of the
+generator. With more manually labeled data for learning the classifiers will be
+reevaluated and compared again. In case of better results the original model
+will be replaced with the better trained one.
 
 Although the proposed timeline graphs reports and automatic detection of
-performance degradation pushes the effectivity of working with performance
+performance degradation push the effectivity of working with performance
 results forward, their potential is not depleted yet. Future addition of
 Jinja2\footnote{\url{http://jinja.pocoo.org}} template system to timeline report
-generator will make the code much cleaner and the reports look a bit rough
-without a proper CSS styling. The performance degradation classifiers will be
+generator will make the code much cleaner. The performance degradation classifiers will be
 reevaluated after obtaining larger manually labeled dataset and the automatic
 classification will be included to timeline reports to highlight performance
 regressions and watch precision of classification on new real data.
-
-
-
-\chapter{Notes}
-\begin{verbatim}
-vlozit nedelitelne mezery
-jednostranny tisk
-rozsirit podekovani
-motivace v uvodech kapitol
-licence zdrojaku soubor LICENSE
-
-grafy ke vsem benchmarkum?
-
-Linux scheduler
-    tuned profiles
-        focus on throughput or latency
-Performance
-    collecting system load data
-        numastat
-        numatop
-            usage of cpu and memory on each node
-        lstopo for hardware schema image
-    scenarios
-        variable number of benchmark instances
-        with and without pinning processes to specific numa nodes
-\end{verbatim}
