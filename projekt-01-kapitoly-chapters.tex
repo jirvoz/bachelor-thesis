@@ -793,7 +793,10 @@ measured by the NAS benchmark with different number of threads.
   \centering
   \includegraphics[width=12cm]{boxplot}
   \caption{Example of a box plot showing throughput measured by the NAS
-    benchmark from multiple measurements with different number of threads.}
+    benchmark from multiple measurements with different number of threads. The
+    last two boxes and their whiskers show us that the range of measured values
+    is the same despite the big difference in medians. Therefore the plotted
+    result is treated as passed (without any performance regression).}
   \label{fig:boxplot}
 \end{figure}
 
@@ -995,13 +998,14 @@ significant gain displayed in Figure \ref{fig:timeline_nas}.
 
 \chapter{Automatic evaluation} \label{ch:ai}
 With every new release of regular kernel and its testing the amount of produced
-results rises. With more machines with different configurations, benchmarks with
-different focus or baselines from different supported versions, number of results
-can rise with every new kernel version even by hundreds.
+results rises. Number of results can rise with every new kernel version even by
+hundreds with more testing machines, with different configurations, with
+benchmarks with different focus, or with baselines from different supported
+versions.
 
 In this thesis we attempt to automate the repetitive classification and
 labeling of results as passed (without any performance regression) or failed
-(containing performance regression). This allows skipping the results without
+(containing performance regression). This allows us to skip the results without
 any significant change. Instead, more time is left for focusing on the results
 with performance regressions.
 
@@ -1013,29 +1017,30 @@ models suitable for given dataset and compare their success rate.
 There are quite many results to check with every new tested kernel. The test
 suite with the Linpack, Stream, NAS Parellel and SPEC benchmarks are run on more
 than eight machines with different amount of NUMA nodes and processor models.
-Man has to go through the reports and check the results of all the benchmarks
-with different configurations.
+Quality engineer has to go through the reports and check the results of all the benchmarks
+with different configurations manually.
 
 When looking at results of benchmark operation, the most important values are
-medians from runs with different amount of threads. Unfortunately, due to noise in measurement
+medians from the runs with the different amount of threads. Unfortunately, due
+to the noise in measurement
 and limited amount of repeated runs the medians can be significantly affected by
 the noise. This complication brings the need of more detailed inspection of
-results than just watching difference in medians of results.
+results than just checking the difference in medians of results.
 
-Another useful data are minimum, maximum and quartile values from each
+Another useful metrics are the minimum, the maximum and the quartile values from each
 measurement. They reveal the stability of the benchmark and the measurement
-noise. With those values it is much easier and more accurate telling the
+noise. With those values it is much easier and more accurate to tell the
 measurement noise from performance regression. With similar minimum, maximum and
-quartile values the performance can be the same even with difference in median values.
+quartile values the performance can be the same even with the difference in median values.
 
 The threshold between noise and performance regression is considered as 5\%
 difference between base and target measurement but varies by the stability of
 each benchmark and complexity of the machine it was run on.
 
 \section{Used technologies}
-For classification we use library \emph{scikit-learn}\;\cite{scikit-learn} with
-Python3. Scikit-learn is a simple library for data analysis and machine learning
-with BSD open source license. It is easy to use with fast learning curve and
+For classification we use the \emph{scikit-learn} library\;\cite{scikit-learn} with
+Python3. Scikit-learn is a library for data analysis and machine learning
+distributed under BSD open source license. It is easy to use with fast learning curve and
 well documented. It is a good choice for small and medium sized projects that do
 not need massive scalability. It provides various algorithms for classification,
 regression and clustering built on \emph{NumPy} and \emph{SciPy} Python
@@ -1048,16 +1053,15 @@ with smaller datasets where advanced methods would not have enough training
 data.
 
 \section{Reading the labeled results} \label{sec:learn_xml}
-Learning data come as an XML file containing preprocessed data from
+Data used for learning are passed as an XML file containing preprocessed data from
 the base and the target run of the benchmark which are labeled as passed or failed.
 
 Record of each benchmark operation is labeled as pass or fail and contains
 records of runs with different amount of threads or processes. Those records
 contain median, minimum, maximum and quartiles form the repeated runs of the
-configuration. The root element contains UUIDs of the comparison and its base
+configuration. The root element then contains UUIDs of the comparison and its base
 and target results for easier tracing in case of suspicious values.
-
-Example of XML file with data for the teaching of classifiers is shown in Figure
+The example of XML file with data for the teaching of classifiers is shown in Figure
 \ref{fig:learn_xml}.
 
 \begin{figure}
@@ -1094,14 +1098,18 @@ process. The design of the form is shown in Figure \ref{fig:label_form}.
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{teaching_table}
-  \caption{Form from HTML comparison report page to label data for machine learning}
+  \caption{Form from HTML comparison report page of SPECjvm2008 benchmark to
+    label data for machine learning. The last column contains form manual
+    labeling of the results which are sent using the button on the top. The
+    \emph{Status} column next to it displays the actual labels stored in the XML
+    file with data for classification.}
   \label{fig:label_form}
 \end{figure}
 
-For processing of requests from the HTML form we built a simple HTTP simple
-server application using Flask framework for Python3. It is wrapped in Docker
+For processing of the requests from this HTML form we built a simple HTTP simple
+server application using Flask framework for Python3. It is wrapped in the Docker
 container which runs on machine which stores the performance results and
-comparison reports. It receives a HTTP request with POST data containing type of
+comparison reports. It receives a HTTP request with POST data containing the type of
 benchmark, path to directory with the report page and labels for results of each
 benchmark operation. Using this data the application modifies the XML file with
 labels described in Section \ref{sec:learn_xml} and returns HTTP redirect header
@@ -1115,45 +1123,44 @@ back to the comparison report. This process is shown in diagram in Figure
   \label{fig:marker_diagram}
 \end{figure}
 
-\section{Preprocessing for learning} \label{sec:learn_preprocess}
-The intended task is to classify result of each benchmark operation with
+\section{Preprocessing of the data for learning} \label{sec:learn_preprocess}
+We want to classify results of each benchmark operation with
 different thread configurations which is represented by
-\texttt{<comparison\_result>} node in example from previous section. The number
-of threads configurations represented by \texttt{threads\_no} attribute in each
-\texttt{<result>} is not always the same and varies on the number of CPU cores
-on the testing machine.
+\texttt{<comparison\_result>} node in the example in Figure \ref{fig:learn_xml}.
+The number of threads configurations represented by \texttt{threads\_no}
+attribute in each \texttt{<result>} is not always the same and varies on the
+number of CPU cores on the testing machine.
 
-The important values we focus on are the statistical data from runs with
-different amount of threads, that a man uses to label the data manually. From
+The important values that we focus on are the statistical data from runs with
+different amount of threads, that one uses to label the data manually. From
 each of the runs we take minimum, median, maximum and first and third quartile
 from the repeated measurements of the same run configuration.
 
 To avoid absolute values from measurements that are different on each machine,
-we will use relative proportions. Difference of target and base medians will be
-divided by base median and the rest of target statistical values will be divided
+we use relative proportions. Difference of target and base medians are
+divided by base median and the rest of target statistical values are divided
 by the target median.
 
-Next task is to reduce provided data with variable number of threaded results
+Next task is to reduce the provided data with variable number of threaded results
 to fixed size vector. We will take minimum, median and maximum from values of
 each statistical property: of minimums, medians, maximums and first and third
-quartiles. This reduction will keep important values form the benchmark
+quartiles. Each reduction will keep important values form the benchmark
 operation results in reasonably small vector.
 
-Last operation with vector values is applying square root on them. This
+The last operation with these vector values is applying square root. This
 operation reduces distances of vectors with exceptionally high values, which
 helps the k-NN and linear classifier to get better results. Scatter of the
 vectors plotted in 3 best dimensions is shown in Figure \ref{fig:vectors_plot}.
 
-For later use, we will name the vector component like \texttt{medians min} is
-minimum value of all medians in results with different number of threads.
-
+For later use, we will name the vector component like \texttt{medians min} 
+(minimum value of all medians in results with different number of threads).
 The whole preprocessing of a single result of benchmark operation shows the
 Figure \ref{fig:learn_preprocess} with Python code snippet.
 
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{vectors_plot}
-  \caption{In this figure are plotted vectors from the training dataset reduced
+  \caption{Plotted vectors from the training dataset reduced
     to 3 dimensions, which are the best for classification. The reduction was done by
     \texttt{SelectKBest} class from scikit-learn library by choosing the
     dimensions with the biggest variability between classes. The plot on the
@@ -1166,14 +1173,14 @@ Figure \ref{fig:learn_preprocess} with Python code snippet.
 
 \begin{figure}
   \small
-  \begin{lstlisting}[language=Python]
+  \begin{lstlisting}[language=Python, numbers=left]
 mins = []
 medians = []
 maxes = []
 q1s = []
 q3s = []
 
-# Iterate over the thread results of single benchmark operation
+# Iterate over the thread result XML nodes of single benchmark operation
 for res in cpresult:
     for basetarget in res:
         if basetarget.tag == "base_result":
@@ -1181,6 +1188,7 @@ for res in cpresult:
         if basetarget.tag == "target_result":
             t_attr = basetarget.attrib
     try:
+        # Compute relative differences between base and target results
         medians.append((float(t_attr["median"]) - float(b_attr["median"]))
                         / float(b_attr["median"]))
         mins.append((float(t_attr["median"]) - float(t_attr["min"]))
@@ -1195,77 +1203,86 @@ for res in cpresult:
         print("ERROR in values in " + path)
 
 vector = []
+# Add min, med and max value from each array of differences
 for a in [medians, mins, maxes, q1s, q3s]:
     vector.append(min(a))
     vector.append(median(a))
     vector.append(max(a))
 
+# Square root all element
 vector = list(map(lambda x: math.sqrt(float(x))
                   if float(x) > 0
                   else -math.sqrt(abs(float(x))), vector)))
   \end{lstlisting}
   \normalsize
-  \caption{}
+  \caption{Python code showing reading and preprocessing of a vector from single
+    comparison node parsed by \texttt{ElementTree} library for working with XML
+    files. On the line 8 is iteration through comparisons of benchmark
+    operations. On the line 9 the code looks for child nodes with base and
+    target results. In the \texttt{try} block starting on the line 14 are
+    computed relative differences of the statistical values. On the line 29 is
+    are added minimum, median and maximum values from each array of relative
+    differences of statistical values. The last operation on the line 34 applies
+    square root on each element of the vector.}
   \label{fig:learn_preprocess}
 \end{figure}
-% TODO describe the code
 
 \section{Comparison of classifiers} \label{sec:classifier_comparison}
-Classification is procedure of assigning category to new observation based on
+The classification is a procedure of assigning category to new observation based on
 training set of observations with specified category. Because of the
 availability of already classified data it belongs to \emph{supervised learning}
 part of machine learning.
 
 Data for classification are represented by set of vectors with fixed element
 count. Vector is an ordered set of numbers where each one represents a value in
-separate dimension of the source data. For supervised learning have vectors from
-training set assigned categories (also called classes). In our case we will have
+separate dimension of the source data. For supervised learning vectors from
+training set have assigned categories (also called classes). In our case we will have
 2 classes: \emph{pass} and \emph{fail}.
 
-For the following training and evaluation of the models we have roughly 250
+For the following training and evaluation of the models we used roughly 250
 labeled vectors. This should be enough to train different simple classifiers with
 sufficient accuracy on other unlabeled vectors.
 
 \subsection{Validation and metrics} \label{subsec:validation}
 To compare success rate of different classification models we need a method to evaluate
-accuracy of predicting new data. Testing the model on data it got also for
-learning brings risk of overlooking \emph{overfitting}. Overfitting means that the model
+accuracy of predicting new data. Testing the model on data that we used for
+learning can lead to \emph{overfitting}. Overfitting means that the model
 precisely predicts data it has already seen, but fails to predict any new data
 it has not seen yet.
-
-To avoid overfitting we will use \emph{cross-validation} method to test model.
+To avoid overfitting we use \emph{cross-validation} method to test the model.
 It removes part of data from training set and uses them as testing set for
 evaluating the prediction.
 
-For splitting the training data we will use \emph{k-fold} method. This method
+For splitting the training data we use \emph{k-fold} method. This method
 splits the original dataset to $k$ groups. One of groups is used as testing set and
 the rest $k - 1$ groups are left for training. This way we get $k$ different
 dataset for evaluation of our classifiers.
 
-As implementation of k-fold cross-validation we will use
-\texttt{Repeated\-Stratified\-K\-Fold} class from scikit-learn library with parameter
+As implementation of k-fold cross-validation we use
+\texttt{Repeated\-Stratified\-K\-Fold} class from scikit-learn library with the parameter
 $k$ set to 4. It will split the original dataset to 4 groups with same ratio of
 pass and fail labels repeating this process with differently shuffled data.
-Setting number of folds to 4 will give us enough data for training, but also for
+Setting number of folds to 4 gives us enough data both for training and for
 the evaluation.
 
-As metric for rating of predicted values we will use \emph{accuracy} scoring.
-Predicted results will be evaluated as 1 or 0 if the predicted class is the same as the reference
+As metric for rating of predicted values we use \emph{accuracy} scoring.
+Predicted results are evaluated as 1 or 0 if the predicted class is the same as the reference
 class from manual labeling or not. Averaging those scores from the whole testing
-set will give us ratio of correctly predicted vectors.
+set will give us ratio of correctly predicted vectors. In the following we will
+describe each tested classifier.
 
 \subsection{k-nearest neighbors classifier}
 This classifier does not construct any generalized model, but works with the
-whole training data. The decision is made by voting of the $k$ nearest
+whole training data. The decision is then made by voting of the $k$ nearest
 neighbors.
 
 The learning process consists only of building data structure for more efficient
-search through the learning dataset. More computations come with the prediction
+search through the dataset. More computations come with the prediction
 when the algorithm must go through the learning dataset and find $k$ nearest
 vectors.
 
 Accuracy of the model highly depends on the parameter $k$. Higher values
-suppress noise in dataset, but can smoother the boundaries of classes too much.
+suppress noise in dataset, but can smoothen the boundaries of classes too much.
 This behavior can be seen in Figure \ref{fig:knn}.
 
 Scikit-learn implements k-NN classifier in \texttt{K\-Neighbors\-Classifier} class.
@@ -1318,11 +1335,11 @@ single class (purity of the node is 1) or any additional restrictive condition
 is met.
 
 Main advantage of the decision tree is its transparency and easy visualization
-of the model. In Figure \ref{fig:decision_tree} there is visualization of
-decision tree constrained by depth and samples count in leaf nodes built with
+of the model. In Figure \ref{fig:decision_tree} is an example visualization of
+the decision tree constrained by depth and samples count in leaf nodes built with
 our dataset of performance comparisons.
 
-Disadvantage of the decision tree is sensitivity to noisy data and is high
+Disadvantage of the decision tree is sensitivity to noisy data and high
 chance of overfitting, because the tree tries to fit the whole dataset and has
 100\% prediction accuracy on already seen data. This issue can be suppressed by
 reducing maximum depth of the tree, setting minimal amount of samples required
@@ -1332,7 +1349,7 @@ to split impure node into another decision.
   \centering
   \includegraphics[width=14cm]{decision_tree}
   \caption{Decision tree created by Decision tree classifier and rendered by
-    Graphviz library for Python. It shows decision tree generated on our
+    Graphviz library. It shows decision tree generated on our
     performance comparison data constrained by depth and samples count in leaf
     node. First line of non-leaf node shows the condition for choosing the next
     decision branch. \emph{gini} property of node shows its impurity --
@@ -1367,7 +1384,7 @@ of the model at the cost of higher bias.
 
 Comparison of these two implementations is in Figure
 \ref{fig:randomized_forests}. The RandomForestClassifier has slightly better
-accuracy than ExtraTreesClassifier. Accuracy also rises much slower compared to
+accuracy than ExtraTreesClassifier. The accuracy also rises much slower compared to
 number of the trees in the model.
 
 \begin{figure}
@@ -1381,7 +1398,7 @@ number of the trees in the model.
   \label{fig:randomized_forests}
 \end{figure}
 
-\section{Evaluation of classifiers}
+\section{Evaluation of classifiers} \label{sec:classifier_evaluation}
 For the evaluation and comparison of proposed classifiers we will use these
 configurations:
 \begin{itemize}
@@ -1420,10 +1437,10 @@ Extra trees:
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{classifiers}
-  \caption{Comparison of accuracy of different classifiers mentioned in Section
+  \caption{Comparison of accuracy of different implemented classifiers listed in Section
     \ref{sec:classifier_comparison}. The results come from repeated k-fold
     cross-validation by splitting the dataset to train and test sets using ratio
-    3:1.}
+    3:1. The exact results are listed in Section \ref{sec:classifier_evaluation}}
   \label{fig:classifiers}
 \end{figure}
 
