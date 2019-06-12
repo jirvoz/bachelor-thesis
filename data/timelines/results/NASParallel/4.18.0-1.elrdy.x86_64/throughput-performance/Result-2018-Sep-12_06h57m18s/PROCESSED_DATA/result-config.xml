@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <settings>
+    <Arguments value="--variant=fast"/>
+    <BeakerJobID value="2758883"/>
+    <Family value=""/>
+    <JavaVersion value="NO INPUT DATA"/>
+    <Area value="sched"/>
+    <DateTime value="Result-2018-Sep-12_06h57m18s"/>
+    <JavaFlags value="NO INPUT DATA"/>
+    <PathToResult value="./results/NASParallel/4.18.0-1.elrdy.x86_64/throughput-performance/Result-2018-Sep-12_06h57m18s"/>
+    <RecipeID value="5654467"/>
+    <IbrsEnabled value="NONE"/>
+    <BeakerRPMVersion value="kernel_perf_cpumem-performance-NAS_parallel_benchmark-test-certification-2.0-103.noarch"/>
+    <HugePagesTotal value="0"/>
+    <MicrocodeCtl value="microcode_ctl-2.1-26.el8.x86_64"/>
+    <HugePagesSetup value="always"/>
+    <PtiEnabled value="NONE"/>
+    <KernelFirmware value="linux-firmware-20180717-87.git8d69bab7.el8.noarch"/>
+    <Workflow value=""/>
+    <TestStartTime value="1536728277"/>
+    <HtOnOff value="htON"/>
+    <RetpEnabled value="NONE"/>
+    <UUID value="fc56c1fe-75a3-4ce6-85b1-f029aa1d9e78"/>
+    <Kernel value="kernel-4.18.0-1.elrdy.x86_64"/>
+    <SpecificTag value=""/>
+    <HostName value="localhost.localdomain"/>
+    <HostType value="machine"/>
+    <SELinux value="Enforcing"/>
+    <HugePageSize value="2048 kB"/>
+    <Tag value="-"/>
+    <NumasNumber value="2"/>
+    <IbpbEnabled value="NONE"/>
+    <TestCase value="NASParallel-2_NUMA_nodes"/>
+    <TunedProfile value="throughput-performance"/>
+    <BenchmarkName value="NASParallel"/>
+    <Architecture value="x86_64"/>
+    <TestTimeString value="2 hours 34 minutes 13 seconds"/>
+    <Distribution value="RHEL-8.0-20180824.2"/>
+  </settings>
+</beaker_run_result>

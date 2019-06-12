@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result>
+    <jvm_result operation="scimark_monte_carlo">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="compiler_sunflow">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="compress">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="mpegaudio">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="scimark_sor_small">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="crypto_signverify">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="0.0" median="1.0" mean="1.0" max="1" third_q="1.0" min="1" first_q="1.0"/>
+      </run>
+    </jvm_result>
+  </test_result>
+</beaker_run_result>

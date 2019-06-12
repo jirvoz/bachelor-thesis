@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result>
+    <jvm_result operation="scimark_monte_carlo">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="71.2" mean="71.2" max="71.2" third_q="71.2" min="71.2" first_q="71.2"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.5" median="142.5" mean="142.5" max="143" third_q="142.8" min="142" first_q="142.2"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.5" median="277.5" mean="277.5" max="278" third_q="277.8" min="277" first_q="277.2"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="2.0" median="514.0" mean="514.0" max="516" third_q="515.0" min="512" first_q="513.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="5.0" median="998.0" mean="998.0" max="1003" third_q="1000.5" min="993" first_q="995.5"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="19.5" median="1384.5" mean="1384.5" max="1404" third_q="1394.2" min="1365" first_q="1374.8"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="4.5" median="1528.5" mean="1528.5" max="1533" third_q="1530.8" min="1524" first_q="1526.2"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="compiler_sunflow">
+      <run threads_no="1">
+        <results_statistics stdev="0.9" median="79.8" mean="79.8" max="80.7" third_q="80.3" min="78.9" first_q="79.4"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="1.0" median="154.0" mean="154.0" max="155" third_q="154.5" min="153" first_q="153.5"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="5.0" median="297.0" mean="297.0" max="302" third_q="299.5" min="292" first_q="294.5"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="1.5" median="549.5" mean="549.5" max="551" third_q="550.2" min="548" first_q="548.8"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="8.5" median="1034.5" mean="1034.5" max="1043" third_q="1038.8" min="1026" first_q="1030.2"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="35.5" median="1400.5" mean="1400.5" max="1436" third_q="1418.2" min="1365" first_q="1382.8"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="12.0" median="1530.0" mean="1530.0" max="1542" third_q="1536.0" min="1518" first_q="1524.0"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="compress">
+      <run threads_no="1">
+        <results_statistics stdev="0.8" median="57.1" mean="57.1" max="57.9" third_q="57.5" min="56.3" first_q="56.7"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="112.0" mean="112.0" max="112" third_q="112.0" min="112" first_q="112.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.5" median="212.5" mean="212.5" max="213" third_q="212.8" min="212" first_q="212.2"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="3.5" median="412.5" mean="412.5" max="416" third_q="414.2" min="409" first_q="410.8"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="6.5" median="766.5" mean="766.5" max="773" third_q="769.8" min="760" first_q="763.2"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="49.0" median="949.0" mean="949.0" max="998" third_q="973.5" min="900" first_q="924.5"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="3.0" median="1164.0" mean="1164.0" max="1167" third_q="1165.5" min="1161" first_q="1162.5"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="mpegaudio">
+      <run threads_no="1">
+        <results_statistics stdev="0.1" median="42.3" mean="42.3" max="42.4" third_q="42.4" min="42.2" first_q="42.2"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.1" median="88.6" mean="88.6" max="88.7" third_q="88.6" min="88.4" first_q="88.5"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="1.5" median="169.5" mean="169.5" max="171" third_q="170.2" min="168" first_q="168.8"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.5" median="317.5" mean="317.5" max="318" third_q="317.8" min="317" first_q="317.2"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="4.0" median="583.0" mean="583.0" max="587" third_q="585.0" min="579" first_q="581.0"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="9.5" median="779.5" mean="779.5" max="789" third_q="784.2" min="770" first_q="774.8"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="4.0" median="873.0" mean="873.0" max="877" third_q="875.0" min="869" first_q="871.0"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="scimark_sor_small">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="50.0" mean="50.0" max="50.0" third_q="50.0" min="50.0" first_q="50.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.1" median="99.8" mean="99.8" max="99.9" third_q="99.9" min="99.8" first_q="99.8"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="0.5" median="194.5" mean="194.5" max="195" third_q="194.8" min="194" first_q="194.2"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.0" median="359.0" mean="359.0" max="359" third_q="359.0" min="359" first_q="359.0"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="1.0" median="705.0" mean="705.0" max="706" third_q="705.5" min="704" first_q="704.5"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="1.0" median="1056.0" mean="1056.0" max="1057" third_q="1056.5" min="1055" first_q="1055.5"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="1.0" median="1215.0" mean="1215.0" max="1216" third_q="1215.5" min="1214" first_q="1214.5"/>
+      </run>
+    </jvm_result>
+    <jvm_result operation="crypto_signverify">
+      <run threads_no="1">
+        <results_statistics stdev="0.0" median="153.0" mean="153.0" max="153" third_q="153.0" min="153" first_q="153.0"/>
+      </run>
+      <run threads_no="2">
+        <results_statistics stdev="0.0" median="305.0" mean="305.0" max="305" third_q="305.0" min="305" first_q="305.0"/>
+      </run>
+      <run threads_no="4">
+        <results_statistics stdev="2.5" median="578.5" mean="578.5" max="581" third_q="579.8" min="576" first_q="577.2"/>
+      </run>
+      <run threads_no="8">
+        <results_statistics stdev="0.5" median="1093.5" mean="1093.5" max="1094" third_q="1093.8" min="1093" first_q="1093.2"/>
+      </run>
+      <run threads_no="16">
+        <results_statistics stdev="32.5" median="2039.5" mean="2039.5" max="2072" third_q="2055.8" min="2007" first_q="2023.2"/>
+      </run>
+      <run threads_no="24">
+        <results_statistics stdev="195.5" median="2480.5" mean="2480.5" max="2676" third_q="2578.2" min="2285" first_q="2382.8"/>
+      </run>
+      <run threads_no="28">
+        <results_statistics stdev="78.5" median="3050.5" mean="3050.5" max="3129" third_q="3089.8" min="2972" first_q="3011.2"/>
+      </run>
+    </jvm_result>
+  </test_result>
+</beaker_run_result>

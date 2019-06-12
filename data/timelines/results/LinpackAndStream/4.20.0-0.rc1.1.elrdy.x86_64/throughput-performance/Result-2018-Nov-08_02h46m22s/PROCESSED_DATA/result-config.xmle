@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <settings>
+    <TestStartTime value="1541641623"/>
+    <Architecture value="x86_64"/>
+    <HugePagesTotal value="0"/>
+    <UUID value="87f3f3ed-49a8-4eb3-9673-68cf1706d646"/>
+    <PathToResult value="/mnt/data/www/testing/sched/results/LinpackAndStream/4.20.0-0.rc1.1.elrdy.x86_64/throughput-performance/Result-2018-Nov-08_02h46m22s"/>
+    <KernelFirmware value="linux-firmware-20180717-87.git8d69bab7.el8.noarch"/>
+    <TestTimeString value="1 hours 4 minutes 7 seconds"/>
+    <RecipeID value="6085044"/>
+    <Area value="sched"/>
+    <Distribution value="RHEL-8.0-20180904.0"/>
+    <Family value="RHEL8-RDY"/>
+    <JavaFlags value="no input data"/>
+    <JavaVersion value="no input data"/>
+    <IbrsEnabled value="NONE"/>
+    <IbpbEnabled value="NONE"/>
+    <Tag value="https://platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/job/Kernel_Scheduler_Performance/268"/>
+    <DateTime value="Result-2018-Nov-08_02h46m22s"/>
+    <BeakerJobID value="3071632"/>
+    <RetpEnabled value="NONE"/>
+    <BeakerRPMVersion value="kernel_perf_cpumem-performance-LinpackAndStream-test-certification-2.0-97.noarch"/>
+    <HugePagesSetup value="always"/>
+    <NumasNumber value="2"/>
+    <TunedProfile value="throughput-performance"/>
+    <Arguments value="--variant=fast"/>
+    <HostType value="machine"/>
+    <Workflow value="fast"/>
+    <PtiEnabled value="NONE"/>
+    <HostName value="localhost.localdomain"/>
+    <SELinux value="Enforcing"/>
+    <Kernel value="kernel-4.20.0-0.rc1.1.elrdy.x86_64"/>
+    <BenchmarkName value="LinpackAndStream"/>
+    <SpecificTag value="https://platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/job/Kernel_Scheduler_Performance/268"/>
+    <TestCase value="LinpackAndStream-2_NUMA_nodes"/>
+    <HtOnOff value="htON"/>
+    <MicrocodeCtl value="microcode_ctl-2.1-27.el8.x86_64"/>
+    <HugePageSize value="2048 kB"/>
+  </settings>
+</beaker_run_result>

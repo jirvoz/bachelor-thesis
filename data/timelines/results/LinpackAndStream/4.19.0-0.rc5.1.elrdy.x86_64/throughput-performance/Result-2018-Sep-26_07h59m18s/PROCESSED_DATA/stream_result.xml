@@ -1,0 +1,1174 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result benchmark_name="stream" run_type="affinity_runs"/>
+  <test_result benchmark_name="stream" run_type="default_runs">
+    <run instances_no="1">
+      <loop number="1">
+        <result copy="12941.6332" add="14466.6473" user_time="7.01" scale="13245.5364" triad="14429.526" all="13784.9197" system_time="0.04" total_time="7.07"/>
+      </loop>
+      <loop number="2">
+        <result copy="12738.8383" add="14195.9763" user_time="7.15" scale="12739.6102" triad="14156.4975" all="13504.3837" system_time="0.04" total_time="7.22"/>
+      </loop>
+      <loop number="3">
+        <result copy="12914.6094" add="14454.9316" user_time="7.02" scale="13024.9344" triad="14406.5285" all="13732.459" system_time="0.04" total_time="7.1"/>
+      </loop>
+      <loop number="4">
+        <result copy="12906.1557" add="14451.0741" user_time="7.02" scale="12686.0559" triad="14402.2646" all="13715.1028" system_time="0.03" total_time="7.09"/>
+      </loop>
+      <loop number="5">
+        <result copy="12784.0925" add="14316.0541" user_time="7.12" scale="12869.8017" triad="14248.4385" all="13588.4843" system_time="0.04" total_time="7.19"/>
+      </loop>
+    </run>
+    <run instances_no="2">
+      <loop number="1">
+        <result copy="12456.7158" add="13974.3329" user_time="7.3" scale="12323.5366" triad="13799.0846" all="13157.3723" system_time="0.04" total_time="7.36"/>
+        <result copy="12731.389" add="14279.3923" user_time="8.09" scale="12608.1335" triad="14228.5696" all="13566.371" system_time="0.09" total_time="8.21"/>
+      </loop>
+      <loop number="2">
+        <result copy="12733.0709" add="14228.7704" user_time="8.02" scale="12507.9543" triad="14153.2784" all="13511.2511" system_time="0.09" total_time="8.13"/>
+        <result copy="12609.0585" add="14072.665" user_time="7.26" scale="12469.6228" triad="13989.0001" all="13281.3243" system_time="0.04" total_time="7.32"/>
+      </loop>
+      <loop number="3">
+        <result copy="12593.0538" add="13987.8057" user_time="7.25" scale="12418.0708" triad="13973.359" all="13287.4065" system_time="0.03" total_time="7.31"/>
+        <result copy="12749.2285" add="14293.2046" user_time="8.11" scale="12570.2135" triad="14219.6682" all="13569.1887" system_time="0.09" total_time="8.23"/>
+      </loop>
+      <loop number="4">
+        <result copy="12736.4958" add="14301.8132" user_time="8.09" scale="12588.6804" triad="14237.4493" all="13572.7114" system_time="0.09" total_time="8.21"/>
+        <result copy="12583.1312" add="13996.926" user_time="7.25" scale="12335.294" triad="13916.5198" all="13255.3402" system_time="0.04" total_time="7.32"/>
+      </loop>
+      <loop number="5">
+        <result copy="12730.6556" add="14270.6757" user_time="8.01" scale="12586.8186" triad="14195.4431" all="13550.4111" system_time="0.1" total_time="8.13"/>
+        <result copy="12708.0517" add="14188.8534" user_time="7.17" scale="12546.4031" triad="14114.712" all="13403.4854" system_time="0.04" total_time="7.24"/>
+      </loop>
+    </run>
+    <run instances_no="4">
+      <loop number="1">
+        <result copy="8740.6513" add="10023.5382" user_time="12.73" scale="8661.115" triad="10193.6267" all="9452.8267" system_time="0.09" total_time="12.86"/>
+        <result copy="9735.9785" add="11516.0462" user_time="10.54" scale="10549.6993" triad="11393.9301" all="10790.5" system_time="0.08" total_time="10.65"/>
+        <result copy="10953.5526" add="12214.0662" user_time="8.87" scale="11049.298" triad="11726.744" all="11473.0985" system_time="0.04" total_time="8.94"/>
+        <result copy="10958.8336" add="12163.8039" user_time="10.96" scale="11030.1103" triad="11987.424" all="11407.8491" system_time="0.04" total_time="11.04"/>
+      </loop>
+      <loop number="2">
+        <result copy="8934.0959" add="10697.4973" user_time="12.59" scale="9153.8192" triad="10070.062" all="9797.1816" system_time="0.06" total_time="12.7"/>
+        <result copy="10884.8624" add="11908.2186" user_time="11.16" scale="11209.8952" triad="11785.3644" all="11118.5779" system_time="0.04" total_time="11.25"/>
+        <result copy="10024.6456" add="11184.6299" user_time="10.78" scale="9934.5253" triad="11087.2576" all="10534.9796" system_time="0.07" total_time="10.9"/>
+        <result copy="10977.3912" add="12121.1044" user_time="8.78" scale="11180.7353" triad="12130.8243" all="11623.8603" system_time="0.03" total_time="8.85"/>
+      </loop>
+      <loop number="3">
+        <result copy="9484.2011" add="10334.1197" user_time="12.05" scale="9398.653" triad="10521.1627" all="9667.8717" system_time="0.07" total_time="12.17"/>
+        <result copy="11111.5139" add="11995.7091" user_time="8.88" scale="10844.2272" triad="12009.7994" all="11362.4983" system_time="0.04" total_time="8.95"/>
+        <result copy="8858.0638" add="9980.5961" user_time="11.99" scale="9030.1714" triad="9684.3569" all="9317.2333" system_time="0.08" total_time="12.11"/>
+        <result copy="10950.156" add="12229.5991" user_time="9.09" scale="10856.1411" triad="12052.0861" all="11338.7644" system_time="0.04" total_time="9.17"/>
+      </loop>
+      <loop number="4">
+        <result copy="10009.5428" add="11224.5749" user_time="10.77" scale="9961.3345" triad="11034.9805" all="10523.9897" system_time="0.08" total_time="10.9"/>
+        <result copy="8247.7343" add="9276.0445" user_time="12.15" scale="8878.1128" triad="9583.6124" all="8771.1186" system_time="0.08" total_time="12.28"/>
+        <result copy="10851.9021" add="12293.9785" user_time="9.11" scale="10852.2495" triad="12173.6183" all="11273.428" system_time="0.04" total_time="9.19"/>
+        <result copy="10658.667" add="11966.1997" user_time="11.04" scale="10857.9033" triad="11880.2518" all="11278.2518" system_time="0.04" total_time="11.12"/>
+      </loop>
+      <loop number="5">
+        <result copy="11135.2778" add="12586.9575" user_time="8.63" scale="10978.2152" triad="12132.1507" all="11700.1301" system_time="0.04" total_time="8.71"/>
+        <result copy="9284.286" add="10498.8581" user_time="10.75" scale="9334.2438" triad="10301.5845" all="9881.7608" system_time="0.07" total_time="10.86"/>
+        <result copy="10642.2073" add="12217.2521" user_time="8.67" scale="11067.5786" triad="12307.2518" all="11579.9069" system_time="0.04" total_time="8.74"/>
+        <result copy="12406.2899" add="12761.858" user_time="9.83" scale="11004.1947" triad="12520.8825" all="12162.5327" system_time="0.1" total_time="9.97"/>
+      </loop>
+    </run>
+    <run instances_no="8">
+      <loop number="1">
+        <result copy="6436.721" add="7927.6845" user_time="18.94" scale="6927.8048" triad="7671.9534" all="7270.0084" system_time="0.1" total_time="19.1"/>
+        <result copy="6938.9009" add="7965.9533" user_time="19.11" scale="6884.7604" triad="8044.993" all="7445.8224" system_time="0.04" total_time="19.22"/>
+        <result copy="7238.7296" add="8637.4026" user_time="15.51" scale="7574.6727" triad="8451.1732" all="7977.3448" system_time="0.1" total_time="15.67"/>
+        <result copy="7381.9745" add="8535.3527" user_time="13.87" scale="7257.4556" triad="8254.0818" all="7687.8696" system_time="0.05" total_time="13.98"/>
+        <result copy="6894.1186" add="7828.8067" user_time="20.08" scale="6881.9922" triad="7845.9633" all="7210.6629" system_time="0.1" total_time="20.24"/>
+        <result copy="7287.3975" add="8479.1476" user_time="15.59" scale="7221.0844" triad="8203.6274" all="7659.7339" system_time="0.04" total_time="15.69"/>
+        <result copy="7314.7445" add="8310.5696" user_time="13.73" scale="7306.959" triad="8319.9426" all="7722.3684" system_time="0.05" total_time="13.84"/>
+        <result copy="6799.9233" add="7804.2139" user_time="19.7" scale="6771.2795" triad="7711.303" all="7312.9551" system_time="0.11" total_time="19.88"/>
+      </loop>
+      <loop number="2">
+        <result copy="6903.2211" add="7944.104" user_time="18.03" scale="6936.7556" triad="7726.8173" all="7413.0722" system_time="0.07" total_time="18.17"/>
+        <result copy="6174.5992" add="6898.9081" user_time="19.44" scale="5904.8134" triad="6603.1431" all="6252.8863" system_time="0.11" total_time="19.61"/>
+        <result copy="7201.3741" add="8760.5338" user_time="15.72" scale="7775.2313" triad="8549.9812" all="8059.2612" system_time="0.12" total_time="15.9"/>
+        <result copy="7283.3507" add="8541.7965" user_time="19.41" scale="7050.5693" triad="8145.8446" all="7771.9889" system_time="0.11" total_time="19.59"/>
+        <result copy="7390.5105" add="8766.8014" user_time="16.58" scale="7355.75" triad="8484.6344" all="7820.2725" system_time="0.05" total_time="16.69"/>
+        <result copy="7022.3428" add="8265.8182" user_time="19.27" scale="6993.9023" triad="7928.005" all="7531.4543" system_time="0.06" total_time="19.4"/>
+        <result copy="7360.8138" add="8710.1438" user_time="17.36" scale="7459.9674" triad="8238.5183" all="7716.0348" system_time="0.05" total_time="17.48"/>
+        <result copy="7404.7359" add="8506.4047" user_time="13.9" scale="7327.9873" triad="8322.1427" all="7755.3957" system_time="0.04" total_time="14.01"/>
+      </loop>
+      <loop number="3">
+        <result copy="7297.1532" add="8592.4177" user_time="16.44" scale="7375.2251" triad="8391.4347" all="7929.0923" system_time="0.09" total_time="16.6"/>
+        <result copy="6550.6058" add="7594.8302" user_time="20.74" scale="6560.6832" triad="7400.242" all="7050.2768" system_time="0.08" total_time="20.88"/>
+        <result copy="6614.7502" add="7830.6883" user_time="18.44" scale="6794.3076" triad="7540.3723" all="7186.5966" system_time="0.11" total_time="18.61"/>
+        <result copy="7389.9661" add="8489.7352" user_time="14.13" scale="7351.2081" triad="8324.3113" all="7833.8424" system_time="0.05" total_time="14.24"/>
+        <result copy="7184.6413" add="8088.8923" user_time="18.72" scale="6983.7822" triad="7850.8894" all="7511.5711" system_time="0.05" total_time="18.83"/>
+        <result copy="7151.4328" add="8464.7671" user_time="14.15" scale="7211.9587" triad="8416.1137" all="7815.8589" system_time="0.05" total_time="14.25"/>
+        <result copy="7033.7162" add="8152.6965" user_time="18.06" scale="6935.245" triad="7919.5874" all="7497.7932" system_time="0.05" total_time="18.18"/>
+        <result copy="7489.6535" add="8630.3895" user_time="19.55" scale="7350.9882" triad="8464.5811" all="7974.4326" system_time="0.09" total_time="19.71"/>
+      </loop>
+      <loop number="4">
+        <result copy="6535.0846" add="7716.9753" user_time="20.45" scale="6554.1609" triad="7559.8497" all="7140.526" system_time="0.1" total_time="20.61"/>
+        <result copy="7004.563" add="8073.1269" user_time="15.38" scale="6960.296" triad="7976.3318" all="7466.1673" system_time="0.05" total_time="15.48"/>
+        <result copy="6872.2176" add="8114.3509" user_time="17.58" scale="6914.116" triad="7875.8597" all="7482.5905" system_time="0.07" total_time="17.71"/>
+        <result copy="6753.1318" add="8029.6952" user_time="19.6" scale="6806.9844" triad="7660.0202" all="7013.0367" system_time="0.09" total_time="19.74"/>
+        <result copy="6831.0044" add="8048.8177" user_time="17.88" scale="6831.5271" triad="7808.1107" all="7410.9456" system_time="0.13" total_time="18.07"/>
+        <result copy="7054.4261" add="8311.0298" user_time="18.5" scale="7086.8439" triad="8028.6755" all="7595.6662" system_time="0.04" total_time="18.61"/>
+        <result copy="6981.3885" add="8011.0561" user_time="18.39" scale="6847.5129" triad="7875.1921" all="7442.7015" system_time="0.05" total_time="18.51"/>
+        <result copy="6897.5641" add="8038.2966" user_time="14.16" scale="6881.0462" triad="7844.2231" all="7430.4545" system_time="0.05" total_time="14.26"/>
+      </loop>
+      <loop number="5">
+        <result copy="7200.5234" add="8390.1011" user_time="20.12" scale="7273.5958" triad="8209.9958" all="7795.9987" system_time="0.1" total_time="20.29"/>
+        <result copy="7446.9102" add="9327.702" user_time="19.33" scale="7935.4404" triad="9137.3159" all="8543.0052" system_time="0.12" total_time="19.51"/>
+        <result copy="7351.5327" add="8519.7744" user_time="13.87" scale="7327.5299" triad="8235.8981" all="7751.6156" system_time="0.04" total_time="13.97"/>
+        <result copy="6956.9168" add="8223.0192" user_time="18.49" scale="7105.5038" triad="7882.0209" all="7537.4973" system_time="0.05" total_time="18.61"/>
+        <result copy="7215.0957" add="8725.6999" user_time="15.4" scale="7695.7889" triad="8618.587" all="8039.8389" system_time="0.11" total_time="15.58"/>
+        <result copy="7475.0476" add="8318.0731" user_time="18.14" scale="7338.9658" triad="8329.5463" all="7782.5855" system_time="0.05" total_time="18.25"/>
+        <result copy="7594.9359" add="8567.4291" user_time="13.66" scale="7287.4111" triad="8453.5082" all="7807.63" system_time="0.05" total_time="13.77"/>
+        <result copy="7319.0331" add="8181.4699" user_time="17.64" scale="6767.0946" triad="7821.2136" all="7432.2557" system_time="0.11" total_time="17.82"/>
+      </loop>
+    </run>
+    <run instances_no="12">
+      <loop number="1">
+        <result copy="5150.6025" add="5989.6876" user_time="26.31" scale="5082.4097" triad="5855.0892" all="5527.4905" system_time="0.09" total_time="26.5"/>
+        <result copy="5807.6577" add="7178.1783" user_time="22.37" scale="6172.8883" triad="6917.2945" all="6517.6284" system_time="0.19" total_time="22.66"/>
+        <result copy="5036.0392" add="5951.2311" user_time="25.91" scale="5036.3453" triad="5786.0251" all="5504.0653" system_time="0.16" total_time="26.17"/>
+        <result copy="5515.7618" add="6388.8572" user_time="26.17" scale="5461.0491" triad="6184.5313" all="5876.1523" system_time="0.11" total_time="26.38"/>
+        <result copy="5547.855" add="6504.0714" user_time="25.71" scale="5468.0934" triad="6249.5098" all="5873.805" system_time="0.1" total_time="25.91"/>
+        <result copy="5871.0596" add="6442.54" user_time="26.57" scale="5508.2102" triad="6311.132" all="6045.8766" system_time="0.17" total_time="26.84"/>
+        <result copy="5137.898" add="6044.8449" user_time="28.1" scale="5085.5574" triad="5839.5951" all="5546.1431" system_time="0.18" total_time="28.38"/>
+        <result copy="5138.0113" add="5995.1116" user_time="23.39" scale="5167.6757" triad="5798.5655" all="5549.1791" system_time="0.09" total_time="23.58"/>
+        <result copy="5647.4464" add="6501.7047" user_time="27.04" scale="5510.2737" triad="6364.0494" all="5951.4255" system_time="0.09" total_time="27.23"/>
+        <result copy="5592.4688" add="6440.7932" user_time="24.22" scale="5549.2951" triad="6168.4529" all="5894.5277" system_time="0.14" total_time="24.45"/>
+        <result copy="5809.3465" add="7001.6285" user_time="26.37" scale="6011.045" triad="6682.2391" all="6320.334" system_time="0.17" total_time="26.64"/>
+        <result copy="5631.6784" add="6534.496" user_time="19.86" scale="5607.0245" triad="6253.0347" all="5973.4632" system_time="0.09" total_time="20.04"/>
+      </loop>
+      <loop number="2">
+        <result copy="5292.122" add="6157.3704" user_time="23.62" scale="5231.0993" triad="6043.8283" all="5682.5231" system_time="0.09" total_time="23.81"/>
+        <result copy="5227.6491" add="6097.7278" user_time="20.02" scale="5226.8511" triad="5948.9289" all="5626.9191" system_time="0.07" total_time="20.19"/>
+        <result copy="5221.9233" add="6061.6367" user_time="24.97" scale="5213.3284" triad="5835.6791" all="5605.8645" system_time="0.17" total_time="25.23"/>
+        <result copy="5133.2736" add="5976.9289" user_time="27.42" scale="4968.04" triad="5694.9341" all="5452.2595" system_time="0.16" total_time="27.67"/>
+        <result copy="4622.8087" add="5584.1279" user_time="28.68" scale="4547.7883" triad="5746.3399" all="5025.4612" system_time="0.2" total_time="28.97"/>
+        <result copy="5535.7809" add="6440.8014" user_time="27.3" scale="5423.5911" triad="6219.5213" all="5958.843" system_time="0.2" total_time="27.59"/>
+        <result copy="5678.4726" add="6621.6757" user_time="22.1" scale="5636.612" triad="6342.3465" all="6067.6693" system_time="0.15" total_time="22.34"/>
+        <result copy="5372.3461" add="6187.9789" user_time="22.44" scale="5307.1401" triad="6069.041" all="5740.7596" system_time="0.11" total_time="22.65"/>
+        <result copy="5311.3438" add="6085.2643" user_time="26.05" scale="5198.7216" triad="5934.8352" all="5649.5846" system_time="0.11" total_time="26.26"/>
+        <result copy="5093.9954" add="5895.8775" user_time="27.2" scale="4955.493" triad="5751.5944" all="5436.3614" system_time="0.18" total_time="27.48"/>
+        <result copy="5260.8781" add="6229.388" user_time="20.09" scale="5192.9988" triad="5885.7847" all="5618.8762" system_time="0.08" total_time="20.26"/>
+        <result copy="5199.4682" add="5946.3393" user_time="23.8" scale="5082.9628" triad="5810.7054" all="5496.2578" system_time="0.1" total_time="23.99"/>
+      </loop>
+      <loop number="3">
+        <result copy="4820.132" add="5223.4747" user_time="28.24" scale="4423.1109" triad="5042.5509" all="4878.467" system_time="0.18" total_time="28.51"/>
+        <result copy="5297.1052" add="6087.8957" user_time="20.55" scale="5211.0233" triad="5977.4568" all="5659.0724" system_time="0.11" total_time="20.75"/>
+        <result copy="5224.2071" add="6178.1685" user_time="27.6" scale="5324.685" triad="5879.9177" all="5615.4538" system_time="0.11" total_time="27.8"/>
+        <result copy="5236.6926" add="6092.452" user_time="23.9" scale="5183.4229" triad="5892.4851" all="5590.886" system_time="0.09" total_time="24.08"/>
+        <result copy="5592.3882" add="6496.2632" user_time="26.92" scale="5541.9512" triad="6314.4011" all="5996.5431" system_time="0.14" total_time="27.15"/>
+        <result copy="4624.7271" add="5426.0768" user_time="26.37" scale="4634.4624" triad="5264.7526" all="4889.1459" system_time="0.2" total_time="26.67"/>
+        <result copy="5253.3835" add="6153.9478" user_time="20.43" scale="5290.3183" triad="6005.5661" all="5682.4112" system_time="0.11" total_time="20.63"/>
+        <result copy="5065.7599" add="6035.3229" user_time="23.78" scale="5049.64" triad="5845.3779" all="5506.9658" system_time="0.14" total_time="24.02"/>
+        <result copy="5276.8017" add="6122.9957" user_time="22.23" scale="5304.6106" triad="6009.8213" all="5688.6062" system_time="0.2" total_time="22.53"/>
+        <result copy="5173.3874" add="6143.796" user_time="23.52" scale="5159.1365" triad="5899.135" all="5598.2368" system_time="0.09" total_time="23.7"/>
+        <result copy="5109.8265" add="5920.6912" user_time="23.82" scale="5024.6464" triad="5795.4836" all="5494.2485" system_time="0.17" total_time="24.08"/>
+        <result copy="5213.3722" add="5948.4989" user_time="28.45" scale="5163.0862" triad="5775.1725" all="5544.6677" system_time="0.1" total_time="28.64"/>
+      </loop>
+      <loop number="4">
+        <result copy="4447.9904" add="5168.8542" user_time="27.99" scale="4413.8498" triad="5022.0126" all="4597.1236" system_time="0.1" total_time="28.19"/>
+        <result copy="5266.1119" add="6259.599" user_time="25.69" scale="5555.9047" triad="6209.8379" all="5865.6328" system_time="0.16" total_time="25.95"/>
+        <result copy="5327.2943" add="6262.8601" user_time="21.14" scale="5378.7719" triad="6053.5251" all="5721.1225" system_time="0.1" total_time="21.33"/>
+        <result copy="5322.7021" add="6230.7402" user_time="27.03" scale="5350.2506" triad="6007.4268" all="5730.9198" system_time="0.08" total_time="27.2"/>
+        <result copy="5786.7733" add="6940.7696" user_time="24.48" scale="6060.9805" triad="6770.1724" all="6425.8135" system_time="0.15" total_time="24.73"/>
+        <result copy="5519.2317" add="6258.3986" user_time="21.23" scale="5382.5163" triad="6125.5108" all="5805.7261" system_time="0.07" total_time="21.4"/>
+        <result copy="5360.3933" add="5602.9589" user_time="27.81" scale="4691.1204" triad="5325.8428" all="5199.1912" system_time="0.17" total_time="28.07"/>
+        <result copy="5424.2153" add="6289.0971" user_time="21.23" scale="5450.0695" triad="6076.3572" all="5756.9975" system_time="0.04" total_time="21.37"/>
+        <result copy="5492.092" add="6169.768" user_time="25.83" scale="5312.1765" triad="6008.7719" all="5793.1873" system_time="0.14" total_time="26.06"/>
+        <result copy="5427.1682" add="6285.0812" user_time="21.29" scale="5333.4489" triad="6091.7698" all="5744.4122" system_time="0.06" total_time="21.44"/>
+        <result copy="5426.6237" add="6246.2724" user_time="26.92" scale="5318.3399" triad="6029.1979" all="5754.5471" system_time="0.05" total_time="27.07"/>
+        <result copy="5109.583" add="5978.1362" user_time="25.17" scale="5091.6183" triad="5724.3251" all="5514.8239" system_time="0.16" total_time="25.43"/>
+      </loop>
+      <loop number="5">
+        <result copy="12504.4078" add="13862.6774" user_time="10.5" scale="12230.5953" triad="13929.3129" all="13158.6102" system_time="0.13" total_time="10.67"/>
+        <result copy="5274.8695" add="6043.5334" user_time="21.46" scale="5166.707" triad="5892.7479" all="5550.6497" system_time="0.08" total_time="21.63"/>
+        <result copy="5193.727" add="6081.4561" user_time="23.83" scale="5181.3574" triad="5900.8259" all="5595.7901" system_time="0.08" total_time="24.0"/>
+        <result copy="4608.3755" add="5934.3253" user_time="26.95" scale="5035.4561" triad="5533.025" all="4564.4943" system_time="0.14" total_time="27.18"/>
+        <result copy="5048.2064" add="6020.6279" user_time="24.18" scale="5121.7342" triad="5789.4634" all="5529.0559" system_time="0.19" total_time="24.46"/>
+        <result copy="5209.276" add="6016.4016" user_time="19.37" scale="5170.1551" triad="5866.7703" all="5575.5092" system_time="0.07" total_time="19.53"/>
+        <result copy="5213.7898" add="6155.1037" user_time="24.22" scale="5138.7572" triad="5860.0705" all="5542.3571" system_time="0.07" total_time="24.38"/>
+        <result copy="5304.4735" add="5633.2227" user_time="25.27" scale="4532.1006" triad="5443.1148" all="5165.5104" system_time="0.17" total_time="25.52"/>
+        <result copy="5141.2359" add="5976.8118" user_time="24.94" scale="5165.176" triad="5829.2992" all="5549.7983" system_time="0.12" total_time="25.15"/>
+        <result copy="5181.5128" add="6087.8934" user_time="22.62" scale="5119.2381" triad="5879.0579" all="5588.8133" system_time="0.12" total_time="22.84"/>
+        <result copy="5338.5112" add="6090.96" user_time="19.24" scale="5208.3601" triad="5880.0578" all="5585.4267" system_time="0.07" total_time="19.39"/>
+        <result copy="5176.0494" add="5999.2525" user_time="19.37" scale="5085.1597" triad="5854.7758" all="5548.8354" system_time="0.06" total_time="19.52"/>
+      </loop>
+    </run>
+    <run instances_no="16">
+      <loop number="1">
+        <result copy="4285.733" add="4829.8218" user_time="30.67" scale="4094.5697" triad="4759.893" all="4374.9308" system_time="0.25" total_time="31.05"/>
+        <result copy="4655.003" add="5641.6692" user_time="27.26" scale="4809.1048" triad="5359.0787" all="5117.0622" system_time="0.26" total_time="27.65"/>
+        <result copy="3404.4312" add="3508.2847" user_time="34.19" scale="3351.8901" triad="3756.1285" all="3126.7764" system_time="0.23" total_time="34.52"/>
+        <result copy="4267.6646" add="4869.9964" user_time="29.22" scale="4149.084" triad="4811.7029" all="4514.2129" system_time="0.11" total_time="29.46"/>
+        <result copy="4219.6371" add="4928.0221" user_time="27.16" scale="4233.1291" triad="4770.3147" all="4502.7931" system_time="0.13" total_time="27.42"/>
+        <result copy="4639.378" add="5438.5213" user_time="29.52" scale="4676.1126" triad="5262.3883" all="4986.1387" system_time="0.22" total_time="29.87"/>
+        <result copy="4102.1741" add="4801.7262" user_time="33.02" scale="4096.747" triad="4681.452" all="4438.5343" system_time="0.11" total_time="33.27"/>
+        <result copy="4309.1156" add="4881.7982" user_time="34.72" scale="4008.5121" triad="4705.8222" all="4220.8732" system_time="0.24" total_time="35.09"/>
+        <result copy="4044.6773" add="4823.4139" user_time="34.85" scale="4172.6881" triad="4618.8072" all="4402.0823" system_time="0.23" total_time="35.21"/>
+        <result copy="4169.8286" add="4909.2275" user_time="28.81" scale="4115.6492" triad="4775.0923" all="4535.2702" system_time="0.11" total_time="29.05"/>
+        <result copy="4204.6297" add="4902.3684" user_time="26.11" scale="4214.3004" triad="4792.5521" all="4512.4389" system_time="0.1" total_time="26.34"/>
+        <result copy="12127.4467" add="13668.2417" user_time="10.71" scale="12133.8074" triad="13507.4937" all="12887.4105" system_time="0.14" total_time="10.89"/>
+        <result copy="4113.8083" add="5102.6755" user_time="30.23" scale="4200.8169" triad="4831.9965" all="4560.5107" system_time="0.1" total_time="30.47"/>
+        <result copy="4296.4513" add="5008.1322" user_time="32.92" scale="4309.5443" triad="4778.9418" all="4571.4304" system_time="0.13" total_time="33.18"/>
+        <result copy="3940.9169" add="4648.4506" user_time="31.43" scale="3941.5995" triad="4535.7873" all="4295.434" system_time="0.26" total_time="31.81"/>
+        <result copy="3919.1948" add="4714.0974" user_time="32.54" scale="3928.3442" triad="4552.3451" all="4306.933" system_time="0.15" total_time="32.81"/>
+      </loop>
+      <loop number="2">
+        <result copy="4323.7168" add="4964.1975" user_time="33.31" scale="4350.8534" triad="4853.4244" all="4565.3329" system_time="0.15" total_time="33.59"/>
+        <result copy="3599.0158" add="4147.0573" user_time="36.74" scale="3655.9614" triad="3937.7291" all="3513.2274" system_time="0.25" total_time="37.1"/>
+        <result copy="4329.087" add="4917.8042" user_time="31.57" scale="4197.7633" triad="4833.435" all="4568.7353" system_time="0.11" total_time="31.81"/>
+        <result copy="4325.833" add="4922.612" user_time="29.05" scale="4260.4268" triad="4859.0514" all="4599.2085" system_time="0.1" total_time="29.28"/>
+        <result copy="4501.0057" add="5378.6686" user_time="29.25" scale="4642.0887" triad="5276.2806" all="4955.4359" system_time="0.24" total_time="29.63"/>
+        <result copy="4034.5971" add="4680.6528" user_time="37.44" scale="3908.9398" triad="4504.0401" all="4247.4796" system_time="0.23" total_time="37.79"/>
+        <result copy="4040.5398" add="4579.9447" user_time="32.71" scale="3939.7375" triad="4571.3468" all="4279.3664" system_time="0.12" total_time="32.97"/>
+        <result copy="4009.7946" add="4745.2603" user_time="37.29" scale="4004.4604" triad="4576.3231" all="4345.9037" system_time="0.24" total_time="37.65"/>
+        <result copy="4037.9142" add="4660.7762" user_time="32.68" scale="3979.2783" triad="4519.7363" all="4311.9071" system_time="0.12" total_time="32.93"/>
+        <result copy="3961.7998" add="4660.4068" user_time="30.32" scale="3964.0505" triad="4464.9801" all="4266.5692" system_time="0.21" total_time="30.66"/>
+        <result copy="4509.2714" add="5610.0276" user_time="33.39" scale="4684.2663" triad="5336.3277" all="5028.5378" system_time="0.25" total_time="33.78"/>
+        <result copy="4381.0025" add="5002.6715" user_time="30.8" scale="4329.9888" triad="4824.1876" all="4582.6871" system_time="0.11" total_time="31.05"/>
+        <result copy="4423.5541" add="5546.9439" user_time="28.35" scale="4795.176" triad="5357.5922" all="5057.4266" system_time="0.23" total_time="28.71"/>
+        <result copy="3985.7942" add="4673.2711" user_time="31.18" scale="3965.6237" triad="4529.0837" all="4318.8726" system_time="0.14" total_time="31.45"/>
+        <result copy="4305.8567" add="4988.4615" user_time="27.01" scale="4166.1366" triad="4878.7248" all="4608.6091" system_time="0.12" total_time="27.27"/>
+        <result copy="4187.6763" add="4773.2059" user_time="34.98" scale="3948.7551" triad="4540.6954" all="4334.7015" system_time="0.22" total_time="35.32"/>
+      </loop>
+      <loop number="3">
+        <result copy="4092.3672" add="4778.2311" user_time="27.9" scale="4062.4848" triad="4558.233" all="4366.9974" system_time="0.13" total_time="28.16"/>
+        <result copy="4009.1348" add="4743.0097" user_time="31.62" scale="4056.6541" triad="4586.0903" all="4388.776" system_time="0.23" total_time="31.99"/>
+        <result copy="3993.4743" add="4671.5508" user_time="30.84" scale="3884.9805" triad="4550.295" all="4299.9246" system_time="0.22" total_time="31.2"/>
+        <result copy="4006.2369" add="4625.2024" user_time="36.68" scale="3914.3671" triad="4482.6922" all="4272.3571" system_time="0.12" total_time="36.93"/>
+        <result copy="4092.0791" add="4790.5126" user_time="33.32" scale="4102.469" triad="4586.6044" all="4392.971" system_time="0.14" total_time="33.6"/>
+        <result copy="4599.9118" add="5277.0179" user_time="34.01" scale="4665.4343" triad="5148.0132" all="4897.366" system_time="0.24" total_time="34.39"/>
+        <result copy="4059.1493" add="4710.2345" user_time="28.59" scale="3974.9049" triad="4590.7498" all="4353.0528" system_time="0.1" total_time="28.83"/>
+        <result copy="4116.8428" add="4744.0348" user_time="31.07" scale="4028.4853" triad="4583.9347" all="4377.1991" system_time="0.12" total_time="31.34"/>
+        <result copy="3850.2482" add="4366.166" user_time="36.16" scale="3748.714" triad="4188.2897" all="4036.4392" system_time="0.24" total_time="36.53"/>
+        <result copy="3907.1453" add="4657.9697" user_time="33.92" scale="3928.5384" triad="4505.4873" all="4271.3692" system_time="0.11" total_time="34.17"/>
+        <result copy="3782.5112" add="4378.9245" user_time="36.66" scale="4138.4304" triad="4447.9363" all="4178.8307" system_time="0.24" total_time="37.03"/>
+        <result copy="4107.4642" add="4735.3807" user_time="27.73" scale="4000.0557" triad="4603.2904" all="4352.5491" system_time="0.1" total_time="27.97"/>
+        <result copy="3545.3753" add="4153.6347" user_time="35.2" scale="3490.0289" triad="3908.0892" all="3586.7934" system_time="0.25" total_time="35.59"/>
+        <result copy="3970.956" add="4711.4075" user_time="35.07" scale="3901.3584" triad="4514.8485" all="4277.9922" system_time="0.26" total_time="35.46"/>
+        <result copy="4004.5871" add="4767.3091" user_time="33.62" scale="4018.7019" triad="4604.173" all="4380.1936" system_time="0.13" total_time="33.9"/>
+        <result copy="4026.8652" add="4713.4814" user_time="33.65" scale="4071.0573" triad="4606.7965" all="4357.9141" system_time="0.1" total_time="33.9"/>
+      </loop>
+      <loop number="4">
+        <result copy="4136.6484" add="4840.9756" user_time="31.68" scale="4150.4883" triad="4677.5599" all="4463.3714" system_time="0.12" total_time="31.95"/>
+        <result copy="3259.2307" add="3725.3335" user_time="37.15" scale="3126.9463" triad="3939.0429" all="3500.8286" system_time="0.22" total_time="37.51"/>
+        <result copy="3531.5733" add="4101.3884" user_time="33.46" scale="3539.725" triad="4019.7041" all="3832.7118" system_time="0.23" total_time="33.83"/>
+        <result copy="3851.6744" add="4271.8365" user_time="34.27" scale="3821.276" triad="4145.7365" all="4023.476" system_time="0.27" total_time="34.68"/>
+        <result copy="4026.9644" add="4735.556" user_time="33.76" scale="3983.6321" triad="4603.9792" all="4364.862" system_time="0.12" total_time="34.02"/>
+        <result copy="4205.7422" add="4948.442" user_time="31.84" scale="4089.3207" triad="4830.4926" all="4526.5646" system_time="0.11" total_time="32.1"/>
+        <result copy="3792.9452" add="4319.1161" user_time="35.66" scale="3614.4645" triad="4162.7515" all="3872.0086" system_time="0.21" total_time="36.02"/>
+        <result copy="5771.7961" add="6124.0273" user_time="36.48" scale="5305.4495" triad="5026.9815" all="5524.4444" system_time="0.26" total_time="36.86"/>
+        <result copy="4475.1585" add="5206.2406" user_time="33.97" scale="4459.8003" triad="5088.213" all="4829.6429" system_time="0.26" total_time="34.39"/>
+        <result copy="4212.138" add="4845.2843" user_time="29.08" scale="4149.8186" triad="4660.5226" all="4469.0068" system_time="0.1" total_time="29.33"/>
+        <result copy="4203.8434" add="4929.2603" user_time="32.69" scale="4162.2646" triad="4667.0703" all="4475.5348" system_time="0.1" total_time="32.94"/>
+        <result copy="3989.186" add="4770.0083" user_time="29.56" scale="3974.6721" triad="4621.6459" all="4358.5071" system_time="0.1" total_time="29.81"/>
+        <result copy="4144.034" add="4885.7002" user_time="33.24" scale="4163.3235" triad="4727.9005" all="4489.0034" system_time="0.12" total_time="33.53"/>
+        <result copy="4113.5915" add="4805.0808" user_time="35.77" scale="4123.5237" triad="4692.587" all="4466.5666" system_time="0.11" total_time="36.02"/>
+        <result copy="4676.6248" add="5323.1301" user_time="36.11" scale="4600.211" triad="5210.5382" all="4983.777" system_time="0.23" total_time="36.48"/>
+        <result copy="3959.8578" add="4694.5578" user_time="33.48" scale="4028.2529" triad="4530.38" all="4342.5476" system_time="0.13" total_time="33.76"/>
+      </loop>
+      <loop number="5">
+        <result copy="3666.841" add="4439.2721" user_time="33.64" scale="3862.3528" triad="4327.0324" all="4099.5924" system_time="0.24" total_time="34.02"/>
+        <result copy="4065.0712" add="4844.0524" user_time="32.68" scale="4105.1652" triad="4650.3845" all="4417.4999" system_time="0.13" total_time="32.96"/>
+        <result copy="3988.5901" add="4667.3959" user_time="36.42" scale="3977.0945" triad="4570.4736" all="4295.9018" system_time="0.24" total_time="36.79"/>
+        <result copy="4108.6186" add="4737.3502" user_time="33.37" scale="4119.3157" triad="4733.0934" all="4393.1973" system_time="0.11" total_time="33.63"/>
+        <result copy="4782.2515" add="5113.2268" user_time="36.36" scale="4485.6931" triad="5142.6445" all="4628.8036" system_time="0.24" total_time="36.73"/>
+        <result copy="4101.6805" add="4814.413" user_time="34.1" scale="4053.8692" triad="4674.3936" all="4378.6095" system_time="0.14" total_time="34.38"/>
+        <result copy="3996.5321" add="4597.3208" user_time="35.49" scale="3961.2911" triad="4511.1797" all="4292.4654" system_time="0.12" total_time="35.76"/>
+        <result copy="4133.2169" add="4811.2236" user_time="33.76" scale="4032.6891" triad="4585.7381" all="4381.0691" system_time="0.11" total_time="34.02"/>
+        <result copy="3953.4037" add="4595.1495" user_time="32.26" scale="3926.7646" triad="4494.3233" all="4256.5754" system_time="0.25" total_time="32.65"/>
+        <result copy="3915.0029" add="4625.951" user_time="36.29" scale="3979.882" triad="4554.3453" all="4273.3861" system_time="0.23" total_time="36.66"/>
+        <result copy="4130.1752" add="4733.7834" user_time="36.1" scale="4022.4382" triad="4661.0566" all="4385.3977" system_time="0.11" total_time="36.35"/>
+        <result copy="4024.4776" add="4721.4069" user_time="28.12" scale="4002.1189" triad="4632.9215" all="4343.8579" system_time="0.1" total_time="28.36"/>
+        <result copy="4056.3018" add="4635.738" user_time="36.1" scale="3953.2468" triad="4545.8537" all="4312.515" system_time="0.13" total_time="36.37"/>
+        <result copy="5055.3256" add="5546.071" user_time="29.09" scale="4501.5454" triad="5338.3838" all="5130.7705" system_time="0.27" total_time="29.51"/>
+        <result copy="4179.4553" add="4741.2557" user_time="33.21" scale="4009.1153" triad="4705.6727" all="4449.0584" system_time="0.23" total_time="33.59"/>
+        <result copy="4100.4941" add="4787.7335" user_time="31.8" scale="4113.8981" triad="4642.1899" all="4390.2498" system_time="0.12" total_time="32.07"/>
+      </loop>
+    </run>
+    <run instances_no="20">
+      <loop number="1">
+        <result copy="3337.0088" add="3991.0566" user_time="39.22" scale="3385.1538" triad="3891.1935" all="3673.7687" system_time="0.29" total_time="39.68"/>
+        <result copy="3159.4425" add="3837.3623" user_time="33.73" scale="3213.0919" triad="3647.0091" all="3462.9076" system_time="0.16" total_time="34.07"/>
+        <result copy="3232.3155" add="3848.6602" user_time="40.27" scale="3232.3618" triad="3691.444" all="3483.6499" system_time="0.16" total_time="40.6"/>
+        <result copy="3273.324" add="3801.1807" user_time="41.47" scale="3203.5196" triad="3679.1058" all="3483.2376" system_time="0.16" total_time="41.82"/>
+        <result copy="3722.4267" add="4250.736" user_time="41.22" scale="3643.1318" triad="4232.9993" all="3998.817" system_time="0.17" total_time="41.58"/>
+        <result copy="2927.7577" add="3495.195" user_time="41.82" scale="2936.5512" triad="3650.6707" all="3284.8536" system_time="0.31" total_time="42.27"/>
+        <result copy="12393.1862" add="13852.518" user_time="10.69" scale="12211.5116" triad="13724.2982" all="13046.9574" system_time="0.17" total_time="10.9"/>
+        <result copy="3212.3872" add="3826.8556" user_time="39.79" scale="3229.9141" triad="3710.4789" all="3499.1094" system_time="0.17" total_time="40.14"/>
+        <result copy="3560.4009" add="3763.608" user_time="42.36" scale="3511.5975" triad="3915.9333" all="3471.1996" system_time="0.37" total_time="42.89"/>
+        <result copy="3227.0269" add="3754.43" user_time="39.99" scale="3207.0667" triad="3707.2851" all="3505.5896" system_time="0.35" total_time="40.51"/>
+        <result copy="3208.4406" add="3761.0043" user_time="37.33" scale="3169.0581" triad="3645.6575" all="3469.2766" system_time="0.12" total_time="37.63"/>
+        <result copy="3211.6423" add="3802.8083" user_time="41.02" scale="3210.8208" triad="3716.7599" all="3507.9642" system_time="0.13" total_time="41.34"/>
+        <result copy="3261.2911" add="3817.2854" user_time="37.94" scale="3179.8261" triad="3711.6315" all="3525.6108" system_time="0.14" total_time="38.27"/>
+        <result copy="3498.8973" add="4267.6291" user_time="43.16" scale="3800.3465" triad="4221.9253" all="3909.0585" system_time="0.3" total_time="43.62"/>
+        <result copy="3429.2907" add="3642.7379" user_time="44.11" scale="2996.7018" triad="3649.382" all="3402.5771" system_time="0.33" total_time="44.59"/>
+        <result copy="3221.2288" add="3825.8057" user_time="41.09" scale="3248.6729" triad="3717.0254" all="3467.356" system_time="0.19" total_time="41.45"/>
+        <result copy="3272.0401" add="3771.6655" user_time="34.84" scale="3195.1216" triad="3738.9463" all="3502.8469" system_time="0.14" total_time="35.15"/>
+        <result copy="3221.4913" add="3761.5012" user_time="35.13" scale="3217.895" triad="3667.4845" all="3481.7899" system_time="0.12" total_time="35.43"/>
+        <result copy="3192.9168" add="3812.4994" user_time="33.71" scale="3207.0341" triad="3683.8369" all="3439.1805" system_time="0.16" total_time="34.05"/>
+        <result copy="3190.2901" add="3775.6066" user_time="43.56" scale="3194.3701" triad="3678.6331" all="3486.9732" system_time="0.28" total_time="44.01"/>
+      </loop>
+      <loop number="2">
+        <result copy="3022.8219" add="3953.6189" user_time="35.71" scale="3184.0321" triad="3643.2375" all="3476.1337" system_time="0.28" total_time="36.19"/>
+        <result copy="3211.6012" add="3728.2744" user_time="41.29" scale="3194.1063" triad="3649.666" all="3464.2908" system_time="0.12" total_time="41.66"/>
+        <result copy="3182.4538" add="3687.607" user_time="36.68" scale="3093.3572" triad="3666.8611" all="3440.3668" system_time="0.15" total_time="37.05"/>
+        <result copy="3120.0879" add="3757.4989" user_time="38.7" scale="3123.4558" triad="3587.7912" all="3415.3786" system_time="0.15" total_time="39.09"/>
+        <result copy="12453.6248" add="13937.8747" user_time="15.63" scale="12377.1299" triad="13916.4472" all="13257.7283" system_time="0.25" total_time="15.95"/>
+        <result copy="2542.692" add="2905.9049" user_time="44.44" scale="2593.5193" triad="2726.0975" all="2510.0539" system_time="0.3" total_time="44.94"/>
+        <result copy="3144.6221" add="3774.8283" user_time="35.83" scale="3392.481" triad="3627.1649" all="3487.961" system_time="0.29" total_time="36.33"/>
+        <result copy="2816.6494" add="3232.411" user_time="42.86" scale="2765.0104" triad="3213.66" all="3008.7396" system_time="0.2" total_time="43.26"/>
+        <result copy="3237.0064" add="3696.4014" user_time="41.94" scale="3143.9734" triad="3597.2082" all="3435.3487" system_time="0.21" total_time="42.36"/>
+        <result copy="3324.1055" add="3964.6949" user_time="34.89" scale="3111.1218" triad="3806.0032" all="3569.9235" system_time="0.27" total_time="35.37"/>
+        <result copy="3245.5314" add="3761.6995" user_time="39.83" scale="3194.3313" triad="3652.0905" all="3494.9146" system_time="0.15" total_time="40.2"/>
+        <result copy="3225.7471" add="3742.6759" user_time="40.57" scale="3196.8601" triad="3592.4417" all="3457.6094" system_time="0.16" total_time="40.93"/>
+        <result copy="3172.8061" add="3726.7696" user_time="41.59" scale="3208.5892" triad="3852.6687" all="3477.6431" system_time="0.33" total_time="42.13"/>
+        <result copy="3249.78" add="3732.3369" user_time="41.91" scale="3182.7484" triad="3598.5889" all="3447.1171" system_time="0.16" total_time="42.27"/>
+        <result copy="2571.2309" add="2925.0365" user_time="44.6" scale="2592.5485" triad="2887.4647" all="2719.5373" system_time="0.32" total_time="45.12"/>
+        <result copy="3243.8802" add="3712.7703" user_time="33.79" scale="3163.6235" triad="3675.0158" all="3461.1119" system_time="0.14" total_time="34.11"/>
+        <result copy="3707.9064" add="4164.7718" user_time="41.95" scale="2864.9109" triad="4099.3828" all="3424.2646" system_time="0.32" total_time="42.43"/>
+        <result copy="3249.9601" add="3744.3689" user_time="38.68" scale="3150.7932" triad="3708.7898" all="3496.2036" system_time="0.15" total_time="39.07"/>
+        <result copy="3178.9171" add="3726.9276" user_time="38.29" scale="3117.838" triad="3656.2826" all="3450.1964" system_time="0.17" total_time="38.69"/>
+        <result copy="2728.8794" add="3199.6393" user_time="36.65" scale="2728.4535" triad="3162.8916" all="2933.6678" system_time="0.15" total_time="37.01"/>
+      </loop>
+      <loop number="3">
+        <result copy="3176.227" add="3691.0711" user_time="35.48" scale="3238.6314" triad="3595.0688" all="3429.2447" system_time="0.15" total_time="35.83"/>
+        <result copy="3251.3746" add="3801.9027" user_time="38.07" scale="3232.8014" triad="3698.5382" all="3505.0302" system_time="0.12" total_time="38.41"/>
+        <result copy="3242.5209" add="3827.493" user_time="37.89" scale="3174.0898" triad="3696.4737" all="3503.8823" system_time="0.16" total_time="38.26"/>
+        <result copy="3493.6554" add="3983.4142" user_time="36.32" scale="3439.4806" triad="3936.8362" all="3698.5428" system_time="0.28" total_time="36.81"/>
+        <result copy="3275.3786" add="3553.7741" user_time="39.95" scale="2984.4569" triad="3502.8722" all="3338.4735" system_time="0.44" total_time="40.58"/>
+        <result copy="3177.8056" add="3677.581" user_time="37.58" scale="3128.3225" triad="3685.1846" all="3417.0819" system_time="0.31" total_time="38.1"/>
+        <result copy="3191.7873" add="3806.3131" user_time="36.02" scale="3249.3166" triad="3707.4924" all="3504.7327" system_time="0.15" total_time="36.38"/>
+        <result copy="3068.2565" add="3617.5125" user_time="40.23" scale="2985.8117" triad="3498.4106" all="3304.3695" system_time="0.16" total_time="40.59"/>
+        <result copy="3762.137" add="4418.6333" user_time="34.93" scale="3554.9366" triad="4253.2211" all="3975.6294" system_time="0.3" total_time="35.44"/>
+        <result copy="3243.7319" add="3810.1945" user_time="36.87" scale="3201.0936" triad="3728.5082" all="3507.6823" system_time="0.16" total_time="37.24"/>
+        <result copy="11333.4008" add="12613.4541" user_time="17.37" scale="11425.662" triad="12485.4246" all="12039.3884" system_time="0.35" total_time="17.81"/>
+        <result copy="3180.6637" add="3828.5057" user_time="41.52" scale="3233.4512" triad="3717.7074" all="3501.6873" system_time="0.14" total_time="41.86"/>
+        <result copy="3250.94" add="3827.2743" user_time="39.66" scale="3196.0343" triad="3752.0385" all="3500.3465" system_time="0.21" total_time="40.07"/>
+        <result copy="3246.1801" add="3819.719" user_time="36.32" scale="3193.494" triad="3736.5748" all="3514.0956" system_time="0.15" total_time="36.68"/>
+        <result copy="3129.7696" add="3760.2271" user_time="42.28" scale="3107.725" triad="3621.3856" all="3437.7513" system_time="0.16" total_time="42.64"/>
+        <result copy="3263.5499" add="3770.1977" user_time="36.24" scale="3184.4885" triad="3664.2176" all="3464.3938" system_time="0.3" total_time="36.74"/>
+        <result copy="12001.0039" add="13636.6883" user_time="13.71" scale="11925.822" triad="13432.7401" all="12738.6139" system_time="0.26" total_time="14.03"/>
+        <result copy="3237.6493" add="3786.0047" user_time="35.05" scale="3203.5361" triad="3681.5324" all="3490.2119" system_time="0.16" total_time="35.43"/>
+        <result copy="3698.9731" add="3358.2154" user_time="42.4" scale="3652.7982" triad="4050.7567" all="3261.4433" system_time="0.18" total_time="42.76"/>
+        <result copy="3280.4566" add="3726.0742" user_time="39.69" scale="3161.4352" triad="3670.6496" all="3485.8318" system_time="0.16" total_time="40.04"/>
+      </loop>
+      <loop number="4">
+        <result copy="3182.3081" add="3759.8835" user_time="35.59" scale="3202.6351" triad="3677.4461" all="3479.4222" system_time="0.13" total_time="35.93"/>
+        <result copy="3557.5104" add="4035.6712" user_time="44.79" scale="3397.1954" triad="3770.227" all="3693.9732" system_time="0.27" total_time="45.26"/>
+        <result copy="3591.7107" add="3996.7131" user_time="40.41" scale="3375.2181" triad="3908.3795" all="3748.7015" system_time="0.28" total_time="40.92"/>
+        <result copy="3184.1017" add="3728.1292" user_time="42.52" scale="3177.4347" triad="3682.605" all="3473.0218" system_time="0.15" total_time="42.88"/>
+        <result copy="3578.4729" add="4030.5926" user_time="40.56" scale="3231.496" triad="3897.3882" all="3686.1189" system_time="0.31" total_time="41.09"/>
+        <result copy="3168.5127" add="3764.3678" user_time="41.76" scale="3112.2686" triad="3612.5337" all="3436.7101" system_time="0.16" total_time="42.14"/>
+        <result copy="3180.1827" add="3790.6967" user_time="45.15" scale="3164.9987" triad="3684.3447" all="3454.7933" system_time="0.15" total_time="45.52"/>
+        <result copy="3008.8356" add="3615.6259" user_time="35.04" scale="3124.9428" triad="3535.5362" all="3319.6921" system_time="0.13" total_time="35.37"/>
+        <result copy="3188.5412" add="3753.3857" user_time="43.25" scale="3121.4786" triad="3496.5059" all="3274.0771" system_time="0.16" total_time="43.64"/>
+        <result copy="3194.2548" add="3716.2204" user_time="42.94" scale="3165.529" triad="3645.8517" all="3456.7913" system_time="0.14" total_time="43.31"/>
+        <result copy="3431.3863" add="3874.8981" user_time="44.11" scale="3424.3824" triad="4002.3506" all="3584.3763" system_time="0.26" total_time="44.56"/>
+        <result copy="3865.9821" add="4349.1989" user_time="37.96" scale="3721.8085" triad="4317.838" all="4028.3307" system_time="0.13" total_time="38.3"/>
+        <result copy="3850.8992" add="4490.4215" user_time="40.97" scale="4004.0776" triad="4277.7008" all="3722.9805" system_time="0.32" total_time="41.48"/>
+        <result copy="3165.5821" add="3705.1622" user_time="45.21" scale="3168.1818" triad="3565.277" all="3414.0102" system_time="0.32" total_time="45.74"/>
+        <result copy="3130.9064" add="3793.0927" user_time="37.82" scale="3180.1641" triad="3608.5686" all="3437.6912" system_time="0.16" total_time="38.19"/>
+        <result copy="2406.4115" add="3095.5804" user_time="45.64" scale="2452.151" triad="3070.8219" all="2687.3722" system_time="0.34" total_time="46.19"/>
+        <result copy="3211.8889" add="3763.9661" user_time="44.41" scale="3161.7123" triad="3651.1887" all="3453.7608" system_time="0.19" total_time="44.83"/>
+        <result copy="3188.5257" add="3771.9065" user_time="40.77" scale="3205.6846" triad="3668.4295" all="3480.2769" system_time="0.15" total_time="41.17"/>
+        <result copy="3153.4543" add="3771.142" user_time="45.15" scale="3155.5887" triad="3649.7503" all="3446.5026" system_time="0.19" total_time="45.56"/>
+        <result copy="3156.0375" add="3725.3923" user_time="39.14" scale="3141.3636" triad="3615.7175" all="3433.8667" system_time="0.14" total_time="39.49"/>
+      </loop>
+      <loop number="5">
+        <result copy="3232.3123" add="3756.0923" user_time="43.24" scale="3132.4929" triad="3608.5877" all="3443.0006" system_time="0.19" total_time="43.6"/>
+        <result copy="3798.1834" add="3989.1518" user_time="41.66" scale="3739.9668" triad="4196.8143" all="3585.2228" system_time="0.28" total_time="42.11"/>
+        <result copy="3151.6822" add="3763.2418" user_time="41.01" scale="3169.9948" triad="3641.9123" all="3427.9615" system_time="0.15" total_time="41.35"/>
+        <result copy="3404.5183" add="3812.692" user_time="35.99" scale="3195.9033" triad="3888.5275" all="3513.7626" system_time="0.31" total_time="36.49"/>
+        <result copy="3419.8708" add="3662.7962" user_time="43.88" scale="2919.431" triad="3405.3818" all="3247.9994" system_time="0.34" total_time="44.36"/>
+        <result copy="3038.5816" add="3611.514" user_time="41.75" scale="3150.3044" triad="3437.4932" all="3302.1341" system_time="0.36" total_time="42.28"/>
+        <result copy="3226.4175" add="3744.0057" user_time="38.52" scale="3175.0557" triad="3674.8462" all="3468.052" system_time="0.16" total_time="38.86"/>
+        <result copy="3218.3015" add="3776.3806" user_time="42.5" scale="3212.5855" triad="3710.8595" all="3498.6839" system_time="0.18" total_time="42.87"/>
+        <result copy="3216.0703" add="3792.5695" user_time="34.46" scale="3186.2893" triad="3696.7749" all="3484.2036" system_time="0.14" total_time="34.78"/>
+        <result copy="3168.0712" add="3757.7425" user_time="37.99" scale="3197.6313" triad="3619.9232" all="3462.0126" system_time="0.13" total_time="38.3"/>
+        <result copy="2985.7946" add="3644.5237" user_time="33.42" scale="2917.5745" triad="3609.7393" all="3241.8881" system_time="0.13" total_time="33.73"/>
+        <result copy="3203.0399" add="3737.5353" user_time="38.22" scale="3140.8707" triad="3703.0477" all="3468.9903" system_time="0.14" total_time="38.54"/>
+        <result copy="3165.4" add="3769.0305" user_time="33.8" scale="3124.0117" triad="3638.438" all="3449.7341" system_time="0.15" total_time="34.14"/>
+        <result copy="3182.7613" add="3738.7012" user_time="35.47" scale="3200.4662" triad="3665.2558" all="3466.7818" system_time="0.14" total_time="35.79"/>
+        <result copy="3353.2675" add="3702.2375" user_time="44.22" scale="3427.219" triad="3566.9927" all="3400.6608" system_time="0.28" total_time="44.67"/>
+        <result copy="3149.7156" add="3753.3101" user_time="38.35" scale="3104.7877" triad="3685.185" all="3457.2059" system_time="0.15" total_time="38.7"/>
+        <result copy="3175.7857" add="3717.8483" user_time="40.47" scale="3176.307" triad="3580.4467" all="3430.9724" system_time="0.19" total_time="40.84"/>
+        <result copy="11916.612" add="13047.9053" user_time="11.47" scale="11848.7905" triad="12657.5502" all="12259.355" system_time="0.17" total_time="11.69"/>
+        <result copy="3210.0943" add="3854.5882" user_time="37.68" scale="3194.3759" triad="3693.0737" all="3506.5697" system_time="0.3" total_time="38.16"/>
+        <result copy="3249.0709" add="3604.3136" user_time="38.95" scale="3123.1456" triad="3468.0002" all="3386.0101" system_time="0.16" total_time="39.3"/>
+      </loop>
+    </run>
+    <run instances_no="24">
+      <loop number="1">
+        <result copy="2784.0846" add="3202.1169" user_time="46.79" scale="2715.9448" triad="3177.1353" all="2966.0999" system_time="0.17" total_time="47.26"/>
+        <result copy="2583.7462" add="3119.0732" user_time="53.11" scale="2617.8642" triad="3061.9869" all="2862.9447" system_time="0.35" total_time="53.66"/>
+        <result copy="2646.8808" add="3112.4187" user_time="54.79" scale="2574.7377" triad="3007.0467" all="2853.6424" system_time="0.17" total_time="55.29"/>
+        <result copy="2685.0824" add="3086.7141" user_time="50.21" scale="2673.8477" triad="3019.6165" all="2869.0406" system_time="0.28" total_time="50.79"/>
+        <result copy="2339.9477" add="2714.5355" user_time="52.04" scale="2313.818" triad="2648.1471" all="2524.332" system_time="0.2" total_time="52.51"/>
+        <result copy="2987.1664" add="3667.4885" user_time="51.14" scale="3219.9108" triad="3513.5404" all="3349.4011" system_time="0.4" total_time="51.8"/>
+        <result copy="2712.7805" add="3170.7316" user_time="51.09" scale="2706.4918" triad="3206.9343" all="2953.5361" system_time="0.18" total_time="51.6"/>
+        <result copy="2659.3754" add="3080.7356" user_time="54.25" scale="2584.9431" triad="3052.3716" all="2839.3941" system_time="0.28" total_time="54.77"/>
+        <result copy="2633.8302" add="3130.1707" user_time="41.27" scale="2675.1717" triad="3065.2706" all="2799.8063" system_time="0.18" total_time="41.7"/>
+        <result copy="2416.1953" add="2825.1252" user_time="44.24" scale="2388.761" triad="2754.1973" all="2616.7652" system_time="0.39" total_time="44.9"/>
+        <result copy="2650.7739" add="3113.2231" user_time="50.3" scale="2626.2003" triad="3054.9754" all="2861.3284" system_time="0.19" total_time="50.76"/>
+        <result copy="2670.3275" add="3175.0725" user_time="53.71" scale="2672.6438" triad="3011.3765" all="2890.8408" system_time="0.4" total_time="54.4"/>
+        <result copy="2781.0259" add="3205.77" user_time="49.7" scale="2713.3408" triad="3180.5197" all="2946.5998" system_time="0.18" total_time="50.19"/>
+        <result copy="2778.7614" add="3182.9046" user_time="44.28" scale="2696.8233" triad="3176.5585" all="2955.8848" system_time="0.16" total_time="44.75"/>
+        <result copy="2658.4062" add="3139.4614" user_time="49.06" scale="2638.5671" triad="2974.0174" all="2867.9606" system_time="0.17" total_time="49.56"/>
+        <result copy="2563.3206" add="2111.408" user_time="48.79" scale="2330.2172" triad="2810.8117" all="2234.9109" system_time="0.19" total_time="49.23"/>
+        <result copy="2957.1251" add="3394.6989" user_time="53.92" scale="2902.1297" triad="3252.9198" all="3140.6205" system_time="0.29" total_time="54.5"/>
+        <result copy="2671.6834" add="3021.2816" user_time="46.9" scale="2638.8131" triad="2999.0996" all="2798.6366" system_time="0.17" total_time="47.39"/>
+        <result copy="3428.2837" add="3631.4581" user_time="54.5" scale="3109.0417" triad="3555.2702" all="3418.8698" system_time="0.33" total_time="55.08"/>
+        <result copy="2676.1359" add="3125.9094" user_time="50.17" scale="2654.0416" triad="3017.9516" all="2880.2526" system_time="0.21" total_time="50.64"/>
+        <result copy="2587.6388" add="3147.3618" user_time="48.44" scale="2597.6656" triad="3045.4401" all="2871.5669" system_time="0.16" total_time="48.92"/>
+        <result copy="3685.6445" add="4224.074" user_time="54.06" scale="3630.4811" triad="3371.9369" all="3563.394" system_time="0.28" total_time="54.6"/>
+        <result copy="2853.6371" add="3241.8837" user_time="53.22" scale="2783.5105" triad="3123.1291" all="2941.8727" system_time="0.18" total_time="53.65"/>
+        <result copy="2762.0018" add="3137.4078" user_time="48.74" scale="2669.8434" triad="3157.8115" all="2959.0627" system_time="0.21" total_time="49.21"/>
+      </loop>
+      <loop number="2">
+        <result copy="2609.2534" add="3095.1435" user_time="51.12" scale="2666.2966" triad="2962.9604" all="2783.2397" system_time="0.18" total_time="51.58"/>
+        <result copy="2522.3228" add="2930.0878" user_time="50.2" scale="2531.2792" triad="2879.6777" all="2732.6847" system_time="0.38" total_time="50.86"/>
+        <result copy="2685.0166" add="3065.8647" user_time="43.08" scale="2618.6432" triad="3110.8695" all="2860.0627" system_time="0.17" total_time="43.55"/>
+        <result copy="2637.9478" add="2967.5944" user_time="49.24" scale="2546.0861" triad="3052.3304" all="2775.1323" system_time="0.18" total_time="49.73"/>
+        <result copy="2627.7891" add="3171.1452" user_time="48.31" scale="2613.5347" triad="3020.4167" all="2868.7492" system_time="0.16" total_time="48.78"/>
+        <result copy="2596.0874" add="3001.0549" user_time="46.05" scale="2586.1027" triad="2949.7193" all="2791.1198" system_time="0.2" total_time="46.51"/>
+        <result copy="1850.9906" add="1897.1365" user_time="51.07" scale="1740.6629" triad="2066.8861" all="1736.4252" system_time="0.36" total_time="51.7"/>
+        <result copy="2581.5061" add="2993.0359" user_time="51.91" scale="2621.8766" triad="2881.4963" all="2776.3969" system_time="0.36" total_time="52.55"/>
+        <result copy="3857.1004" add="4254.7659" user_time="47.8" scale="3714.6425" triad="4244.6027" all="3973.1106" system_time="0.21" total_time="48.3"/>
+        <result copy="3805.3059" add="4329.7887" user_time="53.62" scale="3761.3728" triad="4186.8169" all="3636.327" system_time="0.37" total_time="54.23"/>
+        <result copy="2626.1994" add="3089.5615" user_time="49.16" scale="2664.711" triad="2965.4965" all="2841.5296" system_time="0.43" total_time="49.87"/>
+        <result copy="12216.0102" add="13899.3279" user_time="10.74" scale="12236.4554" triad="13632.2399" all="13047.9699" system_time="0.2" total_time="11.0"/>
+        <result copy="2671.8371" add="3036.0177" user_time="52.44" scale="2607.8479" triad="3038.3618" all="2829.0551" system_time="0.25" total_time="52.93"/>
+        <result copy="2599.1934" add="3013.348" user_time="45.62" scale="2552.3791" triad="2910.5148" all="2790.5046" system_time="0.19" total_time="46.1"/>
+        <result copy="3566.515" add="4010.5968" user_time="49.3" scale="3546.241" triad="4008.2478" all="3325.8093" system_time="0.36" total_time="49.94"/>
+        <result copy="2693.1565" add="3103.9706" user_time="43.27" scale="2643.1325" triad="2984.957" all="2837.2832" system_time="0.17" total_time="43.72"/>
+        <result copy="2663.8607" add="3100.9921" user_time="48.21" scale="2664.4805" triad="2971.6457" all="2834.6768" system_time="0.22" total_time="48.72"/>
+        <result copy="2711.8977" add="3105.4167" user_time="42.64" scale="2636.4763" triad="3039.1122" all="2837.1198" system_time="0.18" total_time="43.09"/>
+        <result copy="2678.4704" add="3057.6795" user_time="44.17" scale="2639.4989" triad="3059.4045" all="2821.0876" system_time="0.17" total_time="44.62"/>
+        <result copy="3637.5708" add="2896.7992" user_time="48.1" scale="2409.6328" triad="2883.8312" all="2685.3456" system_time="0.19" total_time="48.58"/>
+        <result copy="2687.9084" add="3112.7795" user_time="49.96" scale="2689.8807" triad="2962.7451" all="2830.8926" system_time="0.18" total_time="50.41"/>
+        <result copy="2627.3669" add="3078.0365" user_time="43.46" scale="2648.2736" triad="3000.7269" all="2822.7007" system_time="0.17" total_time="43.93"/>
+        <result copy="2539.8349" add="3066.662" user_time="51.07" scale="2550.8627" triad="2990.1561" all="2814.1811" system_time="0.2" total_time="51.55"/>
+        <result copy="1703.589" add="2193.4785" user_time="53.1" scale="1724.054" triad="1988.9893" all="1829.4258" system_time="0.37" total_time="53.75"/>
+      </loop>
+      <loop number="3">
+        <result copy="2731.4124" add="3149.4431" user_time="45.77" scale="2653.3036" triad="3101.731" all="2907.1578" system_time="0.17" total_time="46.23"/>
+        <result copy="2688.7655" add="3173.77" user_time="42.57" scale="2692.0532" triad="3018.1651" all="2887.3124" system_time="0.13" total_time="42.97"/>
+        <result copy="2741.2305" add="3118.4252" user_time="44.44" scale="2651.0697" triad="3102.4544" all="2906.0683" system_time="0.17" total_time="44.9"/>
+        <result copy="2737.5202" add="3144.8246" user_time="49.75" scale="2724.3636" triad="3081.8978" all="2922.8306" system_time="0.17" total_time="50.2"/>
+        <result copy="2639.7065" add="3150.0451" user_time="50.22" scale="2619.0808" triad="2919.8925" all="2757.7324" system_time="0.21" total_time="50.67"/>
+        <result copy="2662.7338" add="3196.7323" user_time="44.7" scale="2634.5284" triad="3093.3216" all="2913.7338" system_time="0.16" total_time="45.16"/>
+        <result copy="2696.0265" add="2336.5668" user_time="52.28" scale="2367.775" triad="3119.7114" all="2404.2862" system_time="0.34" total_time="52.84"/>
+        <result copy="2503.7655" add="2870.8023" user_time="46.38" scale="2461.3354" triad="2795.394" all="2630.8707" system_time="0.29" total_time="46.94"/>
+        <result copy="2668.965" add="3205.5008" user_time="44.51" scale="2692.6077" triad="3096.1886" all="2943.8147" system_time="0.17" total_time="44.97"/>
+        <result copy="3646.0624" add="3705.4064" user_time="49.53" scale="3640.6417" triad="3906.278" all="3129.3349" system_time="0.21" total_time="49.98"/>
+        <result copy="2704.5469" add="2740.6952" user_time="46.26" scale="2651.2631" triad="3125.4742" all="2321.5346" system_time="0.17" total_time="46.73"/>
+        <result copy="3341.1875" add="3626.3551" user_time="52.16" scale="2921.0824" triad="3577.7627" all="3342.3042" system_time="0.35" total_time="52.77"/>
+        <result copy="2716.058" add="3220.7977" user_time="37.42" scale="2685.0573" triad="3210.6572" all="2903.7893" system_time="0.16" total_time="37.81"/>
+        <result copy="2630.6099" add="3003.3996" user_time="49.07" scale="2667.4132" triad="2970.5628" all="2743.6911" system_time="0.34" total_time="49.65"/>
+        <result copy="2452.8663" add="2916.1397" user_time="42.56" scale="2412.5373" triad="2817.7328" all="2669.6849" system_time="0.29" total_time="43.09"/>
+        <result copy="3673.8549" add="4337.9918" user_time="48.27" scale="3636.8538" triad="3960.8476" all="3872.7794" system_time="0.18" total_time="48.72"/>
+        <result copy="1921.2514" add="2111.4114" user_time="53.07" scale="1895.0288" triad="2027.5596" all="1810.6061" system_time="0.36" total_time="53.65"/>
+        <result copy="1785.7348" add="1919.8013" user_time="51.95" scale="1634.0116" triad="1873.7671" all="1779.0176" system_time="0.38" total_time="52.59"/>
+        <result copy="3607.2765" add="3691.8494" user_time="49.74" scale="3569.0053" triad="3608.1164" all="3354.4464" system_time="0.21" total_time="50.21"/>
+        <result copy="3731.7991" add="4286.9757" user_time="48.06" scale="3731.8068" triad="4267.2425" all="3687.7101" system_time="0.2" total_time="48.52"/>
+        <result copy="3250.7543" add="4293.4105" user_time="44.9" scale="3543.034" triad="4189.4356" all="3820.4101" system_time="0.2" total_time="45.36"/>
+        <result copy="1869.6125" add="2253.9215" user_time="48.09" scale="1866.1244" triad="2289.0183" all="2084.6827" system_time="0.35" total_time="48.76"/>
+        <result copy="3712.8744" add="4129.1545" user_time="50.51" scale="3606.8333" triad="3967.7764" all="3866.7709" system_time="0.19" total_time="50.97"/>
+        <result copy="12155.45" add="13594.4256" user_time="7.76" scale="11984.1857" triad="13549.9144" all="12909.2967" system_time="0.04" total_time="7.84"/>
+      </loop>
+      <loop number="4">
+        <result copy="2522.4666" add="2635.94" user_time="49.32" scale="2408.7401" triad="2616.574" all="2512.0021" system_time="0.39" total_time="49.94"/>
+        <result copy="2674.0495" add="3127.1399" user_time="47.98" scale="2661.039" triad="3085.4508" all="2873.6838" system_time="0.16" total_time="48.44"/>
+        <result copy="2287.2166" add="2844.3126" user_time="49.68" scale="2333.8204" triad="2858.9013" all="2467.9099" system_time="0.18" total_time="50.15"/>
+        <result copy="2629.0814" add="3033.1266" user_time="46.52" scale="2530.1068" triad="2977.9868" all="2802.9479" system_time="0.17" total_time="46.99"/>
+        <result copy="2624.5242" add="3039.2843" user_time="46.83" scale="2541.7016" triad="2970.9024" all="2776.7195" system_time="0.16" total_time="47.32"/>
+        <result copy="2601.198" add="3024.0637" user_time="49.22" scale="2634.8617" triad="3045.8105" all="2804.0589" system_time="0.21" total_time="49.69"/>
+        <result copy="2720.5024" add="3121.1689" user_time="43.73" scale="2612.7725" triad="3085.1838" all="2882.2985" system_time="0.16" total_time="44.19"/>
+        <result copy="1889.5882" add="2925.0732" user_time="50.19" scale="2355.8095" triad="2714.1618" all="2455.5543" system_time="0.21" total_time="50.7"/>
+        <result copy="2679.9652" add="3011.1032" user_time="45.54" scale="2655.5958" triad="2956.4649" all="2792.3786" system_time="0.17" total_time="45.98"/>
+        <result copy="2474.028" add="2923.6226" user_time="44.98" scale="2454.1476" triad="2883.6002" all="2668.9" system_time="0.17" total_time="45.47"/>
+        <result copy="2608.5186" add="3031.5931" user_time="45.66" scale="2573.8811" triad="2988.5064" all="2796.7706" system_time="0.16" total_time="46.12"/>
+        <result copy="11493.883" add="12739.1375" user_time="10.87" scale="11600.6379" triad="12579.0653" all="11951.5949" system_time="0.16" total_time="11.08"/>
+        <result copy="3316.479" add="3524.0719" user_time="43.74" scale="2785.1516" triad="3440.5994" all="3249.8244" system_time="0.36" total_time="44.37"/>
+        <result copy="2493.2527" add="2899.5912" user_time="48.76" scale="2488.9867" triad="2846.5525" all="2680.3948" system_time="0.31" total_time="49.35"/>
+        <result copy="2688.9066" add="3134.7506" user_time="39.37" scale="2638.244" triad="3052.8218" all="2825.1276" system_time="0.18" total_time="39.8"/>
+        <result copy="2473.6389" add="2917.5661" user_time="41.68" scale="2489.6181" triad="2863.0874" all="2684.0961" system_time="0.36" total_time="42.3"/>
+        <result copy="3881.65" add="4214.4556" user_time="44.98" scale="3797.6509" triad="4132.2323" all="3799.9741" system_time="0.33" total_time="45.58"/>
+        <result copy="2043.3845" add="2313.7769" user_time="50.93" scale="2016.0768" triad="2660.0647" all="2202.5641" system_time="0.37" total_time="51.55"/>
+        <result copy="3711.5067" add="3692.0821" user_time="48.27" scale="3766.9531" triad="3151.1792" all="2935.429" system_time="0.2" total_time="48.72"/>
+        <result copy="2631.498" add="3059.2174" user_time="47.66" scale="2562.0819" triad="2984.8106" all="2818.6437" system_time="0.17" total_time="48.17"/>
+        <result copy="1809.445" add="2108.5222" user_time="49.34" scale="1883.4319" triad="2224.058" all="1974.564" system_time="0.2" total_time="49.82"/>
+        <result copy="3761.589" add="4261.7796" user_time="49.48" scale="3679.3535" triad="3984.3886" all="3762.7178" system_time="0.22" total_time="49.96"/>
+        <result copy="12112.8955" add="13607.0829" user_time="8.29" scale="12037.7567" triad="13537.2617" all="12861.3015" system_time="0.04" total_time="8.37"/>
+        <result copy="2643.0758" add="3113.1313" user_time="47.38" scale="2630.1993" triad="3069.4912" all="2891.7501" system_time="0.15" total_time="47.85"/>
+      </loop>
+      <loop number="5">
+        <result copy="2612.8221" add="3077.995" user_time="46.82" scale="2576.334" triad="3125.5642" all="2835.5045" system_time="0.37" total_time="47.44"/>
+        <result copy="2679.4718" add="3095.4132" user_time="43.88" scale="2625.0674" triad="2829.1908" all="2681.6985" system_time="0.19" total_time="44.34"/>
+        <result copy="2870.8344" add="3454.0081" user_time="50.25" scale="2898.1174" triad="3332.2741" all="3165.6683" system_time="0.35" total_time="50.85"/>
+        <result copy="1855.5192" add="1975.1831" user_time="52.95" scale="1679.0573" triad="2164.641" all="1835.5308" system_time="0.19" total_time="53.36"/>
+        <result copy="2701.4905" add="3059.7911" user_time="46.99" scale="2560.5419" triad="2986.9333" all="2830.6268" system_time="0.38" total_time="47.66"/>
+        <result copy="2636.1956" add="3048.4131" user_time="48.22" scale="2635.1782" triad="3068.3913" all="2850.1144" system_time="0.18" total_time="48.69"/>
+        <result copy="2621.908" add="3086.5542" user_time="52.45" scale="2610.5543" triad="3046.0571" all="2848.3844" system_time="0.19" total_time="52.9"/>
+        <result copy="1672.4984" add="1883.6952" user_time="54.51" scale="1614.5439" triad="1816.6534" all="1749.1204" system_time="0.18" total_time="54.97"/>
+        <result copy="2612.5295" add="3051.766" user_time="44.11" scale="2607.4324" triad="3123.985" all="2816.5468" system_time="0.16" total_time="44.56"/>
+        <result copy="2208.1629" add="2794.6904" user_time="54.18" scale="2354.5943" triad="2768.2461" all="2443.3365" system_time="0.39" total_time="54.79"/>
+        <result copy="2695.2895" add="3014.6402" user_time="44.09" scale="2615.5303" triad="3001.2942" all="2820.792" system_time="0.16" total_time="44.54"/>
+        <result copy="3318.9174" add="3688.6661" user_time="45.03" scale="3393.5562" triad="3761.6038" all="3333.8901" system_time="0.29" total_time="45.53"/>
+        <result copy="2624.6122" add="3057.7022" user_time="46.57" scale="2580.8754" triad="3059.5666" all="2848.6602" system_time="0.17" total_time="47.05"/>
+        <result copy="2616.8491" add="3157.6108" user_time="53.11" scale="2586.9502" triad="3039.1342" all="2830.5082" system_time="0.19" total_time="53.58"/>
+        <result copy="2627.6593" add="2513.5097" user_time="55.83" scale="2713.6821" triad="2953.3698" all="2380.3168" system_time="0.35" total_time="56.39"/>
+        <result copy="2627.3884" add="3041.2614" user_time="51.11" scale="2588.9755" triad="2998.0233" all="2837.5722" system_time="0.2" total_time="51.57"/>
+        <result copy="2661.4744" add="1972.1031" user_time="48.22" scale="2547.6994" triad="1906.3504" all="2135.8897" system_time="0.17" total_time="48.69"/>
+        <result copy="3513.8325" add="4344.0199" user_time="54.4" scale="3819.653" triad="3362.6659" all="3651.173" system_time="0.32" total_time="54.97"/>
+        <result copy="2630.1516" add="2990.6057" user_time="48.0" scale="2514.6076" triad="2861.1089" all="2772.0405" system_time="0.17" total_time="48.47"/>
+        <result copy="1989.3479" add="2394.5309" user_time="52.45" scale="1970.3884" triad="2310.8323" all="2155.8986" system_time="0.39" total_time="53.13"/>
+        <result copy="2726.516" add="3066.2455" user_time="47.95" scale="2576.603" triad="2995.6968" all="2842.179" system_time="0.17" total_time="48.44"/>
+        <result copy="2516.5591" add="2788.7021" user_time="51.75" scale="2484.1524" triad="2742.5125" all="2579.3442" system_time="0.29" total_time="52.28"/>
+        <result copy="2641.3935" add="3126.1887" user_time="37.14" scale="2603.3807" triad="3062.3929" all="2854.3552" system_time="0.16" total_time="37.52"/>
+        <result copy="2668.0248" add="3169.2094" user_time="50.5" scale="2651.7561" triad="3036.6463" all="2896.643" system_time="0.17" total_time="50.96"/>
+      </loop>
+    </run>
+    <run instances_no="32">
+      <loop number="1">
+        <result copy="3355.5193" add="3840.3627" user_time="49.99" scale="2616.1032" triad="3732.895" all="2838.0761" system_time="0.23" total_time="50.51"/>
+        <result copy="2549.0301" add="2683.1519" user_time="57.81" scale="2567.452" triad="2707.9091" all="2498.689" system_time="0.52" total_time="58.62"/>
+        <result copy="2534.6084" add="2920.1669" user_time="49.32" scale="2495.6871" triad="2852.4211" all="2710.2573" system_time="0.18" total_time="49.83"/>
+        <result copy="2529.2417" add="2956.7225" user_time="55.98" scale="2507.8925" triad="2855.5885" all="2723.0281" system_time="0.19" total_time="56.6"/>
+        <result copy="2362.5753" add="2693.6709" user_time="54.03" scale="2293.9983" triad="2638.1388" all="2518.8071" system_time="0.2" total_time="54.59"/>
+        <result copy="5449.3173" add="6870.1799" user_time="18.63" scale="5709.8355" triad="6744.1115" all="6229.2404" system_time="0.34" total_time="19.21"/>
+        <result copy="9903.7142" add="11351.1952" user_time="14.04" scale="10230.2484" triad="10796.1689" all="10290.98" system_time="0.05" total_time="14.18"/>
+        <result copy="2322.4548" add="2667.1421" user_time="51.94" scale="2287.9423" triad="2663.5503" all="2495.5864" system_time="0.22" total_time="52.65"/>
+        <result copy="1776.3107" add="3192.5105" user_time="56.67" scale="1551.1806" triad="2253.7869" all="1865.765" system_time="0.5" total_time="57.64"/>
+        <result copy="2572.4696" add="2955.1321" user_time="50.33" scale="2517.36" triad="2856.0468" all="2725.2332" system_time="0.19" total_time="50.95"/>
+        <result copy="2607.6985" add="2817.3652" user_time="56.75" scale="2525.807" triad="2825.2714" all="2713.3688" system_time="0.43" total_time="57.48"/>
+        <result copy="3740.6059" add="4097.7475" user_time="53.47" scale="3700.7147" triad="3545.9503" all="3106.1359" system_time="0.23" total_time="54.04"/>
+        <result copy="2539.3733" add="2709.9494" user_time="54.76" scale="2181.8014" triad="2895.9171" all="2593.8032" system_time="0.23" total_time="55.29"/>
+        <result copy="1862.463" add="2116.543" user_time="53.68" scale="1853.8462" triad="2275.9649" all="1848.4223" system_time="0.46" total_time="54.49"/>
+        <result copy="2692.7391" add="3153.9644" user_time="57.32" scale="2687.4542" triad="3075.3321" all="2919.1939" system_time="0.32" total_time="58.04"/>
+        <result copy="2359.6222" add="2782.9668" user_time="56.94" scale="2353.4198" triad="2704.9709" all="2434.7528" system_time="0.17" total_time="57.48"/>
+        <result copy="2529.1255" add="2910.3001" user_time="47.49" scale="2472.9814" triad="2860.6335" all="2681.9487" system_time="0.18" total_time="48.07"/>
+        <result copy="2338.8536" add="2724.566" user_time="46.06" scale="2301.5589" triad="2674.0707" all="2521.7124" system_time="0.2" total_time="46.62"/>
+        <result copy="7678.2834" add="6119.6792" user_time="18.56" scale="5239.3483" triad="6290.8346" all="5650.6119" system_time="0.26" total_time="18.97"/>
+        <result copy="2986.4968" add="4086.0761" user_time="53.31" scale="3551.3778" triad="4016.8152" all="3299.258" system_time="0.27" total_time="53.88"/>
+        <result copy="2504.4123" add="2935.1689" user_time="47.86" scale="2470.8294" triad="2862.6052" all="2711.0816" system_time="0.17" total_time="48.37"/>
+        <result copy="2138.1405" add="2940.7448" user_time="53.99" scale="2696.7191" triad="2968.8482" all="2553.3869" system_time="0.38" total_time="54.68"/>
+        <result copy="1579.6463" add="1761.924" user_time="53.94" scale="1502.5803" triad="1702.7967" all="1641.0679" system_time="0.2" total_time="54.52"/>
+        <result copy="2399.5111" add="2783.3779" user_time="51.15" scale="2353.0577" triad="2711.5416" all="2571.9655" system_time="0.23" total_time="51.84"/>
+        <result copy="10646.5213" add="11210.2832" user_time="15.59" scale="10199.3157" triad="11597.2748" all="10339.4131" system_time="0.04" total_time="15.73"/>
+        <result copy="1670.4734" add="1845.4591" user_time="54.95" scale="1587.1024" triad="1803.7644" all="1733.027" system_time="0.18" total_time="55.42"/>
+        <result copy="1772.4326" add="1856.9405" user_time="53.14" scale="1644.6635" triad="1835.7005" all="1759.2648" system_time="0.18" total_time="53.69"/>
+        <result copy="2313.9518" add="2685.7365" user_time="55.99" scale="2277.5921" triad="2641.2681" all="2489.4213" system_time="0.21" total_time="56.71"/>
+        <result copy="9973.0472" add="12096.4261" user_time="13.58" scale="10836.5953" triad="10776.6459" all="10291.1057" system_time="0.04" total_time="13.72"/>
+        <result copy="5572.4862" add="6216.3799" user_time="18.57" scale="5440.6119" triad="6153.9667" all="5888.5871" system_time="0.28" total_time="19.04"/>
+        <result copy="7425.0023" add="8621.7556" user_time="17.44" scale="6806.4589" triad="7912.112" all="7059.436" system_time="0.13" total_time="17.72"/>
+        <result copy="2276.2522" add="2694.6299" user_time="57.84" scale="2299.9998" triad="2636.5726" all="2495.4939" system_time="0.19" total_time="58.5"/>
+      </loop>
+      <loop number="2">
+        <result copy="2546.9725" add="2914.7904" user_time="48.94" scale="2485.922" triad="2919.8753" all="2713.6525" system_time="0.18" total_time="49.46"/>
+        <result copy="2626.6301" add="2941.5935" user_time="48.79" scale="2579.7283" triad="2907.3045" all="2776.6371" system_time="0.19" total_time="49.35"/>
+        <result copy="3536.7295" add="3868.939" user_time="51.42" scale="3330.6279" triad="3754.4737" all="3085.7321" system_time="0.47" total_time="52.25"/>
+        <result copy="2678.3689" add="2928.4539" user_time="53.67" scale="2663.6088" triad="2809.6854" all="2736.38" system_time="0.49" total_time="54.48"/>
+        <result copy="2531.355" add="2941.8235" user_time="40.45" scale="2523.3787" triad="2923.9183" all="2747.0604" system_time="0.2" total_time="40.99"/>
+        <result copy="5681.3199" add="6412.3541" user_time="20.82" scale="5472.5168" triad="6029.0964" all="5505.5995" system_time="0.07" total_time="21.1"/>
+        <result copy="4554.8493" add="5223.0216" user_time="21.24" scale="4841.8196" triad="5090.5867" all="4884.022" system_time="0.11" total_time="21.59"/>
+        <result copy="2293.0453" add="2474.306" user_time="51.74" scale="1955.4006" triad="2555.2104" all="1886.9155" system_time="0.2" total_time="52.31"/>
+        <result copy="2472.6587" add="2892.7152" user_time="46.24" scale="2441.2476" triad="2920.6565" all="2675.023" system_time="0.19" total_time="46.75"/>
+        <result copy="2460.9184" add="2553.1923" user_time="52.67" scale="2370.9469" triad="2742.1997" all="2483.2148" system_time="0.44" total_time="53.45"/>
+        <result copy="2411.7695" add="2771.1034" user_time="52.07" scale="2408.2971" triad="2781.2519" all="2557.4956" system_time="0.28" total_time="52.66"/>
+        <result copy="4632.5361" add="5286.1722" user_time="22.08" scale="4640.501" triad="5176.2295" all="4968.523" system_time="0.22" total_time="22.53"/>
+        <result copy="4385.3785" add="4984.797" user_time="24.06" scale="4317.3761" triad="4911.5476" all="4632.6544" system_time="0.45" total_time="24.7"/>
+        <result copy="2468.1076" add="2955.338" user_time="50.52" scale="2629.2264" triad="2891.4548" all="2677.2209" system_time="0.47" total_time="51.33"/>
+        <result copy="2539.0315" add="2872.9817" user_time="49.6" scale="2527.7316" triad="2960.7893" all="2645.5188" system_time="0.17" total_time="50.11"/>
+        <result copy="2934.586" add="3822.855" user_time="53.0" scale="3330.7512" triad="3691.8777" all="3413.6662" system_time="0.2" total_time="53.57"/>
+        <result copy="2454.0681" add="2868.4667" user_time="52.74" scale="2415.7964" triad="2801.554" all="2655.6115" system_time="0.18" total_time="53.28"/>
+        <result copy="3618.0695" add="3971.1192" user_time="51.47" scale="3515.759" triad="3923.9074" all="3726.7974" system_time="0.22" total_time="52.01"/>
+        <result copy="2824.6957" add="2975.4157" user_time="37.2" scale="2701.9681" triad="3026.0633" all="2900.3232" system_time="0.18" total_time="37.63"/>
+        <result copy="2541.3583" add="2991.4211" user_time="51.26" scale="2494.2281" triad="2911.7671" all="2755.9478" system_time="0.19" total_time="51.8"/>
+        <result copy="2434.0963" add="2865.0731" user_time="44.07" scale="2408.4457" triad="2767.7895" all="2642.4746" system_time="0.46" total_time="44.83"/>
+        <result copy="2422.5277" add="2845.4149" user_time="48.66" scale="2433.4667" triad="2785.0205" all="2642.9371" system_time="0.47" total_time="49.48"/>
+        <result copy="5081.6949" add="6063.6869" user_time="22.09" scale="4993.4598" triad="5964.275" all="5016.3117" system_time="0.1" total_time="22.4"/>
+        <result copy="2607.2621" add="2998.0223" user_time="50.68" scale="2692.9288" triad="2900.9824" all="2729.5901" system_time="0.25" total_time="51.24"/>
+        <result copy="2510.6267" add="2947.1442" user_time="46.87" scale="2508.6759" triad="2934.9698" all="2749.5155" system_time="0.19" total_time="47.41"/>
+        <result copy="3326.7212" add="2784.2154" user_time="50.17" scale="2389.754" triad="2724.488" all="2545.1606" system_time="0.24" total_time="50.85"/>
+        <result copy="2123.2109" add="2353.4904" user_time="52.92" scale="2150.1241" triad="2337.0468" all="2078.7431" system_time="0.22" total_time="53.5"/>
+        <result copy="5723.3441" add="5863.8874" user_time="20.76" scale="5161.6954" triad="5838.8894" all="5292.6116" system_time="0.07" total_time="21.02"/>
+        <result copy="9922.8209" add="10269.0095" user_time="20.16" scale="9084.7629" triad="9379.4827" all="8916.1076" system_time="0.04" total_time="20.38"/>
+        <result copy="2458.3583" add="2899.9385" user_time="51.06" scale="2443.8156" triad="2928.6243" all="2677.181" system_time="0.21" total_time="51.67"/>
+        <result copy="4850.4115" add="5114.8924" user_time="20.57" scale="5374.2345" triad="5190.0024" all="4896.707" system_time="0.09" total_time="20.85"/>
+        <result copy="5492.938" add="6596.0552" user_time="20.18" scale="5752.9974" triad="6309.2509" all="5469.5859" system_time="0.08" total_time="20.46"/>
+      </loop>
+      <loop number="3">
+        <result copy="4310.2191" add="4958.0467" user_time="23.47" scale="4237.2263" triad="4936.8878" all="4651.0939" system_time="0.38" total_time="24.02"/>
+        <result copy="2347.1354" add="2649.8095" user_time="53.33" scale="2276.1186" triad="2609.0782" all="2478.4091" system_time="0.39" total_time="54.04"/>
+        <result copy="4703.1389" add="5463.7136" user_time="20.76" scale="4665.9838" triad="5308.1796" all="4902.1561" system_time="0.08" total_time="21.0"/>
+        <result copy="2879.181" add="3302.8308" user_time="46.92" scale="2900.381" triad="3380.28" all="3070.2567" system_time="0.21" total_time="47.41"/>
+        <result copy="2895.4126" add="3222.6542" user_time="51.87" scale="2753.8341" triad="3276.0274" all="3061.6261" system_time="0.17" total_time="52.36"/>
+        <result copy="2100.9916" add="2875.415" user_time="47.95" scale="2337.085" triad="2623.4364" all="2364.5715" system_time="0.2" total_time="48.48"/>
+        <result copy="5367.301" add="5583.0043" user_time="20.91" scale="5333.6471" triad="5362.9575" all="4993.6523" system_time="0.07" total_time="21.16"/>
+        <result copy="3788.9329" add="4299.1325" user_time="49.13" scale="3770.8786" triad="3680.158" all="3689.6685" system_time="0.4" total_time="49.83"/>
+        <result copy="2709.8967" add="3005.9138" user_time="39.04" scale="2673.338" triad="3050.9719" all="2865.8228" system_time="0.45" total_time="39.79"/>
+        <result copy="2557.3659" add="2960.5459" user_time="51.17" scale="2515.7123" triad="2853.1011" all="2732.7834" system_time="0.44" total_time="51.89"/>
+        <result copy="2339.3552" add="2712.4403" user_time="51.4" scale="2312.2167" triad="2663.3494" all="2518.6346" system_time="0.2" total_time="51.94"/>
+        <result copy="4636.2203" add="5554.8017" user_time="20.88" scale="4617.4042" triad="5332.0187" all="4919.8701" system_time="0.08" total_time="21.13"/>
+        <result copy="2528.9228" add="2814.5098" user_time="49.03" scale="2457.1098" triad="2827.4232" all="2594.0198" system_time="0.34" total_time="49.67"/>
+        <result copy="1740.8321" add="1969.6681" user_time="47.88" scale="1710.8885" triad="1891.0927" all="1821.5306" system_time="0.47" total_time="48.69"/>
+        <result copy="2544.3622" add="2910.8481" user_time="51.8" scale="2528.3651" triad="2877.8058" all="2738.2289" system_time="0.17" total_time="52.3"/>
+        <result copy="2814.3441" add="3329.136" user_time="38.55" scale="2845.6898" triad="3261.2378" all="3051.533" system_time="0.17" total_time="38.98"/>
+        <result copy="2538.1813" add="3750.6215" user_time="52.48" scale="3328.4388" triad="3744.301" all="3292.8323" system_time="0.21" total_time="52.97"/>
+        <result copy="2482.36" add="2842.3202" user_time="46.01" scale="2501.0949" triad="2825.7066" all="2635.2211" system_time="0.19" total_time="46.52"/>
+        <result copy="2558.3582" add="2941.0508" user_time="46.62" scale="2474.4219" triad="2913.2724" all="2728.8441" system_time="0.17" total_time="47.13"/>
+        <result copy="2946.2368" add="3312.2288" user_time="53.25" scale="2706.1173" triad="3278.7685" all="3087.7439" system_time="0.17" total_time="53.74"/>
+        <result copy="1724.8228" add="2036.6722" user_time="49.68" scale="1707.2532" triad="1976.0638" all="1877.9536" system_time="0.19" total_time="50.2"/>
+        <result copy="2909.2461" add="3349.4075" user_time="43.18" scale="2902.9023" triad="3234.5178" all="3018.6978" system_time="0.18" total_time="43.65"/>
+        <result copy="1867.8698" add="1974.1653" user_time="51.36" scale="1766.8402" triad="1939.5761" all="1845.2848" system_time="0.19" total_time="51.86"/>
+        <result copy="5903.1927" add="5574.3347" user_time="20.69" scale="4650.3713" triad="5423.1641" all="4955.3574" system_time="0.04" total_time="20.86"/>
+        <result copy="3018.8878" add="3359.4351" user_time="49.42" scale="2905.0773" triad="3271.7548" all="3105.4772" system_time="0.19" total_time="49.93"/>
+        <result copy="3736.7127" add="3919.81" user_time="53.52" scale="3762.9474" triad="3220.8176" all="3618.5842" system_time="0.19" total_time="54.11"/>
+        <result copy="5070.5931" add="5439.4902" user_time="20.46" scale="5056.8205" triad="5259.8172" all="4975.6261" system_time="0.07" total_time="20.7"/>
+        <result copy="2496.5288" add="2964.1085" user_time="46.16" scale="2465.7106" triad="2852.8185" all="2706.9062" system_time="0.2" total_time="46.68"/>
+        <result copy="6322.8214" add="7164.3838" user_time="19.77" scale="6998.2373" triad="7085.4944" all="6328.9315" system_time="0.06" total_time="19.97"/>
+        <result copy="5247.1448" add="5311.9478" user_time="21.64" scale="4547.692" triad="5164.4202" all="4887.784" system_time="0.08" total_time="21.87"/>
+        <result copy="4453.4511" add="5417.4791" user_time="22.4" scale="4426.2119" triad="5018.3477" all="4696.7913" system_time="0.06" total_time="22.63"/>
+        <result copy="2441.1546" add="2759.2749" user_time="50.96" scale="2416.0296" triad="2757.8596" all="2574.7349" system_time="0.22" total_time="51.48"/>
+      </loop>
+      <loop number="4">
+        <result copy="1756.7655" add="2073.3756" user_time="53.08" scale="1716.7746" triad="1986.2288" all="1894.0332" system_time="0.37" total_time="53.79"/>
+        <result copy="1785.7652" add="2012.0393" user_time="51.99" scale="1878.4554" triad="2091.8689" all="1857.2971" system_time="0.21" total_time="52.5"/>
+        <result copy="2766.246" add="3109.0126" user_time="41.82" scale="2704.0858" triad="3064.8079" all="2919.7019" system_time="0.4" total_time="42.54"/>
+        <result copy="5795.3882" add="6684.4562" user_time="21.16" scale="6022.2387" triad="6894.8843" all="5883.8595" system_time="0.06" total_time="21.36"/>
+        <result copy="2606.1186" add="3008.4011" user_time="47.43" scale="2570.5637" triad="2974.6869" all="2802.7959" system_time="0.19" total_time="48.04"/>
+        <result copy="2613.5531" add="2985.1761" user_time="51.89" scale="2569.8428" triad="2952.0962" all="2787.4873" system_time="0.27" total_time="52.49"/>
+        <result copy="2559.3097" add="2828.1278" user_time="52.59" scale="2397.846" triad="3627.8373" all="2497.3136" system_time="0.41" total_time="53.29"/>
+        <result copy="2635.222" add="3018.1058" user_time="49.8" scale="2571.9752" triad="2939.51" all="2789.3602" system_time="0.18" total_time="50.3"/>
+        <result copy="2362.8184" add="2733.6089" user_time="53.57" scale="2343.0532" triad="2677.3264" all="2544.2524" system_time="0.49" total_time="54.39"/>
+        <result copy="7226.8261" add="7598.2453" user_time="21.87" scale="6055.1429" triad="8055.9213" all="6921.2373" system_time="0.06" total_time="22.08"/>
+        <result copy="3478.2486" add="3369.8867" user_time="44.0" scale="2555.6073" triad="3843.1881" all="2794.4495" system_time="0.2" total_time="44.49"/>
+        <result copy="2472.9351" add="3025.2377" user_time="39.95" scale="2487.4406" triad="2836.7363" all="2700.712" system_time="0.18" total_time="40.38"/>
+        <result copy="2615.956" add="3014.0089" user_time="48.77" scale="2622.5046" triad="2965.0664" all="2787.4999" system_time="0.2" total_time="49.31"/>
+        <result copy="2688.1001" add="3074.2621" user_time="45.72" scale="2620.7184" triad="2944.1968" all="2839.1659" system_time="0.19" total_time="46.21"/>
+        <result copy="6025.8222" add="7253.0015" user_time="21.7" scale="6849.34" triad="7449.0735" all="6472.2828" system_time="0.19" total_time="22.07"/>
+        <result copy="3390.6552" add="3851.7324" user_time="47.6" scale="3384.1026" triad="3808.0677" all="3639.6373" system_time="0.2" total_time="48.09"/>
+        <result copy="2563.9084" add="2979.7527" user_time="44.72" scale="2598.504" triad="2898.0366" all="2766.0808" system_time="0.17" total_time="45.2"/>
+        <result copy="2581.7838" add="3009.0009" user_time="51.64" scale="2588.8104" triad="2928.4673" all="2783.6283" system_time="0.2" total_time="52.15"/>
+        <result copy="2550.9338" add="3023.1375" user_time="50.34" scale="2506.8389" triad="2938.2989" all="2781.4945" system_time="0.18" total_time="50.82"/>
+        <result copy="2614.6645" add="3014.915" user_time="44.57" scale="2552.8914" triad="2953.7394" all="2803.9975" system_time="0.18" total_time="45.04"/>
+        <result copy="2493.1646" add="2900.16" user_time="44.03" scale="2462.668" triad="2837.2711" all="2684.4713" system_time="0.17" total_time="44.49"/>
+        <result copy="3171.0759" add="3576.1206" user_time="50.63" scale="3240.8463" triad="2844.3371" all="3164.4619" system_time="0.2" total_time="51.16"/>
+        <result copy="5426.8169" add="6712.43" user_time="22.23" scale="5237.6643" triad="5961.8501" all="5800.9574" system_time="0.07" total_time="22.46"/>
+        <result copy="9674.0048" add="10915.6626" user_time="17.06" scale="10089.7222" triad="10797.6289" all="9494.928" system_time="0.04" total_time="17.22"/>
+        <result copy="2594.7352" add="3043.4737" user_time="47.26" scale="2598.3887" triad="2940.4823" all="2791.5523" system_time="0.44" total_time="47.99"/>
+        <result copy="4340.0934" add="5248.5052" user_time="22.87" scale="4462.8675" triad="5155.6269" all="4844.1798" system_time="0.45" total_time="23.54"/>
+        <result copy="1826.2549" add="2004.738" user_time="50.5" scale="1685.3331" triad="2134.697" all="1822.9613" system_time="0.25" total_time="51.1"/>
+        <result copy="6347.8287" add="6594.2975" user_time="21.51" scale="5872.8484" triad="6913.3587" all="6431.0531" system_time="0.07" total_time="21.73"/>
+        <result copy="6274.2984" add="7489.0793" user_time="20.68" scale="6145.4231" triad="6838.9838" all="6438.4608" system_time="0.11" total_time="20.96"/>
+        <result copy="2469.9604" add="2532.4141" user_time="50.6" scale="2158.8009" triad="2406.6194" all="2153.8446" system_time="0.21" total_time="51.11"/>
+        <result copy="2380.1629" add="2778.6791" user_time="51.97" scale="2116.1528" triad="2559.6524" all="2467.3774" system_time="0.42" total_time="52.63"/>
+        <result copy="4795.7634" add="5543.4038" user_time="22.27" scale="4917.0804" triad="5384.9899" all="5103.6796" system_time="0.16" total_time="22.67"/>
+      </loop>
+      <loop number="5">
+        <result copy="7514.4603" add="8199.8102" user_time="17.26" scale="6958.6357" triad="8085.0613" all="7493.7405" system_time="0.04" total_time="17.42"/>
+        <result copy="2486.1939" add="2958.9693" user_time="44.44" scale="2493.2376" triad="2847.2207" all="2717.4416" system_time="0.19" total_time="44.99"/>
+        <result copy="3326.0332" add="3893.3411" user_time="54.26" scale="3419.688" triad="3718.4662" all="3618.6045" system_time="0.2" total_time="54.91"/>
+        <result copy="1692.6903" add="1866.6415" user_time="51.19" scale="1636.9111" triad="1810.9775" all="1742.0384" system_time="0.21" total_time="51.74"/>
+        <result copy="2467.5146" add="2848.044" user_time="52.83" scale="2409.8161" triad="2789.1732" all="2646.5131" system_time="0.43" total_time="53.51"/>
+        <result copy="1672.8022" add="1948.8109" user_time="54.35" scale="1657.2488" triad="1869.5735" all="1802.951" system_time="0.28" total_time="55.0"/>
+        <result copy="2463.2715" add="2934.5447" user_time="46.47" scale="2457.0768" triad="2847.2143" all="2685.4715" system_time="0.21" total_time="47.05"/>
+        <result copy="3723.8445" add="3673.7188" user_time="54.83" scale="3615.8704" triad="4017.7184" all="3224.7277" system_time="0.37" total_time="55.49"/>
+        <result copy="3708.9532" add="3349.1729" user_time="53.73" scale="3591.9815" triad="3390.3743" all="3273.742" system_time="0.28" total_time="54.31"/>
+        <result copy="2366.4699" add="2717.5655" user_time="52.7" scale="2330.6919" triad="2643.0335" all="2532.1813" system_time="0.19" total_time="53.17"/>
+        <result copy="2474.5946" add="2891.0285" user_time="51.67" scale="2469.0389" triad="2843.8033" all="2667.8931" system_time="0.35" total_time="52.36"/>
+        <result copy="2483.9737" add="2951.6779" user_time="52.52" scale="2453.298" triad="2854.25" all="2703.7816" system_time="0.21" total_time="53.04"/>
+        <result copy="5185.5614" add="5919.2224" user_time="20.11" scale="5104.7192" triad="5870.2153" all="5561.7631" system_time="0.21" total_time="20.5"/>
+        <result copy="2543.9918" add="2893.6634" user_time="46.97" scale="2468.1512" triad="2801.9528" all="2679.5361" system_time="0.18" total_time="47.47"/>
+        <result copy="4865.8722" add="5606.5239" user_time="20.76" scale="4818.1768" triad="5487.764" all="5153.9467" system_time="0.24" total_time="21.18"/>
+        <result copy="2462.0343" add="2836.9861" user_time="53.0" scale="2439.5021" triad="2796.7937" all="2640.6735" system_time="0.19" total_time="53.55"/>
+        <result copy="1887.2671" add="2105.4039" user_time="55.81" scale="1859.8839" triad="2321.3457" all="1809.6031" system_time="0.57" total_time="56.69"/>
+        <result copy="2559.9205" add="2904.0636" user_time="47.69" scale="2457.6562" triad="2821.1492" all="2651.5835" system_time="0.18" total_time="48.2"/>
+        <result copy="2495.6704" add="2896.389" user_time="50.07" scale="2447.4769" triad="2885.4602" all="2688.5804" system_time="0.18" total_time="50.54"/>
+        <result copy="2533.14" add="2943.9242" user_time="46.21" scale="2465.5351" triad="2847.5584" all="2694.9411" system_time="0.19" total_time="46.72"/>
+        <result copy="2496.9117" add="2915.52" user_time="54.01" scale="2482.4107" triad="2853.437" all="2701.2001" system_time="0.18" total_time="54.54"/>
+        <result copy="1642.6417" add="2091.8337" user_time="54.58" scale="1785.5961" triad="1938.6868" all="1754.6123" system_time="0.23" total_time="55.14"/>
+        <result copy="2472.617" add="2905.717" user_time="48.92" scale="2487.3189" triad="2855.0865" all="2689.4989" system_time="0.19" total_time="49.43"/>
+        <result copy="8642.1381" add="8989.1031" user_time="16.98" scale="8981.6821" triad="8940.4052" all="8325.7233" system_time="0.04" total_time="17.13"/>
+        <result copy="1674.7842" add="2017.6691" user_time="51.34" scale="1810.6854" triad="1849.9378" all="1799.8706" system_time="0.19" total_time="51.93"/>
+        <result copy="4962.9337" add="5758.6189" user_time="20.25" scale="4975.5529" triad="5948.5825" all="5315.3319" system_time="0.07" total_time="20.47"/>
+        <result copy="2486.3444" add="3023.8982" user_time="43.23" scale="2561.7255" triad="2882.6297" all="2746.3883" system_time="0.18" total_time="43.69"/>
+        <result copy="2526.1467" add="2724.4931" user_time="53.72" scale="2538.1346" triad="2675.4439" all="2533.607" system_time="0.38" total_time="54.36"/>
+        <result copy="2439.1136" add="2855.4359" user_time="48.51" scale="2436.5376" triad="2829.4928" all="2636.6798" system_time="0.4" total_time="49.29"/>
+        <result copy="8863.4238" add="9690.4925" user_time="16.7" scale="9169.4922" triad="9399.4404" all="8809.4471" system_time="0.04" total_time="16.86"/>
+        <result copy="5155.6329" add="5982.449" user_time="19.44" scale="5074.459" triad="5786.1508" all="5514.5935" system_time="0.16" total_time="19.82"/>
+        <result copy="6074.76" add="6846.1782" user_time="17.82" scale="5756.9182" triad="6588.8091" all="6132.1709" system_time="0.06" total_time="18.0"/>
+      </loop>
+    </run>
+    <run instances_no="40">
+      <loop number="1">
+        <result copy="7139.7552" add="7077.9175" user_time="25.16" scale="5906.941" triad="7128.7064" all="6150.5351" system_time="0.08" total_time="25.41"/>
+        <result copy="1600.0544" add="1822.0842" user_time="56.22" scale="1569.1884" triad="1832.0468" all="1671.1082" system_time="0.53" total_time="57.1"/>
+        <result copy="2630.4117" add="2914.0118" user_time="54.68" scale="2546.3856" triad="2842.8928" all="2681.9943" system_time="0.22" total_time="55.31"/>
+        <result copy="2347.3491" add="2748.6676" user_time="47.69" scale="2325.8637" triad="2719.081" all="2540.4851" system_time="0.18" total_time="48.32"/>
+        <result copy="2069.8746" add="2365.7733" user_time="36.38" scale="2106.0829" triad="2257.9955" all="2161.4951" system_time="0.2" total_time="36.9"/>
+        <result copy="2404.8838" add="2775.0785" user_time="49.26" scale="2350.0112" triad="2732.5689" all="2581.4379" system_time="0.21" total_time="49.87"/>
+        <result copy="2420.5812" add="2838.4553" user_time="52.04" scale="2437.6882" triad="2733.3088" all="2630.7613" system_time="0.18" total_time="52.64"/>
+        <result copy="2200.9627" add="2372.5531" user_time="38.07" scale="2161.7654" triad="2336.5511" all="2279.5292" system_time="0.43" total_time="38.94"/>
+        <result copy="2367.8141" add="2749.3731" user_time="52.66" scale="2351.1598" triad="2762.0743" all="2577.232" system_time="0.18" total_time="53.19"/>
+        <result copy="1622.2297" add="1856.8051" user_time="55.79" scale="1605.7862" triad="1727.4815" all="1697.6604" system_time="0.19" total_time="56.38"/>
+        <result copy="3574.3978" add="3307.891" user_time="38.28" scale="3519.1339" triad="3898.6996" all="3396.2227" system_time="0.37" total_time="39.0"/>
+        <result copy="2373.9352" add="2791.2066" user_time="54.33" scale="2342.4041" triad="2716.1101" all="2564.9976" system_time="0.25" total_time="55.08"/>
+        <result copy="4094.0824" add="4790.3998" user_time="27.6" scale="4066.9622" triad="4529.5102" all="4137.2978" system_time="0.07" total_time="27.85"/>
+        <result copy="2437.3294" add="2822.201" user_time="52.82" scale="2374.5119" triad="2745.5477" all="2599.2695" system_time="0.17" total_time="53.35"/>
+        <result copy="2422.6815" add="2844.6964" user_time="56.04" scale="1807.4599" triad="2850.3048" all="2152.5719" system_time="0.42" total_time="56.85"/>
+        <result copy="3733.6421" add="4163.287" user_time="28.93" scale="3612.6744" triad="4078.2105" all="3799.0207" system_time="0.27" total_time="29.43"/>
+        <result copy="3371.7199" add="3778.1179" user_time="35.19" scale="3414.2526" triad="3813.3101" all="3558.8229" system_time="0.29" total_time="35.75"/>
+        <result copy="2164.997" add="2487.5904" user_time="38.45" scale="2122.2425" triad="2359.1452" all="2285.4523" system_time="0.35" total_time="39.15"/>
+        <result copy="2208.2319" add="1922.7944" user_time="54.31" scale="2164.2835" triad="1853.2244" all="1985.6075" system_time="0.49" total_time="55.19"/>
+        <result copy="3322.3983" add="3813.4349" user_time="36.3" scale="3644.3313" triad="3985.6299" all="3585.5662" system_time="0.18" total_time="36.79"/>
+        <result copy="1590.2219" add="2193.8581" user_time="52.88" scale="1855.8052" triad="1832.7204" all="1820.5427" system_time="0.2" total_time="53.46"/>
+        <result copy="1610.3445" add="1820.4285" user_time="54.1" scale="1608.3465" triad="1746.9985" all="1694.5445" system_time="0.19" total_time="54.7"/>
+        <result copy="1609.2441" add="1817.5657" user_time="54.03" scale="1547.122" triad="1762.5987" all="1681.9725" system_time="0.21" total_time="54.76"/>
+        <result copy="2638.1683" add="3004.1295" user_time="48.3" scale="2562.442" triad="2971.9169" all="2788.2471" system_time="0.3" total_time="49.06"/>
+        <result copy="2590.8185" add="2911.9607" user_time="49.37" scale="2549.5883" triad="2879.1068" all="2739.354" system_time="0.19" total_time="49.86"/>
+        <result copy="3468.1329" add="4104.0177" user_time="37.0" scale="3210.8031" triad="4888.4296" all="3681.1752" system_time="0.04" total_time="37.33"/>
+        <result copy="2537.6214" add="2860.9328" user_time="47.29" scale="2447.0459" triad="2825.5205" all="2596.3352" system_time="0.2" total_time="47.82"/>
+        <result copy="2412.5505" add="2765.0518" user_time="52.39" scale="2351.249" triad="2736.4612" all="2568.9846" system_time="0.19" total_time="53.01"/>
+        <result copy="2152.5091" add="2536.2337" user_time="38.13" scale="2059.4032" triad="2381.934" all="2265.5682" system_time="0.56" total_time="39.08"/>
+        <result copy="1683.4244" add="1801.4833" user_time="54.91" scale="1721.6159" triad="1829.1228" all="1686.1755" system_time="0.21" total_time="55.57"/>
+        <result copy="1644.8583" add="1829.2515" user_time="50.53" scale="1522.5611" triad="1754.6453" all="1685.6081" system_time="0.19" total_time="51.19"/>
+        <result copy="7738.1675" add="8438.4506" user_time="24.8" scale="6999.7617" triad="8024.3719" all="6542.2773" system_time="0.08" total_time="25.05"/>
+        <result copy="3246.1329" add="3656.6653" user_time="34.68" scale="3401.3279" triad="3632.6789" all="3457.5755" system_time="0.17" total_time="35.15"/>
+        <result copy="1663.6115" add="1825.9704" user_time="51.84" scale="1586.4662" triad="1767.2398" all="1709.1398" system_time="0.19" total_time="52.53"/>
+        <result copy="2508.9358" add="2417.4708" user_time="54.43" scale="2440.2624" triad="2388.0562" all="2400.3389" system_time="0.3" total_time="55.23"/>
+        <result copy="3355.938" add="3779.6517" user_time="33.99" scale="3280.7577" triad="3864.1602" all="3521.9505" system_time="0.15" total_time="34.42"/>
+        <result copy="3378.1565" add="4160.2175" user_time="37.06" scale="3325.8031" triad="3595.8435" all="3531.1417" system_time="0.07" total_time="37.51"/>
+        <result copy="2428.4658" add="2837.4961" user_time="49.56" scale="2393.5642" triad="2791.0353" all="2633.5159" system_time="0.17" total_time="50.13"/>
+        <result copy="1621.455" add="2046.0975" user_time="53.73" scale="1693.6736" triad="1970.1618" all="1829.7911" system_time="0.2" total_time="54.3"/>
+        <result copy="2421.4018" add="2918.5182" user_time="35.1" scale="2433.8907" triad="2530.3135" all="2589.8415" system_time="0.11" total_time="35.49"/>
+      </loop>
+      <loop number="2">
+        <result copy="1626.2632" add="1798.9885" user_time="51.02" scale="1576.3966" triad="1765.5124" all="1696.4205" system_time="0.21" total_time="51.78"/>
+        <result copy="2420.2285" add="2765.9781" user_time="54.8" scale="2403.8365" triad="2731.3912" all="2589.4602" system_time="0.17" total_time="55.32"/>
+        <result copy="3290.0766" add="3771.1406" user_time="40.3" scale="3284.4605" triad="3717.6335" all="3483.2764" system_time="0.28" total_time="41.04"/>
+        <result copy="1619.3735" add="1835.3204" user_time="54.08" scale="1508.7541" triad="1742.9912" all="1684.2335" system_time="0.18" total_time="54.69"/>
+        <result copy="1611.4889" add="1838.8534" user_time="49.26" scale="1572.4073" triad="1692.4145" all="1680.9313" system_time="0.52" total_time="50.24"/>
+        <result copy="1604.9531" add="1853.0701" user_time="51.83" scale="1576.6353" triad="1728.8067" all="1695.2669" system_time="0.2" total_time="52.49"/>
+        <result copy="2477.5768" add="2794.6364" user_time="51.37" scale="2415.1159" triad="2770.4244" all="2637.3329" system_time="0.2" total_time="52.11"/>
+        <result copy="1639.9295" add="1880.9545" user_time="48.45" scale="1614.7462" triad="1773.4816" all="1734.5993" system_time="0.19" total_time="49.09"/>
+        <result copy="2485.9824" add="2871.5636" user_time="48.97" scale="2444.1033" triad="2848.5862" all="2687.675" system_time="0.16" total_time="49.48"/>
+        <result copy="2295.0982" add="2647.1494" user_time="54.21" scale="2296.6659" triad="2612.5654" all="2467.7099" system_time="0.23" total_time="54.86"/>
+        <result copy="3403.1772" add="3721.8328" user_time="40.51" scale="3272.3383" triad="3651.4701" all="3462.4188" system_time="0.81" total_time="41.67"/>
+        <result copy="5872.8777" add="6124.0937" user_time="28.39" scale="5540.987" triad="6059.6218" all="4890.9775" system_time="0.39" total_time="29.06"/>
+        <result copy="2159.3952" add="2472.1276" user_time="39.18" scale="2116.7414" triad="2309.8755" all="2226.1915" system_time="0.48" total_time="40.05"/>
+        <result copy="2230.8484" add="2409.0924" user_time="40.31" scale="2223.1837" triad="2371.4757" all="2176.5141" system_time="0.27" total_time="41.09"/>
+        <result copy="2155.7566" add="2383.9622" user_time="40.41" scale="1905.0833" triad="2146.4668" all="2095.6746" system_time="0.75" total_time="41.63"/>
+        <result copy="2192.1331" add="2411.0506" user_time="41.04" scale="2110.5122" triad="2254.8414" all="2182.6704" system_time="0.3" total_time="41.85"/>
+        <result copy="3458.376" add="3916.7245" user_time="35.88" scale="3443.4192" triad="3923.9605" all="3686.2391" system_time="0.58" total_time="36.8"/>
+        <result copy="2011.848" add="3173.9154" user_time="54.23" scale="2548.7932" triad="3023.6085" all="2676.0878" system_time="0.21" total_time="54.82"/>
+        <result copy="2387.4545" add="2762.988" user_time="48.21" scale="2390.507" triad="2738.0986" all="2562.7107" system_time="0.17" total_time="48.73"/>
+        <result copy="2790.3651" add="2998.575" user_time="41.17" scale="2644.4844" triad="2754.869" all="2607.8471" system_time="0.45" total_time="41.99"/>
+        <result copy="9117.6632" add="10061.0483" user_time="19.09" scale="8970.0972" triad="9217.0178" all="8048.5505" system_time="0.15" total_time="19.43"/>
+        <result copy="1914.3117" add="2065.7938" user_time="54.9" scale="1785.3995" triad="2005.5294" all="1847.8078" system_time="0.24" total_time="55.58"/>
+        <result copy="2387.0206" add="2784.0141" user_time="45.39" scale="2359.7864" triad="2730.2359" all="2570.3549" system_time="0.18" total_time="45.92"/>
+        <result copy="1620.4177" add="1806.4523" user_time="53.89" scale="1598.0205" triad="1768.1068" all="1703.6207" system_time="0.21" total_time="54.65"/>
+        <result copy="1948.1147" add="2047.9995" user_time="55.43" scale="1943.9275" triad="2001.6128" all="1930.4839" system_time="0.21" total_time="56.03"/>
+        <result copy="1650.0138" add="1884.333" user_time="54.48" scale="1606.6563" triad="1811.3128" all="1725.4804" system_time="0.59" total_time="55.61"/>
+        <result copy="1953.8124" add="2240.9643" user_time="40.49" scale="1937.4182" triad="2196.8911" all="2042.5305" system_time="0.4" total_time="41.37"/>
+        <result copy="3203.9706" add="3851.3446" user_time="33.68" scale="3168.8341" triad="3745.6975" all="3471.0801" system_time="0.31" total_time="34.39"/>
+        <result copy="2025.2454" add="2386.5118" user_time="40.95" scale="1938.5317" triad="2284.6469" all="2126.632" system_time="0.36" total_time="41.78"/>
+        <result copy="2431.6756" add="2844.9716" user_time="49.39" scale="2397.6051" triad="2770.0831" all="2625.3076" system_time="0.21" total_time="50.19"/>
+        <result copy="1663.3983" add="1871.9172" user_time="53.45" scale="1582.0037" triad="1796.8741" all="1741.0067" system_time="0.2" total_time="54.16"/>
+        <result copy="6432.3855" add="6054.7162" user_time="30.2" scale="7692.5891" triad="6551.6429" all="6258.9987" system_time="0.04" total_time="30.47"/>
+        <result copy="2614.0983" add="2919.2442" user_time="42.45" scale="2522.4702" triad="2897.3247" all="2726.6584" system_time="0.19" total_time="43.03"/>
+        <result copy="1616.829" add="1861.1176" user_time="51.35" scale="1624.2126" triad="1789.8844" all="1704.8313" system_time="0.5" total_time="52.32"/>
+        <result copy="2407.9979" add="2810.7157" user_time="46.67" scale="2395.5402" triad="2762.3073" all="2603.1813" system_time="0.19" total_time="47.31"/>
+        <result copy="6313.3724" add="8022.7694" user_time="33.01" scale="6870.5789" triad="7659.6586" all="6238.3613" system_time="0.14" total_time="33.45"/>
+        <result copy="1572.6149" add="1833.0042" user_time="53.65" scale="1555.6407" triad="1792.7591" all="1692.1191" system_time="0.19" total_time="54.35"/>
+        <result copy="3502.6116" add="3909.8605" user_time="31.97" scale="3435.5634" triad="3833.0233" all="3665.3242" system_time="0.26" total_time="32.63"/>
+        <result copy="1763.3239" add="1978.439" user_time="54.96" scale="1624.6299" triad="2029.7731" all="1809.2747" system_time="0.2" total_time="55.77"/>
+        <result copy="2078.9731" add="2342.944" user_time="39.78" scale="2097.9432" triad="2318.7256" all="2163.5284" system_time="0.33" total_time="40.56"/>
+      </loop>
+      <loop number="3">
+        <result copy="3160.3995" add="3625.9998" user_time="37.26" scale="3185.9379" triad="3532.328" all="3403.9735" system_time="0.24" total_time="38.04"/>
+        <result copy="1690.1372" add="1838.2351" user_time="52.8" scale="1616.4873" triad="1810.456" all="1720.34" system_time="0.18" total_time="53.34"/>
+        <result copy="2469.8701" add="2838.6019" user_time="49.92" scale="2460.1228" triad="2832.386" all="2659.7096" system_time="0.2" total_time="50.54"/>
+        <result copy="2492.9045" add="2892.5988" user_time="50.75" scale="2459.4039" triad="2801.8192" all="2610.2174" system_time="0.2" total_time="51.4"/>
+        <result copy="2486.8083" add="2862.6049" user_time="50.91" scale="2463.3528" triad="2873.1786" all="2676.216" system_time="0.2" total_time="51.51"/>
+        <result copy="2150.456" add="2356.9535" user_time="38.28" scale="2052.1112" triad="2474.7209" all="2171.6659" system_time="0.19" total_time="38.89"/>
+        <result copy="1646.785" add="1804.2438" user_time="50.53" scale="1647.4677" triad="1808.3732" all="1713.9979" system_time="0.18" total_time="51.08"/>
+        <result copy="2376.6749" add="2340.1845" user_time="38.58" scale="2116.4168" triad="2511.3528" all="2305.0933" system_time="0.19" total_time="39.19"/>
+        <result copy="2128.0188" add="2166.4253" user_time="40.51" scale="1973.6986" triad="2137.9484" all="2099.0096" system_time="0.64" total_time="41.52"/>
+        <result copy="1583.1879" add="1813.6401" user_time="52.17" scale="1579.0672" triad="1768.063" all="1685.6548" system_time="0.19" total_time="52.73"/>
+        <result copy="2672.0351" add="2912.1179" user_time="49.88" scale="2533.8159" triad="2871.1126" all="2742.4344" system_time="0.19" total_time="50.43"/>
+        <result copy="2014.4808" add="2239.0186" user_time="40.73" scale="1942.8904" triad="2122.3175" all="2078.8474" system_time="0.31" total_time="41.55"/>
+        <result copy="2597.1448" add="2985.9615" user_time="46.14" scale="2540.4569" triad="2988.9823" all="2765.2219" system_time="0.2" total_time="46.74"/>
+        <result copy="2274.6315" add="2536.3086" user_time="39.93" scale="2103.2531" triad="2328.9794" all="2217.6014" system_time="0.14" total_time="40.5"/>
+        <result copy="2504.2933" add="2819.6808" user_time="42.56" scale="2451.546" triad="2871.3449" all="2636.8236" system_time="0.21" total_time="43.2"/>
+        <result copy="1671.7569" add="1812.6872" user_time="54.48" scale="1640.9564" triad="1828.2345" all="1717.0402" system_time="0.18" total_time="55.07"/>
+        <result copy="1698.5673" add="1867.7535" user_time="48.83" scale="1625.5596" triad="1796.0252" all="1725.2592" system_time="0.18" total_time="49.36"/>
+        <result copy="1991.5502" add="2363.9201" user_time="40.29" scale="2101.4847" triad="2128.6693" all="2094.3114" system_time="0.31" total_time="41.13"/>
+        <result copy="1946.2451" add="2369.5528" user_time="40.22" scale="2221.3363" triad="2186.8196" all="2063.8479" system_time="0.18" total_time="40.84"/>
+        <result copy="1872.3782" add="2181.6094" user_time="49.06" scale="2005.0316" triad="2163.3098" all="2039.9738" system_time="0.18" total_time="49.66"/>
+        <result copy="1589.7559" add="1791.3128" user_time="53.88" scale="1589.5559" triad="1757.6983" all="1685.9741" system_time="0.18" total_time="54.44"/>
+        <result copy="8828.1926" add="8736.1401" user_time="24.2" scale="8830.7546" triad="8909.6762" all="8128.52" system_time="0.07" total_time="24.49"/>
+        <result copy="1978.8522" add="2204.6188" user_time="48.13" scale="1887.6754" triad="2134.0639" all="1904.1767" system_time="0.57" total_time="49.08"/>
+        <result copy="2672.0205" add="3048.5276" user_time="52.64" scale="2647.748" triad="3005.8504" all="2848.0076" system_time="0.47" total_time="53.55"/>
+        <result copy="3290.3207" add="3739.3098" user_time="30.46" scale="3266.1029" triad="3654.7427" all="3507.3263" system_time="0.22" total_time="31.07"/>
+        <result copy="2564.1564" add="2984.4468" user_time="48.0" scale="2526.7067" triad="2928.3816" all="2761.283" system_time="0.2" total_time="48.7"/>
+        <result copy="1957.9171" add="2278.316" user_time="39.03" scale="1924.9644" triad="2118.477" all="2053.9615" system_time="0.27" total_time="39.77"/>
+        <result copy="3882.127" add="4579.2491" user_time="33.29" scale="3728.2156" triad="4327.557" all="3775.4578" system_time="0.13" total_time="33.76"/>
+        <result copy="1907.484" add="2174.7134" user_time="50.91" scale="1933.239" triad="1786.6391" all="1938.4127" system_time="0.21" total_time="51.59"/>
+        <result copy="2544.7836" add="2952.7247" user_time="48.22" scale="2503.8434" triad="2906.5664" all="2723.2067" system_time="0.23" total_time="48.88"/>
+        <result copy="3845.4607" add="4656.0862" user_time="38.0" scale="3330.0949" triad="3645.7127" all="3303.0418" system_time="0.06" total_time="38.42"/>
+        <result copy="3369.1959" add="3792.4085" user_time="30.11" scale="3311.8327" triad="3786.2737" all="3554.5186" system_time="0.19" total_time="30.65"/>
+        <result copy="3845.7355" add="4598.8955" user_time="35.48" scale="4040.0111" triad="5761.9322" all="3932.8635" system_time="0.08" total_time="35.9"/>
+        <result copy="1914.7258" add="2199.8763" user_time="49.44" scale="1897.6417" triad="2073.2787" all="1889.0863" system_time="0.2" total_time="50.01"/>
+        <result copy="1612.1042" add="1878.6114" user_time="52.96" scale="1592.032" triad="1762.5305" all="1703.8978" system_time="0.21" total_time="53.63"/>
+        <result copy="2216.3706" add="2569.2145" user_time="39.32" scale="2166.1009" triad="2411.7942" all="2325.305" system_time="0.2" total_time="39.94"/>
+        <result copy="3618.425" add="4371.5434" user_time="29.77" scale="3706.0288" triad="3826.541" all="3590.5351" system_time="0.27" total_time="30.36"/>
+        <result copy="1583.5685" add="1903.4988" user_time="48.12" scale="1578.3796" triad="1768.1525" all="1706.1955" system_time="0.2" total_time="48.72"/>
+        <result copy="1669.2663" add="1927.6761" user_time="50.57" scale="1597.3716" triad="1789.2639" all="1731.0732" system_time="0.23" total_time="51.3"/>
+        <result copy="1675.8032" add="1906.6316" user_time="55.09" scale="1671.4505" triad="1897.5462" all="1771.6554" system_time="0.51" total_time="55.99"/>
+      </loop>
+      <loop number="4">
+        <result copy="3234.7363" add="3535.0457" user_time="33.73" scale="3039.4831" triad="3524.307" all="3234.6606" system_time="0.27" total_time="34.38"/>
+        <result copy="1868.4847" add="2468.2811" user_time="44.55" scale="1819.8287" triad="2341.326" all="2007.4094" system_time="0.77" total_time="45.82"/>
+        <result copy="2396.7126" add="2589.2398" user_time="43.41" scale="2584.7378" triad="2699.7946" all="2367.1616" system_time="0.75" total_time="44.51"/>
+        <result copy="3496.3794" add="3529.3081" user_time="33.42" scale="3337.7596" triad="3946.0181" all="3279.4906" system_time="0.26" total_time="34.06"/>
+        <result copy="2051.293" add="2172.4071" user_time="44.2" scale="1832.4474" triad="2119.8357" all="1946.9199" system_time="0.31" total_time="44.99"/>
+        <result copy="2512.2026" add="2938.4496" user_time="47.0" scale="2492.0416" triad="2851.5857" all="2697.3058" system_time="0.2" total_time="47.61"/>
+        <result copy="1785.9532" add="1964.2832" user_time="47.86" scale="1717.4735" triad="1868.3884" all="1796.2522" system_time="0.21" total_time="48.56"/>
+        <result copy="1682.6936" add="1865.4973" user_time="48.97" scale="1658.4349" triad="1832.2458" all="1760.4008" system_time="0.2" total_time="49.65"/>
+        <result copy="2174.8786" add="2439.3592" user_time="41.43" scale="2194.352" triad="2364.7493" all="2145.1133" system_time="0.24" total_time="42.09"/>
+        <result copy="1665.2481" add="1864.9422" user_time="48.72" scale="1596.3375" triad="1812.3819" all="1732.2677" system_time="0.2" total_time="49.41"/>
+        <result copy="2177.8556" add="2357.0775" user_time="44.63" scale="2155.4826" triad="2198.8537" all="2116.4758" system_time="0.27" total_time="45.37"/>
+        <result copy="1711.3809" add="1902.7057" user_time="49.25" scale="1577.0506" triad="1830.3118" all="1759.9331" system_time="0.2" total_time="49.8"/>
+        <result copy="1659.9764" add="1837.0918" user_time="50.69" scale="1627.8334" triad="1785.4846" all="1735.5191" system_time="0.18" total_time="51.22"/>
+        <result copy="2300.3418" add="2763.7955" user_time="42.92" scale="2061.8199" triad="2271.9263" all="2153.9271" system_time="0.28" total_time="43.63"/>
+        <result copy="1650.6055" add="1873.0719" user_time="51.68" scale="1631.7421" triad="1774.4942" all="1737.2718" system_time="0.19" total_time="52.29"/>
+        <result copy="2008.6802" add="2215.8878" user_time="44.39" scale="1984.9197" triad="2057.839" all="1957.5538" system_time="0.34" total_time="45.23"/>
+        <result copy="2333.296" add="3181.1817" user_time="44.16" scale="2487.3731" triad="2633.9283" all="2476.1224" system_time="0.42" total_time="44.96"/>
+        <result copy="1767.3149" add="1937.8456" user_time="50.78" scale="1712.542" triad="1865.3353" all="1792.1598" system_time="0.18" total_time="51.35"/>
+        <result copy="1644.0829" add="1829.7973" user_time="48.23" scale="1625.5438" triad="1781.7535" all="1722.1167" system_time="0.19" total_time="48.81"/>
+        <result copy="1937.1553" add="2303.769" user_time="42.94" scale="2174.2015" triad="2108.0057" all="2044.9643" system_time="0.33" total_time="43.74"/>
+        <result copy="1685.7139" add="1936.4373" user_time="46.16" scale="1636.4494" triad="1794.8076" all="1766.1232" system_time="0.19" total_time="46.69"/>
+        <result copy="4279.7981" add="4271.0338" user_time="41.97" scale="4135.5856" triad="4160.3741" all="3636.4263" system_time="0.17" total_time="42.5"/>
+        <result copy="2562.7201" add="2935.9052" user_time="37.08" scale="2503.1208" triad="2874.6746" all="2717.8144" system_time="0.19" total_time="37.58"/>
+        <result copy="2554.7582" add="2976.3819" user_time="38.81" scale="2519.7562" triad="2903.7046" all="2753.8262" system_time="0.2" total_time="39.38"/>
+        <result copy="1962.4789" add="2190.3261" user_time="43.72" scale="1837.2664" triad="2086.2998" all="1983.2264" system_time="0.72" total_time="44.9"/>
+        <result copy="2293.0263" add="2396.8765" user_time="43.46" scale="2135.0125" triad="2377.1571" all="2168.4817" system_time="0.46" total_time="44.3"/>
+        <result copy="1675.4896" add="1863.5156" user_time="50.44" scale="1601.5579" triad="1819.4519" all="1740.7506" system_time="0.21" total_time="51.16"/>
+        <result copy="3325.6541" add="3690.6353" user_time="33.36" scale="3144.2483" triad="3882.7916" all="3348.828" system_time="0.25" total_time="33.97"/>
+        <result copy="5511.6292" add="6348.1413" user_time="39.47" scale="5375.3882" triad="5121.2212" all="4599.0548" system_time="0.11" total_time="39.92"/>
+        <result copy="2541.1551" add="2908.5981" user_time="37.25" scale="2487.2335" triad="2885.899" all="2703.3387" system_time="0.2" total_time="37.85"/>
+        <result copy="4049.1662" add="5141.785" user_time="31.66" scale="4056.8711" triad="4723.5914" all="3899.4162" system_time="0.38" total_time="32.33"/>
+        <result copy="1672.4956" add="1855.5516" user_time="49.03" scale="1649.0615" triad="1809.4322" all="1756.8024" system_time="0.2" total_time="49.64"/>
+        <result copy="1639.1097" add="1810.7153" user_time="50.73" scale="1614.9396" triad="1780.3448" all="1714.9146" system_time="0.2" total_time="51.34"/>
+        <result copy="2547.6668" add="2976.6674" user_time="48.2" scale="2559.9113" triad="2900.2352" all="2748.5926" system_time="0.18" total_time="48.79"/>
+        <result copy="1673.39" add="1834.2729" user_time="48.35" scale="1625.7112" triad="1816.9391" all="1739.5046" system_time="0.19" total_time="48.93"/>
+        <result copy="1631.063" add="1896.1794" user_time="51.85" scale="1634.7865" triad="1825.6414" all="1755.3044" system_time="0.63" total_time="52.88"/>
+        <result copy="2416.3924" add="2592.7403" user_time="42.41" scale="2042.2215" triad="2638.0511" all="2084.3083" system_time="0.24" total_time="43.06"/>
+        <result copy="7817.2247" add="9483.4878" user_time="31.56" scale="8273.0149" triad="8470.9761" all="7813.496" system_time="0.09" total_time="31.97"/>
+        <result copy="1663.613" add="1879.8181" user_time="50.14" scale="1633.4946" triad="1781.6143" all="1743.4119" system_time="0.21" total_time="50.84"/>
+        <result copy="2402.7073" add="2848.996" user_time="46.79" scale="2408.4392" triad="2811.8657" all="2621.5244" system_time="0.21" total_time="47.48"/>
+      </loop>
+      <loop number="5">
+        <result copy="2258.1649" add="2413.7342" user_time="37.77" scale="2200.2815" triad="2414.6414" all="2295.3729" system_time="0.38" total_time="38.69"/>
+        <result copy="4246.5436" add="4821.5072" user_time="37.5" scale="5252.5567" triad="5486.4188" all="4066.1346" system_time="0.43" total_time="38.26"/>
+        <result copy="1573.2538" add="1733.8292" user_time="53.41" scale="1532.2157" triad="1720.0937" all="1629.7947" system_time="0.19" total_time="53.96"/>
+        <result copy="3600.9139" add="3981.9165" user_time="30.88" scale="3421.0005" triad="3875.2672" all="3695.3344" system_time="0.32" total_time="31.63"/>
+        <result copy="3348.1001" add="3783.542" user_time="36.68" scale="3306.08" triad="3733.5475" all="3424.7718" system_time="0.37" total_time="37.59"/>
+        <result copy="2225.0721" add="2490.5683" user_time="38.64" scale="2034.4677" triad="2332.0358" all="2267.9483" system_time="0.4" total_time="39.55"/>
+        <result copy="3018.7685" add="2541.0837" user_time="50.55" scale="2025.4484" triad="2779.5735" all="2366.5953" system_time="0.22" total_time="51.36"/>
+        <result copy="2418.5204" add="2828.809" user_time="45.73" scale="2405.3812" triad="2753.7534" all="2615.3153" system_time="0.19" total_time="46.39"/>
+        <result copy="2972.4046" add="3442.1367" user_time="54.63" scale="2999.2043" triad="2936.6796" all="3093.2813" system_time="0.23" total_time="55.34"/>
+        <result copy="2025.6266" add="2094.634" user_time="55.03" scale="2036.477" triad="2721.5272" all="2038.2534" system_time="0.6" total_time="56.02"/>
+        <result copy="1608.3653" add="1797.8826" user_time="56.07" scale="1549.2936" triad="1664.2776" all="1642.6281" system_time="0.19" total_time="56.61"/>
+        <result copy="2405.1904" add="2832.8195" user_time="55.67" scale="2418.3268" triad="2738.3987" all="2586.7918" system_time="0.54" total_time="56.56"/>
+        <result copy="4040.6768" add="4527.7504" user_time="35.58" scale="4428.422" triad="5917.2579" all="4332.7402" system_time="0.06" total_time="35.92"/>
+        <result copy="2148.7765" add="2507.1972" user_time="38.77" scale="2181.0184" triad="2311.3069" all="2276.0929" system_time="0.39" total_time="39.69"/>
+        <result copy="4285.7566" add="4263.1422" user_time="35.84" scale="3502.0573" triad="4123.8016" all="3793.1087" system_time="0.36" total_time="36.67"/>
+        <result copy="2396.281" add="2793.0463" user_time="47.04" scale="2358.7471" triad="2737.3593" all="2593.8242" system_time="0.2" total_time="47.85"/>
+        <result copy="2348.0924" add="2728.3135" user_time="52.49" scale="2350.6887" triad="2672.3373" all="2531.6235" system_time="0.21" total_time="53.11"/>
+        <result copy="4158.91" add="4870.0913" user_time="28.93" scale="4615.3456" triad="4952.3058" all="4389.1933" system_time="0.47" total_time="29.68"/>
+        <result copy="1657.226" add="1861.1364" user_time="53.28" scale="1587.5131" triad="1705.3151" all="1682.4311" system_time="0.22" total_time="53.93"/>
+        <result copy="2340.8513" add="2689.149" user_time="50.19" scale="2316.3466" triad="2646.9397" all="2508.0813" system_time="0.18" total_time="50.72"/>
+        <result copy="2436.4092" add="2757.3324" user_time="53.63" scale="2393.299" triad="2730.5718" all="2557.3529" system_time="0.19" total_time="54.15"/>
+        <result copy="2503.6039" add="2858.3758" user_time="47.95" scale="2425.4904" triad="2826.7965" all="2618.3363" system_time="0.17" total_time="48.48"/>
+        <result copy="9034.757" add="10035.7553" user_time="18.3" scale="9223.7547" triad="9819.5201" all="9537.8335" system_time="0.04" total_time="18.5"/>
+        <result copy="1561.8352" add="1836.6521" user_time="49.17" scale="1538.0394" triad="1663.0602" all="1638.656" system_time="0.19" total_time="49.94"/>
+        <result copy="2417.0059" add="2800.0701" user_time="48.33" scale="2392.0364" triad="2728.6664" all="2591.5725" system_time="0.51" total_time="49.19"/>
+        <result copy="2412.2524" add="2773.314" user_time="44.76" scale="2477.6881" triad="2779.7999" all="2575.4953" system_time="0.2" total_time="45.51"/>
+        <result copy="3580.3705" add="3946.4359" user_time="30.92" scale="3442.5982" triad="3918.3528" all="3711.7995" system_time="0.33" total_time="31.68"/>
+        <result copy="1557.5327" add="1736.8326" user_time="56.81" scale="1512.9781" triad="1731.0202" all="1628.2883" system_time="0.18" total_time="57.33"/>
+        <result copy="2225.4449" add="2468.4729" user_time="38.05" scale="2213.0362" triad="2388.9466" all="2293.4357" system_time="0.56" total_time="39.14"/>
+        <result copy="4288.3432" add="5173.7441" user_time="36.69" scale="3712.0933" triad="4745.7354" all="3747.0461" system_time="0.44" total_time="37.49"/>
+        <result copy="2467.1359" add="2803.9083" user_time="51.87" scale="2382.0618" triad="2756.48" all="2601.8449" system_time="0.2" total_time="52.55"/>
+        <result copy="2421.9124" add="2778.1941" user_time="53.26" scale="2389.3737" triad="2750.0862" all="2581.6688" system_time="0.19" total_time="53.88"/>
+        <result copy="4462.6188" add="4593.4329" user_time="34.94" scale="3727.4753" triad="4293.7023" all="4156.3489" system_time="0.04" total_time="35.27"/>
+        <result copy="3666.3413" add="7557.0984" user_time="32.93" scale="4813.4421" triad="7936.1479" all="5593.763" system_time="0.16" total_time="33.38"/>
+        <result copy="6189.8963" add="5395.2383" user_time="32.92" scale="4472.6698" triad="6375.5519" all="4303.036" system_time="0.05" total_time="33.24"/>
+        <result copy="1645.7677" add="1774.4347" user_time="50.0" scale="1543.9595" triad="1761.4257" all="1669.1621" system_time="0.2" total_time="50.77"/>
+        <result copy="1653.8604" add="1799.2175" user_time="56.97" scale="1550.4875" triad="1697.224" all="1658.2624" system_time="0.51" total_time="58.03"/>
+        <result copy="1549.1147" add="1846.2417" user_time="54.42" scale="1528.3934" triad="1645.831" all="1625.2696" system_time="0.21" total_time="54.97"/>
+        <result copy="2087.2199" add="2296.7542" user_time="52.82" scale="1945.3669" triad="2232.6975" all="2052.1499" system_time="0.26" total_time="53.63"/>
+        <result copy="2372.9" add="2754.875" user_time="48.78" scale="2348.443" triad="2703.0572" all="2553.6794" system_time="0.2" total_time="49.61"/>
+      </loop>
+    </run>
+    <run instances_no="48">
+      <loop number="1">
+        <result copy="2028.6676" add="1955.9032" user_time="53.87" scale="2060.0678" triad="2114.3215" all="1852.3216" system_time="0.38" total_time="55.74"/>
+        <result copy="1978.9843" add="2162.0402" user_time="53.49" scale="2133.3187" triad="1905.8004" all="2036.7238" system_time="0.12" total_time="54.56"/>
+        <result copy="1594.7392" add="1844.8626" user_time="56.19" scale="1567.8081" triad="1736.0954" all="1687.5921" system_time="0.19" total_time="57.25"/>
+        <result copy="1668.2849" add="1864.4403" user_time="56.6" scale="1661.3173" triad="1824.0719" all="1751.3282" system_time="0.2" total_time="57.67"/>
+        <result copy="1648.6436" add="1911.1766" user_time="56.72" scale="1556.6859" triad="1787.0561" all="1716.3156" system_time="0.2" total_time="58.23"/>
+        <result copy="1717.3874" add="2403.1934" user_time="55.61" scale="2089.3603" triad="1780.0205" all="1973.8535" system_time="0.18" total_time="57.23"/>
+        <result copy="1647.6677" add="1863.8642" user_time="55.59" scale="1555.0142" triad="1783.905" all="1715.664" system_time="0.18" total_time="56.71"/>
+        <result copy="1800.3379" add="1963.0174" user_time="53.6" scale="1804.6862" triad="1958.9352" all="1866.1556" system_time="0.45" total_time="55.4"/>
+        <result copy="1691.7092" add="1882.3027" user_time="55.81" scale="1651.8111" triad="1829.2919" all="1754.5602" system_time="0.18" total_time="56.5"/>
+        <result copy="1658.0213" add="1884.7843" user_time="57.14" scale="1553.6851" triad="1787.5315" all="1720.2019" system_time="0.18" total_time="57.92"/>
+        <result copy="2390.7771" add="2373.2702" user_time="52.6" scale="2025.6149" triad="2377.023" all="2298.8167" system_time="0.12" total_time="53.91"/>
+        <result copy="1770.9276" add="1992.3035" user_time="53.71" scale="1907.1467" triad="1897.0154" all="1820.5032" system_time="0.23" total_time="55.02"/>
+        <result copy="1616.8492" add="1846.0952" user_time="56.39" scale="1588.8074" triad="1720.5646" all="1693.2046" system_time="0.2" total_time="57.25"/>
+        <result copy="1639.6868" add="2103.998" user_time="57.04" scale="1932.8687" triad="1817.7934" all="1752.8334" system_time="0.18" total_time="58.09"/>
+        <result copy="1622.7465" add="1867.4829" user_time="55.87" scale="1586.9679" triad="1730.8248" all="1701.8144" system_time="0.19" total_time="56.97"/>
+        <result copy="1665.8213" add="1867.7507" user_time="56.78" scale="1586.0243" triad="1795.8033" all="1712.3741" system_time="0.46" total_time="58.43"/>
+        <result copy="2011.6753" add="2092.4658" user_time="53.85" scale="1652.5223" triad="1962.5073" all="1796.6643" system_time="0.22" total_time="55.36"/>
+        <result copy="1826.6174" add="2281.2467" user_time="53.07" scale="1900.8845" triad="1919.5635" all="1926.4017" system_time="0.11" total_time="54.28"/>
+        <result copy="1674.2597" add="1886.4944" user_time="55.87" scale="1585.0842" triad="1813.3032" all="1744.0534" system_time="0.2" total_time="56.88"/>
+        <result copy="1634.888" add="1873.8271" user_time="56.48" scale="1770.6942" triad="1785.8925" all="1717.5023" system_time="0.18" total_time="57.63"/>
+        <result copy="1583.1424" add="1831.5863" user_time="56.09" scale="1548.7028" triad="1767.7265" all="1683.9866" system_time="0.19" total_time="57.14"/>
+        <result copy="1639.6892" add="1841.6014" user_time="56.21" scale="1564.8519" triad="1762.9223" all="1701.6709" system_time="0.19" total_time="57.26"/>
+        <result copy="2285.6707" add="2491.5711" user_time="52.55" scale="2421.5461" triad="2336.7233" all="2236.6348" system_time="0.11" total_time="53.75"/>
+        <result copy="1960.6838" add="2287.6063" user_time="54.07" scale="2086.4281" triad="1945.6988" all="1891.2495" system_time="0.54" total_time="55.83"/>
+        <result copy="1681.2635" add="1864.8975" user_time="55.4" scale="1619.0756" triad="1829.1092" all="1753.5453" system_time="0.18" total_time="56.07"/>
+        <result copy="1868.6907" add="2053.1017" user_time="52.98" scale="1940.8556" triad="1939.9717" all="1919.0532" system_time="0.11" total_time="54.39"/>
+        <result copy="2137.8188" add="2325.824" user_time="53.53" scale="2056.5087" triad="2281.9489" all="2209.6977" system_time="0.07" total_time="54.43"/>
+        <result copy="1616.3091" add="1871.7833" user_time="56.96" scale="1595.9688" triad="1783.5129" all="1718.1708" system_time="0.2" total_time="58.23"/>
+        <result copy="2139.2964" add="2239.1612" user_time="53.34" scale="1991.4956" triad="1920.7879" all="2065.7727" system_time="0.09" total_time="54.65"/>
+        <result copy="1654.4792" add="1927.6185" user_time="55.39" scale="1626.6228" triad="1747.6827" all="1741.5818" system_time="0.2" total_time="56.37"/>
+        <result copy="1655.0565" add="1900.9179" user_time="56.06" scale="1594.9813" triad="1747.9861" all="1729.8841" system_time="0.19" total_time="56.82"/>
+        <result copy="2002.5779" add="2026.6626" user_time="54.47" scale="1806.6691" triad="1875.9078" all="1790.3608" system_time="0.38" total_time="55.76"/>
+        <result copy="2594.6394" add="2755.0171" user_time="51.43" scale="2167.7565" triad="2410.6946" all="2396.5107" system_time="0.08" total_time="52.41"/>
+        <result copy="1953.9881" add="2050.526" user_time="53.75" scale="1891.9823" triad="2020.197" all="1847.364" system_time="0.55" total_time="55.4"/>
+        <result copy="1764.8444" add="2139.2823" user_time="53.92" scale="1681.6616" triad="1926.4811" all="1833.0459" system_time="0.19" total_time="55.22"/>
+        <result copy="1693.7702" add="1888.3343" user_time="56.32" scale="1561.8433" triad="1815.8391" all="1744.7199" system_time="0.17" total_time="57.1"/>
+        <result copy="2207.7291" add="2207.2955" user_time="53.19" scale="2219.8018" triad="2021.2513" all="2150.4229" system_time="0.12" total_time="54.19"/>
+        <result copy="1647.0331" add="1841.8726" user_time="56.92" scale="1527.6784" triad="1762.7291" all="1694.2283" system_time="0.17" total_time="57.85"/>
+        <result copy="1810.6232" add="1965.7364" user_time="54.34" scale="1723.9608" triad="2049.7232" all="1816.2682" system_time="0.41" total_time="55.86"/>
+        <result copy="1759.2301" add="1950.2012" user_time="53.93" scale="1738.8564" triad="1875.4366" all="1833.1681" system_time="0.5" total_time="55.64"/>
+        <result copy="1661.8065" add="1884.0346" user_time="55.62" scale="1663.7832" triad="1806.5701" all="1754.2437" system_time="0.19" total_time="56.43"/>
+        <result copy="2043.8271" add="2059.7673" user_time="54.06" scale="1707.5823" triad="2171.6304" all="1868.7967" system_time="0.37" total_time="55.64"/>
+        <result copy="2538.2645" add="2884.9588" user_time="53.39" scale="2562.8442" triad="2840.3384" all="2701.3944" system_time="0.34" total_time="54.39"/>
+        <result copy="1639.6453" add="1863.0694" user_time="56.25" scale="1539.7139" triad="1801.7187" all="1697.0091" system_time="0.18" total_time="57.2"/>
+        <result copy="1675.8353" add="1896.9269" user_time="55.7" scale="1634.9945" triad="1810.4774" all="1753.0345" system_time="0.19" total_time="56.77"/>
+        <result copy="2569.7762" add="2705.5607" user_time="51.72" scale="2150.4361" triad="2392.037" all="2380.0833" system_time="0.09" total_time="52.81"/>
+        <result copy="2283.7136" add="2455.4235" user_time="53.08" scale="2190.4986" triad="2359.1987" all="2335.246" system_time="0.1" total_time="53.99"/>
+        <result copy="2033.7598" add="2008.3429" user_time="54.21" scale="1759.2766" triad="2005.1376" all="1901.1928" system_time="0.43" total_time="55.8"/>
+      </loop>
+      <loop number="2">
+        <result copy="1857.6561" add="2103.833" user_time="53.33" scale="2069.5987" triad="2003.0716" all="1919.087" system_time="0.23" total_time="54.8"/>
+        <result copy="1598.8503" add="1835.8" user_time="58.76" scale="1514.4168" triad="1757.6076" all="1688.4787" system_time="0.2" total_time="59.57"/>
+        <result copy="2727.5695" add="3848.2684" user_time="51.19" scale="2789.5431" triad="2697.4397" all="2853.3701" system_time="0.12" total_time="52.12"/>
+        <result copy="1723.7562" add="2011.958" user_time="52.44" scale="2224.8941" triad="2439.5378" all="1890.1967" system_time="0.56" total_time="54.63"/>
+        <result copy="1630.4258" add="1888.654" user_time="57.84" scale="1582.5886" triad="1719.8952" all="1712.8494" system_time="0.22" total_time="59.11"/>
+        <result copy="1620.4085" add="1893.5944" user_time="56.42" scale="1589.3955" triad="1842.6807" all="1744.4337" system_time="0.18" total_time="57.21"/>
+        <result copy="1916.3317" add="2042.6137" user_time="53.93" scale="1827.5203" triad="1879.3458" all="1848.6826" system_time="0.43" total_time="55.59"/>
+        <result copy="1846.1414" add="2015.7188" user_time="52.91" scale="1743.6688" triad="2321.3955" all="1903.4575" system_time="0.42" total_time="54.52"/>
+        <result copy="1635.5802" add="1881.4333" user_time="56.7" scale="1596.5009" triad="1739.4488" all="1717.2398" system_time="0.17" total_time="57.36"/>
+        <result copy="1901.7583" add="2119.9918" user_time="51.98" scale="1968.6268" triad="2016.9029" all="1948.8856" system_time="0.22" total_time="53.68"/>
+        <result copy="1674.0162" add="1842.3116" user_time="56.18" scale="1619.2287" triad="1809.6441" all="1738.5656" system_time="0.18" total_time="57.18"/>
+        <result copy="2023.4611" add="2398.8788" user_time="53.45" scale="1838.8253" triad="2243.7602" all="1960.8504" system_time="0.66" total_time="55.69"/>
+        <result copy="1871.2555" add="2090.965" user_time="53.03" scale="1806.6752" triad="1931.6278" all="1887.4689" system_time="0.23" total_time="54.3"/>
+        <result copy="1643.9867" add="1837.0052" user_time="56.18" scale="1549.5601" triad="1774.372" all="1711.511" system_time="0.2" total_time="57.53"/>
+        <result copy="1701.1969" add="1917.5407" user_time="56.11" scale="1632.0214" triad="1795.1516" all="1774.0597" system_time="0.19" total_time="57.55"/>
+        <result copy="1565.0492" add="1818.0105" user_time="56.29" scale="1538.9865" triad="1777.6806" all="1683.5311" system_time="0.21" total_time="57.62"/>
+        <result copy="1635.3889" add="1883.3783" user_time="56.7" scale="1578.012" triad="1730.268" all="1714.2642" system_time="0.18" total_time="57.46"/>
+        <result copy="1839.8087" add="2100.6241" user_time="54.1" scale="1771.3956" triad="1937.7879" all="1875.0638" system_time="0.29" total_time="55.44"/>
+        <result copy="1798.6173" add="1995.4227" user_time="54.05" scale="1821.1582" triad="2241.1526" all="1875.4403" system_time="0.49" total_time="55.81"/>
+        <result copy="1884.1065" add="2423.5704" user_time="52.48" scale="1871.232" triad="2016.4857" all="1982.9713" system_time="0.65" total_time="54.73"/>
+        <result copy="1639.2434" add="1902.7974" user_time="54.96" scale="1571.0934" triad="1813.7572" all="1738.9013" system_time="0.2" total_time="56.28"/>
+        <result copy="1603.9988" add="1831.0793" user_time="57.51" scale="1504.5279" triad="1745.2473" all="1679.3613" system_time="0.2" total_time="58.48"/>
+        <result copy="1814.1406" add="2035.0141" user_time="53.67" scale="1775.9254" triad="1941.9388" all="1875.6529" system_time="0.41" total_time="55.29"/>
+        <result copy="1667.8389" add="1847.8671" user_time="58.52" scale="1526.2008" triad="1781.4858" all="1708.5652" system_time="0.18" total_time="59.2"/>
+        <result copy="1842.5959" add="2045.4693" user_time="53.42" scale="1986.8486" triad="1953.7321" all="1879.7845" system_time="0.81" total_time="55.79"/>
+        <result copy="2755.5092" add="2849.2123" user_time="51.31" scale="2176.8236" triad="2471.6737" all="2427.4197" system_time="0.12" total_time="52.58"/>
+        <result copy="1619.2862" add="1845.788" user_time="56.62" scale="1564.5554" triad="1708.5864" all="1690.4421" system_time="0.2" total_time="57.45"/>
+        <result copy="1624.9523" add="1897.7456" user_time="55.69" scale="1623.6755" triad="1786.911" all="1740.0143" system_time="0.2" total_time="57.0"/>
+        <result copy="2941.6324" add="3843.425" user_time="48.07" scale="2868.8573" triad="3300.8711" all="2957.7212" system_time="0.06" total_time="49.17"/>
+        <result copy="2667.8861" add="3221.8515" user_time="51.13" scale="2851.8851" triad="3201.2339" all="2749.6829" system_time="0.06" total_time="52.22"/>
+        <result copy="1817.1896" add="2044.5687" user_time="53.62" scale="1760.5526" triad="1987.6845" all="1912.3622" system_time="0.18" total_time="54.68"/>
+        <result copy="1615.0658" add="1852.6727" user_time="56.66" scale="1563.675" triad="1708.8327" all="1690.5874" system_time="0.21" total_time="57.55"/>
+        <result copy="1621.8511" add="1899.8779" user_time="57.93" scale="1601.6592" triad="1839.3872" all="1743.3742" system_time="0.2" total_time="59.21"/>
+        <result copy="2082.0693" add="2190.9953" user_time="52.68" scale="1806.4559" triad="2125.5783" all="1913.6643" system_time="0.22" total_time="54.08"/>
+        <result copy="1596.8222" add="1859.115" user_time="58.2" scale="1550.927" triad="1685.8406" all="1682.8702" system_time="0.2" total_time="59.57"/>
+        <result copy="1688.6866" add="1900.7053" user_time="56.29" scale="1628.6255" triad="1788.5445" all="1750.7283" system_time="0.19" total_time="57.01"/>
+        <result copy="1764.7" add="2019.1625" user_time="54.29" scale="1679.6817" triad="1945.5629" all="1845.1564" system_time="0.52" total_time="55.67"/>
+        <result copy="1661.1332" add="1862.6807" user_time="56.16" scale="1640.217" triad="1778.9397" all="1743.4157" system_time="0.22" total_time="57.39"/>
+        <result copy="1646.3185" add="1871.6864" user_time="55.57" scale="1542.9799" triad="1775.9979" all="1716.2864" system_time="0.21" total_time="56.57"/>
+        <result copy="1632.5316" add="1867.4943" user_time="58.5" scale="1524.0631" triad="1774.4524" all="1703.0407" system_time="0.19" total_time="59.28"/>
+        <result copy="3106.7343" add="3620.0787" user_time="50.37" scale="3115.6689" triad="3182.3806" all="3101.2078" system_time="0.05" total_time="51.12"/>
+        <result copy="1756.8254" add="2148.0523" user_time="53.55" scale="2007.306" triad="1959.2902" all="1910.0376" system_time="0.63" total_time="55.75"/>
+        <result copy="1645.561" add="1900.9808" user_time="58.14" scale="1602.0915" triad="1758.3419" all="1736.1807" system_time="0.2" total_time="59.25"/>
+        <result copy="3393.3944" add="3662.3814" user_time="50.67" scale="3243.0726" triad="3778.2268" all="3178.5011" system_time="0.06" total_time="51.92"/>
+        <result copy="1599.2495" add="1836.6606" user_time="58.06" scale="1507.6791" triad="1760.7737" all="1683.0996" system_time="0.19" total_time="58.94"/>
+        <result copy="1618.2421" add="1856.1911" user_time="57.92" scale="1585.6502" triad="1750.2711" all="1708.9609" system_time="0.19" total_time="59.24"/>
+        <result copy="1765.1486" add="2007.7682" user_time="53.66" scale="1722.9733" triad="1932.5711" all="1837.9434" system_time="0.31" total_time="55.06"/>
+        <result copy="2188.4703" add="2359.5061" user_time="53.11" scale="2079.8894" triad="2202.9934" all="1965.0366" system_time="0.63" total_time="55.35"/>
+      </loop>
+      <loop number="3">
+        <result copy="1801.7957" add="2246.8233" user_time="55.09" scale="2093.6158" triad="1901.6583" all="1863.3752" system_time="0.44" total_time="56.52"/>
+        <result copy="2654.698" add="3067.9888" user_time="54.93" scale="2378.5354" triad="3003.4069" all="2718.8952" system_time="0.51" total_time="56.27"/>
+        <result copy="1640.1913" add="1909.1596" user_time="56.54" scale="1609.5891" triad="1828.5526" all="1753.6247" system_time="0.19" total_time="57.71"/>
+        <result copy="2224.7399" add="2401.6399" user_time="51.82" scale="2157.6421" triad="2631.1515" all="2255.964" system_time="0.21" total_time="52.95"/>
+        <result copy="1645.2942" add="1976.8784" user_time="56.5" scale="1593.7231" triad="1990.0251" all="1806.6693" system_time="0.19" total_time="57.88"/>
+        <result copy="2167.5517" add="2390.7607" user_time="54.08" scale="2052.281" triad="2293.5307" all="2092.3507" system_time="0.35" total_time="55.54"/>
+        <result copy="1819.5223" add="2187.0828" user_time="54.55" scale="1690.0246" triad="2095.289" all="1870.6786" system_time="0.7" total_time="56.72"/>
+        <result copy="1662.5578" add="1848.9534" user_time="58.1" scale="1556.1273" triad="1777.3429" all="1713.2374" system_time="0.21" total_time="59.02"/>
+        <result copy="1958.633" add="1981.4096" user_time="54.8" scale="1712.1968" triad="2020.5621" all="1870.562" system_time="0.67" total_time="56.67"/>
+        <result copy="1610.9627" add="2319.6748" user_time="58.22" scale="2040.6699" triad="1888.7618" all="1940.1099" system_time="0.18" total_time="59.17"/>
+        <result copy="1594.1509" add="1860.3827" user_time="57.03" scale="1604.2466" triad="1792.9057" all="1722.1372" system_time="0.18" total_time="58.6"/>
+        <result copy="1718.9167" add="1859.9195" user_time="57.58" scale="1553.8869" triad="1799.3543" all="1715.324" system_time="0.2" total_time="58.8"/>
+        <result copy="1631.9923" add="2256.4435" user_time="56.21" scale="1601.6163" triad="1985.7289" all="1716.6527" system_time="0.2" total_time="57.76"/>
+        <result copy="1664.5587" add="1861.8703" user_time="56.5" scale="1555.756" triad="1790.7067" all="1715.3153" system_time="0.22" total_time="57.81"/>
+        <result copy="1661.7391" add="1845.8515" user_time="56.39" scale="1633.5802" triad="1815.3645" all="1741.539" system_time="0.21" total_time="57.76"/>
+        <result copy="1640.0422" add="1889.0887" user_time="56.7" scale="1597.7728" triad="1760.2147" all="1723.2635" system_time="0.19" total_time="57.58"/>
+        <result copy="1841.4595" add="1941.8346" user_time="55.21" scale="1909.7597" triad="1920.9273" all="1812.6106" system_time="0.65" total_time="56.76"/>
+        <result copy="1677.6847" add="1912.7096" user_time="56.35" scale="1644.9322" triad="1815.9822" all="1757.8625" system_time="0.2" total_time="57.57"/>
+        <result copy="3736.2344" add="3879.7555" user_time="50.21" scale="3371.6014" triad="5125.0632" all="3638.7624" system_time="0.17" total_time="51.64"/>
+        <result copy="1639.3762" add="1891.5425" user_time="57.89" scale="1600.4765" triad="1751.0182" all="1718.5853" system_time="0.2" total_time="58.95"/>
+        <result copy="2092.8295" add="2119.1708" user_time="54.66" scale="1836.6388" triad="2113.6453" all="1909.0236" system_time="0.51" total_time="56.41"/>
+        <result copy="2025.9796" add="2298.58" user_time="53.73" scale="1793.1988" triad="2005.9474" all="1970.7596" system_time="0.77" total_time="56.29"/>
+        <result copy="1778.8041" add="2050.6108" user_time="53.49" scale="1763.0888" triad="2009.2333" all="1898.0755" system_time="0.54" total_time="55.41"/>
+        <result copy="1610.1838" add="1871.5632" user_time="56.07" scale="1585.681" triad="1753.7806" all="1703.1192" system_time="0.2" total_time="57.0"/>
+        <result copy="2125.3849" add="2257.3074" user_time="54.65" scale="1788.9793" triad="2024.6733" all="1956.9526" system_time="0.45" total_time="56.32"/>
+        <result copy="1646.906" add="1845.3279" user_time="58.16" scale="1574.4086" triad="1778.5903" all="1699.4315" system_time="0.19" total_time="59.08"/>
+        <result copy="1647.9056" add="1922.1895" user_time="56.36" scale="1623.3149" triad="1812.2562" all="1756.0656" system_time="0.18" total_time="57.42"/>
+        <result copy="1668.3414" add="1911.9327" user_time="56.82" scale="1643.55" triad="1812.879" all="1754.5383" system_time="0.2" total_time="58.01"/>
+        <result copy="1964.4359" add="1986.5885" user_time="55.26" scale="1790.7471" triad="1963.6713" all="1888.1335" system_time="0.41" total_time="56.65"/>
+        <result copy="1687.8549" add="1891.647" user_time="56.42" scale="1605.4688" triad="1824.2953" all="1752.617" system_time="0.2" total_time="57.64"/>
+        <result copy="2451.0792" add="2796.9053" user_time="54.67" scale="1929.993" triad="2124.3705" all="2091.5546" system_time="0.48" total_time="55.8"/>
+        <result copy="1617.6497" add="1841.4367" user_time="57.28" scale="1562.9683" triad="1787.2401" all="1698.6527" system_time="0.2" total_time="58.4"/>
+        <result copy="1622.9615" add="2070.3098" user_time="55.71" scale="1576.6103" triad="1776.2218" all="1687.9089" system_time="0.2" total_time="56.86"/>
+        <result copy="1863.5666" add="2189.4444" user_time="52.58" scale="2028.3348" triad="2058.0883" all="2006.8243" system_time="0.76" total_time="54.67"/>
+        <result copy="3842.4837" add="4456.0011" user_time="48.43" scale="4013.7745" triad="4764.6243" all="3898.9058" system_time="0.04" total_time="49.28"/>
+        <result copy="2244.7596" add="2338.8236" user_time="54.01" scale="2359.4074" triad="2160.1215" all="2071.9415" system_time="0.29" total_time="55.37"/>
+        <result copy="1866.1817" add="2244.5173" user_time="54.18" scale="1958.5258" triad="2067.9884" all="1928.332" system_time="0.46" total_time="56.18"/>
+        <result copy="1601.501" add="1874.5761" user_time="55.66" scale="1603.613" triad="1812.4879" all="1732.9799" system_time="0.2" total_time="57.64"/>
+        <result copy="1921.3617" add="2291.9603" user_time="54.39" scale="1876.2299" triad="2177.9398" all="1974.4899" system_time="0.35" total_time="55.73"/>
+        <result copy="2955.4303" add="3513.8275" user_time="51.91" scale="3032.4557" triad="2923.4744" all="3020.4689" system_time="0.2" total_time="52.93"/>
+        <result copy="1679.271" add="1881.646" user_time="56.35" scale="1578.804" triad="1823.9188" all="1753.1798" system_time="0.21" total_time="57.57"/>
+        <result copy="1832.3666" add="2152.967" user_time="54.91" scale="1919.4575" triad="2175.3975" all="1852.6672" system_time="0.67" total_time="56.86"/>
+        <result copy="1615.4561" add="1858.1188" user_time="57.74" scale="1562.1493" triad="1756.2838" all="1691.7847" system_time="0.45" total_time="59.28"/>
+        <result copy="1780.413" add="2047.133" user_time="54.89" scale="1739.0654" triad="2014.7908" all="1862.8734" system_time="0.59" total_time="56.57"/>
+        <result copy="1668.9686" add="1865.7518" user_time="56.33" scale="1653.1753" triad="1819.8611" all="1750.9187" system_time="0.19" total_time="57.54"/>
+        <result copy="1609.2507" add="1854.4733" user_time="56.94" scale="1586.275" triad="1788.8468" all="1700.9858" system_time="0.19" total_time="57.7"/>
+        <result copy="3848.1574" add="4475.2765" user_time="48.36" scale="4024.1774" triad="4016.8268" all="3943.0269" system_time="0.05" total_time="49.37"/>
+        <result copy="2471.9695" add="2458.0569" user_time="53.34" scale="2046.0351" triad="2430.6766" all="2262.2985" system_time="0.3" total_time="54.64"/>
+      </loop>
+      <loop number="4">
+        <result copy="1670.8755" add="1925.4869" user_time="56.05" scale="1656.4122" triad="1787.3783" all="1759.5032" system_time="0.16" total_time="56.98"/>
+        <result copy="1736.3004" add="2078.4717" user_time="54.58" scale="1986.4857" triad="2040.3604" all="1830.9927" system_time="0.51" total_time="56.61"/>
+        <result copy="1616.7521" add="1787.394" user_time="56.72" scale="1590.1442" triad="1764.1255" all="1691.1592" system_time="0.18" total_time="57.4"/>
+        <result copy="1676.5123" add="1883.3391" user_time="55.96" scale="1580.2679" triad="1809.3989" all="1737.6953" system_time="0.2" total_time="57.34"/>
+        <result copy="2114.7884" add="2135.5542" user_time="53.22" scale="1932.8695" triad="2004.2725" all="1957.0673" system_time="0.25" total_time="54.79"/>
+        <result copy="1872.9496" add="2021.1336" user_time="53.67" scale="1759.3544" triad="2263.3138" all="1960.0218" system_time="0.18" total_time="55.29"/>
+        <result copy="1611.396" add="1798.3951" user_time="56.69" scale="1596.9985" triad="1766.9101" all="1691.7114" system_time="0.18" total_time="57.38"/>
+        <result copy="1936.8344" add="2018.2265" user_time="54.0" scale="2009.8886" triad="2155.804" all="1884.6867" system_time="0.25" total_time="55.84"/>
+        <result copy="1761.2462" add="2019.0778" user_time="53.93" scale="1675.6354" triad="1875.185" all="1820.6653" system_time="0.25" total_time="55.23"/>
+        <result copy="1690.4191" add="1906.9365" user_time="55.9" scale="1600.6989" triad="1817.9223" all="1748.29" system_time="0.19" total_time="57.06"/>
+        <result copy="1734.7528" add="2077.1486" user_time="55.29" scale="1691.0941" triad="1893.5978" all="1799.8654" system_time="0.43" total_time="56.61"/>
+        <result copy="1608.2013" add="1862.9564" user_time="56.91" scale="1568.4506" triad="1717.4774" all="1690.6664" system_time="0.18" total_time="57.6"/>
+        <result copy="1644.6771" add="1828.5296" user_time="56.66" scale="1588.6622" triad="1782.5461" all="1714.9843" system_time="0.21" total_time="57.51"/>
+        <result copy="1781.1438" add="1984.1442" user_time="54.82" scale="1830.4049" triad="2084.7325" all="1872.5358" system_time="0.23" total_time="55.98"/>
+        <result copy="1641.2703" add="1888.3345" user_time="56.6" scale="1591.3632" triad="1774.1014" all="1716.5811" system_time="0.21" total_time="57.45"/>
+        <result copy="2056.9752" add="2175.8911" user_time="53.42" scale="2033.4916" triad="2159.1103" all="1916.3059" system_time="0.59" total_time="56.32"/>
+        <result copy="1867.3915" add="2163.1721" user_time="53.14" scale="1983.9004" triad="2269.5854" all="1887.9113" system_time="0.3" total_time="55.04"/>
+        <result copy="1662.7397" add="1829.8226" user_time="56.66" scale="1647.3405" triad="1818.8012" all="1745.5759" system_time="0.19" total_time="57.77"/>
+        <result copy="1712.3558" add="2086.924" user_time="54.94" scale="2125.7564" triad="1935.8728" all="1898.9298" system_time="0.29" total_time="56.57"/>
+        <result copy="1661.107" add="1856.2633" user_time="56.45" scale="1571.2243" triad="1781.505" all="1711.8427" system_time="0.2" total_time="57.44"/>
+        <result copy="1679.4828" add="1926.5586" user_time="55.8" scale="1632.4256" triad="1803.4467" all="1753.984" system_time="0.2" total_time="56.94"/>
+        <result copy="1880.2188" add="2130.3978" user_time="52.97" scale="1969.8833" triad="2037.5371" all="1893.0134" system_time="0.15" total_time="54.76"/>
+        <result copy="2325.3119" add="2362.6989" user_time="53.08" scale="2097.8324" triad="2244.6831" all="2001.8747" system_time="0.14" total_time="54.28"/>
+        <result copy="1623.1279" add="1799.6414" user_time="57.3" scale="1604.0129" triad="1741.3199" all="1689.1186" system_time="0.19" total_time="58.14"/>
+        <result copy="1848.5832" add="2296.7461" user_time="52.95" scale="1854.6394" triad="2634.4989" all="2014.6917" system_time="0.17" total_time="54.25"/>
+        <result copy="1652.7673" add="1911.8947" user_time="56.71" scale="1924.3737" triad="1747.9867" all="1714.9261" system_time="0.17" total_time="58.12"/>
+        <result copy="1664.0319" add="1839.7014" user_time="55.7" scale="1651.5147" triad="1822.2105" all="1744.0369" system_time="0.2" total_time="56.72"/>
+        <result copy="1663.1178" add="1920.6505" user_time="56.31" scale="1620.3257" triad="1800.9884" all="1744.1595" system_time="0.2" total_time="57.39"/>
+        <result copy="1658.3972" add="1858.6651" user_time="56.66" scale="1549.1583" triad="1775.9575" all="1712.7752" system_time="0.2" total_time="57.51"/>
+        <result copy="1716.4688" add="2002.4207" user_time="55.11" scale="1706.8723" triad="1795.9723" all="1791.8092" system_time="0.42" total_time="56.27"/>
+        <result copy="1718.7702" add="1879.0149" user_time="53.8" scale="1819.4786" triad="1899.2376" all="1780.0365" system_time="0.66" total_time="56.8"/>
+        <result copy="1762.6601" add="2031.5813" user_time="54.93" scale="1681.858" triad="2023.7472" all="1848.9765" system_time="0.31" total_time="56.29"/>
+        <result copy="1626.905" add="1819.8684" user_time="57.12" scale="1550.1422" triad="1753.8712" all="1682.6044" system_time="0.2" total_time="57.94"/>
+        <result copy="3359.9329" add="3181.1193" user_time="51.54" scale="3607.9331" triad="3374.1719" all="3131.8218" system_time="0.06" total_time="52.43"/>
+        <result copy="1627.6996" add="1789.556" user_time="57.36" scale="1612.1204" triad="1761.5265" all="1690.0376" system_time="0.2" total_time="58.18"/>
+        <result copy="2447.4292" add="3184.3531" user_time="52.12" scale="2715.4421" triad="3381.1996" all="2889.4075" system_time="0.12" total_time="53.64"/>
+        <result copy="1685.0289" add="1907.7444" user_time="55.99" scale="1744.8506" triad="1951.5838" all="1748.2151" system_time="0.2" total_time="56.97"/>
+        <result copy="1711.1372" add="2287.7171" user_time="54.65" scale="1610.6797" triad="2135.4861" all="1802.8409" system_time="0.46" total_time="56.1"/>
+        <result copy="1646.352" add="1897.2141" user_time="55.68" scale="1566.2134" triad="1964.1355" all="1742.3993" system_time="0.19" total_time="56.98"/>
+        <result copy="1816.0512" add="2027.8931" user_time="55.0" scale="2048.0546" triad="2160.8555" all="1877.1089" system_time="0.44" total_time="56.52"/>
+        <result copy="1751.4207" add="2029.1218" user_time="54.29" scale="1647.7285" triad="1909.4613" all="1840.5846" system_time="0.63" total_time="56.66"/>
+        <result copy="1828.4275" add="1995.8312" user_time="54.51" scale="1696.1274" triad="2328.4238" all="1930.1379" system_time="0.45" total_time="56.25"/>
+        <result copy="2215.5847" add="1991.0933" user_time="54.07" scale="1879.3815" triad="1866.3846" all="1835.5806" system_time="0.68" total_time="56.33"/>
+        <result copy="1639.7771" add="1878.9141" user_time="57.08" scale="1600.9037" triad="1778.4317" all="1722.6985" system_time="0.19" total_time="58.01"/>
+        <result copy="1614.4268" add="1860.2192" user_time="56.76" scale="1581.1843" triad="1726.8676" all="1688.7931" system_time="0.2" total_time="57.56"/>
+        <result copy="2999.0892" add="3232.9557" user_time="51.29" scale="3246.8567" triad="3909.7128" all="3155.2903" system_time="0.07" total_time="52.21"/>
+        <result copy="1625.072" add="1831.1258" user_time="56.86" scale="1507.3602" triad="1755.6405" all="1682.6681" system_time="0.19" total_time="57.58"/>
+        <result copy="1635.0861" add="1849.354" user_time="56.59" scale="1622.6681" triad="1801.8873" all="1722.2889" system_time="0.2" total_time="57.41"/>
+      </loop>
+      <loop number="5">
+        <result copy="1671.0784" add="1912.4815" user_time="54.64" scale="1583.1925" triad="1822.0879" all="1749.9139" system_time="0.2" total_time="55.83"/>
+        <result copy="1630.4993" add="1842.5201" user_time="58.36" scale="1625.1769" triad="1749.9311" all="1700.4266" system_time="0.18" total_time="59.16"/>
+        <result copy="1654.4425" add="1845.8462" user_time="56.93" scale="1583.8374" triad="1779.2716" all="1715.5047" system_time="0.19" total_time="57.66"/>
+        <result copy="1633.9842" add="1849.2762" user_time="57.94" scale="1623.103" triad="1790.3394" all="1725.1646" system_time="0.2" total_time="58.68"/>
+        <result copy="2961.0472" add="3006.9946" user_time="51.88" scale="3349.0434" triad="2983.9215" all="2771.5981" system_time="0.23" total_time="53.29"/>
+        <result copy="1843.5522" add="2256.4646" user_time="54.81" scale="1778.4149" triad="2010.5058" all="1904.6372" system_time="0.41" total_time="56.52"/>
+        <result copy="1636.3983" add="1875.2969" user_time="56.84" scale="1604.881" triad="1773.3198" all="1725.1088" system_time="0.19" total_time="57.6"/>
+        <result copy="2107.6711" add="2168.2434" user_time="55.02" scale="2021.7334" triad="2197.8594" all="1932.4655" system_time="0.42" total_time="56.48"/>
+        <result copy="1803.6973" add="2026.8646" user_time="55.13" scale="1691.4121" triad="1849.3435" all="1794.7608" system_time="0.57" total_time="56.92"/>
+        <result copy="1957.4947" add="2032.6109" user_time="54.73" scale="1913.8423" triad="2244.3499" all="1873.3607" system_time="0.63" total_time="56.51"/>
+        <result copy="1646.9853" add="1897.7065" user_time="57.94" scale="1604.6056" triad="1752.2047" all="1722.8425" system_time="0.18" total_time="59.0"/>
+        <result copy="1678.0621" add="1901.3452" user_time="55.92" scale="1645.082" triad="1810.7985" all="1755.8985" system_time="0.19" total_time="57.01"/>
+        <result copy="1620.6163" add="1871.1653" user_time="56.31" scale="1589.7021" triad="1743.3467" all="1701.4707" system_time="0.2" total_time="57.27"/>
+        <result copy="1617.9043" add="1797.5354" user_time="57.81" scale="1618.15" triad="1756.4556" all="1697.6407" system_time="0.19" total_time="58.51"/>
+        <result copy="1635.608" add="1870.9655" user_time="57.67" scale="1619.0069" triad="1771.8438" all="1718.5164" system_time="0.21" total_time="58.91"/>
+        <result copy="1621.6581" add="1870.0527" user_time="56.3" scale="1580.6977" triad="1737.6123" all="1699.824" system_time="0.21" total_time="57.72"/>
+        <result copy="2203.1641" add="2116.2001" user_time="54.84" scale="1672.1194" triad="2067.1623" all="1851.7667" system_time="0.68" total_time="56.85"/>
+        <result copy="1881.938" add="2312.9493" user_time="54.89" scale="1950.5557" triad="1922.9323" all="1878.5219" system_time="0.45" total_time="56.74"/>
+        <result copy="3295.1164" add="3453.4338" user_time="50.56" scale="4366.0629" triad="4724.9417" all="3753.3182" system_time="0.15" total_time="51.83"/>
+        <result copy="1690.0846" add="1877.6014" user_time="56.17" scale="1579.0959" triad="1807.9362" all="1726.9039" system_time="0.19" total_time="57.37"/>
+        <result copy="1786.6961" add="2065.3115" user_time="55.35" scale="1690.2289" triad="1908.1608" all="1818.4637" system_time="0.69" total_time="56.75"/>
+        <result copy="1679.1136" add="1933.3042" user_time="56.9" scale="1625.8282" triad="1788.6775" all="1755.9778" system_time="0.21" total_time="58.09"/>
+        <result copy="1968.2943" add="2012.0538" user_time="54.92" scale="1848.0017" triad="2104.8482" all="1931.4719" system_time="0.4" total_time="56.38"/>
+        <result copy="3025.4507" add="3154.7915" user_time="52.54" scale="2379.5896" triad="2623.6824" all="2612.2377" system_time="0.76" total_time="54.88"/>
+        <result copy="3835.3645" add="4123.866" user_time="48.79" scale="3454.0317" triad="3954.8566" all="3669.2393" system_time="0.06" total_time="49.85"/>
+        <result copy="1625.6267" add="1789.6982" user_time="56.88" scale="1611.4913" triad="1762.6073" all="1701.5176" system_time="0.19" total_time="57.62"/>
+        <result copy="4518.487" add="4156.5939" user_time="51.15" scale="4939.3128" triad="4053.5224" all="4305.3535" system_time="0.21" total_time="52.74"/>
+        <result copy="3346.6539" add="2884.9345" user_time="53.61" scale="3623.4559" triad="3245.5492" all="2977.7757" system_time="0.74" total_time="55.76"/>
+        <result copy="2146.7258" add="2168.746" user_time="53.06" scale="1746.4339" triad="2112.5601" all="1938.8415" system_time="0.42" total_time="54.44"/>
+        <result copy="1654.3699" add="1906.9419" user_time="57.69" scale="1633.5981" triad="1847.4154" all="1745.2935" system_time="0.21" total_time="59.18"/>
+        <result copy="1668.218" add="1931.0753" user_time="56.48" scale="1631.0436" triad="1760.5034" all="1750.1837" system_time="0.21" total_time="57.32"/>
+        <result copy="2354.2074" add="2292.3144" user_time="53.92" scale="2403.9808" triad="2035.4037" all="2240.08" system_time="0.51" total_time="55.24"/>
+        <result copy="1842.0386" add="2092.016" user_time="53.07" scale="1802.3837" triad="2033.066" all="1930.8386" system_time="0.46" total_time="54.85"/>
+        <result copy="2328.0967" add="2174.8397" user_time="54.48" scale="2154.55" triad="2336.8236" all="2120.1879" system_time="0.54" total_time="56.27"/>
+        <result copy="1905.5197" add="2128.2331" user_time="54.67" scale="1825.829" triad="2035.476" all="1963.5263" system_time="0.43" total_time="56.32"/>
+        <result copy="1689.5329" add="1875.2039" user_time="56.06" scale="1624.5454" triad="1821.7773" all="1750.88" system_time="0.2" total_time="57.11"/>
+        <result copy="3759.1207" add="5027.4757" user_time="50.33" scale="4694.0824" triad="4550.8131" all="4516.6068" system_time="0.22" total_time="51.77"/>
+        <result copy="2763.0532" add="2436.7515" user_time="53.48" scale="2233.7306" triad="2414.6438" all="2320.0009" system_time="0.3" total_time="54.91"/>
+        <result copy="3542.9894" add="3927.8791" user_time="50.92" scale="3162.1023" triad="3778.3136" all="3630.0781" system_time="0.14" total_time="52.13"/>
+        <result copy="1644.6919" add="1831.2021" user_time="56.52" scale="1621.5038" triad="1784.9777" all="1726.649" system_time="0.21" total_time="57.69"/>
+        <result copy="1771.4677" add="2475.6037" user_time="54.97" scale="1607.2003" triad="2413.997" all="1979.2456" system_time="0.2" total_time="56.16"/>
+        <result copy="1643.5253" add="1892.8337" user_time="55.68" scale="1597.726" triad="1934.8135" all="1752.5385" system_time="0.2" total_time="57.57"/>
+        <result copy="1698.0376" add="1881.4799" user_time="56.58" scale="1565.3523" triad="1819.6967" all="1739.3421" system_time="0.2" total_time="57.44"/>
+        <result copy="1630.8329" add="1812.6615" user_time="58.24" scale="1602.9174" triad="1758.1641" all="1693.6429" system_time="0.19" total_time="59.27"/>
+        <result copy="1685.6427" add="2010.8782" user_time="55.24" scale="1751.298" triad="1898.7341" all="1817.4799" system_time="0.61" total_time="56.72"/>
+        <result copy="3624.8088" add="4588.5987" user_time="48.09" scale="4558.6098" triad="3916.0787" all="3680.6503" system_time="0.06" total_time="49.18"/>
+        <result copy="1609.8624" add="1842.4478" user_time="58.01" scale="1533.9145" triad="1765.3399" all="1682.9519" system_time="0.21" total_time="59.02"/>
+        <result copy="1642.981" add="1814.6194" user_time="56.95" scale="1608.4186" triad="1782.6837" all="1713.7745" system_time="0.18" total_time="57.61"/>
+      </loop>
+    </run>
+  </test_result>
+  <test_result benchmark_name="stream" run_type="numa_runs"/>
+</beaker_run_result>

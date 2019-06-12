@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result>
+    <nas_result benchmark_name="mg_C_x">
+      <threads number="2">
+        <mops median="8192.8" max="8603.6" third_q="8475.4" stdev="283.7" min="7784.0" mean="8245.3" first_q="8170.6"/>
+        <total_time median="21.5" max="22.6" third_q="21.6" stdev="0.7" min="20.5" mean="21.5" first_q="21.1"/>
+        <out_of_cpu_time median="0.8" max="1.4" third_q="1.4" stdev="0.4" min="0.6" mean="1.0" first_q="0.6"/>
+      </threads>
+      <threads number="4">
+        <mops median="13791.3" max="14856.6" third_q="14252.4" stdev="516.6" min="13494.0" mean="13981.1" first_q="13511.2"/>
+        <total_time median="12.8" max="13.1" third_q="13.0" stdev="0.4" min="12.0" mean="12.7" first_q="12.4"/>
+        <out_of_cpu_time median="3.2" max="3.6" third_q="3.6" stdev="0.8" min="1.5" mean="2.8" first_q="2.3"/>
+      </threads>
+      <threads number="8">
+        <mops median="17716.5" max="19049.1" third_q="17943.4" stdev="530.4" min="17641.2" mean="18008.8" first_q="17693.6"/>
+        <total_time median="9.8" max="9.9" third_q="9.8" stdev="0.2" min="9.2" mean="9.7" first_q="9.7"/>
+        <out_of_cpu_time median="10.8" max="12.2" third_q="11.3" stdev="1.0" min="9.4" mean="10.7" first_q="9.8"/>
+      </threads>
+      <threads number="16">
+        <mops median="18929.9" max="19825.6" third_q="18988.0" stdev="578.4" min="17999.6" mean="18926.2" first_q="18887.9"/>
+        <total_time median="9.2" max="9.6" third_q="9.2" stdev="0.3" min="8.8" mean="9.2" first_q="9.2"/>
+        <out_of_cpu_time median="27.6" max="31.2" third_q="30.6" stdev="2.3" min="25.1" mean="28.2" first_q="26.6"/>
+      </threads>
+      <threads number="24">
+        <mops median="18682.0" max="19580.0" third_q="18841.5" stdev="594.2" min="17827.7" mean="18629.3" first_q="18215.5"/>
+        <total_time median="9.2" max="9.6" third_q="9.5" stdev="0.2" min="8.9" mean="9.3" first_q="9.2"/>
+        <out_of_cpu_time median="40.3" max="49.0" third_q="44.4" stdev="4.6" min="37.1" mean="41.6" first_q="37.2"/>
+      </threads>
+      <threads number="36">
+        <mops median="24848.0" max="26121.3" third_q="25411.6" stdev="698.3" min="24114.3" mean="25008.7" first_q="24548.3"/>
+        <total_time median="6.9" max="7.1" third_q="7.0" stdev="0.2" min="6.6" mean="6.9" first_q="6.8"/>
+        <out_of_cpu_time median="53.2" max="56.9" third_q="54.3" stdev="2.9" min="48.0" mean="52.9" first_q="51.9"/>
+      </threads>
+      <threads number="44">
+        <mops median="32135.2" max="32402.5" third_q="32269.8" stdev="1565.8" min="28282.4" mean="31149.7" first_q="30658.4"/>
+        <total_time median="5.4" max="6.2" third_q="5.6" stdev="0.3" min="5.3" mean="5.6" first_q="5.4"/>
+        <out_of_cpu_time median="20.0" max="35.7" third_q="25.4" stdev="7.5" min="14.3" mean="22.6" first_q="17.8"/>
+      </threads>
+      <threads number="48">
+        <mops median="31489.1" max="33124.8" third_q="32595.9" stdev="1802.1" min="27965.3" mean="31233.6" first_q="30992.7"/>
+        <total_time median="5.5" max="6.2" third_q="5.5" stdev="0.3" min="5.2" mean="5.5" first_q="5.3"/>
+        <out_of_cpu_time median="21.4" max="47.1" third_q="23.2" stdev="13.5" min="8.1" mean="22.5" first_q="12.8"/>
+      </threads>
+    </nas_result>
+    <nas_result benchmark_name="ep_C_x">
+      <threads number="2">
+        <mops median="103.3" max="103.4" third_q="103.4" stdev="0.0" min="103.3" mean="103.3" first_q="103.3"/>
+        <total_time median="83.2" max="83.2" third_q="83.2" stdev="0.0" min="83.1" mean="83.2" first_q="83.1"/>
+        <out_of_cpu_time median="1.0" max="1.1" third_q="1.0" stdev="0.1" min="0.8" mean="1.0" first_q="0.9"/>
+      </threads>
+      <threads number="4">
+        <mops median="200.1" max="201.7" third_q="200.7" stdev="0.7" min="200.0" mean="200.5" first_q="200.0"/>
+        <total_time median="42.9" max="43.0" third_q="43.0" stdev="0.1" min="42.6" mean="42.9" first_q="42.8"/>
+        <out_of_cpu_time median="3.0" max="3.6" third_q="3.3" stdev="0.6" min="1.9" mean="3.0" first_q="3.0"/>
+      </threads>
+      <threads number="8">
+        <mops median="369.1" max="371.0" third_q="370.7" stdev="0.9" min="368.8" mean="369.7" first_q="369.0"/>
+        <total_time median="23.3" max="23.3" third_q="23.3" stdev="0.0" min="23.2" mean="23.3" first_q="23.2"/>
+        <out_of_cpu_time median="2.9" max="2.9" third_q="2.9" stdev="0.4" min="2.0" mean="2.6" first_q="2.3"/>
+      </threads>
+      <threads number="16">
+        <mops median="720.5" max="721.9" third_q="721.7" stdev="2.9" min="714.4" mean="719.2" first_q="717.4"/>
+        <total_time median="11.9" max="12.0" third_q="12.0" stdev="0.0" min="11.9" mean="11.9" first_q="11.9"/>
+        <out_of_cpu_time median="2.5" max="3.4" third_q="3.4" stdev="0.6" min="2.0" mean="2.7" first_q="2.3"/>
+      </threads>
+      <threads number="24">
+        <mops median="920.0" max="964.0" third_q="940.4" stdev="25.9" min="893.0" mean="923.8" first_q="901.4"/>
+        <total_time median="9.4" max="9.7" third_q="9.6" stdev="0.3" min="8.9" mean="9.4" first_q="9.2"/>
+        <out_of_cpu_time median="20.8" max="25.4" third_q="20.9" stdev="3.8" min="14.2" mean="19.7" first_q="17.2"/>
+      </threads>
+      <threads number="36">
+        <mops median="1338.4" max="1342.2" third_q="1340.3" stdev="14.6" min="1303.5" mean="1329.5" first_q="1323.3"/>
+        <total_time median="6.5" max="6.6" third_q="6.5" stdev="0.1" min="6.4" mean="6.5" first_q="6.4"/>
+        <out_of_cpu_time median="18.8" max="19.8" third_q="19.5" stdev="1.6" min="16.1" mean="18.1" first_q="16.4"/>
+      </threads>
+      <threads number="44">
+        <mops median="1565.6" max="1580.6" third_q="1580.3" stdev="38.8" min="1476.3" mean="1551.5" first_q="1554.7"/>
+        <total_time median="5.5" max="5.9" third_q="5.6" stdev="0.2" min="5.5" mean="5.6" first_q="5.5"/>
+        <out_of_cpu_time median="12.2" max="31.7" third_q="15.6" stdev="8.2" min="8.3" mean="16.0" first_q="12.2"/>
+      </threads>
+      <threads number="48">
+        <mops median="1720.3" max="1724.6" third_q="1723.4" stdev="33.9" min="1636.7" mean="1704.2" first_q="1716.2"/>
+        <total_time median="5.0" max="5.3" third_q="5.0" stdev="0.1" min="5.0" mean="5.1" first_q="5.0"/>
+        <out_of_cpu_time median="4.5" max="18.7" third_q="4.5" stdev="5.9" min="3.2" mean="7.0" first_q="3.9"/>
+      </threads>
+    </nas_result>
+    <nas_result benchmark_name="ft_C_x">
+      <threads number="2">
+        <mops median="3911.8" max="3966.4" third_q="3930.9" stdev="23.3" min="3902.6" mean="3923.9" first_q="3908.0"/>
+        <total_time median="107.8" max="108.0" third_q="107.9" stdev="0.6" min="106.4" mean="107.5" first_q="107.5"/>
+        <out_of_cpu_time median="2.4" max="3.1" third_q="2.4" stdev="0.4" min="1.9" mean="2.4" first_q="2.0"/>
+      </threads>
+      <threads number="4">
+        <mops median="7458.2" max="7464.5" third_q="7464.4" stdev="35.0" min="7389.6" mean="7433.9" first_q="7392.8"/>
+        <total_time median="56.5" max="57.0" third_q="57.0" stdev="0.2" min="56.5" mean="56.7" first_q="56.5"/>
+        <out_of_cpu_time median="5.1" max="6.0" third_q="5.6" stdev="0.8" min="3.7" mean="4.9" first_q="4.3"/>
+      </threads>
+      <threads number="8">
+        <mops median="13420.3" max="13538.6" third_q="13518.3" stdev="82.2" min="13333.6" mean="13434.1" first_q="13359.8"/>
+        <total_time median="31.5" max="31.6" third_q="31.6" stdev="0.2" min="31.2" mean="31.4" first_q="31.3"/>
+        <out_of_cpu_time median="12.6" max="13.7" third_q="13.2" stdev="0.6" min="11.9" mean="12.7" first_q="12.3"/>
+      </threads>
+      <threads number="16">
+        <mops median="22911.1" max="23678.5" third_q="23401.5" stdev="423.1" min="22624.8" mean="23049.2" first_q="22629.9"/>
+        <total_time median="18.9" max="19.1" third_q="19.1" stdev="0.3" min="18.3" mean="18.8" first_q="18.4"/>
+        <out_of_cpu_time median="30.6" max="31.9" third_q="31.3" stdev="2.7" min="25.8" mean="29.1" first_q="26.0"/>
+      </threads>
+      <threads number="24">
+        <mops median="23131.5" max="25168.7" third_q="23418.4" stdev="918.4" min="22448.4" mean="23444.0" first_q="23053.0"/>
+        <total_time median="18.5" max="19.0" third_q="18.5" stdev="0.6" min="17.1" mean="18.3" first_q="18.2"/>
+        <out_of_cpu_time median="95.1" max="109.2" third_q="106.4" stdev="11.3" min="77.3" mean="96.5" first_q="94.6"/>
+      </threads>
+      <threads number="36">
+        <mops median="31493.7" max="31805.0" third_q="31764.0" stdev="316.1" min="30987.0" mean="31451.5" first_q="31207.6"/>
+        <total_time median="13.5" max="13.7" third_q="13.6" stdev="0.1" min="13.4" mean="13.5" first_q="13.4"/>
+        <out_of_cpu_time median="89.5" max="93.0" third_q="92.5" stdev="2.9" min="86.2" mean="89.5" first_q="86.4"/>
+      </threads>
+      <threads number="44">
+        <mops median="36947.4" max="37047.2" third_q="36989.2" stdev="78.8" min="36808.4" mean="36947.2" first_q="36943.6"/>
+        <total_time median="11.5" max="11.5" third_q="11.5" stdev="0.0" min="11.5" mean="11.5" first_q="11.5"/>
+        <out_of_cpu_time median="49.2" max="50.2" third_q="49.9" stdev="0.8" min="48.3" mean="49.2" first_q="48.3"/>
+      </threads>
+      <threads number="48">
+        <mops median="38452.1" max="39308.6" third_q="38821.5" stdev="1192.6" min="35869.2" mean="38152.0" first_q="38308.7"/>
+        <total_time median="11.1" max="11.9" third_q="11.1" stdev="0.4" min="10.8" mean="11.2" first_q="10.9"/>
+        <out_of_cpu_time median="37.8" max="56.6" third_q="37.9" stdev="9.6" min="29.7" mean="38.6" first_q="31.1"/>
+      </threads>
+    </nas_result>
+    <nas_result benchmark_name="sp_C_x">
+      <threads number="2">
+        <mops median="5053.3" max="5077.2" third_q="5065.8" stdev="15.8" min="5034.2" mean="5054.3" first_q="5040.9"/>
+        <total_time median="289.0" max="290.0" third_q="289.6" stdev="0.9" min="287.5" mean="288.9" first_q="288.2"/>
+        <out_of_cpu_time median="10.1" max="12.1" third_q="10.8" stdev="0.9" min="9.8" mean="10.5" first_q="9.8"/>
+      </threads>
+      <threads number="4">
+        <mops median="8507.5" max="8583.2" third_q="8555.3" stdev="41.8" min="8469.1" mean="8521.5" first_q="8492.4"/>
+        <total_time median="171.5" max="172.3" third_q="171.8" stdev="0.8" min="170.0" mean="171.2" first_q="170.6"/>
+        <out_of_cpu_time median="38.7" max="41.4" third_q="40.7" stdev="2.4" min="35.2" mean="38.4" first_q="36.1"/>
+      </threads>
+      <threads number="8">
+        <mops median="12916.1" max="13526.5" third_q="13074.2" stdev="348.1" min="12564.3" mean="12940.3" first_q="12620.6"/>
+        <total_time median="113.0" max="116.1" third_q="115.6" stdev="3.0" min="107.9" mean="112.8" first_q="111.6"/>
+        <out_of_cpu_time median="72.7" max="81.7" third_q="80.0" stdev="8.2" min="62.3" mean="71.9" first_q="63.0"/>
+      </threads>
+      <threads number="16">
+        <mops median="12302.4" max="16179.4" third_q="15640.6" stdev="1890.0" min="11924.8" mean="13609.8" first_q="12001.8"/>
+        <total_time median="118.6" max="122.3" third_q="121.6" stdev="14.3" min="90.3" mean="109.3" first_q="93.5"/>
+        <out_of_cpu_time median="273.0" max="289.8" third_q="280.0" stdev="32.6" min="197.9" mean="259.7" first_q="257.9"/>
+      </threads>
+      <threads number="24">
+        <mops median="11081.4" max="13270.0" third_q="11357.4" stdev="914.8" min="10746.8" mean="11483.4" first_q="10961.6"/>
+        <total_time median="131.5" max="135.6" third_q="133.0" stdev="9.2" min="109.9" mean="127.7" first_q="128.3"/>
+        <out_of_cpu_time median="545.2" max="587.7" third_q="550.0" stdev="59.0" min="439.1" mean="514.4" first_q="450.2"/>
+      </threads>
+      <threads number="36">
+        <mops median="14466.8" max="16175.4" third_q="16098.8" stdev="893.9" min="14194.2" mean="15047.9" first_q="14304.3"/>
+        <total_time median="100.8" max="102.7" third_q="102.0" stdev="5.6" min="90.2" mean="97.3" first_q="90.7"/>
+        <out_of_cpu_time median="754.5" max="813.0" third_q="807.7" stdev="123.8" min="516.3" mean="693.2" first_q="574.3"/>
+      </threads>
+      <threads number="44">
+        <mops median="17003.7" max="17594.2" third_q="17352.8" stdev="680.5" min="15630.8" mean="16876.4" first_q="16800.6"/>
+        <total_time median="85.9" max="93.4" third_q="87.0" stdev="3.6" min="83.1" mean="86.7" first_q="84.2"/>
+        <out_of_cpu_time median="472.5" max="673.2" third_q="498.8" stdev="109.7" min="357.2" mean="479.2" first_q="394.4"/>
+      </threads>
+      <threads number="48">
+        <mops median="17009.8" max="17843.2" third_q="17386.6" stdev="413.0" min="16686.4" mean="17157.8" first_q="16863.2"/>
+        <total_time median="85.9" max="87.6" third_q="86.6" stdev="2.0" min="81.9" mean="85.2" first_q="84.0"/>
+        <out_of_cpu_time median="402.6" max="468.8" third_q="441.4" stdev="65.8" min="277.3" mean="394.9" first_q="384.6"/>
+      </threads>
+    </nas_result>
+  </test_result>
+</beaker_run_result>

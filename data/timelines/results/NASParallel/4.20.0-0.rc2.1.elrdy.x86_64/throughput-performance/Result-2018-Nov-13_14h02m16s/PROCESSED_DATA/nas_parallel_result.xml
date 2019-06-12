@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result>
+    <nas_result benchmark_name="mg_C_x">
+      <threads number="2">
+        <result real_time="21.8" mops="8157.0" out_of_cpu_time="0.5"/>
+        <result real_time="21.7" mops="8147.1" out_of_cpu_time="0.6"/>
+        <result real_time="21.7" mops="8122.2" out_of_cpu_time="0.4"/>
+        <result real_time="20.7" mops="8559.2" out_of_cpu_time="1.0"/>
+        <result real_time="21.6" mops="8200.4" out_of_cpu_time="0.6"/>
+      </threads>
+      <threads number="4">
+        <result real_time="11.8" mops="15208.3" out_of_cpu_time="1.3"/>
+        <result real_time="12.6" mops="14097.7" out_of_cpu_time="2.9"/>
+        <result real_time="12.5" mops="14169.4" out_of_cpu_time="2.7"/>
+        <result real_time="12.5" mops="14178.4" out_of_cpu_time="2.5"/>
+        <result real_time="12.1" mops="14553.6" out_of_cpu_time="1.9"/>
+      </threads>
+      <threads number="8">
+        <result real_time="9.7" mops="17919.8" out_of_cpu_time="10.4"/>
+        <result real_time="8.4" mops="21123.7" out_of_cpu_time="7.1"/>
+        <result real_time="8.7" mops="20349.1" out_of_cpu_time="7.0"/>
+        <result real_time="8.4" mops="20825.4" out_of_cpu_time="5.3"/>
+        <result real_time="8.2" mops="21572.8" out_of_cpu_time="6.2"/>
+      </threads>
+      <threads number="16">
+        <result real_time="9.2" mops="18957.6" out_of_cpu_time="28.6"/>
+        <result real_time="8.4" mops="20692.4" out_of_cpu_time="23.1"/>
+        <result real_time="8.7" mops="20231.4" out_of_cpu_time="24.4"/>
+        <result real_time="9.0" mops="19287.7" out_of_cpu_time="27.6"/>
+        <result real_time="8.9" mops="19652.2" out_of_cpu_time="30.5"/>
+      </threads>
+      <threads number="24">
+        <result real_time="8.0" mops="21907.4" out_of_cpu_time="30.4"/>
+        <result real_time="8.9" mops="19429.0" out_of_cpu_time="35.8"/>
+        <result real_time="9.1" mops="19124.2" out_of_cpu_time="37.7"/>
+        <result real_time="8.6" mops="20163.4" out_of_cpu_time="34.9"/>
+        <result real_time="9.0" mops="19410.7" out_of_cpu_time="39.6"/>
+      </threads>
+      <threads number="36">
+        <result real_time="6.5" mops="26582.6" out_of_cpu_time="45.2"/>
+        <result real_time="6.7" mops="26096.4" out_of_cpu_time="39.0"/>
+        <result real_time="6.6" mops="25918.3" out_of_cpu_time="49.8"/>
+        <result real_time="6.3" mops="27948.7" out_of_cpu_time="35.2"/>
+        <result real_time="6.6" mops="26284.6" out_of_cpu_time="52.8"/>
+      </threads>
+      <threads number="44">
+        <result real_time="5.3" mops="32592.3" out_of_cpu_time="14.6"/>
+        <result real_time="5.6" mops="31085.6" out_of_cpu_time="24.1"/>
+        <result real_time="5.5" mops="31427.8" out_of_cpu_time="22.7"/>
+        <result real_time="5.6" mops="30977.9" out_of_cpu_time="24.0"/>
+        <result real_time="5.3" mops="32356.0" out_of_cpu_time="13.6"/>
+      </threads>
+      <threads number="48">
+        <result real_time="5.3" mops="32391.3" out_of_cpu_time="12.8"/>
+        <result real_time="5.6" mops="30632.3" out_of_cpu_time="25.8"/>
+        <result real_time="5.5" mops="31164.8" out_of_cpu_time="18.2"/>
+        <result real_time="6.2" mops="29069.9" out_of_cpu_time="41.9"/>
+        <result real_time="5.3" mops="32208.8" out_of_cpu_time="12.4"/>
+      </threads>
+    </nas_result>
+    <nas_result benchmark_name="ep_C_x">
+      <threads number="2">
+        <result real_time="87.4" mops="98.3" out_of_cpu_time="1.0"/>
+        <result real_time="87.6" mops="98.1" out_of_cpu_time="1.0"/>
+        <result real_time="87.3" mops="98.4" out_of_cpu_time="0.7"/>
+        <result real_time="87.4" mops="98.2" out_of_cpu_time="0.8"/>
+        <result real_time="87.5" mops="98.2" out_of_cpu_time="1.0"/>
+      </threads>
+      <threads number="4">
+        <result real_time="45.2" mops="190.0" out_of_cpu_time="3.4"/>
+        <result real_time="45.3" mops="189.7" out_of_cpu_time="3.7"/>
+        <result real_time="45.2" mops="190.2" out_of_cpu_time="3.6"/>
+        <result real_time="45.4" mops="189.4" out_of_cpu_time="4.0"/>
+        <result real_time="45.1" mops="190.5" out_of_cpu_time="3.2"/>
+      </threads>
+      <threads number="8">
+        <result real_time="24.5" mops="350.3" out_of_cpu_time="2.9"/>
+        <result real_time="24.5" mops="350.9" out_of_cpu_time="3.0"/>
+        <result real_time="24.6" mops="349.4" out_of_cpu_time="3.3"/>
+        <result real_time="24.6" mops="349.0" out_of_cpu_time="3.2"/>
+        <result real_time="24.6" mops="349.2" out_of_cpu_time="2.8"/>
+      </threads>
+      <threads number="16">
+        <result real_time="12.6" mops="682.4" out_of_cpu_time="3.4"/>
+        <result real_time="12.6" mops="684.2" out_of_cpu_time="3.8"/>
+        <result real_time="12.6" mops="685.4" out_of_cpu_time="3.9"/>
+        <result real_time="12.6" mops="682.4" out_of_cpu_time="3.4"/>
+        <result real_time="12.6" mops="683.9" out_of_cpu_time="3.7"/>
+      </threads>
+      <threads number="24">
+        <result real_time="9.0" mops="962.7" out_of_cpu_time="11.3"/>
+        <result real_time="9.2" mops="941.8" out_of_cpu_time="13.7"/>
+        <result real_time="9.1" mops="943.1" out_of_cpu_time="10.3"/>
+        <result real_time="9.0" mops="962.6" out_of_cpu_time="10.1"/>
+        <result real_time="9.1" mops="946.4" out_of_cpu_time="11.1"/>
+      </threads>
+      <threads number="36">
+        <result real_time="6.9" mops="1243.3" out_of_cpu_time="19.8"/>
+        <result real_time="7.1" mops="1222.7" out_of_cpu_time="24.0"/>
+        <result real_time="6.8" mops="1267.5" out_of_cpu_time="17.7"/>
+        <result real_time="7.1" mops="1224.3" out_of_cpu_time="23.9"/>
+        <result real_time="7.0" mops="1241.3" out_of_cpu_time="23.4"/>
+      </threads>
+      <threads number="44">
+        <result real_time="6.1" mops="1416.8" out_of_cpu_time="15.8"/>
+        <result real_time="5.9" mops="1467.4" out_of_cpu_time="12.6"/>
+        <result real_time="6.0" mops="1446.9" out_of_cpu_time="16.7"/>
+        <result real_time="6.3" mops="1364.1" out_of_cpu_time="31.5"/>
+        <result real_time="5.9" mops="1474.1" out_of_cpu_time="12.9"/>
+      </threads>
+      <threads number="48">
+        <result real_time="5.5" mops="1580.3" out_of_cpu_time="8.0"/>
+        <result real_time="5.5" mops="1564.2" out_of_cpu_time="8.2"/>
+        <result real_time="5.5" mops="1565.8" out_of_cpu_time="7.8"/>
+        <result real_time="5.5" mops="1574.9" out_of_cpu_time="11.1"/>
+        <result real_time="5.5" mops="1577.7" out_of_cpu_time="8.4"/>
+      </threads>
+    </nas_result>
+    <nas_result benchmark_name="ft_C_x">
+      <threads number="2">
+        <result real_time="107.9" mops="3924.4" out_of_cpu_time="2.2"/>
+        <result real_time="105.0" mops="4037.9" out_of_cpu_time="2.0"/>
+        <result real_time="107.2" mops="3950.9" out_of_cpu_time="2.0"/>
+        <result real_time="107.2" mops="3947.4" out_of_cpu_time="2.7"/>
+        <result real_time="104.7" mops="4049.6" out_of_cpu_time="2.5"/>
+      </threads>
+      <threads number="4">
+        <result real_time="56.0" mops="7582.6" out_of_cpu_time="6.7"/>
+        <result real_time="54.2" mops="7830.0" out_of_cpu_time="5.6"/>
+        <result real_time="54.9" mops="7737.8" out_of_cpu_time="7.1"/>
+        <result real_time="54.5" mops="7784.2" out_of_cpu_time="5.6"/>
+        <result real_time="55.6" mops="7623.3" out_of_cpu_time="5.4"/>
+      </threads>
+      <threads number="8">
+        <result real_time="30.6" mops="13852.8" out_of_cpu_time="9.9"/>
+        <result real_time="30.9" mops="13729.2" out_of_cpu_time="9.9"/>
+        <result real_time="30.4" mops="13929.4" out_of_cpu_time="7.9"/>
+        <result real_time="30.4" mops="13947.4" out_of_cpu_time="8.5"/>
+        <result real_time="30.8" mops="13746.5" out_of_cpu_time="9.4"/>
+      </threads>
+      <threads number="16">
+        <result real_time="17.8" mops="24408.2" out_of_cpu_time="22.3"/>
+        <result real_time="17.9" mops="24269.7" out_of_cpu_time="22.7"/>
+        <result real_time="18.4" mops="23664.0" out_of_cpu_time="26.6"/>
+        <result real_time="17.5" mops="24943.3" out_of_cpu_time="19.4"/>
+        <result real_time="18.5" mops="23505.6" out_of_cpu_time="27.7"/>
+      </threads>
+      <threads number="24">
+        <result real_time="15.5" mops="27931.0" out_of_cpu_time="68.1"/>
+        <result real_time="18.0" mops="23774.1" out_of_cpu_time="99.4"/>
+        <result real_time="18.6" mops="23012.5" out_of_cpu_time="108.5"/>
+        <result real_time="17.7" mops="24289.1" out_of_cpu_time="103.5"/>
+        <result real_time="16.4" mops="26334.4" out_of_cpu_time="75.0"/>
+      </threads>
+      <threads number="36">
+        <result real_time="13.4" mops="31837.2" out_of_cpu_time="84.0"/>
+        <result real_time="13.2" mops="32306.5" out_of_cpu_time="77.2"/>
+        <result real_time="13.4" mops="31883.3" out_of_cpu_time="87.8"/>
+        <result real_time="13.4" mops="31807.0" out_of_cpu_time="85.6"/>
+        <result real_time="13.2" mops="32225.4" out_of_cpu_time="80.3"/>
+      </threads>
+      <threads number="44">
+        <result real_time="11.4" mops="37497.5" out_of_cpu_time="46.5"/>
+        <result real_time="11.9" mops="35826.6" out_of_cpu_time="51.6"/>
+        <result real_time="12.0" mops="35630.4" out_of_cpu_time="59.8"/>
+        <result real_time="11.5" mops="37108.4" out_of_cpu_time="50.7"/>
+        <result real_time="11.4" mops="37301.1" out_of_cpu_time="44.1"/>
+      </threads>
+      <threads number="48">
+        <result real_time="11.0" mops="38792.8" out_of_cpu_time="33.8"/>
+        <result real_time="11.0" mops="38833.2" out_of_cpu_time="36.1"/>
+        <result real_time="11.2" mops="38084.9" out_of_cpu_time="43.4"/>
+        <result real_time="11.1" mops="38315.3" out_of_cpu_time="39.8"/>
+        <result real_time="11.2" mops="38101.4" out_of_cpu_time="43.7"/>
+      </threads>
+    </nas_result>
+    <nas_result benchmark_name="sp_C_x">
+      <threads number="2">
+        <result real_time="263.4" mops="5546.4" out_of_cpu_time="2.0"/>
+        <result real_time="277.3" mops="5266.6" out_of_cpu_time="2.7"/>
+        <result real_time="277.7" mops="5259.2" out_of_cpu_time="3.3"/>
+        <result real_time="273.0" mops="5349.2" out_of_cpu_time="4.8"/>
+        <result real_time="274.8" mops="5315.2" out_of_cpu_time="2.6"/>
+      </threads>
+      <threads number="4">
+        <result real_time="146.1" mops="9995.4" out_of_cpu_time="5.6"/>
+        <result real_time="147.5" mops="9901.5" out_of_cpu_time="15.7"/>
+        <result real_time="147.4" mops="9908.4" out_of_cpu_time="9.3"/>
+        <result real_time="142.7" mops="10236.1" out_of_cpu_time="11.4"/>
+        <result real_time="154.7" mops="9440.3" out_of_cpu_time="18.0"/>
+      </threads>
+      <threads number="8">
+        <result real_time="85.5" mops="17085.0" out_of_cpu_time="15.0"/>
+        <result real_time="84.2" mops="17358.4" out_of_cpu_time="5.9"/>
+        <result real_time="84.1" mops="17376.4" out_of_cpu_time="5.4"/>
+        <result real_time="90.5" mops="16132.4" out_of_cpu_time="14.0"/>
+        <result real_time="88.1" mops="16583.2" out_of_cpu_time="18.3"/>
+      </threads>
+      <threads number="16">
+        <result real_time="69.1" mops="21186.4" out_of_cpu_time="51.1"/>
+        <result real_time="65.3" mops="22443.6" out_of_cpu_time="31.4"/>
+        <result real_time="65.8" mops="22252.6" out_of_cpu_time="33.9"/>
+        <result real_time="65.1" mops="22516.6" out_of_cpu_time="35.0"/>
+        <result real_time="64.0" mops="22893.9" out_of_cpu_time="18.3"/>
+      </threads>
+      <threads number="24">
+        <result real_time="77.3" mops="18904.7" out_of_cpu_time="145.5"/>
+        <result real_time="79.6" mops="18354.0" out_of_cpu_time="194.9"/>
+        <result real_time="79.1" mops="18468.7" out_of_cpu_time="139.2"/>
+        <result real_time="99.8" mops="14632.5" out_of_cpu_time="468.2"/>
+        <result real_time="80.9" mops="18066.8" out_of_cpu_time="218.3"/>
+      </threads>
+      <threads number="36">
+        <result real_time="78.2" mops="18671.1" out_of_cpu_time="244.1"/>
+        <result real_time="83.7" mops="17452.5" out_of_cpu_time="388.5"/>
+        <result real_time="82.2" mops="17754.7" out_of_cpu_time="330.3"/>
+        <result real_time="80.7" mops="18098.1" out_of_cpu_time="304.0"/>
+        <result real_time="90.5" mops="16136.5" out_of_cpu_time="491.4"/>
+      </threads>
+      <threads number="44">
+        <result real_time="80.3" mops="18187.5" out_of_cpu_time="292.2"/>
+        <result real_time="82.8" mops="17653.6" out_of_cpu_time="343.4"/>
+        <result real_time="82.9" mops="17627.7" out_of_cpu_time="383.8"/>
+        <result real_time="82.2" mops="17775.4" out_of_cpu_time="352.8"/>
+        <result real_time="82.9" mops="17605.5" out_of_cpu_time="355.4"/>
+      </threads>
+      <threads number="48">
+        <result real_time="84.8" mops="17231.3" out_of_cpu_time="362.0"/>
+        <result real_time="81.7" mops="17882.4" out_of_cpu_time="259.7"/>
+        <result real_time="86.7" mops="16855.1" out_of_cpu_time="424.8"/>
+        <result real_time="84.3" mops="17337.0" out_of_cpu_time="343.7"/>
+        <result real_time="88.2" mops="16578.4" out_of_cpu_time="423.6"/>
+      </threads>
+    </nas_result>
+  </test_result>
+</beaker_run_result>

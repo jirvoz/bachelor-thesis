@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result benchmark_name="linpackd" run_type="affinity_runs"/>
+  <test_result benchmark_name="linpackd" run_type="default_runs">
+    <run instances_no="1">
+      <result_statistics third_q="3353861.0" max="3360269" first_q="3257420.0" median="3353265.0" stdev="76852.0" min="3164462" mean="3297855.0"/>
+      <total_time_statistics third_q="5.4" max="5.6" first_q="5.3" median="5.3" stdev="0.1" min="5.3" mean="5.4"/>
+      <out_of_cpu_statistics third_q="0.0" max="0.0" first_q="0.0" median="0.0" stdev="0.0" min="0.0" mean="0.0"/>
+    </run>
+    <run instances_no="2">
+      <result_statistics third_q="6459653.0" max="6470247" first_q="5958312.0" median="6150209.0" stdev="259474.0" min="5827317" mean="6173148.0"/>
+      <total_time_statistics third_q="5.7" max="5.9" first_q="5.5" median="5.6" stdev="0.2" min="5.4" mean="5.6"/>
+      <out_of_cpu_statistics third_q="0.0" max="0.0" first_q="0.0" median="0.0" stdev="0.0" min="0.0" mean="0.0"/>
+    </run>
+    <run instances_no="4">
+      <result_statistics third_q="12910975.0" max="13003649" first_q="12177967.0" median="12227951.0" stdev="463949.0" min="11788263" mean="12421761.0"/>
+      <total_time_statistics third_q="5.8" max="5.9" first_q="5.5" median="5.6" stdev="0.2" min="5.4" mean="5.7"/>
+      <out_of_cpu_statistics third_q="0.0" max="0.0" first_q="0.0" median="0.0" stdev="0.0" min="0.0" mean="0.0"/>
+    </run>
+    <run instances_no="8">
+      <result_statistics third_q="23322767.0" max="23527333" first_q="23154431.0" median="23294509.0" stdev="254153.0" min="22763509" mean="23212510.0"/>
+      <total_time_statistics third_q="6.4" max="6.6" first_q="6.3" median="6.3" stdev="0.1" min="6.1" mean="6.3"/>
+      <out_of_cpu_statistics third_q="0.0" max="0.0" first_q="0.0" median="0.0" stdev="0.0" min="0.0" mean="0.0"/>
+    </run>
+    <run instances_no="12">
+      <result_statistics third_q="25994251.0" max="25995481" first_q="25664275.0" median="25836860.0" stdev="254577.0" min="25314290" mean="25761031.0"/>
+      <total_time_statistics third_q="8.8" max="9.2" first_q="8.4" median="8.7" stdev="0.3" min="7.7" mean="8.6"/>
+      <out_of_cpu_statistics third_q="0.1" max="0.1" first_q="0.0" median="0.0" stdev="0.0" min="0.0" mean="0.0"/>
+    </run>
+    <run instances_no="16">
+      <result_statistics third_q="19613738.0" max="19966422" first_q="19456352.0" median="19589027.0" stdev="188376.0" min="19447411" mean="19614590.0"/>
+      <total_time_statistics third_q="14.5" max="15.6" first_q="12.6" median="14.1" stdev="1.1" min="11.0" mean="13.6"/>
+      <out_of_cpu_statistics third_q="0.1" max="0.1" first_q="0.1" median="0.1" stdev="0.0" min="0.1" mean="0.1"/>
+    </run>
+    <run instances_no="20">
+      <result_statistics third_q="17995066.0" max="18154901" first_q="17982698.0" median="17985343.0" stdev="473747.0" min="16856295" mean="17794861.0"/>
+      <total_time_statistics third_q="20.1" max="21.6" first_q="13.5" median="19.1" stdev="3.2" min="11.2" mean="17.5"/>
+      <out_of_cpu_statistics third_q="0.1" max="0.1" first_q="0.1" median="0.1" stdev="0.0" min="0.1" mean="0.1"/>
+    </run>
+    <run instances_no="24">
+      <result_statistics third_q="17910092.0" max="18902660" first_q="16950560.0" median="17143382.0" stdev="1084096.0" min="15629905" mean="17307320.0"/>
+      <total_time_statistics third_q="25.6" max="27.1" first_q="16.7" median="24.4" stdev="5.0" min="11.3" mean="21.5"/>
+      <out_of_cpu_statistics third_q="0.1" max="0.2" first_q="0.1" median="0.1" stdev="0.0" min="0.1" mean="0.1"/>
+    </run>
+    <run instances_no="32">
+      <result_statistics third_q="14069248.0" max="14084250" first_q="13885910.0" median="14037134.0" stdev="94309.0" min="13862423" mean="13987793.0"/>
+      <total_time_statistics third_q="39.1" max="41.7" first_q="34.5" median="37.6" stdev="3.1" min="26.8" mean="36.7"/>
+      <out_of_cpu_statistics third_q="0.3" max="0.4" first_q="0.2" median="0.2" stdev="0.1" min="0.1" mean="0.2"/>
+    </run>
+    <run instances_no="40">
+      <result_statistics third_q="13372825.0" max="13398242" first_q="13315374.0" median="13316192.0" stdev="77341.0" min="13174875" mean="13315502.0"/>
+      <total_time_statistics third_q="51.6" max="52.0" first_q="49.4" median="51.0" stdev="3.4" min="30.8" mean="49.5"/>
+      <out_of_cpu_statistics third_q="0.5" max="0.9" first_q="0.3" median="0.4" stdev="0.2" min="0.2" mean="0.4"/>
+    </run>
+    <run instances_no="48">
+      <result_statistics third_q="12984922.0" max="12990880" first_q="12843992.0" median="12977132.0" stdev="78519.0" min="12807970" mean="12920979.0"/>
+      <total_time_statistics third_q="64.8" max="65.4" first_q="63.7" median="64.3" stdev="2.1" min="51.6" mean="63.9"/>
+      <out_of_cpu_statistics third_q="1.2" max="2.7" first_q="0.6" median="0.9" stdev="0.4" min="0.3" mean="0.9"/>
+    </run>
+  </test_result>
+  <test_result benchmark_name="linpackd" run_type="numa_runs"/>
+</beaker_run_result>

@@ -1,0 +1,11 @@
+# Source code of the bachelor thesis
+Author: Jiří Vozár
+
+## timelines directory
+This directory contains source code of timelines generator. The generator is executed by running the Timelines.py script.
+Directory `results` contains example results for timeline generation, directory `reports` is for generated timelines with included example.
+
+## classifier directory
+This directory contains scripts used to analyze and compare selected classifiers for detection of performance regression.
+
+Next to the scripts is also file `vectors` with the dataset used for teaching classifiers. The columns in the file are: UUID of comparison, name of benchmark operation, label (0=pass, 1=fail), the rest are vector components.

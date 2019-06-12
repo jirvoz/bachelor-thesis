@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <settings>
+    <Workflow value="fast"/>
+    <HugePageSize value="2048 kB"/>
+    <Architecture value="x86_64"/>
+    <BeakerRPMVersion value="kernel_perf_cpumem-performance-SPECjvm2008-test-certification-2.0-79.noarch"/>
+    <HugePagesTotal value="0"/>
+    <HostName value="localhost.localdomain"/>
+    <SpecificTag value="https://platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/job/Kernel_Scheduler_Performance/268"/>
+    <HostType value="machine"/>
+    <TestTimeString value="2 hours 25 minutes 21 seconds"/>
+    <MicrocodeCtl value="microcode_ctl-2.1-27.el8.x86_64"/>
+    <Tag value="https://platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/job/Kernel_Scheduler_Performance/268"/>
+    <TunedProfile value="throughput-performance"/>
+    <IbpbEnabled value="NONE"/>
+    <PtiEnabled value="NONE"/>
+    <TestCase value="SPECjvm2008-2_NUMA_nodes"/>
+    <BenchmarkName value="SPECjvm2008"/>
+    <Distribution value="RHEL-8.0-20180904.0"/>
+    <Area value="sched"/>
+    <DateTime value="Result-2018-Nov-08_07h15m47s"/>
+    <Kernel value="kernel-4.20.0-0.rc1.1.elrdy.x86_64"/>
+    <IbrsEnabled value="NONE"/>
+    <NumasNumber value="2"/>
+    <HugePagesSetup value="always"/>
+    <TestStartTime value="1541657785"/>
+    <Family value="RHEL8-RDY"/>
+    <SELinux value="Enforcing"/>
+    <RetpEnabled value="NONE"/>
+    <JavaFlags value="NO INPUT DATA"/>
+    <UUID value="e9414d9d-b81c-499d-9126-bd2cc3f08f05"/>
+    <HtOnOff value="htON"/>
+    <RecipeID value="6085044"/>
+    <PathToResult value="./results/SPECjvm2008/4.20.0-0.rc1.1.elrdy.x86_64/throughput-performance/Result-2018-Nov-08_07h15m47s"/>
+    <KernelFirmware value="linux-firmware-20180717-87.git8d69bab7.el8.noarch"/>
+    <JavaVersion value="1.8.0_181"/>
+    <Arguments value="--variant=fast"/>
+    <BeakerJobID value="3071632"/>
+  </settings>
+</beaker_run_result>

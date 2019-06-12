@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result benchmark_name="nml_distances">
+    <cpu_bind number="0">
+      <mem_bind number="0">
+        <result time="10.0"/>
+      </mem_bind>
+      <mem_bind number="1">
+        <result time="17.0"/>
+      </mem_bind>
+    </cpu_bind>
+    <cpu_bind number="0">
+      <mem_bind number="0">
+        <result time="10.0"/>
+      </mem_bind>
+      <mem_bind number="1">
+        <result time="17.0"/>
+      </mem_bind>
+    </cpu_bind>
+    <cpu_bind number="1">
+      <mem_bind number="0">
+        <result time="18.0"/>
+      </mem_bind>
+      <mem_bind number="1">
+        <result time="10.0"/>
+      </mem_bind>
+    </cpu_bind>
+    <cpu_bind number="1">
+      <mem_bind number="0">
+        <result time="18.0"/>
+      </mem_bind>
+      <mem_bind number="1">
+        <result time="10.0"/>
+      </mem_bind>
+    </cpu_bind>
+  </test_result>
+</beaker_run_result>

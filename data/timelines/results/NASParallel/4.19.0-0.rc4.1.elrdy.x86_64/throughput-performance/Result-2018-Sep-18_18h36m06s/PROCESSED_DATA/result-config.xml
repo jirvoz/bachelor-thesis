@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <settings>
+    <Arguments value="--variant=fast"/>
+    <BeakerJobID value="2775360"/>
+    <Family value=""/>
+    <JavaVersion value="NO INPUT DATA"/>
+    <Area value="sched"/>
+    <DateTime value="Result-2018-Sep-18_18h36m06s"/>
+    <JavaFlags value="NO INPUT DATA"/>
+    <PathToResult value="./results/NASParallel/4.19.0-0.rc4.1.elrdy.x86_64/throughput-performance/Result-2018-Sep-18_18h36m06s"/>
+    <RecipeID value="5686174"/>
+    <IbrsEnabled value="NONE"/>
+    <BeakerRPMVersion value="kernel_perf_cpumem-performance-NAS_parallel_benchmark-test-certification-2.0-103.noarch"/>
+    <HugePagesTotal value="0"/>
+    <MicrocodeCtl value="microcode_ctl-2.1-27.el8.x86_64"/>
+    <HugePagesSetup value="always"/>
+    <PtiEnabled value="NONE"/>
+    <KernelFirmware value="linux-firmware-20180717-87.git8d69bab7.el8.noarch"/>
+    <Workflow value=""/>
+    <TestStartTime value="1537288605"/>
+    <HtOnOff value="htON"/>
+    <RetpEnabled value="NONE"/>
+    <UUID value="85feb9e8-6c67-476f-b68a-0c4b3f2755e9"/>
+    <Kernel value="kernel-4.19.0-0.rc4.1.elrdy.x86_64"/>
+    <SpecificTag value=""/>
+    <HostName value="localhost.localdomain"/>
+    <HostType value="machine"/>
+    <SELinux value="Enforcing"/>
+    <HugePageSize value="2048 kB"/>
+    <Tag value="https://platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/job/Kernel_Scheduler_Performance/224"/>
+    <NumasNumber value="2"/>
+    <IbpbEnabled value="NONE"/>
+    <TestCase value="NASParallel-2_NUMA_nodes"/>
+    <TunedProfile value="throughput-performance"/>
+    <BenchmarkName value="NASParallel"/>
+    <Architecture value="x86_64"/>
+    <TestTimeString value="2 hours 46 minutes 52 seconds"/>
+    <Distribution value="RHEL-8.0-20180904.0"/>
+  </settings>
+</beaker_run_result>

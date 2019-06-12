@@ -1,0 +1,1174 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result benchmark_name="linpackd" run_type="affinity_runs"/>
+  <test_result benchmark_name="linpackd" run_type="default_runs">
+    <run instances_no="1">
+      <loop number="1">
+        <result system_time="0.0" user_time="5.66" flops="2940971" total_time="5.68"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="5.42" flops="3276118" total_time="5.44"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.0" user_time="5.5" flops="3238627" total_time="5.52"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="5.8" flops="2856062" total_time="5.82"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="5.27" flops="3344723" total_time="5.29"/>
+      </loop>
+    </run>
+    <run instances_no="2">
+      <loop number="1">
+        <result system_time="0.0" user_time="5.57" flops="3123013" total_time="5.59"/>
+        <result system_time="0.0" user_time="5.58" flops="3119464" total_time="5.6"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="5.37" flops="3276067" total_time="5.39"/>
+        <result system_time="0.0" user_time="5.71" flops="2922557" total_time="5.73"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.0" user_time="5.71" flops="2947859" total_time="5.74"/>
+        <result system_time="0.0" user_time="5.82" flops="2872510" total_time="5.85"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="5.35" flops="3342362" total_time="5.38"/>
+        <result system_time="0.0" user_time="5.45" flops="3256265" total_time="5.48"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="5.38" flops="3270541" total_time="5.4"/>
+        <result system_time="0.0" user_time="5.65" flops="3020458" total_time="5.67"/>
+      </loop>
+    </run>
+    <run instances_no="4">
+      <loop number="1">
+        <result system_time="0.0" user_time="5.55" flops="3188832" total_time="5.57"/>
+        <result system_time="0.0" user_time="5.86" flops="2930229" total_time="5.89"/>
+        <result system_time="0.0" user_time="5.62" flops="3053324" total_time="5.65"/>
+        <result system_time="0.0" user_time="5.8" flops="2878196" total_time="5.82"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="5.88" flops="2878830" total_time="5.91"/>
+        <result system_time="0.0" user_time="5.91" flops="2858224" total_time="5.94"/>
+        <result system_time="0.0" user_time="5.43" flops="3242873" total_time="5.45"/>
+        <result system_time="0.0" user_time="5.55" flops="3171263" total_time="5.58"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.0" user_time="5.52" flops="3236236" total_time="5.53"/>
+        <result system_time="0.0" user_time="5.53" flops="3245340" total_time="5.55"/>
+        <result system_time="0.0" user_time="5.45" flops="3231468" total_time="5.46"/>
+        <result system_time="0.0" user_time="5.58" flops="3171018" total_time="5.59"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="5.7" flops="3016587" total_time="5.72"/>
+        <result system_time="0.0" user_time="5.62" flops="3010742" total_time="5.64"/>
+        <result system_time="0.0" user_time="5.82" flops="2951343" total_time="5.83"/>
+        <result system_time="0.0" user_time="5.67" flops="2992282" total_time="5.69"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="5.8" flops="2878291" total_time="5.81"/>
+        <result system_time="0.0" user_time="5.71" flops="2981544" total_time="5.73"/>
+        <result system_time="0.0" user_time="6.01" flops="2796725" total_time="6.03"/>
+        <result system_time="0.0" user_time="5.95" flops="2827411" total_time="5.97"/>
+      </loop>
+    </run>
+    <run instances_no="8">
+      <loop number="1">
+        <result system_time="0.0" user_time="6.6" flops="2676165" total_time="6.63"/>
+        <result system_time="0.0" user_time="6.71" flops="2624812" total_time="6.74"/>
+        <result system_time="0.0" user_time="6.77" flops="2644180" total_time="6.79"/>
+        <result system_time="0.0" user_time="6.88" flops="2558348" total_time="6.9"/>
+        <result system_time="0.0" user_time="6.45" flops="2671430" total_time="6.48"/>
+        <result system_time="0.0" user_time="6.16" flops="2961316" total_time="6.18"/>
+        <result system_time="0.0" user_time="6.34" flops="2669204" total_time="6.36"/>
+        <result system_time="0.0" user_time="6.31" flops="2928102" total_time="6.33"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="6.84" flops="2597699" total_time="6.87"/>
+        <result system_time="0.0" user_time="6.6" flops="2663653" total_time="6.63"/>
+        <result system_time="0.0" user_time="6.11" flops="3020917" total_time="6.13"/>
+        <result system_time="0.0" user_time="6.44" flops="2868231" total_time="6.47"/>
+        <result system_time="0.0" user_time="6.31" flops="2778179" total_time="6.34"/>
+        <result system_time="0.0" user_time="6.74" flops="2648429" total_time="6.77"/>
+        <result system_time="0.0" user_time="6.43" flops="2647943" total_time="6.46"/>
+        <result system_time="0.0" user_time="6.65" flops="2825974" total_time="6.67"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.0" user_time="6.4" flops="2662421" total_time="6.42"/>
+        <result system_time="0.0" user_time="6.31" flops="2970638" total_time="6.34"/>
+        <result system_time="0.0" user_time="6.58" flops="2727162" total_time="6.6"/>
+        <result system_time="0.0" user_time="6.5" flops="2655316" total_time="6.52"/>
+        <result system_time="0.0" user_time="6.31" flops="2971889" total_time="6.33"/>
+        <result system_time="0.0" user_time="6.61" flops="2717835" total_time="6.64"/>
+        <result system_time="0.0" user_time="6.5" flops="2665765" total_time="6.52"/>
+        <result system_time="0.0" user_time="6.18" flops="2970386" total_time="6.2"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="6.51" flops="2658095" total_time="6.54"/>
+        <result system_time="0.0" user_time="6.26" flops="2963636" total_time="6.29"/>
+        <result system_time="0.0" user_time="6.66" flops="2658494" total_time="6.68"/>
+        <result system_time="0.0" user_time="6.58" flops="2615364" total_time="6.61"/>
+        <result system_time="0.0" user_time="6.58" flops="2742293" total_time="6.61"/>
+        <result system_time="0.0" user_time="6.32" flops="2962933" total_time="6.35"/>
+        <result system_time="0.0" user_time="6.09" flops="2948943" total_time="6.12"/>
+        <result system_time="0.0" user_time="6.15" flops="2999293" total_time="6.17"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="6.38" flops="2635092" total_time="6.41"/>
+        <result system_time="0.0" user_time="6.25" flops="2939350" total_time="6.27"/>
+        <result system_time="0.0" user_time="6.36" flops="2895145" total_time="6.39"/>
+        <result system_time="0.0" user_time="6.46" flops="2816892" total_time="6.49"/>
+        <result system_time="0.0" user_time="6.45" flops="2665026" total_time="6.47"/>
+        <result system_time="0.0" user_time="6.13" flops="2951705" total_time="6.16"/>
+        <result system_time="0.0" user_time="6.27" flops="2987810" total_time="6.3"/>
+        <result system_time="0.0" user_time="6.35" flops="2973321" total_time="6.38"/>
+      </loop>
+    </run>
+    <run instances_no="12">
+      <loop number="1">
+        <result system_time="0.01" user_time="8.24" flops="2300761" total_time="8.28"/>
+        <result system_time="0.0" user_time="8.79" flops="2223176" total_time="8.84"/>
+        <result system_time="0.0" user_time="8.8" flops="1942608" total_time="8.84"/>
+        <result system_time="0.0" user_time="8.57" flops="1954564" total_time="8.61"/>
+        <result system_time="0.0" user_time="8.84" flops="2222536" total_time="8.88"/>
+        <result system_time="0.0" user_time="8.69" flops="2221305" total_time="8.73"/>
+        <result system_time="0.0" user_time="9.16" flops="1951740" total_time="9.2"/>
+        <result system_time="0.0" user_time="7.41" flops="2178191" total_time="7.45"/>
+        <result system_time="0.0" user_time="8.85" flops="2210544" total_time="8.9"/>
+        <result system_time="0.01" user_time="8.76" flops="2020656" total_time="8.8"/>
+        <result system_time="0.0" user_time="8.68" flops="2214822" total_time="8.72"/>
+        <result system_time="0.0" user_time="8.21" flops="2037569" total_time="8.25"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.01" user_time="8.13" flops="2215187" total_time="8.17"/>
+        <result system_time="0.0" user_time="8.72" flops="2248835" total_time="8.77"/>
+        <result system_time="0.0" user_time="8.78" flops="2229738" total_time="8.82"/>
+        <result system_time="0.01" user_time="9.24" flops="1709480" total_time="9.29"/>
+        <result system_time="0.0" user_time="8.88" flops="2211371" total_time="8.93"/>
+        <result system_time="0.0" user_time="8.66" flops="2242145" total_time="8.7"/>
+        <result system_time="0.0" user_time="7.86" flops="2163590" total_time="7.9"/>
+        <result system_time="0.0" user_time="8.82" flops="2246753" total_time="8.87"/>
+        <result system_time="0.0" user_time="8.8" flops="2259369" total_time="8.84"/>
+        <result system_time="0.0" user_time="8.31" flops="2200892" total_time="8.35"/>
+        <result system_time="0.0" user_time="8.45" flops="2270798" total_time="8.49"/>
+        <result system_time="0.0" user_time="8.5" flops="2307014" total_time="8.54"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.0" user_time="8.09" flops="2144230" total_time="8.14"/>
+        <result system_time="0.0" user_time="9.06" flops="1994871" total_time="9.11"/>
+        <result system_time="0.0" user_time="8.66" flops="2080309" total_time="8.7"/>
+        <result system_time="0.0" user_time="8.76" flops="2052979" total_time="8.8"/>
+        <result system_time="0.0" user_time="8.65" flops="2267176" total_time="8.7"/>
+        <result system_time="0.0" user_time="8.76" flops="2180527" total_time="8.81"/>
+        <result system_time="0.0" user_time="8.28" flops="2128391" total_time="8.32"/>
+        <result system_time="0.0" user_time="8.49" flops="2070998" total_time="8.53"/>
+        <result system_time="0.0" user_time="8.61" flops="2077706" total_time="8.65"/>
+        <result system_time="0.0" user_time="8.81" flops="2164927" total_time="8.86"/>
+        <result system_time="0.0" user_time="8.49" flops="2253969" total_time="8.54"/>
+        <result system_time="0.0" user_time="8.69" flops="2238952" total_time="8.74"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="7.54" flops="2185895" total_time="7.58"/>
+        <result system_time="0.0" user_time="8.11" flops="2272108" total_time="8.16"/>
+        <result system_time="0.0" user_time="8.78" flops="2175863" total_time="8.83"/>
+        <result system_time="0.0" user_time="8.71" flops="2175703" total_time="8.76"/>
+        <result system_time="0.0" user_time="8.88" flops="1933467" total_time="8.93"/>
+        <result system_time="0.0" user_time="8.85" flops="2110718" total_time="8.9"/>
+        <result system_time="0.0" user_time="8.68" flops="2212491" total_time="8.73"/>
+        <result system_time="0.0" user_time="8.82" flops="2137749" total_time="8.87"/>
+        <result system_time="0.0" user_time="8.56" flops="1904041" total_time="8.6"/>
+        <result system_time="0.01" user_time="8.83" flops="1872396" total_time="8.88"/>
+        <result system_time="0.0" user_time="8.75" flops="2256762" total_time="8.79"/>
+        <result system_time="0.0" user_time="7.73" flops="2190498" total_time="7.77"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="8.87" flops="2121582" total_time="8.92"/>
+        <result system_time="0.0" user_time="8.72" flops="2114791" total_time="8.76"/>
+        <result system_time="0.0" user_time="8.72" flops="2180520" total_time="8.76"/>
+        <result system_time="0.01" user_time="8.24" flops="2116319" total_time="8.29"/>
+        <result system_time="0.0" user_time="8.4" flops="2184488" total_time="8.44"/>
+        <result system_time="0.0" user_time="8.56" flops="2232924" total_time="8.6"/>
+        <result system_time="0.0" user_time="8.06" flops="2148102" total_time="8.11"/>
+        <result system_time="0.0" user_time="8.68" flops="2197903" total_time="8.73"/>
+        <result system_time="0.0" user_time="8.6" flops="2268563" total_time="8.64"/>
+        <result system_time="0.0" user_time="8.77" flops="2101920" total_time="8.82"/>
+        <result system_time="0.0" user_time="8.54" flops="2226356" total_time="8.58"/>
+        <result system_time="0.0" user_time="8.67" flops="2037161" total_time="8.71"/>
+      </loop>
+    </run>
+    <run instances_no="16">
+      <loop number="1">
+        <result system_time="0.01" user_time="13.67" flops="1255298" total_time="13.74"/>
+        <result system_time="0.01" user_time="13.91" flops="1250356" total_time="13.98"/>
+        <result system_time="0.0" user_time="14.8" flops="1195209" total_time="14.87"/>
+        <result system_time="0.0" user_time="14.08" flops="1223958" total_time="14.15"/>
+        <result system_time="0.0" user_time="14.17" flops="1159808" total_time="14.24"/>
+        <result system_time="0.0" user_time="14.61" flops="1250741" total_time="14.68"/>
+        <result system_time="0.01" user_time="12.23" flops="1144826" total_time="12.29"/>
+        <result system_time="0.0" user_time="14.47" flops="1256977" total_time="14.55"/>
+        <result system_time="0.0" user_time="14.44" flops="1287713" total_time="14.51"/>
+        <result system_time="0.0" user_time="12.58" flops="1330434" total_time="12.64"/>
+        <result system_time="0.0" user_time="14.6" flops="1259723" total_time="14.67"/>
+        <result system_time="0.0" user_time="14.62" flops="1205287" total_time="14.7"/>
+        <result system_time="0.0" user_time="14.66" flops="1250132" total_time="14.73"/>
+        <result system_time="0.0" user_time="14.7" flops="1246540" total_time="14.77"/>
+        <result system_time="0.01" user_time="14.02" flops="1182680" total_time="14.1"/>
+        <result system_time="0.0" user_time="13.49" flops="1101333" total_time="13.55"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="13.99" flops="1145667" total_time="14.05"/>
+        <result system_time="0.0" user_time="13.69" flops="1320713" total_time="13.76"/>
+        <result system_time="0.0" user_time="11.8" flops="1225109" total_time="11.86"/>
+        <result system_time="0.0" user_time="13.5" flops="1259299" total_time="13.58"/>
+        <result system_time="0.0" user_time="14.45" flops="1213414" total_time="14.52"/>
+        <result system_time="0.0" user_time="14.26" flops="1233204" total_time="14.33"/>
+        <result system_time="0.0" user_time="13.79" flops="1150034" total_time="13.86"/>
+        <result system_time="0.0" user_time="14.35" flops="1233044" total_time="14.42"/>
+        <result system_time="0.0" user_time="14.38" flops="1231662" total_time="14.45"/>
+        <result system_time="0.0" user_time="12.38" flops="1355196" total_time="12.44"/>
+        <result system_time="0.0" user_time="14.22" flops="1245768" total_time="14.29"/>
+        <result system_time="0.01" user_time="13.34" flops="1267555" total_time="13.41"/>
+        <result system_time="0.0" user_time="14.77" flops="1131642" total_time="14.84"/>
+        <result system_time="0.0" user_time="14.31" flops="1248551" total_time="14.38"/>
+        <result system_time="0.0" user_time="13.81" flops="1192846" total_time="13.88"/>
+        <result system_time="0.0" user_time="14.35" flops="1228156" total_time="14.42"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.0" user_time="13.72" flops="1269468" total_time="13.79"/>
+        <result system_time="0.01" user_time="13.21" flops="1278624" total_time="13.28"/>
+        <result system_time="0.0" user_time="14.12" flops="1193452" total_time="14.19"/>
+        <result system_time="0.0" user_time="14.46" flops="1297331" total_time="14.54"/>
+        <result system_time="0.0" user_time="14.82" flops="1171631" total_time="14.91"/>
+        <result system_time="0.0" user_time="14.16" flops="1166114" total_time="14.23"/>
+        <result system_time="0.0" user_time="14.61" flops="1250909" total_time="14.69"/>
+        <result system_time="0.0" user_time="14.6" flops="1245115" total_time="14.68"/>
+        <result system_time="0.0" user_time="14.89" flops="1152013" total_time="14.97"/>
+        <result system_time="0.0" user_time="14.84" flops="1162711" total_time="14.92"/>
+        <result system_time="0.0" user_time="12.4" flops="1189563" total_time="12.48"/>
+        <result system_time="0.0" user_time="15.02" flops="1157342" total_time="15.1"/>
+        <result system_time="0.01" user_time="13.21" flops="1211131" total_time="13.28"/>
+        <result system_time="0.0" user_time="14.27" flops="1265622" total_time="14.35"/>
+        <result system_time="0.0" user_time="14.2" flops="1173964" total_time="14.27"/>
+        <result system_time="0.01" user_time="13.83" flops="1277416" total_time="13.9"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="14.92" flops="1220485" total_time="14.99"/>
+        <result system_time="0.0" user_time="14.73" flops="1205369" total_time="14.8"/>
+        <result system_time="0.0" user_time="13.5" flops="1230205" total_time="13.56"/>
+        <result system_time="0.0" user_time="14.94" flops="1189431" total_time="15.01"/>
+        <result system_time="0.0" user_time="12.79" flops="1299055" total_time="12.85"/>
+        <result system_time="0.0" user_time="13.62" flops="1275028" total_time="13.69"/>
+        <result system_time="0.0" user_time="12.0" flops="1179134" total_time="12.06"/>
+        <result system_time="0.0" user_time="13.35" flops="1269916" total_time="13.41"/>
+        <result system_time="0.0" user_time="13.73" flops="1198022" total_time="13.8"/>
+        <result system_time="0.0" user_time="13.88" flops="1183673" total_time="13.95"/>
+        <result system_time="0.0" user_time="15.05" flops="1133820" total_time="15.11"/>
+        <result system_time="0.0" user_time="14.86" flops="1199815" total_time="14.92"/>
+        <result system_time="0.01" user_time="12.86" flops="1206416" total_time="12.93"/>
+        <result system_time="0.0" user_time="14.25" flops="1330630" total_time="14.32"/>
+        <result system_time="0.0" user_time="14.96" flops="1142552" total_time="15.03"/>
+        <result system_time="0.0" user_time="14.86" flops="1135710" total_time="14.93"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.01" user_time="13.31" flops="1255527" total_time="13.38"/>
+        <result system_time="0.0" user_time="12.49" flops="1318463" total_time="12.55"/>
+        <result system_time="0.0" user_time="14.57" flops="1226072" total_time="14.63"/>
+        <result system_time="0.0" user_time="12.86" flops="1159478" total_time="12.93"/>
+        <result system_time="0.0" user_time="13.82" flops="1241750" total_time="13.89"/>
+        <result system_time="0.0" user_time="14.77" flops="1193537" total_time="14.84"/>
+        <result system_time="0.0" user_time="14.74" flops="1188915" total_time="14.8"/>
+        <result system_time="0.0" user_time="14.39" flops="1120656" total_time="14.46"/>
+        <result system_time="0.0" user_time="13.42" flops="1236534" total_time="13.48"/>
+        <result system_time="0.0" user_time="13.91" flops="1281373" total_time="13.97"/>
+        <result system_time="0.0" user_time="14.8" flops="1175771" total_time="14.88"/>
+        <result system_time="0.0" user_time="14.03" flops="1276299" total_time="14.09"/>
+        <result system_time="0.0" user_time="14.7" flops="1167175" total_time="14.77"/>
+        <result system_time="0.0" user_time="14.4" flops="1224566" total_time="14.47"/>
+        <result system_time="0.0" user_time="14.68" flops="1178449" total_time="14.75"/>
+        <result system_time="0.0" user_time="14.57" flops="1212560" total_time="14.64"/>
+      </loop>
+    </run>
+    <run instances_no="20">
+      <loop number="1">
+        <result system_time="0.01" user_time="17.03" flops="867709" total_time="17.13"/>
+        <result system_time="0.01" user_time="19.42" flops="842817" total_time="19.52"/>
+        <result system_time="0.01" user_time="17.77" flops="920724" total_time="17.86"/>
+        <result system_time="0.0" user_time="20.45" flops="830998" total_time="20.55"/>
+        <result system_time="0.0" user_time="20.32" flops="841032" total_time="20.42"/>
+        <result system_time="0.0" user_time="20.14" flops="868795" total_time="20.24"/>
+        <result system_time="0.0" user_time="19.52" flops="859134" total_time="19.61"/>
+        <result system_time="0.01" user_time="19.12" flops="860758" total_time="19.22"/>
+        <result system_time="0.01" user_time="17.35" flops="867832" total_time="17.46"/>
+        <result system_time="0.0" user_time="19.99" flops="880592" total_time="20.08"/>
+        <result system_time="0.0" user_time="19.9" flops="883901" total_time="20.0"/>
+        <result system_time="0.0" user_time="20.39" flops="808175" total_time="20.48"/>
+        <result system_time="0.0" user_time="20.46" flops="783844" total_time="20.56"/>
+        <result system_time="0.01" user_time="16.16" flops="841376" total_time="16.25"/>
+        <result system_time="0.0" user_time="20.28" flops="794872" total_time="20.37"/>
+        <result system_time="0.0" user_time="20.24" flops="843369" total_time="20.34"/>
+        <result system_time="0.01" user_time="19.04" flops="882082" total_time="19.14"/>
+        <result system_time="0.01" user_time="19.82" flops="818520" total_time="19.92"/>
+        <result system_time="0.0" user_time="20.28" flops="763796" total_time="20.38"/>
+        <result system_time="0.01" user_time="19.1" flops="896543" total_time="19.2"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="20.14" flops="877283" total_time="20.24"/>
+        <result system_time="0.0" user_time="20.46" flops="819589" total_time="20.55"/>
+        <result system_time="0.0" user_time="20.5" flops="827334" total_time="20.59"/>
+        <result system_time="0.01" user_time="19.51" flops="841584" total_time="19.61"/>
+        <result system_time="0.0" user_time="20.08" flops="815008" total_time="20.17"/>
+        <result system_time="0.0" user_time="20.44" flops="819356" total_time="20.54"/>
+        <result system_time="0.0" user_time="20.45" flops="849619" total_time="20.55"/>
+        <result system_time="0.0" user_time="20.29" flops="851705" total_time="20.38"/>
+        <result system_time="0.0" user_time="19.27" flops="836176" total_time="19.36"/>
+        <result system_time="0.01" user_time="17.72" flops="897506" total_time="17.82"/>
+        <result system_time="0.01" user_time="19.21" flops="864916" total_time="19.3"/>
+        <result system_time="0.0" user_time="20.39" flops="816399" total_time="20.48"/>
+        <result system_time="0.01" user_time="19.22" flops="862458" total_time="19.32"/>
+        <result system_time="0.01" user_time="17.92" flops="928865" total_time="18.02"/>
+        <result system_time="0.01" user_time="19.71" flops="838001" total_time="19.82"/>
+        <result system_time="0.0" user_time="20.38" flops="839316" total_time="20.49"/>
+        <result system_time="0.01" user_time="16.31" flops="854004" total_time="16.39"/>
+        <result system_time="0.01" user_time="17.1" flops="869936" total_time="17.18"/>
+        <result system_time="0.0" user_time="20.25" flops="843928" total_time="20.34"/>
+        <result system_time="0.01" user_time="19.13" flops="867865" total_time="19.23"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.0" user_time="20.71" flops="812214" total_time="20.8"/>
+        <result system_time="0.01" user_time="17.35" flops="884674" total_time="17.45"/>
+        <result system_time="0.01" user_time="19.54" flops="854721" total_time="19.65"/>
+        <result system_time="0.01" user_time="16.88" flops="852665" total_time="16.98"/>
+        <result system_time="0.01" user_time="18.59" flops="926553" total_time="18.7"/>
+        <result system_time="0.01" user_time="16.9" flops="851829" total_time="17.02"/>
+        <result system_time="0.01" user_time="18.83" flops="919256" total_time="18.94"/>
+        <result system_time="0.0" user_time="19.43" flops="859907" total_time="19.54"/>
+        <result system_time="0.0" user_time="20.06" flops="822439" total_time="20.16"/>
+        <result system_time="0.0" user_time="20.61" flops="829340" total_time="20.7"/>
+        <result system_time="0.01" user_time="18.84" flops="919569" total_time="18.95"/>
+        <result system_time="0.0" user_time="20.67" flops="795980" total_time="20.77"/>
+        <result system_time="0.0" user_time="19.99" flops="878392" total_time="20.09"/>
+        <result system_time="0.0" user_time="20.55" flops="842586" total_time="20.65"/>
+        <result system_time="0.01" user_time="18.57" flops="923927" total_time="18.67"/>
+        <result system_time="0.0" user_time="20.92" flops="799889" total_time="21.03"/>
+        <result system_time="0.0" user_time="20.64" flops="840849" total_time="20.74"/>
+        <result system_time="0.01" user_time="19.5" flops="863168" total_time="19.61"/>
+        <result system_time="0.0" user_time="20.22" flops="888001" total_time="20.32"/>
+        <result system_time="0.0" user_time="20.92" flops="798238" total_time="21.02"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.01" user_time="18.69" flops="917304" total_time="18.8"/>
+        <result system_time="0.0" user_time="20.24" flops="854639" total_time="20.34"/>
+        <result system_time="0.01" user_time="18.9" flops="868276" total_time="19.02"/>
+        <result system_time="0.01" user_time="16.75" flops="869682" total_time="16.86"/>
+        <result system_time="0.0" user_time="19.96" flops="837924" total_time="20.06"/>
+        <result system_time="0.0" user_time="20.33" flops="846937" total_time="20.43"/>
+        <result system_time="0.0" user_time="19.27" flops="858445" total_time="19.38"/>
+        <result system_time="0.0" user_time="19.49" flops="860034" total_time="19.61"/>
+        <result system_time="0.0" user_time="19.95" flops="838363" total_time="20.05"/>
+        <result system_time="0.0" user_time="20.08" flops="839726" total_time="20.17"/>
+        <result system_time="0.01" user_time="18.8" flops="874985" total_time="18.91"/>
+        <result system_time="0.0" user_time="20.15" flops="831161" total_time="20.25"/>
+        <result system_time="0.01" user_time="16.22" flops="831767" total_time="16.35"/>
+        <result system_time="0.0" user_time="20.35" flops="826769" total_time="20.45"/>
+        <result system_time="0.01" user_time="17.36" flops="899841" total_time="17.46"/>
+        <result system_time="0.0" user_time="19.41" flops="847083" total_time="19.53"/>
+        <result system_time="0.01" user_time="17.75" flops="918618" total_time="17.86"/>
+        <result system_time="0.01" user_time="20.3" flops="851406" total_time="20.4"/>
+        <result system_time="0.0" user_time="20.36" flops="843587" total_time="20.46"/>
+        <result system_time="0.01" user_time="20.14" flops="860111" total_time="20.25"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="19.21" flops="864104" total_time="19.33"/>
+        <result system_time="0.0" user_time="20.27" flops="828691" total_time="20.38"/>
+        <result system_time="0.01" user_time="18.82" flops="892807" total_time="18.94"/>
+        <result system_time="0.0" user_time="19.34" flops="842409" total_time="19.46"/>
+        <result system_time="0.0" user_time="20.32" flops="821807" total_time="20.43"/>
+        <result system_time="0.01" user_time="16.07" flops="876411" total_time="16.18"/>
+        <result system_time="0.0" user_time="20.17" flops="834303" total_time="20.28"/>
+        <result system_time="0.0" user_time="20.15" flops="826488" total_time="20.25"/>
+        <result system_time="0.0" user_time="20.1" flops="826234" total_time="20.21"/>
+        <result system_time="0.01" user_time="19.43" flops="854576" total_time="19.56"/>
+        <result system_time="0.01" user_time="17.13" flops="935117" total_time="17.24"/>
+        <result system_time="0.01" user_time="15.7" flops="848322" total_time="15.82"/>
+        <result system_time="0.01" user_time="20.19" flops="825989" total_time="20.3"/>
+        <result system_time="0.01" user_time="18.17" flops="943503" total_time="18.28"/>
+        <result system_time="0.0" user_time="20.03" flops="829994" total_time="20.14"/>
+        <result system_time="0.0" user_time="20.27" flops="828905" total_time="20.38"/>
+        <result system_time="0.01" user_time="18.63" flops="897504" total_time="18.75"/>
+        <result system_time="0.0" user_time="20.13" flops="836678" total_time="20.23"/>
+        <result system_time="0.01" user_time="18.93" flops="903421" total_time="19.05"/>
+        <result system_time="0.0" user_time="20.08" flops="832469" total_time="20.18"/>
+      </loop>
+    </run>
+    <run instances_no="24">
+      <loop number="1">
+        <result system_time="0.01" user_time="22.73" flops="679281" total_time="22.85"/>
+        <result system_time="0.0" user_time="25.07" flops="651285" total_time="25.2"/>
+        <result system_time="0.01" user_time="25.1" flops="647291" total_time="25.24"/>
+        <result system_time="0.0" user_time="26.04" flops="632098" total_time="26.17"/>
+        <result system_time="0.0" user_time="26.31" flops="630824" total_time="26.45"/>
+        <result system_time="0.01" user_time="23.44" flops="696674" total_time="23.56"/>
+        <result system_time="0.01" user_time="24.95" flops="647491" total_time="25.08"/>
+        <result system_time="0.01" user_time="22.56" flops="680399" total_time="22.68"/>
+        <result system_time="0.01" user_time="24.55" flops="641549" total_time="24.67"/>
+        <result system_time="0.0" user_time="26.09" flops="647358" total_time="26.22"/>
+        <result system_time="0.0" user_time="26.03" flops="638926" total_time="26.17"/>
+        <result system_time="0.0" user_time="25.81" flops="651598" total_time="25.94"/>
+        <result system_time="0.0" user_time="25.88" flops="667669" total_time="26.01"/>
+        <result system_time="0.0" user_time="26.17" flops="648132" total_time="26.3"/>
+        <result system_time="0.0" user_time="26.04" flops="633742" total_time="26.16"/>
+        <result system_time="0.01" user_time="24.22" flops="713953" total_time="24.34"/>
+        <result system_time="0.0" user_time="26.03" flops="648973" total_time="26.16"/>
+        <result system_time="0.01" user_time="23.76" flops="730739" total_time="23.88"/>
+        <result system_time="0.0" user_time="25.94" flops="666086" total_time="26.07"/>
+        <result system_time="0.0" user_time="25.84" flops="669374" total_time="25.97"/>
+        <result system_time="0.01" user_time="25.07" flops="651010" total_time="25.2"/>
+        <result system_time="0.01" user_time="24.65" flops="645423" total_time="24.78"/>
+        <result system_time="0.0" user_time="18.55" flops="663951" total_time="18.66"/>
+        <result system_time="0.0" user_time="26.07" flops="636522" total_time="26.2"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="25.85" flops="674226" total_time="25.98"/>
+        <result system_time="0.01" user_time="22.25" flops="683165" total_time="22.37"/>
+        <result system_time="0.01" user_time="24.07" flops="646369" total_time="24.2"/>
+        <result system_time="0.01" user_time="24.72" flops="632969" total_time="24.87"/>
+        <result system_time="0.0" user_time="25.83" flops="632209" total_time="25.97"/>
+        <result system_time="0.01" user_time="23.09" flops="755645" total_time="23.21"/>
+        <result system_time="0.01" user_time="24.61" flops="653936" total_time="24.75"/>
+        <result system_time="0.01" user_time="18.95" flops="625395" total_time="19.08"/>
+        <result system_time="0.01" user_time="24.84" flops="629807" total_time="24.97"/>
+        <result system_time="0.0" user_time="25.71" flops="638743" total_time="25.84"/>
+        <result system_time="0.01" user_time="25.99" flops="640810" total_time="26.13"/>
+        <result system_time="0.01" user_time="24.78" flops="651742" total_time="24.92"/>
+        <result system_time="0.01" user_time="20.02" flops="677536" total_time="20.13"/>
+        <result system_time="0.0" user_time="25.84" flops="632821" total_time="25.98"/>
+        <result system_time="0.01" user_time="23.52" flops="745871" total_time="23.64"/>
+        <result system_time="0.0" user_time="25.97" flops="641550" total_time="26.12"/>
+        <result system_time="0.0" user_time="25.67" flops="661939" total_time="25.8"/>
+        <result system_time="0.0" user_time="25.92" flops="669225" total_time="26.06"/>
+        <result system_time="0.01" user_time="22.82" flops="701962" total_time="22.95"/>
+        <result system_time="0.0" user_time="25.89" flops="639162" total_time="26.03"/>
+        <result system_time="0.0" user_time="25.71" flops="654054" total_time="25.84"/>
+        <result system_time="0.0" user_time="25.87" flops="682015" total_time="26.01"/>
+        <result system_time="0.0" user_time="25.86" flops="638744" total_time="25.99"/>
+        <result system_time="0.01" user_time="24.68" flops="638868" total_time="24.8"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.01" user_time="26.69" flops="628406" total_time="26.82"/>
+        <result system_time="0.01" user_time="24.15" flops="727380" total_time="24.28"/>
+        <result system_time="0.01" user_time="25.48" flops="633839" total_time="25.62"/>
+        <result system_time="0.0" user_time="26.28" flops="644349" total_time="26.41"/>
+        <result system_time="0.01" user_time="26.11" flops="658907" total_time="26.25"/>
+        <result system_time="0.01" user_time="25.16" flops="663578" total_time="25.29"/>
+        <result system_time="0.01" user_time="25.34" flops="647232" total_time="25.47"/>
+        <result system_time="0.01" user_time="25.54" flops="634373" total_time="25.68"/>
+        <result system_time="0.01" user_time="24.37" flops="713781" total_time="24.5"/>
+        <result system_time="0.01" user_time="25.5" flops="619177" total_time="25.63"/>
+        <result system_time="0.01" user_time="21.4" flops="615250" total_time="21.54"/>
+        <result system_time="0.0" user_time="26.66" flops="625083" total_time="26.79"/>
+        <result system_time="0.01" user_time="24.03" flops="671650" total_time="24.15"/>
+        <result system_time="0.01" user_time="24.66" flops="684893" total_time="24.79"/>
+        <result system_time="0.0" user_time="26.68" flops="640210" total_time="26.82"/>
+        <result system_time="0.01" user_time="21.36" flops="660288" total_time="21.47"/>
+        <result system_time="0.0" user_time="26.62" flops="655538" total_time="26.75"/>
+        <result system_time="0.0" user_time="26.23" flops="662357" total_time="26.36"/>
+        <result system_time="0.0" user_time="26.51" flops="651309" total_time="26.64"/>
+        <result system_time="0.0" user_time="26.56" flops="687789" total_time="26.69"/>
+        <result system_time="0.0" user_time="26.54" flops="652793" total_time="26.67"/>
+        <result system_time="0.0" user_time="26.67" flops="640457" total_time="26.79"/>
+        <result system_time="0.0" user_time="26.06" flops="663891" total_time="26.19"/>
+        <result system_time="0.01" user_time="24.18" flops="677333" total_time="24.31"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.01" user_time="25.15" flops="620105" total_time="25.28"/>
+        <result system_time="0.01" user_time="25.2" flops="645156" total_time="25.34"/>
+        <result system_time="0.01" user_time="23.57" flops="727070" total_time="23.69"/>
+        <result system_time="0.01" user_time="26.45" flops="628212" total_time="26.59"/>
+        <result system_time="0.01" user_time="22.64" flops="664802" total_time="22.75"/>
+        <result system_time="0.01" user_time="24.44" flops="672418" total_time="24.57"/>
+        <result system_time="0.01" user_time="21.41" flops="632808" total_time="21.55"/>
+        <result system_time="0.0" user_time="26.18" flops="654365" total_time="26.31"/>
+        <result system_time="0.01" user_time="22.86" flops="678777" total_time="22.98"/>
+        <result system_time="0.0" user_time="26.02" flops="651952" total_time="26.15"/>
+        <result system_time="0.0" user_time="26.28" flops="628991" total_time="26.41"/>
+        <result system_time="0.0" user_time="24.99" flops="684369" total_time="25.12"/>
+        <result system_time="0.0" user_time="26.23" flops="658072" total_time="26.35"/>
+        <result system_time="0.0" user_time="26.13" flops="646814" total_time="26.26"/>
+        <result system_time="0.01" user_time="26.32" flops="654037" total_time="26.45"/>
+        <result system_time="0.0" user_time="26.33" flops="632651" total_time="26.47"/>
+        <result system_time="0.0" user_time="26.08" flops="660302" total_time="26.22"/>
+        <result system_time="0.0" user_time="26.25" flops="651523" total_time="26.38"/>
+        <result system_time="0.0" user_time="26.16" flops="663788" total_time="26.29"/>
+        <result system_time="0.0" user_time="26.3" flops="657143" total_time="26.43"/>
+        <result system_time="0.01" user_time="25.31" flops="634772" total_time="25.44"/>
+        <result system_time="0.01" user_time="24.47" flops="675671" total_time="24.6"/>
+        <result system_time="0.01" user_time="22.22" flops="654631" total_time="22.34"/>
+        <result system_time="0.0" user_time="25.07" flops="619561" total_time="25.21"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="26.38" flops="614027" total_time="26.53"/>
+        <result system_time="0.0" user_time="26.29" flops="648258" total_time="26.44"/>
+        <result system_time="0.01" user_time="22.49" flops="644417" total_time="22.68"/>
+        <result system_time="0.0" user_time="26.14" flops="618237" total_time="26.28"/>
+        <result system_time="0.0" user_time="26.34" flops="628520" total_time="26.48"/>
+        <result system_time="0.0" user_time="26.3" flops="638457" total_time="26.44"/>
+        <result system_time="0.01" user_time="24.73" flops="687166" total_time="24.89"/>
+        <result system_time="0.01" user_time="22.93" flops="668158" total_time="23.08"/>
+        <result system_time="0.01" user_time="25.45" flops="634756" total_time="25.62"/>
+        <result system_time="0.01" user_time="24.99" flops="713358" total_time="25.16"/>
+        <result system_time="0.0" user_time="26.5" flops="629602" total_time="26.65"/>
+        <result system_time="0.0" user_time="26.42" flops="632271" total_time="26.57"/>
+        <result system_time="0.01" user_time="26.55" flops="612796" total_time="26.7"/>
+        <result system_time="0.01" user_time="24.5" flops="688460" total_time="24.66"/>
+        <result system_time="0.01" user_time="22.56" flops="651906" total_time="22.71"/>
+        <result system_time="0.01" user_time="24.67" flops="694229" total_time="24.83"/>
+        <result system_time="0.01" user_time="25.42" flops="633059" total_time="25.58"/>
+        <result system_time="0.0" user_time="26.4" flops="647345" total_time="26.55"/>
+        <result system_time="0.01" user_time="23.26" flops="666460" total_time="23.42"/>
+        <result system_time="0.0" user_time="26.35" flops="645543" total_time="26.5"/>
+        <result system_time="0.01" user_time="26.07" flops="622334" total_time="26.22"/>
+        <result system_time="0.01" user_time="24.67" flops="700392" total_time="24.83"/>
+        <result system_time="0.01" user_time="25.3" flops="652759" total_time="25.47"/>
+        <result system_time="0.0" user_time="26.5" flops="619252" total_time="26.64"/>
+      </loop>
+    </run>
+    <run instances_no="32">
+      <loop number="1">
+        <result system_time="0.0" user_time="36.05" flops="499760" total_time="36.24"/>
+        <result system_time="0.0" user_time="37.86" flops="379704" total_time="38.07"/>
+        <result system_time="0.0" user_time="37.47" flops="392241" total_time="37.78"/>
+        <result system_time="0.0" user_time="38.17" flops="381699" total_time="38.43"/>
+        <result system_time="0.03" user_time="34.72" flops="501542" total_time="34.96"/>
+        <result system_time="0.02" user_time="35.32" flops="496477" total_time="35.51"/>
+        <result system_time="0.0" user_time="36.05" flops="498715" total_time="36.23"/>
+        <result system_time="0.01" user_time="35.58" flops="497021" total_time="35.82"/>
+        <result system_time="0.01" user_time="36.95" flops="381127" total_time="37.24"/>
+        <result system_time="0.01" user_time="37.51" flops="383129" total_time="37.76"/>
+        <result system_time="0.02" user_time="34.45" flops="498235" total_time="34.64"/>
+        <result system_time="0.02" user_time="36.82" flops="384808" total_time="37.05"/>
+        <result system_time="0.0" user_time="26.59" flops="500905" total_time="26.74"/>
+        <result system_time="0.0" user_time="37.85" flops="380232" total_time="38.13"/>
+        <result system_time="0.01" user_time="35.25" flops="503198" total_time="35.46"/>
+        <result system_time="0.0" user_time="32.8" flops="383926" total_time="33.06"/>
+        <result system_time="0.0" user_time="35.68" flops="499146" total_time="35.87"/>
+        <result system_time="0.01" user_time="35.16" flops="500493" total_time="35.36"/>
+        <result system_time="0.0" user_time="35.85" flops="498565" total_time="36.04"/>
+        <result system_time="0.01" user_time="38.0" flops="383223" total_time="38.31"/>
+        <result system_time="0.01" user_time="35.97" flops="498284" total_time="36.17"/>
+        <result system_time="0.0" user_time="35.6" flops="496822" total_time="35.79"/>
+        <result system_time="0.0" user_time="35.81" flops="492738" total_time="36.0"/>
+        <result system_time="0.0" user_time="33.12" flops="435110" total_time="33.31"/>
+        <result system_time="0.02" user_time="37.17" flops="381004" total_time="37.39"/>
+        <result system_time="0.0" user_time="38.05" flops="387380" total_time="38.25"/>
+        <result system_time="0.01" user_time="34.8" flops="500810" total_time="35.05"/>
+        <result system_time="0.0" user_time="37.72" flops="380078" total_time="37.94"/>
+        <result system_time="0.02" user_time="37.28" flops="375542" total_time="37.52"/>
+        <result system_time="0.0" user_time="37.7" flops="385824" total_time="37.91"/>
+        <result system_time="0.01" user_time="37.25" flops="381109" total_time="37.51"/>
+        <result system_time="0.01" user_time="35.36" flops="493912" total_time="35.56"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="38.56" flops="371323" total_time="38.91"/>
+        <result system_time="0.01" user_time="37.25" flops="376984" total_time="37.56"/>
+        <result system_time="0.01" user_time="35.46" flops="486280" total_time="35.78"/>
+        <result system_time="0.02" user_time="35.38" flops="487445" total_time="35.57"/>
+        <result system_time="0.0" user_time="38.66" flops="378218" total_time="38.87"/>
+        <result system_time="0.02" user_time="37.13" flops="381803" total_time="37.38"/>
+        <result system_time="0.01" user_time="35.35" flops="493731" total_time="35.72"/>
+        <result system_time="0.01" user_time="37.66" flops="373991" total_time="37.91"/>
+        <result system_time="0.01" user_time="37.93" flops="376911" total_time="38.3"/>
+        <result system_time="0.0" user_time="34.9" flops="496541" total_time="35.08"/>
+        <result system_time="0.01" user_time="36.6" flops="481554" total_time="36.79"/>
+        <result system_time="0.01" user_time="38.79" flops="374534" total_time="39.02"/>
+        <result system_time="0.01" user_time="34.31" flops="502928" total_time="34.5"/>
+        <result system_time="0.01" user_time="35.3" flops="487395" total_time="35.64"/>
+        <result system_time="0.01" user_time="38.12" flops="373886" total_time="38.38"/>
+        <result system_time="0.0" user_time="38.48" flops="381949" total_time="38.7"/>
+        <result system_time="0.0" user_time="36.36" flops="481986" total_time="36.61"/>
+        <result system_time="0.01" user_time="35.83" flops="499321" total_time="36.17"/>
+        <result system_time="0.0" user_time="36.3" flops="493092" total_time="36.48"/>
+        <result system_time="0.01" user_time="35.37" flops="485269" total_time="35.65"/>
+        <result system_time="0.01" user_time="37.87" flops="379648" total_time="38.1"/>
+        <result system_time="0.0" user_time="35.94" flops="491107" total_time="36.13"/>
+        <result system_time="0.0" user_time="38.55" flops="392198" total_time="38.78"/>
+        <result system_time="0.01" user_time="36.3" flops="493362" total_time="36.51"/>
+        <result system_time="0.03" user_time="35.31" flops="501135" total_time="35.53"/>
+        <result system_time="0.0" user_time="36.05" flops="486255" total_time="36.3"/>
+        <result system_time="0.0" user_time="38.46" flops="377579" total_time="38.83"/>
+        <result system_time="0.01" user_time="38.08" flops="388606" total_time="38.36"/>
+        <result system_time="0.0" user_time="25.86" flops="492475" total_time="26.01"/>
+        <result system_time="0.01" user_time="37.77" flops="397368" total_time="38.11"/>
+        <result system_time="0.01" user_time="38.36" flops="390871" total_time="38.62"/>
+        <result system_time="0.0" user_time="38.47" flops="376319" total_time="38.79"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.01" user_time="36.7" flops="389765" total_time="37.08"/>
+        <result system_time="0.01" user_time="36.91" flops="383344" total_time="37.13"/>
+        <result system_time="0.01" user_time="38.34" flops="380802" total_time="38.55"/>
+        <result system_time="0.01" user_time="34.37" flops="517593" total_time="34.63"/>
+        <result system_time="0.01" user_time="37.82" flops="375244" total_time="38.03"/>
+        <result system_time="0.01" user_time="34.67" flops="512581" total_time="34.92"/>
+        <result system_time="0.01" user_time="34.8" flops="494903" total_time="35.05"/>
+        <result system_time="0.02" user_time="37.16" flops="378190" total_time="37.38"/>
+        <result system_time="0.0" user_time="36.36" flops="493477" total_time="36.54"/>
+        <result system_time="0.0" user_time="36.51" flops="482658" total_time="36.7"/>
+        <result system_time="0.0" user_time="37.98" flops="378377" total_time="38.18"/>
+        <result system_time="0.01" user_time="34.58" flops="513875" total_time="34.86"/>
+        <result system_time="0.01" user_time="38.1" flops="388670" total_time="38.38"/>
+        <result system_time="0.01" user_time="38.23" flops="375667" total_time="38.45"/>
+        <result system_time="0.0" user_time="36.39" flops="482604" total_time="36.58"/>
+        <result system_time="0.02" user_time="36.97" flops="381983" total_time="37.24"/>
+        <result system_time="0.02" user_time="37.16" flops="387475" total_time="37.41"/>
+        <result system_time="0.03" user_time="34.32" flops="506146" total_time="34.52"/>
+        <result system_time="0.01" user_time="36.31" flops="501810" total_time="36.63"/>
+        <result system_time="0.0" user_time="36.53" flops="491630" total_time="36.72"/>
+        <result system_time="0.0" user_time="36.53" flops="496180" total_time="36.71"/>
+        <result system_time="0.0" user_time="38.3" flops="375751" total_time="38.51"/>
+        <result system_time="0.0" user_time="33.51" flops="383471" total_time="33.7"/>
+        <result system_time="0.01" user_time="36.58" flops="391706" total_time="36.94"/>
+        <result system_time="0.0" user_time="36.4" flops="501953" total_time="36.74"/>
+        <result system_time="0.0" user_time="32.94" flops="381533" total_time="33.2"/>
+        <result system_time="0.01" user_time="34.14" flops="505061" total_time="34.38"/>
+        <result system_time="0.01" user_time="34.65" flops="508659" total_time="34.94"/>
+        <result system_time="0.0" user_time="37.91" flops="376435" total_time="38.16"/>
+        <result system_time="0.01" user_time="37.0" flops="475211" total_time="37.29"/>
+        <result system_time="0.0" user_time="37.88" flops="383443" total_time="38.09"/>
+        <result system_time="0.01" user_time="34.8" flops="498644" total_time="35.13"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="35.5" flops="502148" total_time="35.69"/>
+        <result system_time="0.01" user_time="35.55" flops="500472" total_time="35.75"/>
+        <result system_time="0.0" user_time="35.53" flops="499893" total_time="35.73"/>
+        <result system_time="0.02" user_time="38.2" flops="386004" total_time="38.45"/>
+        <result system_time="0.0" user_time="35.24" flops="500173" total_time="35.44"/>
+        <result system_time="0.02" user_time="38.5" flops="375720" total_time="38.73"/>
+        <result system_time="0.01" user_time="34.92" flops="502550" total_time="35.12"/>
+        <result system_time="0.0" user_time="38.38" flops="384621" total_time="38.61"/>
+        <result system_time="0.01" user_time="38.57" flops="386610" total_time="38.8"/>
+        <result system_time="0.02" user_time="38.48" flops="377810" total_time="38.71"/>
+        <result system_time="0.02" user_time="35.75" flops="506701" total_time="35.95"/>
+        <result system_time="0.0" user_time="38.6" flops="381640" total_time="38.82"/>
+        <result system_time="0.0" user_time="35.34" flops="500759" total_time="35.53"/>
+        <result system_time="0.02" user_time="36.12" flops="492932" total_time="36.32"/>
+        <result system_time="0.02" user_time="38.32" flops="377826" total_time="38.57"/>
+        <result system_time="0.0" user_time="35.18" flops="499714" total_time="35.37"/>
+        <result system_time="0.03" user_time="36.11" flops="491710" total_time="36.33"/>
+        <result system_time="0.02" user_time="38.42" flops="383650" total_time="38.67"/>
+        <result system_time="0.0" user_time="38.35" flops="387465" total_time="38.56"/>
+        <result system_time="0.0" user_time="38.61" flops="386273" total_time="38.82"/>
+        <result system_time="0.01" user_time="38.35" flops="381250" total_time="38.61"/>
+        <result system_time="0.0" user_time="35.26" flops="500763" total_time="35.45"/>
+        <result system_time="0.0" user_time="38.44" flops="381560" total_time="38.66"/>
+        <result system_time="0.01" user_time="36.17" flops="493029" total_time="36.38"/>
+        <result system_time="0.01" user_time="36.09" flops="496432" total_time="36.28"/>
+        <result system_time="0.01" user_time="36.21" flops="490868" total_time="36.41"/>
+        <result system_time="0.0" user_time="36.01" flops="383788" total_time="36.31"/>
+        <result system_time="0.01" user_time="38.27" flops="382979" total_time="38.49"/>
+        <result system_time="0.01" user_time="38.52" flops="389122" total_time="38.76"/>
+        <result system_time="0.0" user_time="38.39" flops="383376" total_time="38.61"/>
+        <result system_time="0.0" user_time="35.36" flops="501295" total_time="35.55"/>
+        <result system_time="0.01" user_time="35.67" flops="503393" total_time="35.86"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.01" user_time="36.19" flops="494609" total_time="36.46"/>
+        <result system_time="0.01" user_time="35.28" flops="490849" total_time="35.6"/>
+        <result system_time="0.02" user_time="35.13" flops="485635" total_time="35.36"/>
+        <result system_time="0.0" user_time="38.34" flops="382563" total_time="38.54"/>
+        <result system_time="0.0" user_time="38.08" flops="398265" total_time="38.29"/>
+        <result system_time="0.02" user_time="37.75" flops="374643" total_time="37.98"/>
+        <result system_time="0.01" user_time="36.2" flops="500647" total_time="36.39"/>
+        <result system_time="0.01" user_time="36.77" flops="382128" total_time="36.98"/>
+        <result system_time="0.0" user_time="35.25" flops="504927" total_time="35.43"/>
+        <result system_time="0.02" user_time="35.1" flops="497031" total_time="35.29"/>
+        <result system_time="0.0" user_time="36.07" flops="500446" total_time="36.25"/>
+        <result system_time="0.01" user_time="35.17" flops="489316" total_time="35.38"/>
+        <result system_time="0.0" user_time="38.52" flops="382047" total_time="38.73"/>
+        <result system_time="0.0" user_time="26.4" flops="498857" total_time="26.53"/>
+        <result system_time="0.01" user_time="35.54" flops="493149" total_time="35.77"/>
+        <result system_time="0.0" user_time="36.17" flops="493106" total_time="36.35"/>
+        <result system_time="0.0" user_time="38.49" flops="382267" total_time="38.7"/>
+        <result system_time="0.01" user_time="37.24" flops="378653" total_time="37.46"/>
+        <result system_time="0.0" user_time="35.86" flops="501249" total_time="36.05"/>
+        <result system_time="0.01" user_time="37.61" flops="388607" total_time="37.84"/>
+        <result system_time="0.01" user_time="37.79" flops="381070" total_time="38.03"/>
+        <result system_time="0.0" user_time="35.66" flops="498582" total_time="35.83"/>
+        <result system_time="0.01" user_time="38.33" flops="384005" total_time="38.6"/>
+        <result system_time="0.01" user_time="36.8" flops="386128" total_time="37.06"/>
+        <result system_time="0.01" user_time="34.88" flops="505926" total_time="35.07"/>
+        <result system_time="0.02" user_time="35.0" flops="509348" total_time="35.32"/>
+        <result system_time="0.0" user_time="38.14" flops="381666" total_time="38.44"/>
+        <result system_time="0.01" user_time="37.68" flops="385242" total_time="37.94"/>
+        <result system_time="0.01" user_time="34.65" flops="506216" total_time="34.84"/>
+        <result system_time="0.02" user_time="38.02" flops="379236" total_time="38.24"/>
+        <result system_time="0.01" user_time="38.21" flops="384561" total_time="38.43"/>
+        <result system_time="0.0" user_time="38.28" flops="385765" total_time="38.49"/>
+      </loop>
+    </run>
+    <run instances_no="40">
+      <loop number="1">
+        <result system_time="0.0" user_time="43.56" flops="408584" total_time="43.82"/>
+        <result system_time="0.03" user_time="51.09" flops="317101" total_time="51.46"/>
+        <result system_time="0.0" user_time="51.26" flops="316191" total_time="51.57"/>
+        <result system_time="0.0" user_time="51.31" flops="316287" total_time="51.65"/>
+        <result system_time="0.02" user_time="50.66" flops="315177" total_time="51.05"/>
+        <result system_time="0.0" user_time="50.89" flops="319582" total_time="51.27"/>
+        <result system_time="0.02" user_time="44.31" flops="405436" total_time="44.63"/>
+        <result system_time="0.01" user_time="50.68" flops="318962" total_time="51.23"/>
+        <result system_time="0.0" user_time="43.91" flops="402730" total_time="44.34"/>
+        <result system_time="0.02" user_time="50.39" flops="320964" total_time="50.79"/>
+        <result system_time="0.0" user_time="50.65" flops="322808" total_time="51.11"/>
+        <result system_time="0.0" user_time="43.53" flops="403287" total_time="43.88"/>
+        <result system_time="0.03" user_time="50.92" flops="313580" total_time="51.24"/>
+        <result system_time="0.01" user_time="50.86" flops="313282" total_time="51.43"/>
+        <result system_time="0.0" user_time="51.09" flops="322981" total_time="51.48"/>
+        <result system_time="0.01" user_time="51.08" flops="322095" total_time="51.46"/>
+        <result system_time="0.01" user_time="50.89" flops="316262" total_time="51.27"/>
+        <result system_time="0.0" user_time="51.26" flops="322309" total_time="51.55"/>
+        <result system_time="0.02" user_time="50.94" flops="314289" total_time="51.38"/>
+        <result system_time="0.02" user_time="50.37" flops="316601" total_time="50.75"/>
+        <result system_time="0.0" user_time="50.52" flops="323940" total_time="51.01"/>
+        <result system_time="0.01" user_time="50.8" flops="315493" total_time="51.23"/>
+        <result system_time="0.01" user_time="45.72" flops="335873" total_time="45.99"/>
+        <result system_time="0.02" user_time="44.12" flops="398549" total_time="44.42"/>
+        <result system_time="0.01" user_time="43.68" flops="412447" total_time="44.04"/>
+        <result system_time="0.02" user_time="50.69" flops="315971" total_time="51.08"/>
+        <result system_time="0.0" user_time="50.9" flops="317494" total_time="51.23"/>
+        <result system_time="0.0" user_time="50.6" flops="320456" total_time="51.12"/>
+        <result system_time="0.02" user_time="50.71" flops="318321" total_time="51.06"/>
+        <result system_time="0.0" user_time="51.08" flops="316347" total_time="51.52"/>
+        <result system_time="0.0" user_time="50.86" flops="321083" total_time="51.29"/>
+        <result system_time="0.0" user_time="45.57" flops="333580" total_time="45.81"/>
+        <result system_time="0.01" user_time="45.07" flops="319994" total_time="45.35"/>
+        <result system_time="0.01" user_time="50.28" flops="311769" total_time="50.75"/>
+        <result system_time="0.0" user_time="43.36" flops="407620" total_time="43.76"/>
+        <result system_time="0.01" user_time="50.71" flops="312259" total_time="51.15"/>
+        <result system_time="0.03" user_time="50.25" flops="321508" total_time="50.6"/>
+        <result system_time="0.02" user_time="50.43" flops="314007" total_time="50.84"/>
+        <result system_time="0.0" user_time="50.78" flops="316790" total_time="51.33"/>
+        <result system_time="0.01" user_time="44.9" flops="398871" total_time="45.3"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.0" user_time="43.26" flops="408325" total_time="43.51"/>
+        <result system_time="0.03" user_time="51.05" flops="316623" total_time="51.45"/>
+        <result system_time="0.01" user_time="44.72" flops="400620" total_time="45.35"/>
+        <result system_time="0.01" user_time="50.97" flops="316727" total_time="51.66"/>
+        <result system_time="0.02" user_time="51.02" flops="313690" total_time="51.62"/>
+        <result system_time="0.02" user_time="51.3" flops="311599" total_time="51.94"/>
+        <result system_time="0.03" user_time="50.24" flops="314444" total_time="50.69"/>
+        <result system_time="0.03" user_time="51.47" flops="319182" total_time="51.91"/>
+        <result system_time="0.01" user_time="51.42" flops="317194" total_time="51.75"/>
+        <result system_time="0.0" user_time="50.66" flops="319546" total_time="50.98"/>
+        <result system_time="0.0" user_time="50.95" flops="315417" total_time="51.65"/>
+        <result system_time="0.0" user_time="51.18" flops="318896" total_time="51.59"/>
+        <result system_time="0.03" user_time="50.74" flops="315323" total_time="51.29"/>
+        <result system_time="0.02" user_time="50.91" flops="316969" total_time="51.56"/>
+        <result system_time="0.01" user_time="51.02" flops="318228" total_time="51.68"/>
+        <result system_time="0.0" user_time="49.72" flops="320952" total_time="50.35"/>
+        <result system_time="0.0" user_time="50.88" flops="315451" total_time="51.21"/>
+        <result system_time="0.01" user_time="50.61" flops="323077" total_time="51.06"/>
+        <result system_time="0.01" user_time="50.98" flops="321062" total_time="51.41"/>
+        <result system_time="0.0" user_time="51.19" flops="315949" total_time="51.56"/>
+        <result system_time="0.0" user_time="50.41" flops="323450" total_time="50.72"/>
+        <result system_time="0.0" user_time="50.97" flops="315045" total_time="51.67"/>
+        <result system_time="0.03" user_time="50.07" flops="319861" total_time="50.41"/>
+        <result system_time="0.03" user_time="50.77" flops="317458" total_time="51.11"/>
+        <result system_time="0.0" user_time="43.26" flops="408055" total_time="43.77"/>
+        <result system_time="0.0" user_time="50.48" flops="315467" total_time="51.17"/>
+        <result system_time="0.01" user_time="51.15" flops="313116" total_time="51.85"/>
+        <result system_time="0.01" user_time="51.06" flops="324180" total_time="51.75"/>
+        <result system_time="0.0" user_time="43.6" flops="410431" total_time="43.94"/>
+        <result system_time="0.01" user_time="50.63" flops="318927" total_time="51.05"/>
+        <result system_time="0.0" user_time="44.11" flops="317759" total_time="44.48"/>
+        <result system_time="0.03" user_time="51.32" flops="312295" total_time="51.77"/>
+        <result system_time="0.01" user_time="44.8" flops="402327" total_time="45.42"/>
+        <result system_time="0.03" user_time="50.14" flops="317782" total_time="50.49"/>
+        <result system_time="0.01" user_time="50.94" flops="313559" total_time="51.64"/>
+        <result system_time="0.02" user_time="44.8" flops="401523" total_time="45.32"/>
+        <result system_time="0.01" user_time="43.25" flops="409453" total_time="43.55"/>
+        <result system_time="0.0" user_time="50.5" flops="318195" total_time="51.14"/>
+        <result system_time="0.01" user_time="44.82" flops="402325" total_time="45.45"/>
+        <result system_time="0.02" user_time="51.25" flops="316999" total_time="51.93"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.01" user_time="50.28" flops="313672" total_time="50.82"/>
+        <result system_time="0.02" user_time="50.41" flops="312343" total_time="50.79"/>
+        <result system_time="0.01" user_time="48.06" flops="312895" total_time="48.74"/>
+        <result system_time="0.01" user_time="50.83" flops="311740" total_time="51.28"/>
+        <result system_time="0.01" user_time="49.97" flops="312383" total_time="50.66"/>
+        <result system_time="0.02" user_time="50.26" flops="319845" total_time="50.76"/>
+        <result system_time="0.0" user_time="50.64" flops="321433" total_time="50.93"/>
+        <result system_time="0.0" user_time="50.58" flops="311374" total_time="51.07"/>
+        <result system_time="0.0" user_time="50.79" flops="318388" total_time="51.26"/>
+        <result system_time="0.02" user_time="50.34" flops="313270" total_time="50.78"/>
+        <result system_time="0.02" user_time="48.17" flops="320382" total_time="48.66"/>
+        <result system_time="0.02" user_time="43.2" flops="396896" total_time="43.62"/>
+        <result system_time="0.0" user_time="44.25" flops="401475" total_time="44.5"/>
+        <result system_time="0.01" user_time="50.01" flops="314830" total_time="50.76"/>
+        <result system_time="0.0" user_time="50.15" flops="312478" total_time="50.5"/>
+        <result system_time="0.0" user_time="44.84" flops="399733" total_time="45.49"/>
+        <result system_time="0.0" user_time="50.67" flops="313833" total_time="51.01"/>
+        <result system_time="0.0" user_time="50.56" flops="316616" total_time="51.05"/>
+        <result system_time="0.01" user_time="50.44" flops="325598" total_time="50.8"/>
+        <result system_time="0.0" user_time="50.85" flops="311284" total_time="51.28"/>
+        <result system_time="0.01" user_time="50.91" flops="313118" total_time="51.25"/>
+        <result system_time="0.01" user_time="50.21" flops="312220" total_time="50.71"/>
+        <result system_time="0.0" user_time="31.33" flops="407013" total_time="31.51"/>
+        <result system_time="0.0" user_time="44.41" flops="399179" total_time="44.87"/>
+        <result system_time="0.0" user_time="31.43" flops="400523" total_time="31.63"/>
+        <result system_time="0.01" user_time="50.08" flops="319170" total_time="50.77"/>
+        <result system_time="0.02" user_time="49.39" flops="319372" total_time="49.92"/>
+        <result system_time="0.01" user_time="49.98" flops="330091" total_time="50.38"/>
+        <result system_time="0.01" user_time="50.16" flops="313352" total_time="50.85"/>
+        <result system_time="0.03" user_time="49.16" flops="315030" total_time="49.52"/>
+        <result system_time="0.01" user_time="43.41" flops="398998" total_time="43.92"/>
+        <result system_time="0.01" user_time="49.93" flops="323664" total_time="50.37"/>
+        <result system_time="0.02" user_time="50.35" flops="314838" total_time="50.82"/>
+        <result system_time="0.01" user_time="50.82" flops="324997" total_time="51.23"/>
+        <result system_time="0.0" user_time="50.32" flops="320315" total_time="50.88"/>
+        <result system_time="0.03" user_time="49.48" flops="318324" total_time="49.81"/>
+        <result system_time="0.02" user_time="49.51" flops="323125" total_time="50.04"/>
+        <result system_time="0.0" user_time="43.71" flops="404420" total_time="44.39"/>
+        <result system_time="0.0" user_time="42.91" flops="337702" total_time="43.19"/>
+        <result system_time="0.01" user_time="46.8" flops="318154" total_time="47.47"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.0" user_time="50.86" flops="319073" total_time="51.25"/>
+        <result system_time="0.0" user_time="50.14" flops="322730" total_time="50.45"/>
+        <result system_time="0.02" user_time="50.87" flops="309452" total_time="51.19"/>
+        <result system_time="0.03" user_time="51.21" flops="318926" total_time="51.55"/>
+        <result system_time="0.0" user_time="50.74" flops="315468" total_time="51.1"/>
+        <result system_time="0.01" user_time="50.88" flops="315256" total_time="51.28"/>
+        <result system_time="0.01" user_time="51.11" flops="326589" total_time="51.42"/>
+        <result system_time="0.02" user_time="50.84" flops="322840" total_time="51.23"/>
+        <result system_time="0.0" user_time="51.2" flops="314147" total_time="51.54"/>
+        <result system_time="0.01" user_time="50.82" flops="321367" total_time="51.15"/>
+        <result system_time="0.0" user_time="51.02" flops="323759" total_time="51.33"/>
+        <result system_time="0.02" user_time="50.98" flops="309495" total_time="51.34"/>
+        <result system_time="0.02" user_time="44.76" flops="404685" total_time="45.1"/>
+        <result system_time="0.0" user_time="50.68" flops="315466" total_time="51.08"/>
+        <result system_time="0.0" user_time="51.16" flops="321108" total_time="51.48"/>
+        <result system_time="0.0" user_time="44.15" flops="396882" total_time="44.42"/>
+        <result system_time="0.01" user_time="51.16" flops="316229" total_time="51.51"/>
+        <result system_time="0.0" user_time="42.84" flops="408619" total_time="43.1"/>
+        <result system_time="0.0" user_time="43.01" flops="411133" total_time="43.32"/>
+        <result system_time="0.01" user_time="50.71" flops="313455" total_time="51.08"/>
+        <result system_time="0.01" user_time="44.18" flops="405459" total_time="44.5"/>
+        <result system_time="0.0" user_time="45.67" flops="324857" total_time="45.96"/>
+        <result system_time="0.02" user_time="51.21" flops="322349" total_time="51.6"/>
+        <result system_time="0.02" user_time="51.31" flops="312858" total_time="51.66"/>
+        <result system_time="0.03" user_time="50.98" flops="313990" total_time="51.32"/>
+        <result system_time="0.01" user_time="44.9" flops="400674" total_time="45.21"/>
+        <result system_time="0.0" user_time="50.42" flops="316091" total_time="50.78"/>
+        <result system_time="0.0" user_time="44.13" flops="321399" total_time="44.49"/>
+        <result system_time="0.02" user_time="51.07" flops="310395" total_time="51.41"/>
+        <result system_time="0.01" user_time="50.68" flops="317534" total_time="51.04"/>
+        <result system_time="0.02" user_time="44.92" flops="397551" total_time="45.23"/>
+        <result system_time="0.01" user_time="50.77" flops="324003" total_time="51.11"/>
+        <result system_time="0.02" user_time="51.19" flops="316534" total_time="51.56"/>
+        <result system_time="0.0" user_time="50.87" flops="316819" total_time="51.24"/>
+        <result system_time="0.01" user_time="51.03" flops="313632" total_time="51.4"/>
+        <result system_time="0.01" user_time="50.67" flops="315097" total_time="51.03"/>
+        <result system_time="0.01" user_time="43.32" flops="404486" total_time="43.61"/>
+        <result system_time="0.01" user_time="50.99" flops="308155" total_time="51.39"/>
+        <result system_time="0.0" user_time="50.64" flops="313481" total_time="51.05"/>
+        <result system_time="0.0" user_time="46.51" flops="329244" total_time="46.78"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.01" user_time="50.34" flops="316348" total_time="50.76"/>
+        <result system_time="0.0" user_time="50.88" flops="317115" total_time="51.24"/>
+        <result system_time="0.01" user_time="51.12" flops="322770" total_time="51.46"/>
+        <result system_time="0.01" user_time="50.89" flops="311524" total_time="51.32"/>
+        <result system_time="0.01" user_time="50.47" flops="314338" total_time="50.88"/>
+        <result system_time="0.01" user_time="49.4" flops="323334" total_time="49.83"/>
+        <result system_time="0.01" user_time="50.84" flops="323159" total_time="51.28"/>
+        <result system_time="0.01" user_time="50.83" flops="314598" total_time="51.24"/>
+        <result system_time="0.0" user_time="50.99" flops="315743" total_time="51.33"/>
+        <result system_time="0.01" user_time="50.77" flops="315329" total_time="51.17"/>
+        <result system_time="0.01" user_time="50.67" flops="316407" total_time="51.08"/>
+        <result system_time="0.0" user_time="50.52" flops="320662" total_time="50.87"/>
+        <result system_time="0.01" user_time="43.98" flops="404482" total_time="44.34"/>
+        <result system_time="0.03" user_time="50.77" flops="317942" total_time="51.15"/>
+        <result system_time="0.01" user_time="50.73" flops="320681" total_time="51.15"/>
+        <result system_time="0.02" user_time="48.46" flops="326145" total_time="48.83"/>
+        <result system_time="0.01" user_time="50.28" flops="314474" total_time="50.64"/>
+        <result system_time="0.02" user_time="43.91" flops="403968" total_time="44.23"/>
+        <result system_time="0.01" user_time="50.12" flops="326351" total_time="50.48"/>
+        <result system_time="0.0" user_time="50.95" flops="313636" total_time="51.3"/>
+        <result system_time="0.01" user_time="50.65" flops="314679" total_time="51.02"/>
+        <result system_time="0.0" user_time="51.19" flops="318000" total_time="51.54"/>
+        <result system_time="0.0" user_time="50.93" flops="314719" total_time="51.28"/>
+        <result system_time="0.0" user_time="51.06" flops="322301" total_time="51.48"/>
+        <result system_time="0.03" user_time="50.56" flops="313490" total_time="50.94"/>
+        <result system_time="0.0" user_time="43.98" flops="396713" total_time="44.34"/>
+        <result system_time="0.0" user_time="43.89" flops="397660" total_time="44.23"/>
+        <result system_time="0.0" user_time="50.68" flops="313974" total_time="51.11"/>
+        <result system_time="0.0" user_time="43.92" flops="398619" total_time="44.28"/>
+        <result system_time="0.0" user_time="50.92" flops="315008" total_time="51.36"/>
+        <result system_time="0.0" user_time="51.22" flops="315913" total_time="51.57"/>
+        <result system_time="0.0" user_time="33.75" flops="402778" total_time="33.98"/>
+        <result system_time="0.0" user_time="44.47" flops="330500" total_time="44.78"/>
+        <result system_time="0.0" user_time="43.73" flops="397632" total_time="44.06"/>
+        <result system_time="0.02" user_time="43.99" flops="403556" total_time="44.32"/>
+        <result system_time="0.01" user_time="51.01" flops="315712" total_time="51.42"/>
+        <result system_time="0.01" user_time="50.03" flops="327445" total_time="50.48"/>
+        <result system_time="0.0" user_time="51.13" flops="321803" total_time="51.52"/>
+        <result system_time="0.0" user_time="46.29" flops="344378" total_time="46.79"/>
+        <result system_time="0.03" user_time="50.19" flops="315392" total_time="50.57"/>
+      </loop>
+    </run>
+    <run instances_no="48">
+      <loop number="1">
+        <result system_time="0.0" user_time="61.68" flops="271230" total_time="62.26"/>
+        <result system_time="0.0" user_time="63.26" flops="274003" total_time="64.03"/>
+        <result system_time="0.02" user_time="62.47" flops="274831" total_time="63.69"/>
+        <result system_time="0.01" user_time="63.27" flops="266295" total_time="63.72"/>
+        <result system_time="0.02" user_time="62.88" flops="269562" total_time="63.85"/>
+        <result system_time="0.03" user_time="63.04" flops="269857" total_time="63.84"/>
+        <result system_time="0.0" user_time="63.45" flops="274470" total_time="64.08"/>
+        <result system_time="0.03" user_time="62.87" flops="271198" total_time="63.75"/>
+        <result system_time="0.0" user_time="63.59" flops="273237" total_time="64.16"/>
+        <result system_time="0.0" user_time="63.46" flops="269284" total_time="64.24"/>
+        <result system_time="0.02" user_time="62.68" flops="277254" total_time="63.67"/>
+        <result system_time="0.02" user_time="62.37" flops="277322" total_time="63.28"/>
+        <result system_time="0.01" user_time="62.77" flops="273400" total_time="63.2"/>
+        <result system_time="0.0" user_time="63.35" flops="272294" total_time="63.99"/>
+        <result system_time="0.01" user_time="63.12" flops="274138" total_time="63.71"/>
+        <result system_time="0.02" user_time="62.75" flops="269355" total_time="63.84"/>
+        <result system_time="0.01" user_time="63.39" flops="268988" total_time="64.3"/>
+        <result system_time="0.02" user_time="62.61" flops="275717" total_time="63.57"/>
+        <result system_time="0.01" user_time="63.53" flops="267889" total_time="64.31"/>
+        <result system_time="0.01" user_time="63.42" flops="273636" total_time="64.2"/>
+        <result system_time="0.03" user_time="62.47" flops="273886" total_time="63.54"/>
+        <result system_time="0.01" user_time="62.47" flops="273175" total_time="62.91"/>
+        <result system_time="0.01" user_time="63.32" flops="265447" total_time="64.31"/>
+        <result system_time="0.03" user_time="62.39" flops="271141" total_time="63.29"/>
+        <result system_time="0.03" user_time="61.89" flops="267663" total_time="63.11"/>
+        <result system_time="0.0" user_time="56.23" flops="274662" total_time="56.91"/>
+        <result system_time="0.01" user_time="63.3" flops="270942" total_time="63.91"/>
+        <result system_time="0.01" user_time="63.28" flops="267981" total_time="64.01"/>
+        <result system_time="0.02" user_time="62.16" flops="275180" total_time="63.61"/>
+        <result system_time="0.01" user_time="63.08" flops="265789" total_time="64.24"/>
+        <result system_time="0.01" user_time="63.2" flops="275790" total_time="63.89"/>
+        <result system_time="0.01" user_time="63.23" flops="273416" total_time="64.15"/>
+        <result system_time="0.01" user_time="63.63" flops="267865" total_time="64.26"/>
+        <result system_time="0.01" user_time="63.51" flops="271281" total_time="64.03"/>
+        <result system_time="0.0" user_time="54.91" flops="272344" total_time="55.53"/>
+        <result system_time="0.02" user_time="62.69" flops="271971" total_time="63.73"/>
+        <result system_time="0.01" user_time="57.72" flops="267597" total_time="58.91"/>
+        <result system_time="0.02" user_time="62.95" flops="268019" total_time="63.86"/>
+        <result system_time="0.0" user_time="57.81" flops="270730" total_time="58.96"/>
+        <result system_time="0.01" user_time="63.73" flops="267849" total_time="64.24"/>
+        <result system_time="0.0" user_time="63.23" flops="272923" total_time="64.16"/>
+        <result system_time="0.03" user_time="62.87" flops="267749" total_time="63.91"/>
+        <result system_time="0.0" user_time="63.22" flops="275944" total_time="63.84"/>
+        <result system_time="0.02" user_time="62.62" flops="268731" total_time="63.77"/>
+        <result system_time="0.02" user_time="62.25" flops="271429" total_time="63.64"/>
+        <result system_time="0.02" user_time="62.61" flops="267638" total_time="63.8"/>
+        <result system_time="0.02" user_time="62.96" flops="270023" total_time="63.72"/>
+        <result system_time="0.0" user_time="57.69" flops="271517" total_time="58.45"/>
+      </loop>
+      <loop number="2">
+        <result system_time="0.03" user_time="63.84" flops="268572" total_time="64.68"/>
+        <result system_time="0.01" user_time="64.02" flops="265228" total_time="64.8"/>
+        <result system_time="0.03" user_time="62.61" flops="271867" total_time="63.86"/>
+        <result system_time="0.02" user_time="62.84" flops="269259" total_time="63.82"/>
+        <result system_time="0.03" user_time="62.87" flops="268774" total_time="64.17"/>
+        <result system_time="0.04" user_time="62.41" flops="267369" total_time="64.05"/>
+        <result system_time="0.01" user_time="64.18" flops="264845" total_time="64.69"/>
+        <result system_time="0.02" user_time="62.4" flops="264378" total_time="63.98"/>
+        <result system_time="0.01" user_time="63.89" flops="267032" total_time="64.65"/>
+        <result system_time="0.02" user_time="62.68" flops="270112" total_time="64.14"/>
+        <result system_time="0.01" user_time="63.61" flops="273640" total_time="64.38"/>
+        <result system_time="0.01" user_time="62.85" flops="271096" total_time="64.24"/>
+        <result system_time="0.0" user_time="64.06" flops="264609" total_time="64.83"/>
+        <result system_time="0.0" user_time="64.2" flops="266491" total_time="64.7"/>
+        <result system_time="0.01" user_time="62.45" flops="268782" total_time="63.25"/>
+        <result system_time="0.0" user_time="63.94" flops="265655" total_time="64.73"/>
+        <result system_time="0.01" user_time="64.21" flops="270982" total_time="64.73"/>
+        <result system_time="0.03" user_time="62.89" flops="269183" total_time="64.02"/>
+        <result system_time="0.01" user_time="62.66" flops="271079" total_time="64.19"/>
+        <result system_time="0.01" user_time="61.61" flops="269730" total_time="63.24"/>
+        <result system_time="0.02" user_time="62.93" flops="272786" total_time="63.9"/>
+        <result system_time="0.03" user_time="62.25" flops="275035" total_time="63.44"/>
+        <result system_time="0.01" user_time="63.99" flops="265319" total_time="64.84"/>
+        <result system_time="0.0" user_time="63.92" flops="271553" total_time="64.41"/>
+        <result system_time="0.0" user_time="63.81" flops="270002" total_time="64.61"/>
+        <result system_time="0.03" user_time="62.91" flops="269989" total_time="64.18"/>
+        <result system_time="0.0" user_time="60.95" flops="273794" total_time="61.74"/>
+        <result system_time="0.0" user_time="64.1" flops="264996" total_time="64.86"/>
+        <result system_time="0.01" user_time="64.16" flops="271687" total_time="64.68"/>
+        <result system_time="0.0" user_time="52.51" flops="266908" total_time="53.63"/>
+        <result system_time="0.01" user_time="63.43" flops="273029" total_time="64.3"/>
+        <result system_time="0.0" user_time="63.84" flops="268424" total_time="64.83"/>
+        <result system_time="0.01" user_time="63.02" flops="268864" total_time="63.81"/>
+        <result system_time="0.0" user_time="63.87" flops="272196" total_time="64.61"/>
+        <result system_time="0.03" user_time="62.8" flops="272541" total_time="64.08"/>
+        <result system_time="0.01" user_time="63.97" flops="268696" total_time="64.78"/>
+        <result system_time="0.04" user_time="62.25" flops="275252" total_time="63.27"/>
+        <result system_time="0.01" user_time="63.7" flops="267593" total_time="64.42"/>
+        <result system_time="0.02" user_time="62.83" flops="278778" total_time="64.06"/>
+        <result system_time="0.02" user_time="63.02" flops="273555" total_time="64.1"/>
+        <result system_time="0.03" user_time="62.9" flops="273075" total_time="63.93"/>
+        <result system_time="0.03" user_time="63.05" flops="268422" total_time="64.04"/>
+        <result system_time="0.01" user_time="63.58" flops="273250" total_time="64.06"/>
+        <result system_time="0.0" user_time="63.82" flops="268242" total_time="64.8"/>
+        <result system_time="0.02" user_time="62.83" flops="268592" total_time="64.13"/>
+        <result system_time="0.0" user_time="55.52" flops="269778" total_time="56.6"/>
+        <result system_time="0.03" user_time="63.12" flops="278091" total_time="64.06"/>
+        <result system_time="0.0" user_time="53.52" flops="269345" total_time="54.28"/>
+      </loop>
+      <loop number="3">
+        <result system_time="0.03" user_time="63.91" flops="266851" total_time="64.4"/>
+        <result system_time="0.01" user_time="63.42" flops="268003" total_time="64.39"/>
+        <result system_time="0.02" user_time="63.74" flops="269835" total_time="64.29"/>
+        <result system_time="0.03" user_time="63.66" flops="268574" total_time="64.15"/>
+        <result system_time="0.01" user_time="63.25" flops="268886" total_time="64.5"/>
+        <result system_time="0.01" user_time="63.2" flops="269501" total_time="64.43"/>
+        <result system_time="0.03" user_time="63.59" flops="273362" total_time="64.1"/>
+        <result system_time="0.0" user_time="63.11" flops="272551" total_time="64.36"/>
+        <result system_time="0.02" user_time="63.73" flops="271527" total_time="64.25"/>
+        <result system_time="0.01" user_time="62.78" flops="274605" total_time="63.73"/>
+        <result system_time="0.01" user_time="63.07" flops="271230" total_time="64.37"/>
+        <result system_time="0.02" user_time="62.5" flops="270107" total_time="63.09"/>
+        <result system_time="0.01" user_time="62.62" flops="264907" total_time="64.45"/>
+        <result system_time="0.01" user_time="63.39" flops="271392" total_time="64.4"/>
+        <result system_time="0.01" user_time="63.36" flops="267784" total_time="64.06"/>
+        <result system_time="0.03" user_time="63.82" flops="270755" total_time="64.3"/>
+        <result system_time="0.01" user_time="63.09" flops="274923" total_time="64.39"/>
+        <result system_time="0.02" user_time="63.77" flops="267024" total_time="64.36"/>
+        <result system_time="0.01" user_time="62.79" flops="274638" total_time="64.02"/>
+        <result system_time="0.02" user_time="63.82" flops="273003" total_time="64.33"/>
+        <result system_time="0.02" user_time="63.5" flops="266462" total_time="64.03"/>
+        <result system_time="0.02" user_time="63.85" flops="271582" total_time="64.39"/>
+        <result system_time="0.03" user_time="63.73" flops="266622" total_time="64.22"/>
+        <result system_time="0.06" user_time="63.89" flops="267297" total_time="64.4"/>
+        <result system_time="0.01" user_time="63.41" flops="269173" total_time="64.4"/>
+        <result system_time="0.0" user_time="54.06" flops="270457" total_time="54.43"/>
+        <result system_time="0.01" user_time="62.69" flops="267898" total_time="64.45"/>
+        <result system_time="0.02" user_time="63.86" flops="270446" total_time="64.36"/>
+        <result system_time="0.01" user_time="63.5" flops="270040" total_time="64.35"/>
+        <result system_time="0.01" user_time="60.72" flops="269816" total_time="62.33"/>
+        <result system_time="0.01" user_time="63.04" flops="273671" total_time="63.79"/>
+        <result system_time="0.01" user_time="63.12" flops="273779" total_time="63.92"/>
+        <result system_time="0.01" user_time="61.44" flops="277058" total_time="62.23"/>
+        <result system_time="0.02" user_time="63.64" flops="272928" total_time="64.16"/>
+        <result system_time="0.0" user_time="63.06" flops="272945" total_time="64.03"/>
+        <result system_time="0.01" user_time="63.16" flops="272680" total_time="64.19"/>
+        <result system_time="0.0" user_time="54.82" flops="273445" total_time="55.2"/>
+        <result system_time="0.01" user_time="62.82" flops="272851" total_time="64.42"/>
+        <result system_time="0.02" user_time="63.79" flops="267168" total_time="64.31"/>
+        <result system_time="0.0" user_time="56.41" flops="271763" total_time="56.8"/>
+        <result system_time="0.01" user_time="63.78" flops="267858" total_time="64.49"/>
+        <result system_time="0.01" user_time="63.11" flops="270470" total_time="64.48"/>
+        <result system_time="0.01" user_time="62.87" flops="267863" total_time="64.32"/>
+        <result system_time="0.01" user_time="63.34" flops="270851" total_time="64.31"/>
+        <result system_time="0.02" user_time="63.74" flops="272328" total_time="64.3"/>
+        <result system_time="0.01" user_time="63.25" flops="273668" total_time="63.88"/>
+        <result system_time="0.01" user_time="62.78" flops="265937" total_time="64.5"/>
+        <result system_time="0.01" user_time="63.54" flops="272625" total_time="64.08"/>
+      </loop>
+      <loop number="4">
+        <result system_time="0.01" user_time="63.72" flops="262393" total_time="64.73"/>
+        <result system_time="0.03" user_time="62.62" flops="271393" total_time="63.59"/>
+        <result system_time="0.01" user_time="62.92" flops="275627" total_time="63.92"/>
+        <result system_time="0.03" user_time="62.59" flops="271826" total_time="63.57"/>
+        <result system_time="0.03" user_time="62.13" flops="274981" total_time="63.24"/>
+        <result system_time="0.0" user_time="64.03" flops="267944" total_time="64.59"/>
+        <result system_time="0.03" user_time="62.4" flops="274232" total_time="63.6"/>
+        <result system_time="0.0" user_time="63.71" flops="268714" total_time="64.71"/>
+        <result system_time="0.03" user_time="63.76" flops="270102" total_time="64.67"/>
+        <result system_time="0.04" user_time="62.69" flops="271705" total_time="63.62"/>
+        <result system_time="0.01" user_time="63.47" flops="266722" total_time="64.78"/>
+        <result system_time="0.02" user_time="62.46" flops="270072" total_time="63.63"/>
+        <result system_time="0.01" user_time="62.9" flops="265590" total_time="63.82"/>
+        <result system_time="0.02" user_time="62.65" flops="272603" total_time="63.57"/>
+        <result system_time="0.02" user_time="62.31" flops="271322" total_time="63.47"/>
+        <result system_time="0.03" user_time="60.97" flops="274774" total_time="62.09"/>
+        <result system_time="0.01" user_time="63.79" flops="268869" total_time="64.75"/>
+        <result system_time="0.01" user_time="63.73" flops="266872" total_time="64.8"/>
+        <result system_time="0.02" user_time="62.2" flops="274286" total_time="62.91"/>
+        <result system_time="0.01" user_time="63.53" flops="268737" total_time="64.67"/>
+        <result system_time="0.0" user_time="63.81" flops="270521" total_time="64.73"/>
+        <result system_time="0.0" user_time="63.45" flops="271949" total_time="64.15"/>
+        <result system_time="0.0" user_time="53.79" flops="272985" total_time="54.57"/>
+        <result system_time="0.03" user_time="62.32" flops="273947" total_time="63.53"/>
+        <result system_time="0.04" user_time="62.4" flops="276608" total_time="63.37"/>
+        <result system_time="0.0" user_time="53.71" flops="275673" total_time="54.5"/>
+        <result system_time="0.01" user_time="63.21" flops="272846" total_time="63.77"/>
+        <result system_time="0.02" user_time="62.16" flops="270274" total_time="63.62"/>
+        <result system_time="0.01" user_time="63.67" flops="273340" total_time="64.22"/>
+        <result system_time="0.03" user_time="62.24" flops="274670" total_time="63.4"/>
+        <result system_time="0.01" user_time="63.67" flops="268580" total_time="64.64"/>
+        <result system_time="0.01" user_time="63.64" flops="271397" total_time="64.46"/>
+        <result system_time="0.02" user_time="62.13" flops="274942" total_time="63.52"/>
+        <result system_time="0.03" user_time="62.58" flops="274266" total_time="63.41"/>
+        <result system_time="0.02" user_time="62.12" flops="270165" total_time="63.58"/>
+        <result system_time="0.02" user_time="61.04" flops="272206" total_time="62.16"/>
+        <result system_time="0.04" user_time="62.44" flops="276427" total_time="63.23"/>
+        <result system_time="0.0" user_time="62.64" flops="268378" total_time="63.15"/>
+        <result system_time="0.01" user_time="52.27" flops="274927" total_time="52.91"/>
+        <result system_time="0.01" user_time="63.75" flops="272259" total_time="64.26"/>
+        <result system_time="0.01" user_time="64.06" flops="267789" total_time="64.78"/>
+        <result system_time="0.01" user_time="63.34" flops="273276" total_time="64.16"/>
+        <result system_time="0.02" user_time="62.04" flops="272204" total_time="63.53"/>
+        <result system_time="0.01" user_time="62.8" flops="271540" total_time="63.66"/>
+        <result system_time="0.01" user_time="63.83" flops="267281" total_time="64.75"/>
+        <result system_time="0.02" user_time="62.43" flops="271138" total_time="63.6"/>
+        <result system_time="0.01" user_time="63.68" flops="269784" total_time="64.6"/>
+        <result system_time="0.01" user_time="60.35" flops="270128" total_time="61.3"/>
+      </loop>
+      <loop number="5">
+        <result system_time="0.0" user_time="63.98" flops="269731" total_time="64.45"/>
+        <result system_time="0.03" user_time="63.95" flops="275081" total_time="64.61"/>
+        <result system_time="0.03" user_time="63.24" flops="271497" total_time="64.44"/>
+        <result system_time="0.02" user_time="62.76" flops="269274" total_time="64.04"/>
+        <result system_time="0.01" user_time="63.9" flops="268630" total_time="64.53"/>
+        <result system_time="0.0" user_time="64.01" flops="270326" total_time="64.49"/>
+        <result system_time="0.03" user_time="63.42" flops="267158" total_time="64.84"/>
+        <result system_time="0.0" user_time="61.88" flops="269510" total_time="62.41"/>
+        <result system_time="0.0" user_time="63.6" flops="274769" total_time="64.17"/>
+        <result system_time="0.01" user_time="63.61" flops="272729" total_time="64.14"/>
+        <result system_time="0.01" user_time="63.71" flops="270101" total_time="64.5"/>
+        <result system_time="0.01" user_time="62.84" flops="264661" total_time="64.55"/>
+        <result system_time="0.02" user_time="63.91" flops="270724" total_time="64.64"/>
+        <result system_time="0.0" user_time="64.07" flops="269950" total_time="64.53"/>
+        <result system_time="0.03" user_time="63.94" flops="264797" total_time="65.09"/>
+        <result system_time="0.03" user_time="63.79" flops="273023" total_time="64.86"/>
+        <result system_time="0.01" user_time="63.49" flops="274894" total_time="64.08"/>
+        <result system_time="0.01" user_time="63.87" flops="268441" total_time="64.49"/>
+        <result system_time="0.0" user_time="63.72" flops="270079" total_time="64.4"/>
+        <result system_time="0.03" user_time="63.86" flops="267486" total_time="64.78"/>
+        <result system_time="0.04" user_time="64.23" flops="264631" total_time="65.06"/>
+        <result system_time="0.03" user_time="64.45" flops="265246" total_time="65.09"/>
+        <result system_time="0.0" user_time="55.23" flops="270789" total_time="56.23"/>
+        <result system_time="0.01" user_time="56.03" flops="276957" total_time="57.02"/>
+        <result system_time="0.0" user_time="63.09" flops="266171" total_time="64.51"/>
+        <result system_time="0.0" user_time="63.79" flops="269820" total_time="64.54"/>
+        <result system_time="0.03" user_time="63.9" flops="270950" total_time="64.54"/>
+        <result system_time="0.02" user_time="63.97" flops="263709" total_time="64.97"/>
+        <result system_time="0.01" user_time="62.96" flops="271740" total_time="63.45"/>
+        <result system_time="0.01" user_time="63.72" flops="274290" total_time="64.16"/>
+        <result system_time="0.02" user_time="63.87" flops="268378" total_time="64.72"/>
+        <result system_time="0.03" user_time="64.07" flops="262992" total_time="65.02"/>
+        <result system_time="0.04" user_time="63.81" flops="264923" total_time="65.07"/>
+        <result system_time="0.01" user_time="63.64" flops="270932" total_time="64.31"/>
+        <result system_time="0.0" user_time="64.01" flops="265753" total_time="64.53"/>
+        <result system_time="0.01" user_time="63.63" flops="268339" total_time="64.11"/>
+        <result system_time="0.03" user_time="64.17" flops="270357" total_time="65.0"/>
+        <result system_time="0.01" user_time="63.51" flops="274666" total_time="64.0"/>
+        <result system_time="0.02" user_time="63.4" flops="264487" total_time="64.72"/>
+        <result system_time="0.02" user_time="56.98" flops="275833" total_time="58.04"/>
+        <result system_time="0.03" user_time="63.94" flops="263169" total_time="64.83"/>
+        <result system_time="0.01" user_time="63.83" flops="268960" total_time="64.27"/>
+        <result system_time="0.01" user_time="63.3" flops="275085" total_time="63.81"/>
+        <result system_time="0.01" user_time="63.8" flops="273787" total_time="64.36"/>
+        <result system_time="0.02" user_time="63.76" flops="264468" total_time="65.1"/>
+        <result system_time="0.02" user_time="63.61" flops="266261" total_time="65.0"/>
+        <result system_time="0.0" user_time="63.64" flops="272199" total_time="64.39"/>
+        <result system_time="0.02" user_time="63.88" flops="276148" total_time="64.61"/>
+      </loop>
+    </run>
+  </test_result>
+  <test_result benchmark_name="linpackd" run_type="numa_runs"/>
+</beaker_run_result>

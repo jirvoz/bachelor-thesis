@@ -1,0 +1,43 @@
+<TimelinesPerf>
+  <TimeLine tags="RHEL8_ELRDY_KERNEL">
+    <TestRunRule>
+      <BaseRule>
+        <Distribution value="^RHEL-8.0"/>
+        <Kernel value="^kernel-4.18.0-1"/>
+        <HostType value="^(?:machine|)$"/>
+      </BaseRule>
+      <TargetRule>
+        <Distribution value="^RHEL-8.0"/>
+        <Kernel value="^kernel-.*elrdy"/>
+        <HostType value="^(?:machine|)$"/>
+      </TargetRule>
+    </TestRunRule>
+    <HostNameList>
+      <HostName value="localhost.localdomain"/>
+    </HostNameList>
+    <Benchmarks>
+      <Benchmark value="LinpackAndStream">
+        <ResultToDisplay value="linpackd.default_runs"/>
+        <ResultToDisplay value="stream.default_runs"/>
+      </Benchmark>
+      <Benchmark value="SPECjbb2005">
+        <ResultToDisplay value="single"/>
+      </Benchmark>
+      <Benchmark value="SPECjvm2008">
+        <ResultToDisplay value="compiler.sunflow"/>
+        <ResultToDisplay value="compress"/>
+        <ResultToDisplay value="crypto.signverify"/>
+        <ResultToDisplay value="mpegaudio"/>
+        <ResultToDisplay value="scimark.monte_carlo"/>
+        <ResultToDisplay value="scimark.sor.small"/>
+      </Benchmark>
+      <Benchmark value="NASParallel">
+        <ResultToDisplay value="ft_C_x"/>
+        <ResultToDisplay value="sp_C_x"/>
+        <ResultToDisplay value="is_C_x"/>
+        <ResultToDisplay value="ep_C_x"/>
+        <ResultToDisplay value="mg_C_x"/>
+      </Benchmark>
+    </Benchmarks>
+  </TimeLine>
+</TimelinesPerf>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <settings>
+    <Workflow value=""/>
+    <HugePageSize value="2048 kB"/>
+    <Architecture value="x86_64"/>
+    <BeakerRPMVersion value="kernel_perf_cpumem-performance-SPECjvm2008-test-certification-2.0-67.noarch"/>
+    <HugePagesTotal value="0"/>
+    <HostName value="localhost.localdomain"/>
+    <SpecificTag value=""/>
+    <HostType value="machine"/>
+    <TestTimeString value="2 hours 25 minutes 19 seconds"/>
+    <MicrocodeCtl value="microcode_ctl-2.1-26.el8.x86_64"/>
+    <Tag value="-"/>
+    <TunedProfile value="throughput-performance"/>
+    <IbpbEnabled value="NONE"/>
+    <PtiEnabled value="NONE"/>
+    <TestCase value="SPECjvm2008-2_NUMA_nodes"/>
+    <BenchmarkName value="SPECjvm2008"/>
+    <Distribution value="RHEL-8.0-20180824.2"/>
+    <Area value="sched"/>
+    <DateTime value="Result-2018-Sep-12_14h04m08s"/>
+    <Kernel value="kernel-4.18.0-1.elrdy.x86_64"/>
+    <IbrsEnabled value="NONE"/>
+    <NumasNumber value="2"/>
+    <HugePagesSetup value="always"/>
+    <TestStartTime value="1536753886"/>
+    <Family value=""/>
+    <SELinux value="Enforcing"/>
+    <RetpEnabled value="NONE"/>
+    <JavaFlags value="NO INPUT DATA"/>
+    <UUID value="a0104fc6-dd36-4c73-b2ed-5647bc98a034"/>
+    <HtOnOff value="htON"/>
+    <RecipeID value="5654467"/>
+    <PathToResult value="./results/SPECjvm2008/4.18.0-1.elrdy.x86_64/throughput-performance/Result-2018-Sep-12_14h04m08s"/>
+    <KernelFirmware value="linux-firmware-20180717-87.git8d69bab7.el8.noarch"/>
+    <JavaVersion value="1.8.0_181"/>
+    <Arguments value="--variant=fast"/>
+    <BeakerJobID value="2758883"/>
+  </settings>
+</beaker_run_result>

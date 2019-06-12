@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result>
+    <jvm_result operation="scimark_monte_carlo">
+      <runs threads_no="1">
+        <result bops="71.35"/>
+        <result bops="71.37"/>
+      </runs>
+      <runs threads_no="2">
+        <result bops="142"/>
+        <result bops="143"/>
+      </runs>
+      <runs threads_no="4">
+        <result bops="279"/>
+        <result bops="282"/>
+      </runs>
+      <runs threads_no="8">
+        <result bops="511"/>
+        <result bops="511"/>
+      </runs>
+      <runs threads_no="16">
+        <result bops="1004"/>
+        <result bops="1005"/>
+      </runs>
+      <runs threads_no="24">
+        <result bops="1487"/>
+        <result bops="1498"/>
+      </runs>
+      <runs threads_no="28">
+        <result bops="1539"/>
+        <result bops="1539"/>
+      </runs>
+    </jvm_result>
+    <jvm_result operation="compiler_sunflow">
+      <runs threads_no="1">
+        <result bops="62.84"/>
+        <result bops="62.36"/>
+      </runs>
+      <runs threads_no="2">
+        <result bops="127"/>
+        <result bops="124"/>
+      </runs>
+      <runs threads_no="4">
+        <result bops="244"/>
+        <result bops="240"/>
+      </runs>
+      <runs threads_no="8">
+        <result bops="443"/>
+        <result bops="448"/>
+      </runs>
+      <runs threads_no="16">
+        <result bops="874"/>
+        <result bops="847"/>
+      </runs>
+      <runs threads_no="24">
+        <result bops="1244"/>
+        <result bops="1231"/>
+      </runs>
+      <runs threads_no="28">
+        <result bops="1301"/>
+        <result bops="1315"/>
+      </runs>
+    </jvm_result>
+    <jvm_result operation="compress">
+      <runs threads_no="1">
+        <result bops="56.41"/>
+        <result bops="56.56"/>
+      </runs>
+      <runs threads_no="2">
+        <result bops="111"/>
+        <result bops="114"/>
+      </runs>
+      <runs threads_no="4">
+        <result bops="224"/>
+        <result bops="225"/>
+      </runs>
+      <runs threads_no="8">
+        <result bops="414"/>
+        <result bops="414"/>
+      </runs>
+      <runs threads_no="16">
+        <result bops="794"/>
+        <result bops="803"/>
+      </runs>
+      <runs threads_no="24">
+        <result bops="1194"/>
+        <result bops="1190"/>
+      </runs>
+      <runs threads_no="28">
+        <result bops="1256"/>
+        <result bops="1251"/>
+      </runs>
+    </jvm_result>
+    <jvm_result operation="mpegaudio">
+      <runs threads_no="1">
+        <result bops="42.49"/>
+        <result bops="41.99"/>
+      </runs>
+      <runs threads_no="2">
+        <result bops="89.64"/>
+        <result bops="87.69"/>
+      </runs>
+      <runs threads_no="4">
+        <result bops="176"/>
+        <result bops="171"/>
+      </runs>
+      <runs threads_no="8">
+        <result bops="316"/>
+        <result bops="317"/>
+      </runs>
+      <runs threads_no="16">
+        <result bops="608"/>
+        <result bops="607"/>
+      </runs>
+      <runs threads_no="24">
+        <result bops="881"/>
+        <result bops="868"/>
+      </runs>
+      <runs threads_no="28">
+        <result bops="932"/>
+        <result bops="934"/>
+      </runs>
+    </jvm_result>
+    <jvm_result operation="scimark_sor_small">
+      <runs threads_no="1">
+        <result bops="49.95"/>
+        <result bops="49.98"/>
+      </runs>
+      <runs threads_no="2">
+        <result bops="99.9"/>
+        <result bops="99.91"/>
+      </runs>
+      <runs threads_no="4">
+        <result bops="197"/>
+        <result bops="196"/>
+      </runs>
+      <runs threads_no="8">
+        <result bops="359"/>
+        <result bops="360"/>
+      </runs>
+      <runs threads_no="16">
+        <result bops="706"/>
+        <result bops="707"/>
+      </runs>
+      <runs threads_no="24">
+        <result bops="1060"/>
+        <result bops="1059"/>
+      </runs>
+      <runs threads_no="28">
+        <result bops="1216"/>
+        <result bops="1218"/>
+      </runs>
+    </jvm_result>
+    <jvm_result operation="crypto_signverify">
+      <runs threads_no="1">
+        <result bops="153"/>
+        <result bops="153"/>
+      </runs>
+      <runs threads_no="2">
+        <result bops="305"/>
+        <result bops="305"/>
+      </runs>
+      <runs threads_no="4">
+        <result bops="602"/>
+        <result bops="603"/>
+      </runs>
+      <runs threads_no="8">
+        <result bops="1097"/>
+        <result bops="1095"/>
+      </runs>
+      <runs threads_no="16">
+        <result bops="2151"/>
+        <result bops="2152"/>
+      </runs>
+      <runs threads_no="24">
+        <result bops="3180"/>
+        <result bops="3165"/>
+      </runs>
+      <runs threads_no="28">
+        <result bops="3365"/>
+        <result bops="3347"/>
+      </runs>
+    </jvm_result>
+  </test_result>
+</beaker_run_result>

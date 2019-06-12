@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result benchmark_name="md5_sum_sums">
+    <results-statistics idle="0.0" sys="0.0" max="102003458048" sum="4868918214656" median="101413072896" min="100880990208" usr="99.8" mean="1"/>
+  </test_result>
+</beaker_run_result>

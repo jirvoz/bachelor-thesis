@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<beaker_run_result>
+  <test_result benchmark_name="linpacks" run_type="affinity_runs"/>
+  <test_result benchmark_name="linpacks" run_type="default_runs"/>
+  <test_result benchmark_name="linpacks" run_type="numa_runs"/>
+</beaker_run_result>
